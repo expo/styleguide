@@ -23,9 +23,6 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "homepage": "https://github.com/expo/styleguide#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "devDependencies": {
     "typescript": "4.0.5"
   }
