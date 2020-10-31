@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/expo/styleguide/issues"
   },
-  "homepage": "https://github.com/expo/styleguide#readme"
+  "homepage": "https://github.com/expo/styleguide#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
