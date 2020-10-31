@@ -99,7 +99,7 @@ const baseColors = {
 export const colors = {
   ...baseColors,
   semantic: {
-    borderDefault: baseColors.gray[250],
+    border: baseColors.gray[250],
     background: "#FDFDFD",
     success: baseColors.green[700],
     error: baseColors.red[700],
