@@ -1,0 +1,22 @@
+{
+  "name": "@expo/styleguide",
+  "version": "1.0.0",
+  "description": "Foundational styles for Expo interfaces.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expo/styleguide.git"
+  },
+  "keywords": [
+    "expo"
+  ],
+  "author": "Jon Samp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/expo/styleguide/issues"
+  },
+  "homepage": "https://github.com/expo/styleguide#readme"
+}
