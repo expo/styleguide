@@ -1,6 +1,6 @@
 export declare const colors: {
     semantic: {
-        borderDefault: string;
+        border: string;
         background: string;
         success: string;
         error: string;

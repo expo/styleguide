@@ -110,7 +110,7 @@ var baseColors = {
     lila: "#A3A1F7",
 };
 exports.colors = __assign(__assign({}, baseColors), { semantic: {
-        borderDefault: baseColors.gray[250],
+        border: baseColors.gray[250],
         background: "#FDFDFD",
         success: baseColors.green[700],
         error: baseColors.red[700],
