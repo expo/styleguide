@@ -1,4 +1,4 @@
-# @expo/stylguide
+# @expo/styleguide
 
 ## Get started
 
@@ -17,5 +17,3 @@ Then in a React component:
 ```js
 import { colors, shadows } from "@expo/styleguide";
 ```
-
-## Publishing
