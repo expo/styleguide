@@ -105,5 +105,6 @@ export const colors = {
     error: baseColors.red[700],
     warning: baseColors.yellow[600],
     link: baseColors.primary[500],
+    text: baseColors.black,
   },
 };
