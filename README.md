@@ -20,6 +20,10 @@ Then in a React component:
 import { colors, shadows, ... } from "@expo/styleguide";
 ```
 
+## Committing
+
+Use `yarn commit` to create a proper commit message that can auto-release when merging to the **main** branch.
+
 ## Releasing
 
 The release strategy is automated with [commitizen](https://github.com/commitizen/cz-cli) and [semantic-release-cli](https://github.com/semantic-release/cli), using [this approach](https://css-tricks.com/how-to-automate-project-versioning-and-releases-with-continuous-deployment/).
