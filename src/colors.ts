@@ -104,5 +104,6 @@ export const colors = {
     success: baseColors.green[700],
     error: baseColors.red[700],
     warning: baseColors.yellow[600],
+    link: baseColors.primary[500],
   },
 };
