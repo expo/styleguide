@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide",
-  "version": "0.0.0-development",
+  "version": "1.0.2",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,5 +35,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
