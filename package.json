@@ -1,19 +1,20 @@
 {
   "name": "@expo/styleguide",
-  "version": "1.0.2",
+  "version": "0.0.0-development",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "commit": "cz"
+    "commit": "cz",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/expo/styleguide.git"
+    "url": "https://github.com/expo/styleguide.git"
   },
   "keywords": [
     "expo"
@@ -27,7 +28,8 @@
   "devDependencies": {
     "commitizen": "4.2.2",
     "cz-conventional-changelog": "3.3.0",
-    "typescript": "4.0.5"
+    "typescript": "4.0.5",
+    "semantic-release": "^17.2.2"
   },
   "config": {
     "commitizen": {
