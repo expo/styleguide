@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "commit": "cz",
-    "semantic-release": "semantic-release"
+    "release": "semantic-release"
   },
   "files": [
     "dist"
