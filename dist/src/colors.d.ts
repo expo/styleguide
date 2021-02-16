@@ -5,6 +5,78 @@ export declare const colors: {
         success: string;
         error: string;
         warning: string;
+        link: string;
+        text: string;
+        dark: {
+            border: string;
+            background: string;
+            success: string;
+            error: string;
+            warning: string;
+            link: string;
+            text: string;
+        };
+    };
+    blue: {
+        '000': string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+    };
+    gray: {
+        '000': string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+        1000: string;
+    };
+    green: {
+        '000': string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+    };
+    orange: {
+        '000': string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+    };
+    pink: {
+        '000': string;
+        100: string;
+        200: string;
+        300: string;
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
     };
     primary: {
         100: string;
@@ -18,29 +90,8 @@ export declare const colors: {
         900: string;
         1000: string;
     };
-    green: {
-        100: string;
-        200: string;
-        300: string;
-        400: string;
-        500: string;
-        600: string;
-        700: string;
-        800: string;
-        900: string;
-    };
-    blue: {
-        100: string;
-        200: string;
-        300: string;
-        400: string;
-        500: string;
-        600: string;
-        700: string;
-        800: string;
-        900: string;
-    };
-    orange: {
+    red: {
+        '000': string;
         100: string;
         200: string;
         300: string;
@@ -52,42 +103,9 @@ export declare const colors: {
         900: string;
     };
     yellow: {
+        '000': string;
         100: string;
         200: string;
-        300: string;
-        400: string;
-        500: string;
-        600: string;
-        700: string;
-        800: string;
-        900: string;
-    };
-    pink: {
-        100: string;
-        200: string;
-        300: string;
-        400: string;
-        500: string;
-        600: string;
-        700: string;
-        800: string;
-        900: string;
-    };
-    red: {
-        100: string;
-        200: string;
-        300: string;
-        400: string;
-        500: string;
-        600: string;
-        700: string;
-        800: string;
-        900: string;
-    };
-    gray: {
-        100: string;
-        200: string;
-        250: string;
         300: string;
         400: string;
         500: string;
