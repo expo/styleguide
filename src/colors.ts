@@ -142,6 +142,7 @@ export const colors = {
     warning: baseColors.yellow[700],
     link: baseColors.primary[500],
     text: baseColors.black,
+
     dark: {
       border: baseColors.gray[800],
       background: baseColors.gray[1000],
