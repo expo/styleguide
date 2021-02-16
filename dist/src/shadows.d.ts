@@ -3,4 +3,6 @@ export declare const shadows: {
     small: string;
     medium: string;
     large: string;
+    input: string;
+    button: string;
 };
