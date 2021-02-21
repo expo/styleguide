@@ -5,9 +5,14 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
     "commit": "cz",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
   },
   "files": [
     "dist"
@@ -26,10 +31,15 @@
   },
   "homepage": "https://github.com/expo/styleguide#readme",
   "devDependencies": {
+    "@types/react": "^17.0.2",
     "commitizen": "4.2.2",
     "cz-conventional-changelog": "3.3.0",
-    "typescript": "4.0.5",
-    "semantic-release": "^17.2.2"
+    "expo-module-scripts": "^1.2.0",
+    "semantic-release": "^17.2.2",
+    "typescript": "4.0.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
   },
   "config": {
     "commitizen": {
@@ -40,5 +50,8 @@
     "branches": [
       "main"
     ]
+  },
+  "volta": {
+    "node": "14.15.5"
   }
 }
