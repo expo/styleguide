@@ -10,7 +10,7 @@
     "build": "expo-module build",
     "clean": "expo-module clean",
     "test": "expo-module test",
-    "prepare": "expo-module prepare",
+    "prepare": "expo-module prepare && cp src/theme/expo-colors.css ./dist",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module"
   },
