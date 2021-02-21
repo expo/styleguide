@@ -1,4 +1,10 @@
-import React, { createContext, useEffect, useState, useContext } from 'react';
+import React, {
+  createContext,
+  useEffect,
+  useState,
+  useContext,
+  ReactNode,
+} from 'react';
 import { getInitialColorMode } from './BlockingSetInitialColorMode';
 
 export enum Themes {
@@ -14,13 +20,21 @@ const ThemeContext = createContext({
   themeName: Themes.AUTO,
 });
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+type ThemeProviderProps = {
+  children: ReactNode;
+  disabled?: boolean;
+};
+
+export function ThemeProvider(props: ThemeProviderProps) {
+  const { children, disabled = false } = props;
   const initialTheme = (process as any).browser
     ? (document.documentElement.dataset.expoTheme as Themes)
     : Themes.AUTO;
   const [themeName, setThemeName] = useState(initialTheme);
 
   useEffect(function didMount() {
+    if (disabled) return;
+
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     mediaQuery.addEventListener('change', onThemeChange);
@@ -39,8 +53,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   function setDocumentTheme(themeName: Themes) {
+    if (disabled) return;
+
     if ([Themes.LIGHT, Themes.DARK].includes(themeName)) {
       document.documentElement.setAttribute('data-expo-theme', themeName);
+    } else {
+      document.documentElement.setAttribute('data-expo-theme', '');
     }
   }
 

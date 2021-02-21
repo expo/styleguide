@@ -249,7 +249,7 @@
   --expo-color-theme-icon-default: var(--expo-color-base-dark-gray-800);
   --expo-color-theme-link-default: var(--expo-color-base-dark-primary-700);
   --expo-color-theme-status-default: var(--expo-color-base-dark-gray-400);
-  --expo-color-theme-status-error: #var(--expo-color-base-dark-red-500);
+  --expo-color-theme-status-error: var(--expo-color-base-dark-red-500);
   --expo-color-theme-status-warning: var(--expo-color-base-dark-yellow-500);
   --expo-color-theme-status-success: var(--expo-color-base-dark-green-500);
   --expo-color-theme-status-info: var(--expo-color-base-dark-blue-500);
