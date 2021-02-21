@@ -7,7 +7,7 @@
   "scripts": {
     "commit": "cz",
     "release": "semantic-release",
-    "build": "expo-module build",
+    "build": "expo-module build && cp src/theme/expo-colors.css ./dist",
     "clean": "expo-module clean",
     "test": "expo-module test",
     "prepare": "expo-module prepare && cp src/theme/expo-colors.css ./dist",
