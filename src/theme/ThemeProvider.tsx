@@ -15,7 +15,10 @@ const ThemeContext = createContext({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [themeName, setThemeName] = useState(Themes.AUTO);
+  const initialTheme = (process as any).browser
+    ? (document.documentElement.dataset.expoTheme as Themes)
+    : Themes.AUTO;
+  const [themeName, setThemeName] = useState(initialTheme);
 
   useEffect(function didMount() {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');

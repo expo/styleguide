@@ -36,6 +36,17 @@ export const theme = {
     success: 'var(--expo-color-theme-text-success)',
   },
   icon: { default: 'var(--expo-color-theme-icon-default)' },
+  code: {
+    keyword: 'var(--expo-color-theme-code-keyword)',
+    builtin: 'var(--expo-color-theme-code-builtin)',
+    property: 'var(--expo-color-theme-code-property)',
+    comment: 'var(--expo-color-theme-code-comment)',
+    punctuation: 'var(--expo-color-theme-code-punctuation)',
+    operator: 'var(--expo-color-theme-code-operator)',
+    regex: 'var(--expo-color-theme-code-regex)',
+    string: 'var(--expo-color-theme-code-string)',
+    before: 'var(--expo-color-theme-code-before)',
+  },
 };
 
 export const colors = {

@@ -217,6 +217,15 @@
   --expo-color-theme-text-error: var(--expo-color-base-light-red-600);
   --expo-color-theme-text-warning: var(--expo-color-base-light-yellow-900);
   --expo-color-theme-text-success: var(--expo-color-base-light-green-600);
+  --expo-color-theme-code-keyword: var(--expo-color-base-light-blue-500);
+  --expo-color-theme-code-builtin: var(--expo-color-base-light-green-600);
+  --expo-color-theme-code-property: var(--expo-color-base-light-red-500);
+  --expo-color-theme-code-comment: var(--expo-color-base-light-gray-600);
+  --expo-color-theme-code-punctuation: var(--expo-color-base-light-gray-700);
+  --expo-color-theme-code-operator: var(--expo-color-base-light-yellow-800);
+  --expo-color-theme-code-regex: var(--expo-color-base-light-orange-600);
+  --expo-color-theme-code-string: var(--expo-color-base-light-yellow-700);
+  --expo-color-theme-code-before: var(--expo-color-base-light-gray-400);
 }
 
 [data-expo-theme='dark'] {
@@ -249,4 +258,13 @@
   --expo-color-theme-text-error: var(--expo-color-base-dark-red-600);
   --expo-color-theme-text-warning: var(--expo-color-base-dark-yellow-900);
   --expo-color-theme-text-success: var(--expo-color-base-dark-green-600);
+  --expo-color-theme-code-keyword: var(--expo-color-base-dark-blue-600);
+  --expo-color-theme-code-builtin: var(--expo-color-base-dark-green-600);
+  --expo-color-theme-code-property: var(--expo-color-base-dark-red-600);
+  --expo-color-theme-code-comment: var(--expo-color-base-dark-gray-600);
+  --expo-color-theme-code-punctuation: var(--expo-color-base-dark-gray-700);
+  --expo-color-theme-code-operator: var(--expo-color-base-dark-yellow-800);
+  --expo-color-theme-code-regex: var(--expo-color-base-dark-orange-600);
+  --expo-color-theme-code-string: var(--expo-color-base-dark-yellow-700);
+  --expo-color-theme-code-before: var(--expo-color-base-dark-gray-400);
 }
