@@ -257,8 +257,8 @@
   --expo-color-theme-status-warning: var(--expo-color-base-dark-yellow-500);
   --expo-color-theme-status-success: var(--expo-color-base-dark-green-500);
   --expo-color-theme-status-info: var(--expo-color-base-dark-blue-500);
-  --expo-color-theme-text-default: var(--expo-color-base-dark-gray-900);
-  --expo-color-theme-text-secondary: var(--expo-color-base-dark-gray-700);
+  --expo-color-theme-text-default: var(--expo-color-base-dark-gray-800);
+  --expo-color-theme-text-secondary: var(--expo-color-base-dark-gray-600);
   --expo-color-theme-text-error: var(--expo-color-base-dark-red-600);
   --expo-color-theme-text-warning: var(--expo-color-base-dark-yellow-900);
   --expo-color-theme-text-success: var(--expo-color-base-dark-green-600);
