@@ -7,16 +7,19 @@
   "scripts": {
     "commit": "cz",
     "release": "semantic-release",
-    "build": "expo-module build && cp src/theme/expo-colors.css ./dist",
+    "include-theme-css": "cp src/theme/expo-colors.css ./dist",
+    "build:icons": "rm -rf ./src/icons && svgr --out-dir ./src/icons ./src/svg",
+    "build": "yarn build:icons && yarn tsc && yarn include-theme-css",
     "clean": "expo-module clean",
     "test": "expo-module test",
-    "prepare": "expo-module prepare && cp src/theme/expo-colors.css ./dist",
+    "prepare": "expo-module prepare && yarn include-theme-css",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module"
   },
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/expo/styleguide",
   "repository": {
     "type": "git",
     "url": "https://github.com/expo/styleguide.git"
@@ -29,8 +32,8 @@
   "bugs": {
     "url": "https://github.com/expo/styleguide/issues"
   },
-  "homepage": "https://github.com/expo/styleguide#readme",
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "@types/react": "^17.0.2",
     "commitizen": "4.2.2",
     "cz-conventional-changelog": "3.3.0",
