@@ -5,4 +5,8 @@ export declare const shadows: {
     large: string;
     input: string;
     button: string;
+    dark: {
+        popover: string;
+        small: string;
+    };
 };
