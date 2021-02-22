@@ -13,7 +13,7 @@
     "clean": "expo-module clean",
     "test": "expo-module test",
     "prepare": "expo-module prepare && yarn include-theme-css",
-    "prepublishOnly": "expo-module prepublishOnly",
+    "prepublishOnly": "yarn build && expo-module prepublishOnly",
     "expo-module": "expo-module"
   },
   "files": [
