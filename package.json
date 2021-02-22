@@ -1,17 +1,25 @@
 {
   "name": "@expo/styleguide",
-  "version": "1.0.2",
+  "version": "2.0.0-alpha.4",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
     "commit": "cz",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "include-theme-css": "cp src/theme/expo-colors.css ./dist",
+    "build:icons": "rm -rf ./src/icons && svgr --out-dir ./src/icons ./src/svg",
+    "build": "yarn build:icons && yarn tsc && yarn include-theme-css",
+    "clean": "expo-module clean",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare && yarn include-theme-css",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
   },
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/expo/styleguide",
   "repository": {
     "type": "git",
     "url": "https://github.com/expo/styleguide.git"
@@ -24,12 +32,17 @@
   "bugs": {
     "url": "https://github.com/expo/styleguide/issues"
   },
-  "homepage": "https://github.com/expo/styleguide#readme",
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
+    "@types/react": "^17.0.2",
     "commitizen": "4.2.2",
     "cz-conventional-changelog": "3.3.0",
-    "typescript": "4.0.5",
-    "semantic-release": "^17.2.2"
+    "expo-module-scripts": "^1.2.0",
+    "semantic-release": "^17.2.2",
+    "typescript": "4.0.5"
+  },
+  "peerDependencies": {
+    "react": "*"
   },
   "config": {
     "commitizen": {
@@ -40,5 +53,8 @@
     "branches": [
       "main"
     ]
+  },
+  "volta": {
+    "node": "14.15.5"
   }
 }

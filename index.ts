@@ -1,4 +1,15 @@
-import { colors } from "./src/colors";
-import { shadows } from "./src/shadows";
+import { shadows } from './src/shadows';
+import { theme, colors, legacyColors } from './src/theme';
+import { BlockingSetInitialColorMode } from './src/theme/BlockingSetInitialColorMode';
+import { ThemeProvider, useTheme } from './src/theme/ThemeProvider';
 
-export { colors, shadows };
+export * from './src/icons';
+export {
+  colors,
+  legacyColors,
+  shadows,
+  theme,
+  BlockingSetInitialColorMode,
+  ThemeProvider,
+  useTheme,
+};
