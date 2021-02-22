@@ -47,6 +47,10 @@ export const theme = {
     string: 'var(--expo-color-theme-code-string)',
     before: 'var(--expo-color-theme-code-before)',
   },
+  highlight: {
+    accent: 'var(--expo-color-theme-highlight-accent)',
+    emphasis: 'var(--expo-color-theme-highlight-emphasis)',
+  },
 };
 
 export const colors = {

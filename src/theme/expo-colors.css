@@ -226,6 +226,10 @@
   --expo-color-theme-code-regex: var(--expo-color-base-light-orange-600);
   --expo-color-theme-code-string: var(--expo-color-base-light-yellow-700);
   --expo-color-theme-code-before: var(--expo-color-base-light-gray-400);
+  --expo-color-theme-highlight-accent: var(--expo-color-base-light-primary-300);
+  --expo-color-theme-highlight-emphasis: var(
+    --expo-color-base-light-yellow-300
+  );
 }
 
 [data-expo-theme='dark'] {
@@ -267,4 +271,6 @@
   --expo-color-theme-code-regex: var(--expo-color-base-dark-orange-600);
   --expo-color-theme-code-string: var(--expo-color-base-dark-yellow-700);
   --expo-color-theme-code-before: var(--expo-color-base-dark-gray-400);
+  --expo-color-theme-highlight-accent: var(--expo-color-base-dark-primary-700);
+  --expo-color-theme-highlight-emphasis: var(--expo-color-base-dark-yellow-700);
 }
