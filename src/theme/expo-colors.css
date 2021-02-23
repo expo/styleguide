@@ -272,5 +272,5 @@
   --expo-color-theme-code-string: var(--expo-color-base-dark-yellow-700);
   --expo-color-theme-code-before: var(--expo-color-base-dark-gray-400);
   --expo-color-theme-highlight-accent: var(--expo-color-base-dark-primary-700);
-  --expo-color-theme-highlight-emphasis: var(--expo-color-base-dark-yellow-200);
+  --expo-color-theme-highlight-emphasis: var(--expo-color-base-dark-yellow-300);
 }
