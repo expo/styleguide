@@ -184,93 +184,99 @@
   --expo-color-base-dark-purple-900: #eddeff;
   --expo-color-base-dark-white: #ffffff;
   --expo-color-base-dark-black: #0d1117;
-  --expo-color-theme-background-default: var(--expo-color-base-light-white);
-  --expo-color-theme-background-canvas: var(--expo-color-base-light-gray-000);
-  --expo-color-theme-background-secondary: var(
-    --expo-color-base-light-gray-100
-  );
-  --expo-color-theme-background-tertiary: var(--expo-color-base-light-gray-200);
-  --expo-color-theme-background-quaternary: var(
-    --expo-color-base-light-gray-300
-  );
-  --expo-color-theme-background-error: var(--expo-color-base-light-red-100);
-  --expo-color-theme-background-warning: var(
-    --expo-color-base-light-yellow-100
-  );
-  --expo-color-theme-background-success: var(--expo-color-base-light-green-100);
-  --expo-color-theme-border-default: var(--expo-color-base-light-gray-300);
-  --expo-color-theme-border-error: var(--expo-color-base-light-red-300);
-  --expo-color-theme-border-warning: var(--expo-color-base-light-yellow-300);
-  --expo-color-theme-border-success: var(--expo-color-base-light-green-300);
-  --expo-color-theme-button-primary: var(--expo-color-base-light-primary-500);
-  --expo-color-theme-button-secondary: var(--expo-color-base-light-gray-200);
-  --expo-color-theme-button-tertiary: var(--expo-color-base-light-black);
-  --expo-color-theme-icon-default: var(--expo-color-base-light-gray-700);
-  --expo-color-theme-link-default: var(--expo-color-base-light-primary-500);
-  --expo-color-theme-status-default: var(--expo-color-base-light-gray-500);
-  --expo-color-theme-status-error: var(--expo-color-base-light-red-500);
-  --expo-color-theme-status-warning: var(--expo-color-base-light-yellow-500);
-  --expo-color-theme-status-success: var(--expo-color-base-light-green-500);
-  --expo-color-theme-status-info: var(--expo-color-base-light-blue-500);
-  --expo-color-theme-text-default: var(--expo-color-base-light-black);
-  --expo-color-theme-text-secondary: var(--expo-color-base-light-gray-700);
-  --expo-color-theme-text-error: var(--expo-color-base-light-red-600);
-  --expo-color-theme-text-warning: var(--expo-color-base-light-yellow-900);
-  --expo-color-theme-text-success: var(--expo-color-base-light-green-600);
-  --expo-color-theme-code-keyword: var(--expo-color-base-light-blue-500);
-  --expo-color-theme-code-builtin: var(--expo-color-base-light-green-600);
-  --expo-color-theme-code-property: var(--expo-color-base-light-red-500);
-  --expo-color-theme-code-comment: var(--expo-color-base-light-gray-600);
-  --expo-color-theme-code-punctuation: var(--expo-color-base-light-gray-700);
-  --expo-color-theme-code-operator: var(--expo-color-base-light-yellow-800);
-  --expo-color-theme-code-regex: var(--expo-color-base-light-orange-600);
-  --expo-color-theme-code-string: var(--expo-color-base-light-yellow-700);
-  --expo-color-theme-code-before: var(--expo-color-base-light-gray-400);
-  --expo-color-theme-highlight-accent: var(--expo-color-base-light-primary-300);
-  --expo-color-theme-highlight-emphasis: var(
-    --expo-color-base-light-yellow-300
-  );
+  --expo-theme-background-default: var(--expo-color-base-light-white);
+  --expo-theme-background-canvas: var(--expo-color-base-light-gray-000);
+  --expo-theme-background-secondary: var(--expo-color-base-light-gray-100);
+  --expo-theme-background-tertiary: var(--expo-color-base-light-gray-200);
+  --expo-theme-background-quaternary: var(--expo-color-base-light-gray-300);
+  --expo-theme-background-error: var(--expo-color-base-light-red-100);
+  --expo-theme-background-warning: var(--expo-color-base-light-yellow-100);
+  --expo-theme-background-success: var(--expo-color-base-light-green-100);
+  --expo-theme-border-default: var(--expo-color-base-light-gray-300);
+  --expo-theme-border-error: var(--expo-color-base-light-red-300);
+  --expo-theme-border-warning: var(--expo-color-base-light-yellow-300);
+  --expo-theme-border-success: var(--expo-color-base-light-green-300);
+  --expo-theme-button-primary: var(--expo-color-base-light-primary-500);
+  --expo-theme-button-secondary: var(--expo-color-base-light-gray-200);
+  --expo-theme-button-tertiary: var(--expo-color-base-light-black);
+  --expo-theme-icon-default: var(--expo-color-base-light-gray-700);
+  --expo-theme-link-default: var(--expo-color-base-light-primary-500);
+  --expo-theme-status-default: var(--expo-color-base-light-gray-500);
+  --expo-theme-status-error: var(--expo-color-base-light-red-500);
+  --expo-theme-status-warning: var(--expo-color-base-light-yellow-500);
+  --expo-theme-status-success: var(--expo-color-base-light-green-500);
+  --expo-theme-status-info: var(--expo-color-base-light-blue-500);
+  --expo-theme-text-default: var(--expo-color-base-light-black);
+  --expo-theme-text-secondary: var(--expo-color-base-light-gray-700);
+  --expo-theme-text-error: var(--expo-color-base-light-red-600);
+  --expo-theme-text-warning: var(--expo-color-base-light-yellow-900);
+  --expo-theme-text-success: var(--expo-color-base-light-green-600);
+  --expo-theme-code-keyword: var(--expo-color-base-light-blue-500);
+  --expo-theme-code-builtin: var(--expo-color-base-light-green-600);
+  --expo-theme-code-property: var(--expo-color-base-light-red-500);
+  --expo-theme-code-comment: var(--expo-color-base-light-gray-600);
+  --expo-theme-code-punctuation: var(--expo-color-base-light-gray-700);
+  --expo-theme-code-operator: var(--expo-color-base-light-yellow-800);
+  --expo-theme-code-regex: var(--expo-color-base-light-orange-600);
+  --expo-theme-code-string: var(--expo-color-base-light-yellow-700);
+  --expo-theme-code-before: var(--expo-color-base-light-gray-400);
+  --expo-theme-highlight-accent: var(--expo-color-base-light-primary-300);
+  --expo-theme-highlight-emphasis: var(--expo-color-base-light-yellow-300);
+  --expo-theme-shadows-popover: 0 2px 6px rgba(0, 0, 0, 0.15);
+  --expo-theme-shadows-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --expo-theme-shadows-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --expo-theme-shadows-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --expo-theme-shadows-input: 0 2px 2px 0 rgba(0, 0, 20, 0.015),
+    0 0 0 1px rgba(0, 0, 20, 0.0075);
+  --expo-theme-shadows-button: 0 2px 2px 0 rgba(0, 0, 20, 0.015),
+    0 0 0 1px rgba(0, 0, 20, 0.0075);
 }
 
 [data-expo-theme='dark'] {
-  --expo-color-theme-background-default: var(--expo-color-base-dark-gray-000);
-  --expo-color-theme-background-canvas: var(--expo-color-base-dark-gray-100);
-  --expo-color-theme-background-secondary: var(--expo-color-base-dark-gray-200);
-  --expo-color-theme-background-tertiary: var(--expo-color-base-dark-gray-300);
-  --expo-color-theme-background-quaternary: var(
-    --expo-color-base-dark-gray-400
-  );
-  --expo-color-theme-background-error: var(--expo-color-base-dark-red-000);
-  --expo-color-theme-background-warning: var(--expo-color-base-dark-yellow-000);
-  --expo-color-theme-background-success: var(--expo-color-base-dark-green-000);
-  --expo-color-theme-border-default: var(--expo-color-base-dark-gray-400);
-  --expo-color-theme-border-error: var(--expo-color-base-dark-red-200);
-  --expo-color-theme-border-warning: var(--expo-color-base-dark-yellow-200);
-  --expo-color-theme-border-success: var(--expo-color-base-dark-green-200);
-  --expo-color-theme-button-primary: var(--expo-color-base-dark-primary-500);
-  --expo-color-theme-button-secondary: var(--expo-color-base-dark-gray-300);
-  --expo-color-theme-button-tertiary: var(--expo-color-base-dark-gray-900);
-  --expo-color-theme-icon-default: var(--expo-color-base-dark-gray-800);
-  --expo-color-theme-link-default: var(--expo-color-base-dark-primary-700);
-  --expo-color-theme-status-default: var(--expo-color-base-dark-gray-400);
-  --expo-color-theme-status-error: var(--expo-color-base-dark-red-500);
-  --expo-color-theme-status-warning: var(--expo-color-base-dark-yellow-500);
-  --expo-color-theme-status-success: var(--expo-color-base-dark-green-500);
-  --expo-color-theme-status-info: var(--expo-color-base-dark-blue-500);
-  --expo-color-theme-text-default: var(--expo-color-base-dark-gray-800);
-  --expo-color-theme-text-secondary: var(--expo-color-base-dark-gray-600);
-  --expo-color-theme-text-error: var(--expo-color-base-dark-red-600);
-  --expo-color-theme-text-warning: var(--expo-color-base-dark-yellow-900);
-  --expo-color-theme-text-success: var(--expo-color-base-dark-green-600);
-  --expo-color-theme-code-keyword: var(--expo-color-base-dark-blue-600);
-  --expo-color-theme-code-builtin: var(--expo-color-base-dark-green-600);
-  --expo-color-theme-code-property: var(--expo-color-base-dark-red-600);
-  --expo-color-theme-code-comment: var(--expo-color-base-dark-gray-600);
-  --expo-color-theme-code-punctuation: var(--expo-color-base-dark-gray-700);
-  --expo-color-theme-code-operator: var(--expo-color-base-dark-yellow-800);
-  --expo-color-theme-code-regex: var(--expo-color-base-dark-orange-600);
-  --expo-color-theme-code-string: var(--expo-color-base-dark-yellow-700);
-  --expo-color-theme-code-before: var(--expo-color-base-dark-gray-400);
-  --expo-color-theme-highlight-accent: var(--expo-color-base-dark-primary-700);
-  --expo-color-theme-highlight-emphasis: var(--expo-color-base-dark-yellow-300);
+  --expo-theme-background-default: var(--expo-color-base-dark-gray-000);
+  --expo-theme-background-canvas: var(--expo-color-base-dark-gray-100);
+  --expo-theme-background-secondary: var(--expo-color-base-dark-gray-200);
+  --expo-theme-background-tertiary: var(--expo-color-base-dark-gray-300);
+  --expo-theme-background-quaternary: var(--expo-color-base-dark-gray-400);
+  --expo-theme-background-error: var(--expo-color-base-dark-red-000);
+  --expo-theme-background-warning: var(--expo-color-base-dark-yellow-000);
+  --expo-theme-background-success: var(--expo-color-base-dark-green-000);
+  --expo-theme-border-default: var(--expo-color-base-dark-gray-400);
+  --expo-theme-border-error: var(--expo-color-base-dark-red-200);
+  --expo-theme-border-warning: var(--expo-color-base-dark-yellow-200);
+  --expo-theme-border-success: var(--expo-color-base-dark-green-200);
+  --expo-theme-button-primary: var(--expo-color-base-dark-primary-500);
+  --expo-theme-button-secondary: var(--expo-color-base-dark-gray-300);
+  --expo-theme-button-tertiary: var(--expo-color-base-dark-gray-900);
+  --expo-theme-icon-default: var(--expo-color-base-dark-gray-800);
+  --expo-theme-link-default: var(--expo-color-base-dark-primary-700);
+  --expo-theme-status-default: var(--expo-color-base-dark-gray-400);
+  --expo-theme-status-error: var(--expo-color-base-dark-red-500);
+  --expo-theme-status-warning: var(--expo-color-base-dark-yellow-500);
+  --expo-theme-status-success: var(--expo-color-base-dark-green-500);
+  --expo-theme-status-info: var(--expo-color-base-dark-blue-500);
+  --expo-theme-text-default: var(--expo-color-base-dark-gray-800);
+  --expo-theme-text-secondary: var(--expo-color-base-dark-gray-600);
+  --expo-theme-text-error: var(--expo-color-base-dark-red-600);
+  --expo-theme-text-warning: var(--expo-color-base-dark-yellow-900);
+  --expo-theme-text-success: var(--expo-color-base-dark-green-600);
+  --expo-theme-code-keyword: var(--expo-color-base-dark-blue-600);
+  --expo-theme-code-builtin: var(--expo-color-base-dark-green-600);
+  --expo-theme-code-property: var(--expo-color-base-dark-red-600);
+  --expo-theme-code-comment: var(--expo-color-base-dark-gray-600);
+  --expo-theme-code-punctuation: var(--expo-color-base-dark-gray-700);
+  --expo-theme-code-operator: var(--expo-color-base-dark-yellow-800);
+  --expo-theme-code-regex: var(--expo-color-base-dark-orange-600);
+  --expo-theme-code-string: var(--expo-color-base-dark-yellow-700);
+  --expo-theme-code-before: var(--expo-color-base-dark-gray-400);
+  --expo-theme-highlight-accent: var(--expo-color-base-dark-primary-700);
+  --expo-theme-highlight-emphasis: var(--expo-color-base-dark-yellow-300);
+  --expo-theme-shadows-popover: 0 2px 6px rgba(0, 0, 0, 0.55);
+  --expo-theme-shadows-small: 0 5px 10px rgba(0, 0, 0, 0.52);
+  --expo-theme-shadows-medium: 0 8px 30px rgba(0, 0, 0, 0.52);
+  --expo-theme-shadows-large: 0 30px 60px rgba(0, 0, 0, 0.52);
+  --expo-theme-shadows-input: 0 2px 2px 0 rgba(0, 0, 20, 0.055),
+    0 0 0 1px rgba(0, 0, 20, 0.0475);
+  --expo-theme-shadows-button: 0 2px 2px 0 rgba(0, 0, 20, 0.055),
+    0 0 0 1px rgba(0, 0, 20, 0.0475);
 }

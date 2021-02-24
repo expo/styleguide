@@ -1,8 +1,8 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function ThemeDarkIcon(props: IconProps) {
+export default function LogoutMobileIcon(props: IconProps) {
   const {
-    title = "Theme-dark-icon",
+    title = "Logout-mobile-icon",
     size,
     color,
     width,
@@ -22,7 +22,12 @@ export default function ThemeDarkIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M11.262 2a9.981 9.981 0 00-3.26 1.19c-4.783 2.761-6.422 8.877-3.66 13.66 2.76 4.783 8.877 6.422 13.66 3.66a9.973 9.973 0 002.839-2.447 10.004 10.004 0 01-10.4-4.85A10.003 10.003 0 0111.26 2z"
+        d="M17.205 5.863v-.031a2 2 0 00-2-2h-8.26a2 2 0 00-2 2v12.336a2 2 0 002 2h8.42a1.84 1.84 0 001.84-1.84v0"
+        stroke={color || "var(--expo-color-theme-icon-default)"}
+        strokeWidth={2}
+      />
+      <path
+        d="M16.193 17.123v-3.106c-2.776 0-4.735 1.087-5.71 1.92-.18.153-.485.026-.467-.208.356-4.58 4.206-5.809 6.177-5.838V6.877l6.863 5.193-6.863 5.053z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

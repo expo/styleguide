@@ -1,8 +1,8 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function ThemeAutoIcon(props: IconProps) {
+export default function LoadingiconIcon(props: IconProps) {
   const {
-    title = "Theme-auto-icon",
+    title = "Loading icon-icon",
     size,
     color,
     width,
@@ -11,7 +11,7 @@ export default function ThemeAutoIcon(props: IconProps) {
   } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -22,17 +22,19 @@ export default function ThemeAutoIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <circle
+        opacity={0.5}
         cx={12}
-        cy={12}
-        r={8.767}
+        cy={13}
+        r={10.286}
         stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={1.667}
+        strokeWidth={3.429}
       />
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12 2.4v19.2a9.6 9.6 0 110-19.2z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        opacity={0.9}
+        d="M21.352 17.557a10.162 10.162 0 001.041-5.114 10.22 10.22 0 00-1.642-4.966 10.683 10.683 0 00-3.917-3.585 11.125 11.125 0 00-5.221-1.312"
+        stroke={color || "var(--expo-color-theme-icon-default)"}
+        strokeWidth={3.429}
+        strokeLinecap="round"
       />
     </svg>
   );

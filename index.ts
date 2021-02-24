@@ -1,5 +1,4 @@
-import { shadows } from './src/shadows';
-import { theme, colors, legacyColors } from './src/theme';
+import { theme, colors, legacyColors, shadows } from './src/theme';
 import { BlockingSetInitialColorMode } from './src/theme/BlockingSetInitialColorMode';
 import { ThemeProvider, useTheme } from './src/theme/ThemeProvider';
 

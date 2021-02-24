@@ -1,14 +1,7 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function ThemeDarkIcon(props: IconProps) {
-  const {
-    title = "Theme-dark-icon",
-    size,
-    color,
-    width,
-    height,
-    titleId,
-  } = props;
+export default function ErrorIcon(props: IconProps) {
+  const { title = "Error-icon", size, color, width, height, titleId } = props;
   return (
     <svg
       viewBox="0 0 24 24"
@@ -22,7 +15,9 @@ export default function ThemeDarkIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M11.262 2a9.981 9.981 0 00-3.26 1.19c-4.783 2.761-6.422 8.877-3.66 13.66 2.76 4.783 8.877 6.422 13.66 3.66a9.973 9.973 0 002.839-2.447 10.004 10.004 0 01-10.4-4.85A10.003 10.003 0 0111.26 2z"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5 2a3 3 0 00-3 3v14a3 3 0 003 3h14a3 3 0 003-3V5a3 3 0 00-3-3H5zm3.707 5.293a1 1 0 10-1.414 1.414L10.586 12l-3.293 3.293a1 1 0 101.414 1.414L12 13.414l3.293 3.293a1 1 0 101.414-1.414L13.414 12l3.293-3.293a1 1 0 00-1.414-1.414L12 10.586 8.707 7.293z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

@@ -1,14 +1,7 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function ThemeAutoIcon(props: IconProps) {
-  const {
-    title = "Theme-auto-icon",
-    size,
-    color,
-    width,
-    height,
-    titleId,
-  } = props;
+export default function SearchIcon(props: IconProps) {
+  const { title = "Search-icon", size, color, width, height, titleId } = props;
   return (
     <svg
       viewBox="0 0 24 24"
@@ -22,17 +15,17 @@ export default function ThemeAutoIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <circle
-        cx={12}
-        cy={12}
-        r={8.767}
+        cx={10.5}
+        cy={10}
+        r={6.5}
         stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={1.667}
+        strokeWidth={2}
       />
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12 2.4v19.2a9.6 9.6 0 110-19.2z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        d="M15 15.5l5 5"
+        stroke={color || "var(--expo-color-theme-icon-default)"}
+        strokeWidth={2}
+        strokeLinecap="round"
       />
     </svg>
   );

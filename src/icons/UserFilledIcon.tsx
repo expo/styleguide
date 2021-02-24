@@ -1,8 +1,8 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function ThemeDarkIcon(props: IconProps) {
+export default function UserFilledIcon(props: IconProps) {
   const {
-    title = "Theme-dark-icon",
+    title = "User-filled-icon",
     size,
     color,
     width,
@@ -22,7 +22,7 @@ export default function ThemeDarkIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M11.262 2a9.981 9.981 0 00-3.26 1.19c-4.783 2.761-6.422 8.877-3.66 13.66 2.76 4.783 8.877 6.422 13.66 3.66a9.973 9.973 0 002.839-2.447 10.004 10.004 0 01-10.4-4.85A10.003 10.003 0 0111.26 2z"
+        d="M15.333 15.889C18.41 11.274 18.928 2 12.003 2 5.077 2 5.59 11.274 8.667 15.889c-2.745 0-5.899 2.415-6.547 5.12-.129.538.326.991.878.991h18.005c.552 0 1.006-.452.879-.989-.645-2.706-3.803-5.122-6.549-5.122z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

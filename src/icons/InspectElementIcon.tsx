@@ -1,8 +1,8 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function ThemeDarkIcon(props: IconProps) {
+export default function InspectElementIcon(props: IconProps) {
   const {
-    title = "Theme-dark-icon",
+    title = "Inspect-element-icon",
     size,
     color,
     width,
@@ -22,7 +22,13 @@ export default function ThemeDarkIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M11.262 2a9.981 9.981 0 00-3.26 1.19c-4.783 2.761-6.422 8.877-3.66 13.66 2.76 4.783 8.877 6.422 13.66 3.66a9.973 9.973 0 002.839-2.447 10.004 10.004 0 01-10.4-4.85A10.003 10.003 0 0111.26 2z"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M4.331 4.352H22V2H2v20h2.331V4.352z"
+        fill={color || "var(--expo-color-theme-icon-default)"}
+      />
+      <path
+        d="M6.653 19.648h2.332V22H6.653v-2.352zm4.385 0h2.331V22h-2.33v-2.352zm4.385 0h2.331V22h-2.331v-2.352zM22 6.535v2.353h-2.331V6.535H22zm0 4.425v2.352h-2.331V10.96H22zm0 4.424v2.352h-2.331v-2.352h2.33zm-2.331 4.264h2.33V22h-2.33v-2.352z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

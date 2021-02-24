@@ -1,14 +1,7 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function ThemeDarkIcon(props: IconProps) {
-  const {
-    title = "Theme-dark-icon",
-    size,
-    color,
-    width,
-    height,
-    titleId,
-  } = props;
+export default function AndroidIcon(props: IconProps) {
+  const { title = "Android-icon", size, color, width, height, titleId } = props;
   return (
     <svg
       viewBox="0 0 24 24"
@@ -22,7 +15,7 @@ export default function ThemeDarkIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M11.262 2a9.981 9.981 0 00-3.26 1.19c-4.783 2.761-6.422 8.877-3.66 13.66 2.76 4.783 8.877 6.422 13.66 3.66a9.973 9.973 0 002.839-2.447 10.004 10.004 0 01-10.4-4.85A10.003 10.003 0 0111.26 2z"
+        d="M17.063 14.79a.919.919 0 010-1.838.919.919 0 010 1.838zm-10.126 0a.919.919 0 010-1.838.919.919 0 010 1.838zm10.454-5.536l1.831-3.18a.38.38 0 10-.66-.382l-1.853 3.22A11.27 11.27 0 0012 7.902a11.27 11.27 0 00-4.709 1.01L5.438 5.691a.38.38 0 10-.66.382l1.83 3.181C3.466 10.97 1.316 14.163 1 17.934h22c-.315-3.772-2.465-6.965-5.609-8.68z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>
