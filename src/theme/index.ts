@@ -426,6 +426,7 @@ const baseColors = {
   lila: '#A3A1F7',
 };
 
+// colors for existing colors
 export const colors = {
   ...baseColors,
   semantic: {
