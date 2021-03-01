@@ -11,7 +11,7 @@ export default function TriangleRightIcon(props: IconProps) {
   } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -22,7 +22,7 @@ export default function TriangleRightIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M8 3.872v16.52l8.26-8.26L8 3.872z"
+        d="M6.667 3.227v13.766l6.883-6.883-6.883-6.883z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

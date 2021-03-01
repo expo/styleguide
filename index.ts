@@ -1,11 +1,11 @@
-import { theme, colors, legacyColors, shadows } from './src/theme';
+import { theme, colors, palette, shadows } from './src/theme';
 import { BlockingSetInitialColorMode } from './src/theme/BlockingSetInitialColorMode';
 import { ThemeProvider, useTheme } from './src/theme/ThemeProvider';
 
 export * from './src/icons';
 export {
   colors,
-  legacyColors,
+  palette,
   shadows,
   theme,
   BlockingSetInitialColorMode,

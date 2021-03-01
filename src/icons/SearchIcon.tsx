@@ -4,7 +4,7 @@ export default function SearchIcon(props: IconProps) {
   const { title = "Search-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -15,16 +15,16 @@ export default function SearchIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <circle
-        cx={10.5}
-        cy={10}
-        r={6.5}
+        cx={8.386}
+        cy={7.853}
+        r={6.806}
         stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={2}
+        strokeWidth={2.094}
       />
       <path
-        d="M15 15.5l5 5"
+        d="M13.098 13.612l5.235 5.236"
         stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={2}
+        strokeWidth={2.094}
         strokeLinecap="round"
       />
     </svg>

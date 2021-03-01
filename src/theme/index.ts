@@ -63,7 +63,7 @@ export const shadows = {
   test: 'var(--expo-theme-shadows-small)',
 };
 
-export const colors = {
+export const palette = {
   light: {
     gray: {
       100: 'var(--expo-color-base-light-gray-100)',
@@ -426,7 +426,7 @@ const baseColors = {
   lila: '#A3A1F7',
 };
 
-export const legacyColors = {
+export const colors = {
   ...baseColors,
   semantic: {
     border: baseColors.gray[300],

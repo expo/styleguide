@@ -4,7 +4,7 @@ export default function AndroidIcon(props: IconProps) {
   const { title = "Android-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -15,7 +15,7 @@ export default function AndroidIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M17.063 14.79a.919.919 0 010-1.838.919.919 0 010 1.838zm-10.126 0a.919.919 0 010-1.838.919.919 0 010 1.838zm10.454-5.536l1.831-3.18a.38.38 0 10-.66-.382l-1.853 3.22A11.27 11.27 0 0012 7.902a11.27 11.27 0 00-4.709 1.01L5.438 5.691a.38.38 0 10-.66.382l1.83 3.181C3.466 10.97 1.316 14.163 1 17.934h22c-.315-3.772-2.465-6.965-5.609-8.68z"
+        d="M14.219 12.325a.766.766 0 010-1.532.765.765 0 010 1.532zm-8.438 0a.766.766 0 010-1.532.765.765 0 010 1.532zm8.712-4.613l1.525-2.651a.317.317 0 10-.55-.318l-1.544 2.684A9.393 9.393 0 0010 6.585a9.392 9.392 0 00-3.924.842L4.531 4.743a.317.317 0 10-.55.318l1.526 2.65c-2.62 1.43-4.412 4.091-4.674 7.235h18.334c-.263-3.144-2.055-5.805-4.674-7.234z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

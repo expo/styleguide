@@ -11,7 +11,7 @@ export default function ThemeDarkIcon(props: IconProps) {
   } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -22,7 +22,7 @@ export default function ThemeDarkIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M11.262 2a9.981 9.981 0 00-3.26 1.19c-4.783 2.761-6.422 8.877-3.66 13.66 2.76 4.783 8.877 6.422 13.66 3.66a9.973 9.973 0 002.839-2.447 10.004 10.004 0 01-10.4-4.85A10.003 10.003 0 0111.26 2z"
+        d="M9.157 0a10.056 10.056 0 00-3.285 1.199C1.054 3.98-.598 10.142 2.185 14.96c2.782 4.819 8.943 6.47 13.762 3.688a10.048 10.048 0 002.86-2.466A10.079 10.079 0 018.33 11.297 10.078 10.078 0 019.157 0z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

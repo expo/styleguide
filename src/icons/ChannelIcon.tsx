@@ -4,7 +4,7 @@ export default function ChannelIcon(props: IconProps) {
   const { title = "Channel-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -15,32 +15,33 @@ export default function ChannelIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <rect
-        x={8.5}
-        y={1}
-        width={7}
-        height={7}
-        rx={1}
+        x={7.083}
+        y={0.833}
+        width={5.833}
+        height={5.833}
+        rx={0.833}
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
       <rect
-        x={2}
-        y={16}
-        width={7}
-        height={7}
-        rx={1}
+        x={1.667}
+        y={13.333}
+        width={5.833}
+        height={5.833}
+        rx={0.833}
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
       <rect
-        x={15}
-        y={16}
-        width={7}
-        height={7}
-        rx={1}
+        x={12.5}
+        y={13.333}
+        width={5.833}
+        height={5.833}
+        rx={0.833}
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
       <path
-        d="M12 5.632V9.5a2 2 0 01-2 1.999H7.5a2 2 0 00-2 2v2.975M12 5.632V9.5a2 2 0 002 2h2.5a2 2 0 012 2v3.554"
+        d="M10 4.693v3.224c0 .92-.747 1.666-1.667 1.666H6.25c-.92 0-1.667.746-1.667 1.667v2.48M10 4.693v3.224c0 .92.746 1.666 1.667 1.666h2.083c.92 0 1.667.746 1.667 1.667v2.962"
         stroke={color || "var(--expo-color-theme-icon-default)"}
+        strokeWidth={0.833}
       />
     </svg>
   );

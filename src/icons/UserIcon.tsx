@@ -4,7 +4,7 @@ export default function UserIcon(props: IconProps) {
   const { title = "User-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -15,9 +15,9 @@ export default function UserIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M15 15.5C17.77 11.346 18.235 3 12.002 3 5.77 3 6.231 11.346 9 15.5c-2.77 0-6 2.73-6 5.5h18c.005-2.77-3.23-5.5-6-5.5z"
+        d="M12.917 13.403C15.609 9.364 16.062 1.25 10.002 1.25c-6.06 0-5.611 8.114-2.919 12.153-2.692 0-5.833 2.655-5.833 5.347h17.5c.005-2.692-3.141-5.347-5.833-5.347z"
         stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={2}
+        strokeWidth={1.852}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

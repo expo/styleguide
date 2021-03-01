@@ -1,10 +1,10 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function UploadIcon(props: IconProps) {
-  const { title = "Upload-icon", size, color, width, height, titleId } = props;
+export default function TwitchIcon(props: IconProps) {
+  const { title = "Twitch-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -15,14 +15,12 @@ export default function UploadIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M7 12h10l-5-8-5 8z"
+        d="M4.821 0L1.25 3.571V16.43h4.286V20l3.571-3.571h2.857L18.393 10V0H4.82zm12.143 9.286l-2.857 2.857H11.25l-2.5 2.5v-2.5H5.536V1.429h11.428v7.857z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
       <path
-        d="M21 2H3m9 10v10"
-        stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={2}
-        strokeLinecap="round"
+        d="M14.822 3.929h-1.43v4.285h1.43V3.93zm-3.929 0H9.464v4.285h1.429V3.93z"
+        fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>
   );

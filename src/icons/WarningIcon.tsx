@@ -4,7 +4,7 @@ export default function WarningIcon(props: IconProps) {
   const { title = "Warning-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -14,12 +14,19 @@ export default function WarningIcon(props: IconProps) {
       {...props}
     >
       {title ? <title id={titleId}>{title}</title> : null}
-      <path
-        d="M10.133 3.615c.765-1.537 2.957-1.537 3.723-.001l7.441 14.916c.69 1.383-.316 3.008-1.861 3.008H4.564c-1.545 0-2.55-1.624-1.862-3.007l7.43-14.916zm3.723 4.402c0-.402-.215-.832-.526-1.153-.318-.328-.775-.584-1.31-.584-.532 0-.999.255-1.325.58-.32.318-.55.75-.55 1.157 0 .313.122 1.931.242 3.444.06.763.12 1.507.166 2.06l.055.665.015.185.004.049v.004a1.393 1.393 0 002.786 0v-.006l.005-.049.014-.185.05-.665c.041-.554.097-1.297.152-2.06.11-1.514.222-3.13.222-3.442zM12 20.02a1.93 1.93 0 100-3.86 1.93 1.93 0 000 3.86z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
-        stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={0.64}
-      />
+      <g clipPath="url(#warning-icon_svg__warning-icon_svg__clip0)">
+        <path
+          d="M8.102 1.477c.778-1.561 3.005-1.562 3.784-.001l7.564 15.16c.7 1.406-.322 3.059-1.892 3.059H2.442c-1.57 0-2.592-1.652-1.892-3.057l7.552-15.16zm3.784 4.475c0-.408-.218-.846-.534-1.172-.323-.333-.788-.594-1.331-.594-.542 0-1.016.26-1.348.59-.325.323-.56.761-.56 1.176 0 .318.125 1.963.247 3.5a809.363 809.363 0 00.225 2.77l.015.188.004.05v.004a1.416 1.416 0 002.833-.001v-.006l.004-.05.014-.187.05-.677c.043-.562.1-1.318.155-2.093.112-1.538.226-3.181.226-3.498zm-1.885 12.199a1.961 1.961 0 100-3.923 1.961 1.961 0 000 3.923z"
+          fill={color || "var(--expo-color-theme-icon-default)"}
+          stroke={color || "var(--expo-color-theme-icon-default)"}
+          strokeWidth={0.65}
+        />
+      </g>
+      <defs>
+        <clipPath id="warning-icon_svg__warning-icon_svg__clip0">
+          <path fill="#fff" d="M0 0h20v20H0z" />
+        </clipPath>
+      </defs>
     </svg>
   );
 }

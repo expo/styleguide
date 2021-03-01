@@ -11,7 +11,7 @@ export default function LogoutMobileIcon(props: IconProps) {
   } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 21 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -22,12 +22,12 @@ export default function LogoutMobileIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M17.205 5.863v-.031a2 2 0 00-2-2h-8.26a2 2 0 00-2 2v12.336a2 2 0 002 2h8.42a1.84 1.84 0 001.84-1.84v0"
+        d="M14.104 3.739v-.032a2.04 2.04 0 00-2.04-2.04h-8.43a2.04 2.04 0 00-2.04 2.04v12.586a2.04 2.04 0 002.04 2.04h8.592c1.037 0 1.878-.84 1.878-1.878v0"
         stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={2}
+        strokeWidth={2.04}
       />
       <path
-        d="M16.193 17.123v-3.106c-2.776 0-4.735 1.087-5.71 1.92-.18.153-.485.026-.467-.208.356-4.58 4.206-5.809 6.177-5.838V6.877l6.863 5.193-6.863 5.053z"
+        d="M13.071 15.227v-3.17c-2.832 0-4.83 1.11-5.827 1.96-.182.155-.494.026-.475-.213.363-4.672 4.29-5.926 6.302-5.956V4.774l7.002 5.297-7.002 5.156z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
     </svg>

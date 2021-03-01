@@ -11,7 +11,7 @@ export default function DownloadIcon(props: IconProps) {
   } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 20 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={size || width || "20px"}
@@ -22,13 +22,13 @@ export default function DownloadIcon(props: IconProps) {
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M17 12H7l5 8 5-8z"
+        d="M14.583 11H5.417L10 18.333 14.583 11z"
         fill={color || "var(--expo-color-theme-icon-default)"}
       />
       <path
-        d="M3 22h18m-9-10V2"
+        d="M1.75 20.167h16.5M10 11V1.833"
         stroke={color || "var(--expo-color-theme-icon-default)"}
-        strokeWidth={2}
+        strokeWidth={1.833}
         strokeLinecap="round"
       />
     </svg>
