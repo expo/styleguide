@@ -30,7 +30,9 @@ export function ThemeProvider(props: ThemeProviderProps) {
   const initialTheme = (process as any).browser
     ? (document.documentElement.dataset.expoTheme as Themes)
     : Themes.AUTO;
-  const [themeName, setThemeName] = useState(initialTheme);
+  const [themeName, setThemeName] = useState(
+    disabled ? Themes.LIGHT : initialTheme
+  );
 
   useEffect(function didMount() {
     if (disabled) return;
