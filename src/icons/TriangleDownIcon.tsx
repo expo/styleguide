@@ -23,7 +23,7 @@ export default function TriangleDownIcon(props: IconProps) {
       {title ? <title id={titleId}>{title}</title> : null}
       <path
         d="M16.993 6.667H3.227l6.883 6.883 6.883-6.883z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
     </svg>
   );

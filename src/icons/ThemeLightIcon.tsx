@@ -23,7 +23,7 @@ export default function ThemeLightIcon(props: IconProps) {
       {title ? <title id={titleId}>{title}</title> : null}
       <g
         clipPath="url(#theme-light-icon_svg__theme-light-icon_svg__clip0)"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       >
         <path
           fillRule="evenodd"

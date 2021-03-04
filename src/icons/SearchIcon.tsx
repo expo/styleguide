@@ -18,12 +18,12 @@ export default function SearchIcon(props: IconProps) {
         cx={8.386}
         cy={7.853}
         r={6.806}
-        stroke={color || "var(--expo-color-theme-icon-default)"}
+        stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={2.094}
       />
       <path
         d="M13.098 13.612l5.235 5.236"
-        stroke={color || "var(--expo-color-theme-icon-default)"}
+        stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={2.094}
         strokeLinecap="round"
       />

@@ -25,14 +25,14 @@ export default function ThemeAutoIcon(props: IconProps) {
         cx={10}
         cy={10}
         r={7.755}
-        stroke={color || "var(--expo-color-theme-icon-default)"}
+        stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={1.157}
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M10 1.667a8.333 8.333 0 100 16.666V1.667z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
     </svg>
   );

@@ -23,7 +23,7 @@ export default function TriangleRightIcon(props: IconProps) {
       {title ? <title id={titleId}>{title}</title> : null}
       <path
         d="M6.667 3.227v13.766l6.883-6.883-6.883-6.883z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
     </svg>
   );

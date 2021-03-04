@@ -1,6 +1,6 @@
 const template = require('./icon-template');
 
-const defaultColor = '{color || "var(--expo-color-theme-icon-default)"}';
+const defaultColor = '{color || "var(--expo-theme-icon-default)"}';
 
 module.exports = {
   dimensions: false,

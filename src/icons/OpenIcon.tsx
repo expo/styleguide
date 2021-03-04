@@ -16,11 +16,11 @@ export default function OpenIcon(props: IconProps) {
       {title ? <title id={titleId}>{title}</title> : null}
       <path
         d="M6.28 4.524l8.78 8.78L17.692 1.89 6.28 4.524z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
       <path
         d="M10.67 8.913l-8.78 8.78"
-        stroke={color || "var(--expo-color-theme-icon-default)"}
+        stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={2.057}
         strokeLinecap="round"
       />

@@ -23,7 +23,7 @@ export default function ChevronDownIcon(props: IconProps) {
       {title ? <title id={titleId}>{title}</title> : null}
       <path
         d="M6 9l6 6 6-6"
-        stroke={color || "var(--expo-color-theme-icon-default)"}
+        stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -23,11 +23,11 @@ export default function DownloadIcon(props: IconProps) {
       {title ? <title id={titleId}>{title}</title> : null}
       <path
         d="M14.583 11H5.417L10 18.333 14.583 11z"
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
       <path
         d="M1.75 20.167h16.5M10 11V1.833"
-        stroke={color || "var(--expo-color-theme-icon-default)"}
+        stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={1.833}
         strokeLinecap="round"
       />

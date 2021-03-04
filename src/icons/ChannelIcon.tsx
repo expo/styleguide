@@ -20,7 +20,7 @@ export default function ChannelIcon(props: IconProps) {
         width={5.833}
         height={5.833}
         rx={0.833}
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
       <rect
         x={1.667}
@@ -28,7 +28,7 @@ export default function ChannelIcon(props: IconProps) {
         width={5.833}
         height={5.833}
         rx={0.833}
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
       <rect
         x={12.5}
@@ -36,11 +36,11 @@ export default function ChannelIcon(props: IconProps) {
         width={5.833}
         height={5.833}
         rx={0.833}
-        fill={color || "var(--expo-color-theme-icon-default)"}
+        fill={color || "var(--expo-theme-icon-default)"}
       />
       <path
         d="M10 4.693v3.224c0 .92-.747 1.666-1.667 1.666H6.25c-.92 0-1.667.746-1.667 1.667v2.48M10 4.693v3.224c0 .92.746 1.666 1.667 1.666h2.083c.92 0 1.667.746 1.667 1.667v2.962"
-        stroke={color || "var(--expo-color-theme-icon-default)"}
+        stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={0.833}
       />
     </svg>
