@@ -39,7 +39,12 @@ export function ThemeProvider(props: ThemeProviderProps) {
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    mediaQuery.addEventListener('change', onThemeChange);
+    try {
+      mediaQuery.addEventListener('change', onThemeChange);
+    } catch {
+      // Fallback to old-style listeing for changes, for Safari and IE
+      mediaQuery.addListener(onThemeChange);
+    }
 
     const themePreference = window.localStorage.getItem('data-expo-theme');
 
@@ -50,7 +55,12 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
 
     return function unMount() {
-      mediaQuery.removeEventListener('change', onThemeChange);
+      try {
+        mediaQuery.removeEventListener('change', onThemeChange);
+      } catch {
+        // Fallback to old-style listeing for changes, for Safari and IE
+        mediaQuery.removeListener(onThemeChange);
+      }
     };
   }, []);
 
