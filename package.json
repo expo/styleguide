@@ -7,7 +7,7 @@
   "scripts": {
     "commit": "cz",
     "release": "semantic-release",
-    "include-theme-css": "cp src/theme/expo-colors.css ./dist",
+    "include-theme-css": "cp src/theme/expo-theme.css ./dist",
     "rename-icons": "find ./src/svg -depth -type f \\( -name '*.svg' ! -name '*-icon.svg' \\) -exec sh -c 'mv \"$1\" \"${1%.svg}-icon.svg\"' _ {} \\;",
     "build:icons": "rm -rf ./src/icons && yarn rename-icons && svgr --out-dir ./src/icons ./src/svg",
     "build": "yarn build:icons && yarn tsc && yarn include-theme-css",

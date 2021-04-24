@@ -8,6 +8,7 @@ export const theme = {
     error: 'var(--expo-theme-background-error)',
     warning: 'var(--expo-theme-background-warning)',
     success: 'var(--expo-theme-background-success)',
+    overlay: 'var(--expo-theme-background-overlay)',
   },
   border: {
     default: 'var(--expo-theme-border-default)',
@@ -16,9 +17,27 @@ export const theme = {
     success: 'var(--expo-theme-border-success)',
   },
   button: {
-    primary: 'var(--expo-theme-button-primary)',
-    secondary: 'var(--expo-theme-button-secondary)',
-    tertiary: 'var(--expo-theme-button-tertiary)',
+    primary: {
+      background: 'var(--expo-theme-button-primary-background)',
+      foreground: 'var(--expo-theme-button-primary-foreground)',
+    },
+    secondary: {
+      background: 'var(--expo-theme-button-secondary-background)',
+      foreground: 'var(--expo-theme-button-secondary-foreground)',
+    },
+    tertiary: {
+      background: 'var(--expo-theme-button-tertiary-background)',
+      foreground: 'var(--expo-theme-button-tertiary-foreground)',
+    },
+    transparent: {
+      background: 'var(--expo-theme-button-transparent-background)',
+      foreground: 'var(--expo-theme-button-transparent-foreground)',
+    },
+    ghost: {
+      background: 'var(--expo-theme-button-ghost-background)',
+      foreground: 'var(--expo-theme-button-ghost-foreground)',
+      border: 'var(--expo-theme-button-ghost-border)',
+    },
   },
   link: { default: 'var(--expo-theme-link-default)' },
   status: {
@@ -35,7 +54,10 @@ export const theme = {
     warning: 'var(--expo-theme-text-warning)',
     success: 'var(--expo-theme-text-success)',
   },
-  icon: { default: 'var(--expo-theme-icon-default)' },
+  icon: {
+    default: 'var(--expo-theme-icon-default)',
+    secondary: 'var(--expo-theme-icon-secondary)',
+  },
   code: {
     keyword: 'var(--expo-theme-code-keyword)',
     builtin: 'var(--expo-theme-code-builtin)',
@@ -54,13 +76,12 @@ export const theme = {
 };
 
 export const shadows = {
-  popover: 'var(--expo-theme-shadows-popover)',
   small: 'var(--expo-theme-shadows-small)',
   medium: 'var(--expo-theme-shadows-medium)',
   large: 'var(--expo-theme-shadows-large)',
   input: 'var(--expo-theme-shadows-input)',
   button: 'var(--expo-theme-shadows-button)',
-  test: 'var(--expo-theme-shadows-small)',
+  popover: 'var(--expo-theme-shadows-popover)',
 };
 
 export const palette = {

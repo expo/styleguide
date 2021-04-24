@@ -1,7 +1,14 @@
 import React from "react";
 import { IconProps } from "../../types";
-export default function OpenIcon(props: IconProps) {
-  const { title = "Open-icon", size, color, width, height, titleId } = props;
+export default function OpenInternalIcon(props: IconProps) {
+  const {
+    title = "Open-internal-icon",
+    size,
+    color,
+    width,
+    height,
+    titleId,
+  } = props;
   return (
     <svg
       viewBox="0 0 20 20"

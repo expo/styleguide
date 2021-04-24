@@ -4,7 +4,7 @@
   --expo-color-base-light-gray-200: #f0f1f2;
   --expo-color-base-light-gray-300: #e1e4e8;
   --expo-color-base-light-gray-400: #d1d5da;
-  --expo-color-base-light-gray-500: #b7bbbf;
+  --expo-color-base-light-gray-500: #9b9fa3;
   --expo-color-base-light-gray-600: #6c737c;
   --expo-color-base-light-gray-700: #596068;
   --expo-color-base-light-gray-800: #464d55;
@@ -192,14 +192,30 @@
   --expo-theme-background-error: var(--expo-color-base-light-red-100);
   --expo-theme-background-warning: var(--expo-color-base-light-yellow-100);
   --expo-theme-background-success: var(--expo-color-base-light-green-100);
+  --expo-theme-background-overlay: var(--expo-color-base-light-white);
   --expo-theme-border-default: var(--expo-color-base-light-gray-300);
   --expo-theme-border-error: var(--expo-color-base-light-red-300);
   --expo-theme-border-warning: var(--expo-color-base-light-yellow-300);
   --expo-theme-border-success: var(--expo-color-base-light-green-300);
-  --expo-theme-button-primary: var(--expo-color-base-light-primary-500);
-  --expo-theme-button-secondary: var(--expo-color-base-light-gray-200);
-  --expo-theme-button-tertiary: var(--expo-color-base-light-black);
+  --expo-theme-button-primary-background: var(
+    --expo-color-base-light-primary-500
+  );
+  --expo-theme-button-primary-foreground: var(--expo-color-base-light-white);
+  --expo-theme-button-secondary-background: var(
+    --expo-color-base-light-gray-200
+  );
+  --expo-theme-button-secondary-foreground: var(--expo-color-base-light-black);
+  --expo-theme-button-tertiary-background: var(--expo-color-base-light-black);
+  --expo-theme-button-tertiary-foreground: var(--expo-color-base-light-white);
+  --expo-theme-button-transparent-background: transparent;
+  --expo-theme-button-transparent-foreground: var(
+    --expo-color-base-light-black
+  );
+  --expo-theme-button-ghost-background: transparent;
+  --expo-theme-button-ghost-foreground: var(--expo-color-base-light-gray-800);
+  --expo-theme-button-ghost-border: var(--expo-color-base-light-gray-400);
   --expo-theme-icon-default: var(--expo-color-base-light-gray-700);
+  --expo-theme-icon-secondary: var(--expo-color-base-light-gray-500);
   --expo-theme-link-default: var(--expo-color-base-light-primary-500);
   --expo-theme-status-default: var(--expo-color-base-light-gray-500);
   --expo-theme-status-error: var(--expo-color-base-light-red-500);
@@ -241,14 +257,30 @@
   --expo-theme-background-error: var(--expo-color-base-dark-red-000);
   --expo-theme-background-warning: var(--expo-color-base-dark-yellow-000);
   --expo-theme-background-success: var(--expo-color-base-dark-green-000);
+  --expo-theme-background-overlay: var(--expo-color-base-dark-gray-100);
   --expo-theme-border-default: var(--expo-color-base-dark-gray-400);
   --expo-theme-border-error: var(--expo-color-base-dark-red-200);
   --expo-theme-border-warning: var(--expo-color-base-dark-yellow-200);
   --expo-theme-border-success: var(--expo-color-base-dark-green-200);
-  --expo-theme-button-primary: var(--expo-color-base-dark-primary-500);
-  --expo-theme-button-secondary: var(--expo-color-base-dark-gray-300);
-  --expo-theme-button-tertiary: var(--expo-color-base-dark-gray-900);
+  --expo-theme-button-primary-background: var(
+    --expo-color-base-dark-primary-500
+  );
+  --expo-theme-button-primary-foreground: var(--expo-color-base-dark-white);
+  --expo-theme-button-secondary-background: var(
+    --expo-color-base-dark-gray-300
+  );
+  --expo-theme-button-secondary-foreground: var(--expo-color-base-dark-white);
+  --expo-theme-button-tertiary-foreground: var(--expo-color-base-dark-black);
+  --expo-theme-button-tertiary-background: var(--expo-color-base-dark-gray-900);
+  --expo-theme-button-transparent-background: transparent;
+  --expo-theme-button-transparent-foreground: var(
+    --expo-color-base-dark-gray-800
+  );
+  --expo-theme-button-ghost-background: transparent;
+  --expo-theme-button-ghost-foreground: var(--expo-color-base-dark-gray-800);
+  --expo-theme-button-ghost-border: var(--expo-color-base-dark-gray-400);
   --expo-theme-icon-default: var(--expo-color-base-dark-gray-800);
+  --expo-theme-icon-secondary: var(--expo-color-base-dark-gray-600);
   --expo-theme-link-default: var(--expo-color-base-dark-primary-700);
   --expo-theme-status-default: var(--expo-color-base-dark-gray-400);
   --expo-theme-status-error: var(--expo-color-base-dark-red-500);
