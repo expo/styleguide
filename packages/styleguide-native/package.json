@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-native",
-  "version": "0.0.1-alpha.8+94bfdec",
+  "version": "0.1.0",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
