@@ -1,0 +1,41 @@
+{
+  "name": "@expo/styleguide",
+  "version": "3.0.1-alpha.6+0134f67",
+  "description": "Foundational styles for Expo interfaces.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "include-theme-css": "copyfiles --flat ./src/styles/expo-theme.css ./dist",
+    "build:icons": "rimraf ./src/icons && svgr ../../common/svg --out-dir ./src/icons",
+    "build": "yarn build:icons && yarn clean && yarn tsc && yarn include-theme-css"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/expo/styleguide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/styleguide.git"
+  },
+  "keywords": [
+    "expo"
+  ],
+  "author": "Jon Samp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/expo/styleguide/issues"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^5.5.0",
+    "@types/node": "^15.3.1",
+    "@types/react": "^17.0.2",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "gitHead": "0134f67e00f7cba7c1e3dd2d43d81ebc516e04df"
+}
