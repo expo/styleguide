@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide",
-  "version": "3.1.0",
+  "version": "3.0.1-alpha.8+94bfdec",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
