@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-native",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.5+3758d3b",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,5 +32,6 @@
   "peerDependencies": {
     "react": "*",
     "react-native-svg": "*"
-  }
+  },
+  "gitHead": "3758d3b83d2186381ddf65e5cc4d4691a28bf8e3"
 }
