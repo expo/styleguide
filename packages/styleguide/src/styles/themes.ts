@@ -77,15 +77,15 @@ export const theme = {
 
 export const lightTheme = {
   background: {
-    default: 'var(--expo-color-base-light-white',
-    canvas: 'var(--expo-color-base-light-gray-000',
+    default: 'var(--expo-color-base-light-white)',
+    canvas: 'var(--expo-color-base-light-gray-000)',
     secondary: 'var(--expo-color-base-light-gray-100)',
     tertiary: 'var(--expo-color-base-light-gray-200)',
     quaternary: 'var(--expo-color-base-light-gray-300)',
     error: 'var(--expo-color-base-light-red-100)',
     warning: 'var(--expo-color-base-light-yellow-100)',
     success: 'var(--expo-color-base-light-green-100)',
-    overlay: 'var(--expo-color-base-light-white',
+    overlay: 'var(--expo-color-base-light-white)',
   },
   border: {
     default: 'var(--expo-color-base-light-gray-300)',
@@ -103,7 +103,7 @@ export const lightTheme = {
       foreground: 'var(--expo-color-base-light-black)',
     },
     tertiary: {
-      background: 'var(--expo-color-base-light-black',
+      background: 'var(--expo-color-base-light-black)',
       foreground: 'var(--expo-color-base-light-white)',
     },
     transparent: {
@@ -156,14 +156,14 @@ export const lightTheme = {
 
 export const darkTheme = {
   background: {
-    default: 'var(--expo-color-base-dark-gray-000',
+    default: 'var(--expo-color-base-dark-gray-000)',
     canvas: 'var(--expo-color-base-dark-gray-100)',
     secondary: 'var(--expo-color-base-dark-gray-200)',
     tertiary: 'var(--expo-color-base-dark-gray-300)',
     quaternary: 'var(--expo-color-base-dark-gray-400)',
-    error: 'var(--expo-color-base-dark-red-000',
-    warning: 'var(--expo-color-base-dark-yellow-000',
-    success: 'var(--expo-color-base-dark-green-000',
+    error: 'var(--expo-color-base-dark-red-000)',
+    warning: 'var(--expo-color-base-dark-yellow-000)',
+    success: 'var(--expo-color-base-dark-green-000)',
     overlay: 'var(--expo-color-base-dark-gray-100)',
   },
   border: {
@@ -175,15 +175,15 @@ export const darkTheme = {
   button: {
     primary: {
       background: 'var(--expo-color-base-dark-primary-500)',
-      foreground: 'var(--expo-color-base-dark-white',
+      foreground: 'var(--expo-color-base-dark-white)',
     },
     secondary: {
       background: 'var(--expo-color-base-dark-gray-300)',
-      foreground: 'var(--expo-color-base-dark-white',
+      foreground: 'var(--expo-color-base-dark-white)',
     },
     tertiary: {
       background: 'var(--expo-color-base-dark-gray-900)',
-      foreground: 'var(--expo-color-base-dark-black',
+      foreground: 'var(--expo-color-base-dark-black)',
     },
     transparent: {
       background: 'transparent',
