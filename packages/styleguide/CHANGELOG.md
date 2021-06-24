@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://github.com/expo/styleguide/compare/@expo/styleguide@3.2.1...@expo/styleguide@3.2.2) (2021-06-24)
+
+
+### Bug Fixes
+
+* proper shadows css variable syntax ([4f09c52](https://github.com/expo/styleguide/commit/4f09c52ae11dc09782d1b56ac6ba62c888c75ffa))
+
+
+### Features
+
+* adds commit, build profile icons ([dc2f7f2](https://github.com/expo/styleguide/commit/dc2f7f2a40da0510b61a482bd8049ebebb30435e))
+
+
+
+
+
 ## [3.2.1](https://github.com/expo/styleguide/compare/@expo/styleguide@3.2.0...@expo/styleguide@3.2.1) (2021-06-24)
 
 

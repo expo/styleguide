@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.2.0...@expo/styleguide-native@0.2.1) (2021-06-24)
+
+
+### Features
+
+* adds commit, build profile icons ([dc2f7f2](https://github.com/expo/styleguide/commit/dc2f7f2a40da0510b61a482bd8049ebebb30435e))
+
+
+
+
+
 # [0.2.0](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.1.2...@expo/styleguide-native@0.2.0) (2021-06-15)
 
 
