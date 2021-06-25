@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.4](https://github.com/expo/styleguide/compare/@expo/styleguide@3.2.3...@expo/styleguide@3.2.4) (2021-06-25)
+
+
+### Bug Fixes
+
+* update channel icon ([011a711](https://github.com/expo/styleguide/commit/011a711a2013a6b4d63b9d76f4972c129291d527))
+
+
+
+
+
 ## [3.2.3](https://github.com/expo/styleguide/compare/@expo/styleguide@3.2.2...@expo/styleguide@3.2.3) (2021-06-25)
 
 **Note:** Version bump only for package @expo/styleguide

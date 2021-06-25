@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.2.2...@expo/styleguide-native@0.2.3) (2021-06-25)
+
+
+### Bug Fixes
+
+* update channel icon ([011a711](https://github.com/expo/styleguide/commit/011a711a2013a6b4d63b9d76f4972c129291d527))
+
+
+
+
+
 ## [0.2.2](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.2.1...@expo/styleguide-native@0.2.2) (2021-06-25)
 
 **Note:** Version bump only for package @expo/styleguide-native
