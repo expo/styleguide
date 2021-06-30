@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/expo/styleguide/compare/@expo/styleguide@3.2.4...@expo/styleguide@3.3.0) (2021-06-30)
+
+
+### Features
+
+* **spacing, iconSize:** Add spacing, add more icon sizes ([e900b83](https://github.com/expo/styleguide/commit/e900b83508f2693d8690957e4e293681c4769578))
+
+
+
+
+
 ## [3.2.4](https://github.com/expo/styleguide/compare/@expo/styleguide@3.2.3...@expo/styleguide@3.2.4) (2021-06-25)
 
 
