@@ -5,6 +5,7 @@ import { borderRadius, iconSize } from './src/styles/sizing';
 import { theme, lightTheme, darkTheme } from './src/styles/themes';
 import { BlockingSetInitialColorMode } from './src/components/BlockingSetInitialColorMode';
 import { ThemeProvider, useTheme } from './src/components/ThemeProvider';
+import { spacing } from './src/styles/spacing';
 
 export * from './src/icons';
 export {
@@ -16,6 +17,7 @@ export {
   lightTheme,
   palette,
   shadows,
+  spacing,
   theme,
   ThemeProvider,
   useTheme,
