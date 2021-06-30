@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.3.0...@expo/styleguide-native@0.3.1) (2021-06-30)
+
+
+### Features
+
+* **icon:** adds sparkles icon ([00dbf9e](https://github.com/expo/styleguide/commit/00dbf9e28043eda14d3df5d532f6291d65dc603f))
+
+
+
+
+
 # [0.3.0](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.2.3...@expo/styleguide-native@0.3.0) (2021-06-30)
 
 
