@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.3.2...@expo/styleguide-native@0.4.0) (2021-07-09)
+
+
+### Features
+
+* **icons:** adds side navigation icons ([53324c5](https://github.com/expo/styleguide/commit/53324c544e7a0ee3e2b101230fae7ac2c99ffcc5))
+
+
+
+
+
 ## [0.3.2](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.3.1...@expo/styleguide-native@0.3.2) (2021-07-07)
 
 
