@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.4.0...@expo/styleguide-native@0.4.1) (2021-12-09)
+
+
+### Features
+
+* **icons:** add at icon and project transfer icon ([#13](https://github.com/expo/styleguide/issues/13)) ([57fc403](https://github.com/expo/styleguide/commit/57fc403d39dc37329b6dfca48d49e85080f2fa2a))
+
+
+
+
+
 # [0.4.0](https://github.com/expo/styleguide/compare/@expo/styleguide-native@0.3.2...@expo/styleguide-native@0.4.0) (2021-07-09)
 
 
