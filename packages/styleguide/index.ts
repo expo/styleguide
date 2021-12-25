@@ -6,11 +6,13 @@ import { theme, lightTheme, darkTheme } from './src/styles/themes';
 import { BlockingSetInitialColorMode } from './src/components/BlockingSetInitialColorMode';
 import { ThemeProvider, useTheme } from './src/components/ThemeProvider';
 import { spacing } from './src/styles/spacing';
+import { breakpoints } from './src/styles/breakpoints';
 
 export * from './src/icons';
 export {
   borderRadius,
   BlockingSetInitialColorMode,
+  breakpoints,
   colors,
   darkTheme,
   iconSize,
