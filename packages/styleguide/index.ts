@@ -7,6 +7,7 @@ import { BlockingSetInitialColorMode } from './src/components/BlockingSetInitial
 import { ThemeProvider, useTheme } from './src/components/ThemeProvider';
 import { spacing } from './src/styles/spacing';
 import { breakpoints } from './src/styles/breakpoints';
+import { typography } from './src/styles/typography';
 
 export * from './src/icons';
 export {
@@ -22,5 +23,6 @@ export {
   spacing,
   theme,
   ThemeProvider,
+  typography,
   useTheme,
 };
