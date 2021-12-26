@@ -28,7 +28,7 @@ export default function ProjectTransferIcon(props: IconProps) {
       />
       <path
         d="M12.389 13V9.665c-2.894 0-4.93 1.188-5.93 2.085-.174.157-.475.028-.458-.21.35-4.948 4.345-6.273 6.388-6.305V2L19 7.5 12.389 13z"
-        fill="#596068"
+        fill={color || "var(--expo-theme-icon-default)"}
       />
     </svg>
   );
