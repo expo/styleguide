@@ -198,17 +198,19 @@ const headers = {
   },
 };
 
+const baseStyle = {
+  fontFamily: fontStacks.regular,
+  fontWeight: 400,
+  ...fontSizes[16],
+};
+
 const body = {
   headline: {
     fontFamily: fontStacks.medium,
     fontWeight: 400,
     ...fontSizes[16],
   },
-  paragraph: {
-    fontFamily: fontStacks.regular,
-    fontWeight: 400,
-    ...fontSizes[16],
-  },
+  paragraph: baseStyle,
   label: {
     fontFamily: fontStacks.medium,
     fontWeight: 400,
@@ -234,6 +236,32 @@ const body = {
     fontWeight: 400,
     ...fontSizes[13],
   },
+  ul: {
+    marginLeft: rem(1.5),
+
+    'ol, ul': {
+      marginTop: rem(0.5),
+      marginBottom: rem(1),
+    },
+  },
+  ol: {
+    marginLeft: rem(1.5),
+
+    'ol, ul': {
+      marginTop: rem(0.5),
+      marginBottom: rem(1),
+    },
+  },
+  li: {
+    ...baseStyle,
+    marginBottom: rem(0.5),
+  },
+  blockquote: {
+    ...baseStyle,
+    color: theme.text.secondary,
+    paddingLeft: spacing[4],
+    borderLeft: `${spacing[1]}px solid ${theme.border.default}`,
+  },
 };
 
 const utility = {
@@ -243,20 +271,18 @@ const utility = {
     textDecoration: 'none',
     cursor: 'pointer',
     opacity: 1,
+
     // transform prevents a 1px shift on hover on Safari
     transform: 'translate3d(0,0,0)',
+
     ':visited': {
       color: theme.link.default,
     },
+
     ':hover': {
       transition: '200ms',
       opacity: 0.8,
     },
-  },
-  li: {
-    ...fontSizes[16],
-    fontWeight: 400,
-    marginBottom: rem(0.5),
   },
   inlineCode: {
     ...body.code,
@@ -286,7 +312,7 @@ const utility = {
     borderRadius: borderRadius.medium,
     border: `1px solid ${theme.border.default}`,
     padding: spacing[4],
-    whiteSpace: 'pre-wrap',
+    whiteSpace: 'pre-wrap' as 'pre-wrap',
     margin: `${spacing[4]}px 0`,
   },
   terminalPre: {
@@ -298,7 +324,8 @@ const utility = {
     border: `1px solid ${darkTheme.border.default}`,
     padding: spacing[4],
     margin: `${spacing[4]}px 0`,
-    whiteSpace: 'pre-wrap',
+    whiteSpace: 'pre-wrap' as 'pre-wrap',
+
     '&:before': {
       content: '"➜ "',
     },
@@ -310,12 +337,23 @@ const utility = {
     display: 'block',
     width: '100%',
   },
-  blockquote: {
-    ...fontSizes[16],
-    fontWeight: 400,
-    color: theme.text.secondary,
-    paddingLeft: spacing[4],
-    borderLeft: `${spacing[1]}px solid ${theme.border.default}`,
+  weight: {
+    black: {
+      fontFamily: fontStacks.black,
+      fontWeight: 900,
+    },
+    semiBold: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+    },
+    medium: {
+      fontFamily: fontStacks.medium,
+      fontWeight: 500,
+    },
+    regular: {
+      fontFamily: fontStacks.regular,
+      fontWeight: 400,
+    },
   },
 };
 
