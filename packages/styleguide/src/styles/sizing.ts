@@ -1,8 +1,8 @@
 export const borderRadius = {
   huge: 16,
-  large: 8,
-  medium: 4,
-  small: 2,
+  large: 10,
+  medium: 6,
+  small: 4,
 };
 
 export const iconSize = {
