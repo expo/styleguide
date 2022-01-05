@@ -4,6 +4,7 @@ export const lightTheme = {
   background: {
     default: palette.light.white,
     canvas: palette.light.gray['000'],
+    screen: palette.light.gray[100],
     secondary: palette.light.gray[100],
     tertiary: palette.light.gray[200],
     quaternary: palette.light.gray[300],
@@ -77,12 +78,22 @@ export const lightTheme = {
     accent: palette.light.primary[300],
     emphasis: palette.light.yellow[300],
   },
+  project: {
+    blue: '#6299d9',
+    green: '#54a767',
+    yellow: '#e5c145',
+    orange: '#d9864c',
+    red: '#d95757',
+    pink: '#d977b2',
+    purple: '#8a66cc',
+  },
 };
 
 export const darkTheme = {
   background: {
     default: palette.dark.gray['000'],
     canvas: palette.dark.gray[100],
+    screen: palette.dark.gray['000'],
     secondary: palette.dark.gray[200],
     tertiary: palette.dark.gray[300],
     quaternary: palette.dark.gray[400],
@@ -155,5 +166,14 @@ export const darkTheme = {
   highlight: {
     accent: palette.dark.primary[700],
     emphasis: palette.dark.yellow[300],
+  },
+  project: {
+    blue: '#395a80',
+    green: '#32633d',
+    yellow: '#8a6319',
+    orange: '#8c5731',
+    red: '#8c3838',
+    pink: '#8a4c71',
+    purple: '#4e3973',
   },
 };
