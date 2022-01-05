@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { SvgProps, Path } from "react-native-svg";
 import { IconProps } from "../../types";
-export default function BuildIcon(props: SvgProps & IconProps) {
+export default function DeploymentIcon(props: SvgProps & IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg
@@ -12,9 +12,8 @@ export default function BuildIcon(props: SvgProps & IconProps) {
       {...props}
     >
       <Path
-        d="M10 18.943V9.098m0 9.845L1.964 14.92V5.08M10 18.943l8.037-4.022V5.08M10 9.098L1.964 5.08M10 9.098l8.037-4.018m-16.073 0L10 1.057l8.037 4.023"
-        stroke={color || "#000"}
-        strokeWidth={1.85}
+        d="M2 2a2 2 0 00-2 2v12a2 2 0 002 2h7V9.747l-2.96 2.96a1 1 0 11-1.414-1.414l4.667-4.667a.996.996 0 01.71-.293c.28.001.534.117.715.304l4.656 4.656a1 1 0 01-1.415 1.414L11 9.747V18h7a2 2 0 002-2V4a2 2 0 00-2-2H2z"
+        fill={color || "#000"}
       />
     </Svg>
   );
