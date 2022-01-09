@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/expo/styleguide/compare/@expo/styleguide@3.5.0...@expo/styleguide@3.5.1) (2022-01-09)
+
+**Note:** Version bump only for package @expo/styleguide
+
+
+
+
+
 # [3.5.0](https://github.com/expo/styleguide/compare/@expo/styleguide@3.4.2-alpha.3...@expo/styleguide@3.5.0) (2022-01-05)
 
 **Note:** Version bump only for package @expo/styleguide
