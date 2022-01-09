@@ -237,24 +237,24 @@ const body = {
     ...fontSizes[13],
   },
   ul: {
-    marginLeft: rem(1.5),
+    marginLeft: '1.5rem',
 
     'ol, ul': {
-      marginTop: rem(0.5),
-      marginBottom: rem(1),
+      marginTop: '0.5rem',
+      marginBottom: '1rem',
     },
   },
   ol: {
-    marginLeft: rem(1.5),
+    marginLeft: '1.5rem',
 
     'ol, ul': {
-      marginTop: rem(0.5),
-      marginBottom: rem(1),
+      marginTop: '0.5rem',
+      marginBottom: '1rem',
     },
   },
   li: {
     ...baseStyle,
-    marginBottom: rem(0.5),
+    marginBottom: '0.5rem',
   },
   blockquote: {
     ...baseStyle,
