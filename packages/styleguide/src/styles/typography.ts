@@ -149,52 +149,99 @@ const fontSizes = {
 };
 
 const headers = {
-  huge: {
-    fontFamily: fontStacks.black,
-    fontWeight: 900,
-    ...fontSizes[61],
-    [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[53],
-    [`@media (max-width: ${breakpoints.small}px`]: fontSizes[46],
+  xl: {
+    huge: {
+      fontFamily: fontStacks.black,
+      fontWeight: 900,
+      ...fontSizes[61],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[53],
+      [`@media (max-width: ${breakpoints.small}px`]: fontSizes[46],
+    },
+    h1: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[49],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[43],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[37],
+    },
+    h2: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[39],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[34],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[29],
+    },
+    h3: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[31],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[27],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[23],
+    },
+    h4: {
+      fontFamily: fontStacks.medium,
+      fontWeight: 500,
+      ...fontSizes[25],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[22],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[19],
+    },
+    h5: {
+      fontFamily: fontStacks.medium,
+      fontWeight: 500,
+      ...fontSizes[20],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[18],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[16],
+    },
+    h6: {
+      fontFamily: fontStacks.medium,
+      fontWeight: 500,
+      ...fontSizes[16],
+    },
   },
-  h1: {
-    fontFamily: fontStacks.semiBold,
-    fontWeight: 500,
-    ...fontSizes[49],
-    [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[43],
-    [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[37],
-  },
-  h2: {
-    fontFamily: fontStacks.semiBold,
-    fontWeight: 500,
-    ...fontSizes[39],
-    [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[34],
-    [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[29],
-  },
-  h3: {
-    fontFamily: fontStacks.semiBold,
-    fontWeight: 500,
-    ...fontSizes[31],
-    [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[27],
-    [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[23],
-  },
-  h4: {
-    fontFamily: fontStacks.medium,
-    fontWeight: 500,
-    ...fontSizes[25],
-    [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[22],
-    [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[19],
-  },
-  h5: {
-    fontFamily: fontStacks.medium,
-    fontWeight: 500,
-    ...fontSizes[20],
-    [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[18],
-    [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[16],
-  },
-  h6: {
-    fontFamily: fontStacks.medium,
-    fontWeight: 500,
-    ...fontSizes[16],
+  default: {
+    huge: {
+      fontFamily: fontStacks.black,
+      fontWeight: 500,
+      ...fontSizes[39],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[34],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[29],
+    },
+    h1: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[31],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[27],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[23],
+    },
+    h2: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[25],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[22],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[19],
+    },
+    h3: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[20],
+      [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[18],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[16],
+    },
+    h4: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[16],
+    },
+    h5: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[13],
+    },
+    h6: {
+      fontFamily: fontStacks.semiBold,
+      fontWeight: 500,
+      ...fontSizes[12],
+    },
   },
 };
 
