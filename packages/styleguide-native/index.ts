@@ -4,6 +4,7 @@ import { lightTheme, darkTheme } from './src/styles/themes';
 import { iconSize, borderRadius } from './src/styles/sizing';
 import { spacing } from './src/styles/spacing';
 import { breakpoints } from './src/styles/breakpoints';
+import { typography } from './src/styles/typography';
 
 export * from './src/icons';
 export {
@@ -15,4 +16,5 @@ export {
   palette,
   shadows,
   spacing,
+  typography,
 };

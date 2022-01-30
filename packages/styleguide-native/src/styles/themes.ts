@@ -3,7 +3,6 @@ import { palette } from './palette';
 export const lightTheme = {
   background: {
     default: palette.light.white,
-    canvas: palette.light.gray['000'],
     screen: palette.light.gray[100],
     secondary: palette.light.gray[100],
     tertiary: palette.light.gray[200],
@@ -92,7 +91,6 @@ export const lightTheme = {
 export const darkTheme = {
   background: {
     default: palette.dark.gray['000'],
-    canvas: palette.dark.gray[100],
     screen: palette.dark.gray['000'],
     secondary: palette.dark.gray[200],
     tertiary: palette.dark.gray[300],

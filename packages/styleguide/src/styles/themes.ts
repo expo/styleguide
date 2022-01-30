@@ -2,7 +2,6 @@ export const theme = {
   background: {
     default: 'var(--expo-theme-background-default)',
     screen: 'var(--expo-theme-background-screen)',
-    canvas: 'var(--expo-theme-background-canvas)',
     secondary: 'var(--expo-theme-background-secondary)',
     tertiary: 'var(--expo-theme-background-tertiary)',
     quaternary: 'var(--expo-theme-background-quaternary)',
@@ -201,7 +200,6 @@ export const theme = {
 export const lightTheme = {
   background: {
     default: 'var(--expo-color-base-light-white)',
-    canvas: 'var(--expo-color-base-light-gray-000)',
     secondary: 'var(--expo-color-base-light-gray-100)',
     tertiary: 'var(--expo-color-base-light-gray-200)',
     quaternary: 'var(--expo-color-base-light-gray-300)',
@@ -280,7 +278,6 @@ export const lightTheme = {
 export const darkTheme = {
   background: {
     default: 'var(--expo-color-base-dark-gray-000)',
-    canvas: 'var(--expo-color-base-dark-gray-100)',
     secondary: 'var(--expo-color-base-dark-gray-200)',
     tertiary: 'var(--expo-color-base-dark-gray-300)',
     quaternary: 'var(--expo-color-base-dark-gray-400)',
