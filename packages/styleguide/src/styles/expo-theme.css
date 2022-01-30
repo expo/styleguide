@@ -284,7 +284,6 @@
   --expo-theme-palette-white: #ffffff;
   --expo-theme-palette-black: #1b1f23;
   --expo-theme-background-default: var(--expo-color-base-light-white);
-  --expo-theme-background-canvas: var(--expo-color-base-light-gray-000);
   --expo-theme-background-screen: var(--expo-color-base-light-gray-100);
   --expo-theme-background-secondary: var(--expo-color-base-light-gray-100);
   --expo-theme-background-tertiary: var(--expo-color-base-light-gray-200);
@@ -457,7 +456,6 @@
   --expo-theme-palette-white: #ffffff;
   --expo-theme-palette-black: #0d1117;
   --expo-theme-background-default: var(--expo-color-base-dark-gray-100);
-  --expo-theme-background-canvas: var(--expo-color-base-dark-gray-100);
   --expo-theme-background-screen: var(--expo-color-base-dark-gray-000);
   --expo-theme-background-secondary: var(--expo-color-base-dark-gray-200);
   --expo-theme-background-tertiary: var(--expo-color-base-dark-gray-300);
