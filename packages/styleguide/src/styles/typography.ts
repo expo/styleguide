@@ -155,7 +155,7 @@ const headers = {
       fontWeight: 900,
       ...fontSizes[61],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[53],
-      [`@media (max-width: ${breakpoints.small}px`]: fontSizes[46],
+      [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[46],
     },
     h1: {
       fontFamily: fontStacks.semiBold,
