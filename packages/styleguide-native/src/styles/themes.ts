@@ -90,7 +90,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   background: {
-    default: palette.dark.gray['000'],
+    default: palette.dark.gray['100'],
     screen: palette.dark.gray['000'],
     secondary: palette.dark.gray[200],
     tertiary: palette.dark.gray[300],
