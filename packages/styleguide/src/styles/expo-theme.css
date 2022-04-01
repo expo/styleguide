@@ -1,15 +1,15 @@
 :root {
   /* Light palette */
   --expo-color-base-light-gray-000: #fdfdfe;
-  --expo-color-base-light-gray-100: #f8f8fa;
+  --expo-color-base-light-gray-100: #f8f9fa;
   --expo-color-base-light-gray-200: #f0f1f2;
   --expo-color-base-light-gray-300: #e1e4e8;
   --expo-color-base-light-gray-400: #d1d5da;
-  --expo-color-base-light-gray-500: #9b9fa3;
+  --expo-color-base-light-gray-500: #9b9ea3;
   --expo-color-base-light-gray-600: #6c737c;
-  --expo-color-base-light-gray-700: #596068;
-  --expo-color-base-light-gray-800: #464d55;
-  --expo-color-base-light-gray-900: #30363c;
+  --expo-color-base-light-gray-700: #595f68;
+  --expo-color-base-light-gray-800: #464c55;
+  --expo-color-base-light-gray-900: #30353c;
   --expo-color-base-light-gray-1000: #25292e;
   --expo-color-base-light-primary-000: #f9f7ff;
   --expo-color-base-light-primary-100: #ede9ff;
@@ -95,17 +95,17 @@
   --expo-color-base-light-black: #1b1f23;
 
   /* Dark palette */
-  --expo-color-base-dark-gray-000: #0d1117;
-  --expo-color-base-dark-gray-100: #161b22;
-  --expo-color-base-dark-gray-200: #21262d;
-  --expo-color-base-dark-gray-300: #30363d;
-  --expo-color-base-dark-gray-400: #484f58;
-  --expo-color-base-dark-gray-500: #6e7681;
-  --expo-color-base-dark-gray-600: #8b949e;
-  --expo-color-base-dark-gray-700: #b1bac4;
-  --expo-color-base-dark-gray-800: #c9d1d9;
-  --expo-color-base-dark-gray-900: #f0f6fc;
-  --expo-color-base-dark-gray-1000: #fdfdfe;
+  --expo-color-base-dark-gray-000: #0b0f13;
+  --expo-color-base-dark-gray-100: #14191f;
+  --expo-color-base-dark-gray-200: #1c2026;
+  --expo-color-base-dark-gray-300: #262a31;
+  --expo-color-base-dark-gray-400: #32373e;
+  --expo-color-base-dark-gray-500: #49505a;
+  --expo-color-base-dark-gray-600: #737b87;
+  --expo-color-base-dark-gray-700: #9ba4b0;
+  --expo-color-base-dark-gray-800: #bcc3cd;
+  --expo-color-base-dark-gray-900: #e0e4eb;
+  --expo-color-base-dark-gray-1000: #f0f2f5;
   --expo-color-base-dark-primary-000: #1b183d;
   --expo-color-base-dark-primary-100: #201d52;
   --expo-color-base-dark-primary-200: #2a2375;
@@ -191,15 +191,15 @@
 
   /* Light theme */
   --expo-theme-palette-gray-000: #fdfdfe;
-  --expo-theme-palette-gray-100: #f8f8fa;
+  --expo-theme-palette-gray-100: #f8f9fa;
   --expo-theme-palette-gray-200: #f0f1f2;
   --expo-theme-palette-gray-300: #e1e4e8;
   --expo-theme-palette-gray-400: #d1d5da;
-  --expo-theme-palette-gray-500: #9b9fa3;
+  --expo-theme-palette-gray-500: #9b9ea3;
   --expo-theme-palette-gray-600: #6c737c;
-  --expo-theme-palette-gray-700: #596068;
-  --expo-theme-palette-gray-800: #464d55;
-  --expo-theme-palette-gray-900: #30363c;
+  --expo-theme-palette-gray-700: #595f68;
+  --expo-theme-palette-gray-800: #464c55;
+  --expo-theme-palette-gray-900: #30353c;
   --expo-theme-palette-gray-1000: #25292e;
   --expo-theme-palette-primary-000: #f9f7ff;
   --expo-theme-palette-primary-100: #ede9ff;
@@ -303,12 +303,18 @@
   --expo-theme-button-secondary-background: var(
     --expo-color-base-light-gray-200
   );
-  --expo-theme-button-secondary-foreground: var(--expo-color-base-light-black);
-  --expo-theme-button-tertiary-background: var(--expo-color-base-light-black);
-  --expo-theme-button-tertiary-foreground: var(--expo-color-base-light-white);
+  --expo-theme-button-secondary-foreground: var(
+    --expo-color-base-light-gray-1000
+  );
+  --expo-theme-button-tertiary-background: var(
+    --expo-color-base-light-gray-1000
+  );
+  --expo-theme-button-tertiary-foreground: var(
+    --expo-color-base-light-gray-000
+  );
   --expo-theme-button-transparent-background: transparent;
   --expo-theme-button-transparent-foreground: var(
-    --expo-color-base-light-black
+    --expo-color-base-light-gray-1000
   );
   --expo-theme-button-ghost-background: transparent;
   --expo-theme-button-ghost-foreground: var(--expo-color-base-light-gray-800);
@@ -321,7 +327,7 @@
   --expo-theme-status-warning: var(--expo-color-base-light-yellow-500);
   --expo-theme-status-success: var(--expo-color-base-light-green-500);
   --expo-theme-status-info: var(--expo-color-base-light-blue-500);
-  --expo-theme-text-default: var(--expo-color-base-light-black);
+  --expo-theme-text-default: var(--expo-color-base-light-gray-1000);
   --expo-theme-text-secondary: var(--expo-color-base-light-gray-700);
   --expo-theme-text-error: var(--expo-color-base-light-red-600);
   --expo-theme-text-warning: var(--expo-color-base-light-yellow-900);
@@ -362,17 +368,17 @@
 
 [data-expo-theme='dark'] {
   /* Dark theme */
-  --expo-theme-palette-gray-000: #0d1117;
-  --expo-theme-palette-gray-100: #161b22;
-  --expo-theme-palette-gray-200: #21262d;
-  --expo-theme-palette-gray-300: #30363d;
-  --expo-theme-palette-gray-400: #484f58;
-  --expo-theme-palette-gray-500: #6e7681;
-  --expo-theme-palette-gray-600: #8b949e;
-  --expo-theme-palette-gray-700: #b1bac4;
-  --expo-theme-palette-gray-800: #c9d1d9;
-  --expo-theme-palette-gray-900: #f0f6fc;
-  --expo-theme-palette-gray-1000: #fdfdfe;
+  --expo-theme-palette-gray-000: #0b0f13;
+  --expo-theme-palette-gray-100: #14191f;
+  --expo-theme-palette-gray-200: #1c2026;
+  --expo-theme-palette-gray-300: #262a31;
+  --expo-theme-palette-gray-400: #32373e;
+  --expo-theme-palette-gray-500: #49505a;
+  --expo-theme-palette-gray-600: #737b87;
+  --expo-theme-palette-gray-700: #9ba4b0;
+  --expo-theme-palette-gray-800: #bcc3cd;
+  --expo-theme-palette-gray-900: #e0e4eb;
+  --expo-theme-palette-gray-1000: #f0f2f5;
   --expo-theme-palette-primary-000: #1b183d;
   --expo-theme-palette-primary-100: #201d52;
   --expo-theme-palette-primary-200: #2a2375;
@@ -454,7 +460,7 @@
   --expo-theme-palette-purple-800: #e2c5ff;
   --expo-theme-palette-purple-900: #e9d6ff;
   --expo-theme-palette-white: #ffffff;
-  --expo-theme-palette-black: #0d1117;
+  --expo-theme-palette-black: var(--expo-color-base-dark-gray-000);
   --expo-theme-background-default: var(--expo-color-base-dark-gray-100);
   --expo-theme-background-screen: var(--expo-color-base-dark-gray-000);
   --expo-theme-background-secondary: var(--expo-color-base-dark-gray-200);
@@ -463,7 +469,7 @@
   --expo-theme-background-error: var(--expo-color-base-dark-red-000);
   --expo-theme-background-warning: var(--expo-color-base-dark-yellow-000);
   --expo-theme-background-success: var(--expo-color-base-dark-green-000);
-  --expo-theme-background-overlay: var(--expo-color-base-dark-gray-100);
+  --expo-theme-background-overlay: var(--expo-color-base-dark-gray-200);
   --expo-theme-border-default: var(--expo-color-base-dark-gray-400);
   --expo-theme-border-error: var(--expo-color-base-dark-red-200);
   --expo-theme-border-warning: var(--expo-color-base-dark-yellow-300);
@@ -475,9 +481,13 @@
   --expo-theme-button-secondary-background: var(
     --expo-color-base-dark-gray-300
   );
-  --expo-theme-button-secondary-foreground: var(--expo-color-base-dark-white);
-  --expo-theme-button-tertiary-foreground: var(--expo-color-base-dark-black);
-  --expo-theme-button-tertiary-background: var(--expo-color-base-dark-gray-900);
+  --expo-theme-button-secondary-foreground: var(
+    --expo-color-base-dark-gray-800
+  );
+  --expo-theme-button-tertiary-foreground: var(
+    --expo-color-base-dark-gray-1000
+  );
+  --expo-theme-button-tertiary-background: var(--expo-color-base-dark-gray-500);
   --expo-theme-button-transparent-background: transparent;
   --expo-theme-button-transparent-foreground: var(
     --expo-color-base-dark-gray-800
@@ -485,7 +495,7 @@
   --expo-theme-button-ghost-background: transparent;
   --expo-theme-button-ghost-foreground: var(--expo-color-base-dark-gray-800);
   --expo-theme-button-ghost-border: var(--expo-color-base-dark-gray-400);
-  --expo-theme-icon-default: var(--expo-color-base-dark-gray-800);
+  --expo-theme-icon-default: var(--expo-color-base-dark-gray-700);
   --expo-theme-icon-secondary: var(--expo-color-base-dark-gray-600);
   --expo-theme-link-default: var(--expo-color-base-dark-primary-700);
   --expo-theme-status-default: var(--expo-color-base-dark-gray-400);
@@ -494,7 +504,7 @@
   --expo-theme-status-success: var(--expo-color-base-dark-green-500);
   --expo-theme-status-info: var(--expo-color-base-dark-blue-500);
   --expo-theme-text-default: var(--expo-color-base-dark-gray-800);
-  --expo-theme-text-secondary: var(--expo-color-base-dark-gray-600);
+  --expo-theme-text-secondary: var(--expo-color-base-dark-gray-700);
   --expo-theme-text-error: var(--expo-color-base-dark-red-600);
   --expo-theme-text-warning: var(--expo-color-base-dark-yellow-900);
   --expo-theme-text-success: var(--expo-color-base-dark-green-700);
@@ -518,13 +528,13 @@
   --expo-theme-project-purple: linear-gradient(#715c99, #4e3973);
 
   /* Dark shadows */
-  --expo-theme-shadows-micro: 0 1px 3px rgba(0, 0, 0, 0.5),
-    0 1px 2px rgba(0, 0, 0, 0.4);
-  --expo-theme-shadows-tiny: 0 3px 6px rgba(0, 0, 0, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.5);
-  --expo-theme-shadows-small: 0 10px 20px rgba(0, 0, 0, 0.9),
-    0 3px 6px rgba(0, 0, 0, 0.6);
-  --expo-theme-shadows-medium: 0 15px 25px rgba(0, 0, 0, 0.95),
-    0 5px 10px rgba(0, 0, 0, 0.5);
-  --expo-theme-shadows-large: 0 20px 40px rgba(0, 0, 0, 1);
+  --expo-theme-shadows-micro: 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+  --expo-theme-shadows-tiny: 0 3px 6px rgba(0, 0, 0, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.25);
+  --expo-theme-shadows-small: 0 10px 20px rgba(0, 0, 0, 0.25),
+    0 3px 6px rgba(0, 0, 0, 0.25);
+  --expo-theme-shadows-medium: 0 15px 25px rgba(0, 0, 0, 0.5),
+    0 5px 10px rgba(0, 0, 0, 0.25);
+  --expo-theme-shadows-large: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
