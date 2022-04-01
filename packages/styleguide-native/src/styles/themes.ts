@@ -25,15 +25,15 @@ export const lightTheme = {
     },
     secondary: {
       background: palette.light.gray[200],
-      foreground: palette.light.black,
+      foreground: palette.light.gray[1000],
     },
     tertiary: {
-      background: palette.light.black,
-      foreground: palette.light.white,
+      background: palette.light.gray[1000],
+      foreground: palette.light.gray['000'],
     },
     transparent: {
       background: 'transparent',
-      foreground: palette.light.black,
+      foreground: palette.light.gray[1000],
     },
     ghost: {
       background: 'transparent',
@@ -98,7 +98,7 @@ export const darkTheme = {
     error: palette.dark.red['000'],
     warning: palette.dark.yellow['000'],
     success: palette.dark.green['000'],
-    overlay: palette.dark.gray[100],
+    overlay: palette.dark.gray[200],
   },
   border: {
     default: palette.dark.gray[400],
@@ -113,11 +113,11 @@ export const darkTheme = {
     },
     secondary: {
       background: palette.dark.gray[300],
-      foreground: palette.dark.white,
+      foreground: palette.dark.gray[800],
     },
     tertiary: {
-      background: palette.dark.gray[900],
-      foreground: palette.dark.black,
+      background: palette.dark.gray[500],
+      foreground: palette.dark.gray[1000],
     },
     transparent: {
       background: 'transparent',
@@ -131,7 +131,7 @@ export const darkTheme = {
   },
   icon: {
     default: palette.dark.gray[800],
-    secondary: palette.dark.gray[600],
+    secondary: palette.dark.gray[700],
   },
   link: {
     default: palette.dark.primary[700],
@@ -145,7 +145,7 @@ export const darkTheme = {
   },
   text: {
     default: palette.dark.gray[800],
-    secondary: palette.dark.gray[600],
+    secondary: palette.dark.gray[700],
     error: palette.dark.red[600],
     warning: palette.dark.yellow[900],
     success: palette.dark.green[600],
