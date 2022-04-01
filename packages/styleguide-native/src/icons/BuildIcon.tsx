@@ -12,9 +12,10 @@ export default function BuildIcon(props: SvgProps & IconProps) {
       {...props}
     >
       <Path
-        d="M10 18.943V9.098m0 9.845L1.964 14.92V5.08M10 18.943l8.037-4.022V5.08M10 9.098L1.964 5.08M10 9.098l8.037-4.018m-16.073 0L10 1.057l8.037 4.023"
-        stroke={color || "#000"}
-        strokeWidth={1.85}
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10 .023l8.962 4.485v10.984L10 19.977l-8.96-4.485V4.508L10 .023zM2.89 6.576v7.773l6.186 3.096V9.67L2.89 6.576zm8.036 3.093v7.776l6.186-3.096V6.576L10.925 9.67zm5.044-4.59L10 8.064 4.031 5.079l5.97-2.987 5.968 2.987z"
+        fill={color || "#000"}
       />
     </Svg>
   );
