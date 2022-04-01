@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/expo/styleguide/compare/@expo/styleguide-native@1.0.1...@expo/styleguide-native@1.0.2) (2022-04-01)
+
+
+### Reverts
+
+* Revert "chore(release): publish" ([436d592](https://github.com/expo/styleguide/commit/436d592384880ba5971be728d0a31dd2ac8a9f0c))
+
+
+
+
+
 ## [1.0.1](https://github.com/expo/styleguide/compare/@expo/styleguide-native@1.0.1...@expo/styleguide-native@1.0.1) (2022-03-11)
 
 
