@@ -1,5 +1,5 @@
 import React from 'react';
-import {isLocalStorageAvailable} from "../utils/helpers";
+import { isLocalStorageAvailable } from '../utils/helpers';
 
 export function getInitialColorMode(): string | null {
   if (isLocalStorageAvailable()) {
