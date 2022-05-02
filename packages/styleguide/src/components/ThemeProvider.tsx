@@ -6,7 +6,6 @@ import React, {
   ReactNode,
 } from 'react';
 import { getInitialColorMode } from './BlockingSetInitialColorMode';
-import { isLocalStorageAvailable } from '../utils/helpers';
 
 export enum Themes {
   AUTO = 'auto',
@@ -43,18 +42,14 @@ export function ThemeProvider(props: ThemeProviderProps) {
     try {
       mediaQuery.addEventListener('change', onThemeChange);
     } catch {
-      // Fallback to old-style listening for changes, for Safari and IE
+      // Fallback to old-style listeing for changes, for Safari and IE
       mediaQuery.addListener(onThemeChange);
     }
 
-    if (isLocalStorageAvailable()) {
-      const themePreference = window.localStorage.getItem('data-expo-theme');
+    const themePreference = window.localStorage.getItem('data-expo-theme');
 
-      if (themePreference === Themes.LIGHT || themePreference === Themes.DARK) {
-        setThemeName(themePreference);
-      } else {
-        setThemeName(Themes.AUTO);
-      }
+    if (themePreference === Themes.LIGHT || themePreference === Themes.DARK) {
+      setThemeName(themePreference);
     } else {
       setThemeName(Themes.AUTO);
     }
@@ -63,7 +58,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
       try {
         mediaQuery.removeEventListener('change', onThemeChange);
       } catch {
-        // Fallback to old-style listening for changes, for Safari and IE
+        // Fallback to old-style listeing for changes, for Safari and IE
         mediaQuery.removeListener(onThemeChange);
       }
     };
@@ -80,41 +75,34 @@ export function ThemeProvider(props: ThemeProviderProps) {
   }
 
   function onThemeChange(event: MediaQueryListEvent | MediaQueryList) {
-    if (isLocalStorageAvailable()) {
-      const themePreference = window.localStorage.getItem('data-expo-theme');
+    const themePreference = window.localStorage.getItem('data-expo-theme');
 
-      if (!themePreference) {
-        if (event.matches) {
-          setDocumentTheme(Themes.DARK);
-        } else {
-          setDocumentTheme(Themes.LIGHT);
-        }
+    if (!themePreference) {
+      if (event.matches) {
+        setDocumentTheme(Themes.DARK);
+      } else {
+        setDocumentTheme(Themes.LIGHT);
       }
-    } else {
-      setDocumentTheme(Themes.AUTO);
     }
   }
 
   function setDarkMode() {
-    if (isLocalStorageAvailable()) {
+    (process as any).browser &&
       window.localStorage.setItem('data-expo-theme', Themes.DARK);
-    }
     setDocumentTheme(Themes.DARK);
     setThemeName(Themes.DARK);
   }
 
   function setLightMode() {
-    if (isLocalStorageAvailable()) {
+    (process as any).browser &&
       window.localStorage.setItem('data-expo-theme', Themes.LIGHT);
-    }
     setDocumentTheme(Themes.LIGHT);
     setThemeName(Themes.LIGHT);
   }
 
   function setAutoMode() {
-    if (isLocalStorageAvailable()) {
+    (process as any).browser &&
       window.localStorage.removeItem('data-expo-theme');
-    }
 
     const themeName = getInitialColorMode() as Themes;
     setDocumentTheme(themeName);

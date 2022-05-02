@@ -1,14 +1,11 @@
 import React from 'react';
-import { isLocalStorageAvailable } from '../utils/helpers';
 
 export function getInitialColorMode(): string | null {
-  if (isLocalStorageAvailable()) {
-    const preference = window.localStorage.getItem('data-expo-theme');
-    let hasPreference = typeof preference === 'string';
+  const preference = window.localStorage.getItem('data-expo-theme');
+  let hasPreference = typeof preference === 'string';
 
-    if (hasPreference) {
-      return preference;
-    }
+  if (hasPreference) {
+    return preference;
   }
 
   const mql = window.matchMedia('(prefers-color-scheme: dark)');
