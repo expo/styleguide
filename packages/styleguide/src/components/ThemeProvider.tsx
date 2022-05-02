@@ -90,7 +90,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
           setDocumentTheme(Themes.LIGHT);
         }
       }
-    } else  {
+    } else {
       setDocumentTheme(Themes.AUTO);
     }
   }
