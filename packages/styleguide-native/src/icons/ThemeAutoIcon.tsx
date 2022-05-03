@@ -1,6 +1,6 @@
 import * as React from "react";
 import Svg, { SvgProps, Circle, Path } from "react-native-svg";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function ThemeAutoIcon(props: SvgProps & IconProps) {
   const { size, color, width, height } = props;
   return (

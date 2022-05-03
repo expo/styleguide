@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function ThemeAutoIcon(props: IconProps) {
   const {
     title = "Theme-auto-icon",

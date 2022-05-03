@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function ChannelIcon(props: IconProps) {
   const { title = "Channel-icon", size, color, width, height, titleId } = props;
   return (

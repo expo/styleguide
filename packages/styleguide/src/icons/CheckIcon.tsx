@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function CheckIcon(props: IconProps) {
   const { title = "Check-icon", size, color, width, height, titleId } = props;
   return (
