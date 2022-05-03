@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function XIcon(props: IconProps) {
   const { title = "X-icon", size, color, width, height, titleId } = props;
   return (

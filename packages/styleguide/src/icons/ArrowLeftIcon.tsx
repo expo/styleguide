@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function ArrowLeftIcon(props: IconProps) {
   const {
     title = "Arrow-left-icon",

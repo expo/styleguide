@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function AppleAppStoreIcon(props: IconProps) {
   const {
     title = "Apple-app-store-icon",
