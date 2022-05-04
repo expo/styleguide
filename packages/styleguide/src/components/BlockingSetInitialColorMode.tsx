@@ -1,5 +1,20 @@
 import React from 'react';
-import { isLocalStorageAvailable } from '../utils/helpers';
+
+export function isLocalStorageAvailable(): boolean {
+  try {
+    if (!window.localStorage || typeof window.localStorage === 'undefined') {
+      return false;
+    }
+    window.localStorage.setItem('localStorage:test', 'value');
+    if (window.localStorage.getItem('localStorage:test') !== 'value') {
+      return false;
+    }
+    window.localStorage.removeItem('localStorage:test');
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 export function getInitialColorMode(): string | null {
   if (isLocalStorageAvailable()) {
@@ -34,6 +49,7 @@ function setInitialColorMode() {
 
 // our function needs to be a string so that we can call it
 const blockingSetInitialColorMode = `(function() {
+  ${isLocalStorageAvailable.toString()}
   ${getInitialColorMode.toString()}
   ${setInitialColorMode.toString()}
   setInitialColorMode();

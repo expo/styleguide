@@ -5,8 +5,7 @@ import React, {
   useContext,
   ReactNode,
 } from 'react';
-import { getInitialColorMode } from './BlockingSetInitialColorMode';
-import { isLocalStorageAvailable } from '../utils/helpers';
+import { getInitialColorMode, isLocalStorageAvailable } from './BlockingSetInitialColorMode';
 
 export enum Themes {
   AUTO = 'auto',
