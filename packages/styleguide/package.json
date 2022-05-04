@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,8 @@
   "homepage": "https://github.com/expo/styleguide",
   "repository": {
     "type": "git",
-    "url": "https://github.com/expo/styleguide.git"
+    "url": "https://github.com/expo/styleguide.git",
+    "directory": "packages/styleguide"
   },
   "keywords": [
     "expo"
@@ -29,7 +30,7 @@
   "devDependencies": {
     "@svgr/cli": "^5.5.0",
     "@types/node": "^15.3.1",
-    "@types/react": "^17.0.2",
+    "@types/react": "^17.0.6",
     "copyfiles": "^2.4.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.2.4"

@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function RuntimeVersionIcon(props: IconProps) {
   const {
     title = "Runtime-version-icon",

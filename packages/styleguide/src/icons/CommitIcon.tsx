@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function CommitIcon(props: IconProps) {
   const { title = "Commit-icon", size, color, width, height, titleId } = props;
   return (

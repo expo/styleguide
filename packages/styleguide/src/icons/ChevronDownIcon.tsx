@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "../types";
 export default function ChevronDownIcon(props: IconProps) {
   const {
     title = "Chevron-down-icon",

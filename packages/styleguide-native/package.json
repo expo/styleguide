@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-native",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,7 +20,8 @@
   "homepage": "https://github.com/expo/styleguide",
   "repository": {
     "type": "git",
-    "url": "https://github.com/expo/styleguide.git"
+    "url": "https://github.com/expo/styleguide.git",
+    "directory": "packages/styleguide-native"
   },
   "devDependencies": {
     "@svgr/cli": "^5.5.0",

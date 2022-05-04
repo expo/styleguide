@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/expo/styleguide/compare/@expo/styleguide@4.0.2...@expo/styleguide@4.0.3) (2022-05-02)
+
+**Note:** Version bump only for package @expo/styleguide
+
+
+
+
+
+## [4.0.2](https://github.com/expo/styleguide/compare/@expo/styleguide@4.0.1...@expo/styleguide@4.0.2) (2022-05-02)
+
+
+### Bug Fixes
+
+* check if localStorage exist before using it ([fd73b7d](https://github.com/expo/styleguide/commit/fd73b7dbd916232af2395e9ae1c2ff636829d7b9))
+
+
+
+
+
 ## [4.0.1](https://github.com/expo/styleguide/compare/@expo/styleguide@4.0.0...@expo/styleguide@4.0.1) (2022-04-01)
 
 **Note:** Version bump only for package @expo/styleguide
