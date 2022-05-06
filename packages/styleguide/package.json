@@ -8,7 +8,8 @@
     "clean": "rimraf ./dist",
     "include-theme-css": "copyfiles --flat ./src/styles/expo-theme.css ./dist",
     "build:icons": "rimraf ./src/icons && svgr ../../common/svg --out-dir ./src/icons",
-    "build": "yarn build:icons && yarn clean && yarn tsc && yarn include-theme-css"
+    "build": "yarn build:icons && yarn clean && yarn tsc && yarn include-theme-css",
+    "dev": "yarn tsc -w"
   },
   "files": [
     "dist"
