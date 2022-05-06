@@ -1,5 +1,4 @@
 {
-  "name": "root",
   "private": true,
   "scripts": {
     "rename-icons": "find ./common/svg -depth -type f \\( -name '*.svg' ! -name '*-icon.svg' \\) -exec sh -c 'mv \"$1\" \"${1%.svg}-icon.svg\"' _ {} \\;",
@@ -7,7 +6,9 @@
     "build": "turbo run build",
     "create:release": "changeset",
     "version": "changeset version",
-    "publish": "changeset publish"
+    "publish:patch": "turbo run build && changeset publish --patch",
+    "publish:minor": "turbo run build && changeset publish --minor",
+    "publish:major": "turbo run build && changeset publish --major"
   },
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
@@ -18,6 +19,5 @@
   ],
   "volta": {
     "node": "16.0.0"
-  },
-  "version": "999.999.999"
+  }
 }
