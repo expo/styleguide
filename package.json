@@ -3,14 +3,15 @@
   "private": true,
   "scripts": {
     "rename-icons": "find ./common/svg -depth -type f \\( -name '*.svg' ! -name '*-icon.svg' \\) -exec sh -c 'mv \"$1\" \"${1%.svg}-icon.svg\"' _ {} \\;",
-    "build:icons": "yarn rename-icons && yarn lerna run build:icons",
-    "build": "yarn run build:icons && yarn lerna run build",
-    "publish:patch": "yarn lerna publish patch",
-    "publish:minor": "yarn lerna publish minor",
-    "publish:major": "yarn lerna publish major"
+    "dev": "turbo run dev --parallel --no-cache",
+    "build": "turbo run build",
+    "create:release": "changeset",
+    "version": "changeset version",
+    "publish": "changeset publish"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@changesets/cli": "^2.22.0",
+    "turbo": "^1.2.8"
   },
   "workspaces": [
     "packages/*"
