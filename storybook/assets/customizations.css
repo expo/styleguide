@@ -1,0 +1,7 @@
+#docs-root > div {
+  padding: 16px 24px;
+}
+
+.sb-show-main.sb-main-padded {
+  padding-top: 30px;
+}
