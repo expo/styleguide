@@ -6,8 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
-    "build:icons": "rimraf ./src/icons && svgr ../../common/svg --out-dir ./src/icons",
-    "build": "yarn build:icons && yarn clean && yarn tsc",
+    "build:icons": "rimraf ./src/icons && svgr ../../common/svg --config-file ./svgr-icon-config.js --out-dir ./src/icons",
+    "build:logos": "rimraf ./src/logos && svgr ../../common/logos --config-file ./svgr-logo-config.js --out-dir ./src/logos",
+    "build": "yarn build:icons && yarn build:logos && yarn clean && yarn tsc",
     "dev": "yarn tsc --watch"
   },
   "files": [

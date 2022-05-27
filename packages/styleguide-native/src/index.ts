@@ -7,6 +7,7 @@ import { breakpoints } from './styles/breakpoints';
 import { typography } from './styles/typography';
 
 export * from './icons';
+export * from './logos';
 export {
   borderRadius,
   breakpoints,

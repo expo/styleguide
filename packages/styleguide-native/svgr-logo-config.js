@@ -1,4 +1,4 @@
-const template = require('./icon-template');
+const template = require('./svgr-logo-template');
 
 const defaultColor = '{color || "#000"}';
 
@@ -7,10 +7,6 @@ module.exports = {
   dimensions: false,
   typescript: true,
   filenameCase: 'pascal',
-  svgProps: {
-    width: '{size || width || 20}',
-    height: '{size || height || 20}',
-  },
   prettierConfig: {
     parser: 'typescript',
   },

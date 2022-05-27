@@ -5,10 +5,10 @@ export default function PlansIcon(props: SvgProps & IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg
-      width={size || width || 20}
-      height={size || height || 20}
       viewBox="0 0 20 21"
       fill="none"
+      width={size || width || 20}
+      height={size || height || 20}
       {...props}
     >
       <G clipPath="url(#plans-icon_svg__plans-icon_svg__clip0)">
