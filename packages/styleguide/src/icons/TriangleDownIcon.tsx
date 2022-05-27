@@ -11,17 +11,17 @@ export default function TriangleDownIcon(props: IconProps) {
   } = props;
   return (
     <svg
-      width={size || width || "20px"}
-      height={size || height || "20px"}
       viewBox="0 0 20 20"
       fill="none"
+      width={size || width || "20px"}
+      height={size || height || "20px"}
       role="img"
       aria-labelledby={titleId}
       {...props}
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M16.993 6.667H3.227l6.883 6.883 6.883-6.883z"
+        d="M16.883 7.43H3.117L10 14.313l6.883-6.883z"
         fill={color || "var(--expo-theme-icon-default)"}
       />
     </svg>

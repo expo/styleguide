@@ -1,4 +1,4 @@
-const template = require('./icon-template');
+const template = require('./svgr-logo-template');
 
 const defaultColor = '{color || "var(--expo-theme-icon-default)"}';
 
@@ -7,8 +7,6 @@ module.exports = {
   titleProp: true,
   typescript: true,
   svgProps: {
-    width: '{size || width || "20px"}',
-    height: '{size || height || "20px"}',
     role: 'img',
   },
   prettierConfig: {

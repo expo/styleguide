@@ -11,29 +11,21 @@ export default function ActivityIcon(props: IconProps) {
   } = props;
   return (
     <svg
+      viewBox="0 0 20 20"
+      fill="none"
       width={size || width || "20px"}
       height={size || height || "20px"}
-      viewBox="0 0 20 21"
-      fill="none"
       role="img"
       aria-labelledby={titleId}
       {...props}
     >
       {title ? <title id={titleId}>{title}</title> : null}
-      <g clipPath="url(#activity-icon_svg__activity-icon_svg__clip0)">
-        <path
-          d="M13.086 1.541l-9.947 8.742 6.385 1.711-2.61 6.905 9.947-8.741-6.386-1.711 2.61-6.906z"
-          stroke={color || "var(--expo-theme-icon-default)"}
-          strokeWidth={1.75}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
-      <defs>
-        <clipPath id="activity-icon_svg__activity-icon_svg__clip0">
-          <path fill="#fff" transform="translate(0 .22)" d="M0 0h20v20H0z" />
-        </clipPath>
-      </defs>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M13.706.163c.342.24.479.683.332 1.077L11.69 7.52l5.638 1.53a.922.922 0 01.363 1.573l-10.286 9.15a.896.896 0 01-1.112.064.922.922 0 01-.332-1.077l2.347-6.28-5.638-1.53a.91.91 0 01-.647-.676.923.923 0 01.284-.896L12.594.228a.896.896 0 011.112-.065zM4.772 9.624l4.97 1.348a.907.907 0 01.572.467c.116.23.131.5.04.742L8.94 15.97l6.289-5.594-4.97-1.348a.907.907 0 01-.572-.467.926.926 0 01-.04-.742L11.06 4.03 4.772 9.624z"
+        fill={color || "var(--expo-theme-icon-default)"}
+      />
     </svg>
   );
 }

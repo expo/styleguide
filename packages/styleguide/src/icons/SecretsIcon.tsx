@@ -4,10 +4,10 @@ export default function SecretsIcon(props: IconProps) {
   const { title = "Secrets-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      width={size || width || "20px"}
-      height={size || height || "20px"}
       viewBox="0 0 20 21"
       fill="none"
+      width={size || width || "20px"}
+      height={size || height || "20px"}
       role="img"
       aria-labelledby={titleId}
       {...props}

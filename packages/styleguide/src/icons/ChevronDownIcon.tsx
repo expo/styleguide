@@ -11,17 +11,17 @@ export default function ChevronDownIcon(props: IconProps) {
   } = props;
   return (
     <svg
+      viewBox="0 0 20 20"
+      fill="none"
       width={size || width || "20px"}
       height={size || height || "20px"}
-      viewBox="0 0 24 24"
-      fill="none"
       role="img"
       aria-labelledby={titleId}
       {...props}
     >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        d="M6 9l6 6 6-6"
+        d="M15.5 8l-5 5-5-5"
         stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={2}
         strokeLinecap="round"

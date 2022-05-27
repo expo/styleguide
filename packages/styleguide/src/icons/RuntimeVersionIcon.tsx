@@ -11,10 +11,10 @@ export default function RuntimeVersionIcon(props: IconProps) {
   } = props;
   return (
     <svg
-      width={size || width || "20px"}
-      height={size || height || "20px"}
       viewBox="0 0 21 20"
       fill="none"
+      width={size || width || "20px"}
+      height={size || height || "20px"}
       role="img"
       aria-labelledby={titleId}
       {...props}
