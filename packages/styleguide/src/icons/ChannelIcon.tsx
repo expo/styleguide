@@ -4,10 +4,10 @@ export default function ChannelIcon(props: IconProps) {
   const { title = "Channel-icon", size, color, width, height, titleId } = props;
   return (
     <svg
-      width={size || width || "20px"}
-      height={size || height || "20px"}
       viewBox="0 0 20 20"
       fill="none"
+      width={size || width || "20px"}
+      height={size || height || "20px"}
       role="img"
       aria-labelledby={titleId}
       {...props}

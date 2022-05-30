@@ -1,4 +1,4 @@
-const template = require('./icon-template');
+const template = require('./svgr-icon-template');
 
 const defaultColor = '{color || "#000"}';
 

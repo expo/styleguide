@@ -5,10 +5,10 @@ export default function GeneralIcon(props: SvgProps & IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg
-      width={size || width || 20}
-      height={size || height || 20}
       viewBox="0 0 20 20"
       fill="none"
+      width={size || width || 20}
+      height={size || height || 20}
       {...props}
     >
       <Mask id="general-icon_svg__a" fill="#fff">

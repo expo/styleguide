@@ -1,0 +1,27 @@
+import * as React from "react";
+import Svg, { SvgProps, G, Path, Defs, ClipPath } from "react-native-svg";
+import { IconProps } from "../types";
+export default function ThumbsDownIcon(props: SvgProps & IconProps) {
+  const { size, color, width, height } = props;
+  return (
+    <Svg
+      viewBox="0 0 20 20"
+      fill="none"
+      width={size || width || 20}
+      height={size || height || 20}
+      {...props}
+    >
+      <G
+        clipPath="url(#thumbs-down-icon_svg__thumbs-down-icon_svg__clip0_2791_2867)"
+        fill={color || "#000"}
+      >
+        <Path d="M9 17.34l-2.92-6.46A.91.91 0 016 10.5V2.9c0-.504.21-.987.585-1.343A2.055 2.055 0 018 1h6c.781.03 1.54.262 2.192.673.652.41 1.174.982 1.508 1.655l2.23 4.892c.05.12.074.25.07.38v1.9a2.78 2.78 0 01-.88 2.015 3.083 3.083 0 01-2.12.835h-4v3.8a2.78 2.78 0 01-.88 2.015A3.082 3.082 0 0110 20c-.266 0-.52-.1-.708-.278A.927.927 0 019 19.05v-1.71zM1 11.5h2c.552 0 1-.425 1-.95V2c0-.525-.448-.95-1-.95H1c-.552 0-1 .425-1 .95v8.55c0 .525.448.95 1 .95z" />
+      </G>
+      <Defs>
+        <ClipPath id="thumbs-down-icon_svg__thumbs-down-icon_svg__clip0_2791_2867">
+          <Path fill="#fff" d="M0 0h20v20H0z" />
+        </ClipPath>
+      </Defs>
+    </Svg>
+  );
+}
