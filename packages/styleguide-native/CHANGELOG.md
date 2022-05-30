@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.0
+
+### Minor Changes
+
+- 79be7ab: Adds icons and logos
+
 ## 1.0.5
 
 ### Patch Changes
