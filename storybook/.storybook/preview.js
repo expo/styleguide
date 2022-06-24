@@ -1,56 +1,57 @@
-import React, { useEffect } from 'react'
-import { ThemeProvider, useTheme, BlockingSetInitialColorMode, theme } from '@expo/styleguide'
+import React from 'react'
+import { theme } from '@expo/styleguide'
 import { Themes } from '@expo/styleguide/dist/components/ThemeProvider';
 import '@expo/styleguide/dist/expo-theme.css';
 
 const withTheme = (StoryFn, context) => {
-  return (
-    <>
-    {/* <BlockingSetInitialColorMode /> */}
-    <ThemeProvider>
-      <StoryWrapper fn={StoryFn} context={context} />
-    </ThemeProvider>
-    </>
-  )
-}
-
-const StoryWrapper = ({fn: StoryFn, context}) => {
-  const { themeName, setAutoMode, setDarkMode, setLightMode } = useTheme();
-
-  console.log(context.globals.theme)
-
-  const style = {
+  const base = {
     position: 'absolute',
     top: 0,
-    left: 0,
-    right: 0,
-    // width: '100vw',
-    // height: '100vh',
     bottom: 0,
     overflow: 'auto',
     padding: '1rem',
-    background: theme.background.screen
+    background: theme.background[context.globals.background]
   }
 
-  useEffect(() => {
-    if (context.globals.theme === Themes.DARK) {
-      console.log('setting dark')
-      setDarkMode();
-    }
-    if (context.globals.theme === Themes.LIGHT) {
-      console.log('setting light')
-      setLightMode();
-    }
-  }, [context.globals.theme])
+  const styleLeft = {
+    ...base,
+    left: 0,
+    width: '50vw',
+  }
 
-  return (
-    <div style={style}>
-      <StoryFn />
-    </div>
-  )
+  const styleRight = {
+    ...base,
+    right: 0,
+    width: '50vw',
+  }
 
+  const styleFill = {
+    ...base,
+    left: 0,
+    right: 0,
+  }
+
+  switch (context.globals.theme) {
+    case Themes.LIGHT:
+    case Themes.DARK:
+      return (<div data-expo-theme={context.globals.theme} style={styleFill}>
+        <StoryFn />
+      </div>)
+    case 'side-by-side':
+      return (
+        <>
+        <div data-expo-theme='dark' style={styleLeft}>
+          <StoryFn />
+        </div>
+        <div data-expo-theme='light' style={styleRight}>
+          <StoryFn />
+        </div>
+        </>
+      )
+    default:
+      return <div/>
+  }
 }
-
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -74,11 +75,31 @@ export const globalTypes = {
       items: [
         { value: Themes.LIGHT, icon: 'circlehollow', title: 'light' },
         { value: Themes.DARK, icon: 'circle', title: 'dark' },
+        { value: 'side-by-side', icon: 'sidebar', title: 'side by side' },
       ],
       // Property that specifies if the name of the item will be displayed
       showName: true,
     },
   },
+  background: {
+    name: 'Background',
+    description: 'Background for components',
+    defaultValue: 'default',
+    toolbar: {
+      items: [
+        { value: 'default', title: 'default'},
+        { value: 'screen', title: 'screen'},
+        { value: 'secondary', title: 'secondary'},
+        { value: 'tertiary', title: 'tertiary'},
+        { value: 'quaternary', title: 'quaternary'},
+        { value: 'error', title: 'error'},
+        { value: 'warning', title: 'warning'},
+        { value: 'success', title: 'success'},
+        { value: 'overlay', title: 'overlay'}
+      ],
+      showName: true
+    }
+  }
 }
 
 export const decorators = [withTheme]
