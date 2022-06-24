@@ -8,6 +8,8 @@ const withTheme = (StoryFn, context) => {
     position: 'absolute',
     top: 0,
     bottom: 0,
+    left: 0, 
+    right:0,
     overflow: 'auto',
     padding: '1rem',
     background: theme.background[context.globals.background]
@@ -15,26 +17,18 @@ const withTheme = (StoryFn, context) => {
 
   const styleLeft = {
     ...base,
-    left: 0,
-    width: '50vw',
+    marginRight: '50%',
   }
 
   const styleRight = {
     ...base,
-    right: 0,
-    width: '50vw',
-  }
-
-  const styleFill = {
-    ...base,
-    left: 0,
-    right: 0,
+    marginLeft: '50%',
   }
 
   switch (context.globals.theme) {
     case Themes.LIGHT:
     case Themes.DARK:
-      return (<div data-expo-theme={context.globals.theme} style={styleFill}>
+      return (<div data-expo-theme={context.globals.theme} style={base}>
         <StoryFn />
       </div>)
     case 'side-by-side':
