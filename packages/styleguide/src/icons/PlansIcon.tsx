@@ -13,15 +13,13 @@ export default function PlansIcon(props: IconProps) {
       {...props}
     >
       {title ? <title id={titleId}>{title}</title> : null}
-      <g clipPath="url(#plans-icon_svg__plans-icon_svg__clip0)">
-        <path
-          d="M10 5.22l1.545 3.13L15 8.855l-2.5 2.435.59 3.44L10 13.105 6.91 14.73l.59-3.44L5 8.855l3.455-.505L10 5.22z"
-          stroke={color || "var(--expo-theme-icon-default)"}
-          strokeWidth={1.75}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
+      <path
+        d="M10 5.22l1.545 3.13L15 8.855l-2.5 2.435.59 3.44L10 13.105 6.91 14.73l.59-3.44L5 8.855l3.455-.505L10 5.22z"
+        stroke={color || "var(--expo-theme-icon-default)"}
+        strokeWidth={1.75}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <rect
         x={0.875}
         y={2.009}
@@ -31,11 +29,6 @@ export default function PlansIcon(props: IconProps) {
         stroke={color || "var(--expo-theme-icon-default)"}
         strokeWidth={1.75}
       />
-      <defs>
-        <clipPath id="plans-icon_svg__plans-icon_svg__clip0">
-          <path fill="#fff" transform="translate(4 4.22)" d="M0 0h12v12H0z" />
-        </clipPath>
-      </defs>
     </svg>
   );
 }
