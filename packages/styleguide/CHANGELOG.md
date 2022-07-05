@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.1
+
+### Patch Changes
+
+- 19728f7: removes clip path
+
 ## 4.1.0
 
 ### Minor Changes
