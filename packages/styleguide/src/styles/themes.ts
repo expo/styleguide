@@ -8,6 +8,7 @@ export const theme = {
     error: 'var(--expo-theme-background-error)',
     warning: 'var(--expo-theme-background-warning)',
     success: 'var(--expo-theme-background-success)',
+    info: 'var(--expo-theme-background-info)',
     overlay: 'var(--expo-theme-background-overlay)',
   },
   border: {
@@ -15,6 +16,7 @@ export const theme = {
     error: 'var(--expo-theme-border-error)',
     warning: 'var(--expo-theme-border-warning)',
     success: 'var(--expo-theme-border-success)',
+    info: 'var(--expo-theme-border-info)',
   },
   button: {
     primary: {
@@ -53,6 +55,7 @@ export const theme = {
     error: 'var(--expo-theme-text-error)',
     warning: 'var(--expo-theme-text-warning)',
     success: 'var(--expo-theme-text-success)',
+    info: 'var(--expo-theme-text-info)',
   },
   icon: {
     default: 'var(--expo-theme-icon-default)',
@@ -206,6 +209,7 @@ export const lightTheme = {
     error: 'var(--expo-color-base-light-red-100)',
     warning: 'var(--expo-color-base-light-yellow-100)',
     success: 'var(--expo-color-base-light-green-100)',
+    info: 'var(--expo-color-base-light-blue-100)',
     overlay: 'var(--expo-color-base-light-white)',
   },
   border: {
@@ -213,6 +217,7 @@ export const lightTheme = {
     error: 'var(--expo-color-base-light-red-300)',
     success: 'var(--expo-color-base-light-green-300)',
     warning: 'var(--expo-color-base-light-yellow-300)',
+    info: 'var(--expo-color-base-light-blue-300)',
   },
   button: {
     primary: {
@@ -257,6 +262,7 @@ export const lightTheme = {
     error: 'var(--expo-color-base-light-red-600)',
     warning: 'var(--expo-color-base-light-yellow-900)',
     success: 'var(--expo-color-base-light-green-600)',
+    info: 'var(--expo-color-base-light-green-700)',
   },
   code: {
     keyword: 'var(--expo-color-base-light-blue-500)',
@@ -284,6 +290,7 @@ export const darkTheme = {
     error: 'var(--expo-color-base-dark-red-000)',
     warning: 'var(--expo-color-base-dark-yellow-000)',
     success: 'var(--expo-color-base-dark-green-000)',
+    info: 'var(--expo-color-base-dark-blue-000)',
     overlay: 'var(--expo-color-base-dark-gray-100)',
   },
   border: {
@@ -291,6 +298,7 @@ export const darkTheme = {
     error: 'var(--expo-color-base-dark-red-200)',
     success: 'var(--expo-color-base-dark-green-200)',
     warning: 'var(--expo-color-base-dark-yellow-200)',
+    info: 'var(--expo-color-base-dark-blue-200)',
   },
   button: {
     primary: {
@@ -335,6 +343,7 @@ export const darkTheme = {
     error: 'var(--expo-color-base-dark-red-600)',
     warning: 'var(--expo-color-base-dark-yellow-900)',
     success: 'var(--expo-color-base-dark-green-600)',
+    info: 'var(--expo-color-base-dark-blue-600)',
   },
   code: {
     keyword: 'var(--expo-color-base-dark-blue-600)',

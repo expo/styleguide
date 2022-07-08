@@ -10,6 +10,7 @@ export const lightTheme = {
     error: palette.light.red[100],
     warning: palette.light.yellow[100],
     success: palette.light.green[100],
+    info: palette.light.blue[100],
     overlay: palette.light.white,
   },
   border: {
@@ -17,6 +18,7 @@ export const lightTheme = {
     error: palette.light.red[300],
     success: palette.light.green[300],
     warning: palette.light.yellow[300],
+    info: palette.light.blue[300],
   },
   button: {
     primary: {
@@ -61,6 +63,7 @@ export const lightTheme = {
     error: palette.light.red[600],
     warning: palette.light.yellow[900],
     success: palette.light.green[600],
+    info: palette.light.blue[600],
   },
   code: {
     keyword: palette.light.blue[500],
@@ -90,7 +93,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   background: {
-    default: palette.dark.gray['100'],
+    default: palette.dark.gray[100],
     screen: palette.dark.gray['000'],
     secondary: palette.dark.gray[200],
     tertiary: palette.dark.gray[300],
@@ -98,6 +101,7 @@ export const darkTheme = {
     error: palette.dark.red['000'],
     warning: palette.dark.yellow['000'],
     success: palette.dark.green['000'],
+    info: palette.dark.blue['000'],
     overlay: palette.dark.gray[200],
   },
   border: {
@@ -105,6 +109,7 @@ export const darkTheme = {
     error: palette.dark.red[200],
     success: palette.dark.green[200],
     warning: palette.dark.yellow[200],
+    info: palette.dark.blue[200],
   },
   button: {
     primary: {
@@ -149,6 +154,7 @@ export const darkTheme = {
     error: palette.dark.red[600],
     warning: palette.dark.yellow[900],
     success: palette.dark.green[600],
+    info: palette.dark.blue[700],
   },
   code: {
     keyword: palette.dark.blue[600],
