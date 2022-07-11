@@ -291,11 +291,13 @@
   --expo-theme-background-error: var(--expo-color-base-light-red-100);
   --expo-theme-background-warning: var(--expo-color-base-light-yellow-100);
   --expo-theme-background-success: var(--expo-color-base-light-green-100);
+  --expo-theme-background-info: var(--expo-color-base-light-blue-100);
   --expo-theme-background-overlay: var(--expo-color-base-light-white);
   --expo-theme-border-default: var(--expo-color-base-light-gray-300);
   --expo-theme-border-error: var(--expo-color-base-light-red-300);
   --expo-theme-border-warning: var(--expo-color-base-light-yellow-300);
   --expo-theme-border-success: var(--expo-color-base-light-green-300);
+  --expo-theme-border-info: var(--expo-color-base-light-blue-300);
   --expo-theme-button-primary-background: var(
     --expo-color-base-light-primary-500
   );
@@ -332,6 +334,7 @@
   --expo-theme-text-error: var(--expo-color-base-light-red-600);
   --expo-theme-text-warning: var(--expo-color-base-light-yellow-900);
   --expo-theme-text-success: var(--expo-color-base-light-green-700);
+  --expo-theme-text-info: var(--expo-color-base-light-blue-600);
   --expo-theme-code-keyword: var(--expo-color-base-light-blue-500);
   --expo-theme-code-builtin: var(--expo-color-base-light-green-600);
   --expo-theme-code-property: var(--expo-color-base-light-red-500);
@@ -469,11 +472,13 @@
   --expo-theme-background-error: var(--expo-color-base-dark-red-000);
   --expo-theme-background-warning: var(--expo-color-base-dark-yellow-000);
   --expo-theme-background-success: var(--expo-color-base-dark-green-000);
+  --expo-theme-background-info: var(--expo-color-base-dark-blue-000);
   --expo-theme-background-overlay: var(--expo-color-base-dark-gray-200);
   --expo-theme-border-default: var(--expo-color-base-dark-gray-400);
   --expo-theme-border-error: var(--expo-color-base-dark-red-200);
   --expo-theme-border-warning: var(--expo-color-base-dark-yellow-300);
   --expo-theme-border-success: var(--expo-color-base-dark-green-200);
+  --expo-theme-border-info: var(--expo-color-base-dark-blue-200);
   --expo-theme-button-primary-background: var(
     --expo-color-base-dark-primary-500
   );
@@ -508,6 +513,7 @@
   --expo-theme-text-error: var(--expo-color-base-dark-red-600);
   --expo-theme-text-warning: var(--expo-color-base-dark-yellow-900);
   --expo-theme-text-success: var(--expo-color-base-dark-green-700);
+  --expo-theme-text-info: var(--expo-color-base-dark-blue-700);
   --expo-theme-code-keyword: var(--expo-color-base-dark-blue-600);
   --expo-theme-code-builtin: var(--expo-color-base-dark-green-600);
   --expo-theme-code-property: var(--expo-color-base-dark-red-600);
