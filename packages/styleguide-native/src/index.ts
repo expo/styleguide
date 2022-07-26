@@ -5,6 +5,7 @@ import { iconSize, borderRadius } from './styles/sizing';
 import { spacing } from './styles/spacing';
 import { breakpoints } from './styles/breakpoints';
 import { typography } from './styles/typography';
+import { IconProps } from 'types';
 
 export * from './icons';
 export * from './logos';
@@ -18,4 +19,5 @@ export {
   shadows,
   spacing,
   typography,
+  IconProps,
 };

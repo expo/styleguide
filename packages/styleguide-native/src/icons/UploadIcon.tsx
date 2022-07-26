@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { SvgProps, Path } from "react-native-svg";
+import React from "react";
+import Svg, { Path } from "react-native-svg";
 import { IconProps } from "../types";
-export default function UploadIcon(props: SvgProps & IconProps) {
+export default function UploadIcon(props: IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg

@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { SvgProps, Mask, Rect } from "react-native-svg";
+import React from "react";
+import Svg, { Path, Mask, Rect } from "react-native-svg";
 import { IconProps } from "../types";
-export default function GeneralIcon(props: SvgProps & IconProps) {
+export default function GeneralIcon(props: IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg

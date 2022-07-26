@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { SvgProps, Rect, Path } from "react-native-svg";
+import React from "react";
+import Svg, { Path, Rect } from "react-native-svg";
 import { IconProps } from "../types";
-export default function AppleSimulatorIcon(props: SvgProps & IconProps) {
+export default function AppleSimulatorIcon(props: IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg

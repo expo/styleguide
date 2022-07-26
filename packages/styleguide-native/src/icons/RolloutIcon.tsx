@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { SvgProps, Path, Circle } from "react-native-svg";
+import React from "react";
+import Svg, { Path, Circle } from "react-native-svg";
 import { IconProps } from "../types";
-export default function RolloutIcon(props: SvgProps & IconProps) {
+export default function RolloutIcon(props: IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg
