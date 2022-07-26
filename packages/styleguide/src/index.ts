@@ -8,6 +8,7 @@ import { ThemeProvider, useTheme } from './components/ThemeProvider';
 import { spacing } from './styles/spacing';
 import { breakpoints } from './styles/breakpoints';
 import { typography } from './styles/typography';
+import { IconProps } from 'types';
 
 export * from './icons';
 export * from './logos';
@@ -26,4 +27,5 @@ export {
   ThemeProvider,
   typography,
   useTheme,
+  IconProps
 };
