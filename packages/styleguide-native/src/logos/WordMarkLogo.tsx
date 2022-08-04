@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { SvgProps, Path } from "react-native-svg";
+import React from "react";
+import Svg, { Path } from "react-native-svg";
 import { IconProps } from "../types";
-export default function WordMarkLogo(props: SvgProps & IconProps) {
+export default function WordMarkLogo(props: IconProps) {
   const { color } = props;
   return (
     <Svg viewBox="0 0 71 20" fill="none" {...props}>

@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { SvgProps, Path, Ellipse } from "react-native-svg";
+import React from "react";
+import Svg, { Path, Ellipse } from "react-native-svg";
 import { IconProps } from "../types";
-export default function DeploymentsIcon(props: SvgProps & IconProps) {
+export default function DeploymentsIcon(props: IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg

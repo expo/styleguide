@@ -1,7 +1,7 @@
-import * as React from "react";
-import Svg, { SvgProps, Path, Rect } from "react-native-svg";
+import React from "react";
+import Svg, { Path, Rect } from "react-native-svg";
 import { IconProps } from "../types";
-export default function PushToDeviceIcon(props: SvgProps & IconProps) {
+export default function PushToDeviceIcon(props: IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg
