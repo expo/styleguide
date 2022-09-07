@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.2
+
+### Patch Changes
+
+- 580866b: Updates icon exports
+
 ## 4.1.1
 
 ### Patch Changes
