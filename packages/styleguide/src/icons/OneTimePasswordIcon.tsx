@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function OneTimePasswordIcon(props: IconProps) {
+export function OneTimePasswordIcon(props: IconProps) {
   const {
     title = "One-time-password-icon",
     size,

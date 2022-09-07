@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function GeneralIcon(props: IconProps) {
+export function GeneralIcon(props: IconProps) {
   const { title = "General-icon", size, color, width, height, titleId } = props;
   return (
     <svg

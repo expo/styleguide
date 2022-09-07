@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function HeadsetIcon(props: IconProps) {
+export function HeadsetIcon(props: IconProps) {
   const { title = "Headset-icon", size, color, width, height, titleId } = props;
   return (
     <svg

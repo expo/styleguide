@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function OverviewIcon(props: IconProps) {
+export function OverviewIcon(props: IconProps) {
   const {
     title = "Overview-icon",
     size,

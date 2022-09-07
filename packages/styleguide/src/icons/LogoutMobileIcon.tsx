@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function LogoutMobileIcon(props: IconProps) {
+export function LogoutMobileIcon(props: IconProps) {
   const {
     title = "Logout-mobile-icon",
     size,

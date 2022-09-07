@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function PlanFreeIcon(props: IconProps) {
+export function PlanFreeIcon(props: IconProps) {
   const {
     title = "Plan-free-icon",
     size,

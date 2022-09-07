@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function InvoicesIcon(props: IconProps) {
+export function InvoicesIcon(props: IconProps) {
   const {
     title = "Invoices-icon",
     size,

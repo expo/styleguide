@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function TwitchIcon(props: IconProps) {
+export function TwitchIcon(props: IconProps) {
   const { title = "Twitch-icon", size, color, width, height, titleId } = props;
   return (
     <svg

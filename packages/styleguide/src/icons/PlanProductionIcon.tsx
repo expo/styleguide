@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function PlanProductionIcon(props: IconProps) {
+export function PlanProductionIcon(props: IconProps) {
   const {
     title = "Plan-production-icon",
     size,

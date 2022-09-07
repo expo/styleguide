@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ThemeLightIcon(props: IconProps) {
+export function ThemeLightIcon(props: IconProps) {
   const {
     title = "Theme-light-icon",
     size,

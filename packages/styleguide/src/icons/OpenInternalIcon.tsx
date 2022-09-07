@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function OpenInternalIcon(props: IconProps) {
+export function OpenInternalIcon(props: IconProps) {
   const {
     title = "Open-internal-icon",
     size,

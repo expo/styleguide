@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function SlashShortcutIcon(props: IconProps) {
+export function SlashShortcutIcon(props: IconProps) {
   const {
     title = "Slash-shortcut-icon",
     size,

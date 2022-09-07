@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ArrowDownIcon(props: IconProps) {
+export function ArrowDownIcon(props: IconProps) {
   const {
     title = "Arrow-down-icon",
     size,

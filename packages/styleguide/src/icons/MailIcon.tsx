@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function MailIcon(props: IconProps) {
+export function MailIcon(props: IconProps) {
   const { title = "Mail-icon", size, color, width, height, titleId } = props;
   return (
     <svg

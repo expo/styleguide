@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function CloudSlashIcon(props: IconProps) {
+export function CloudSlashIcon(props: IconProps) {
   const {
     title = "Cloud-slash-icon",
     size,

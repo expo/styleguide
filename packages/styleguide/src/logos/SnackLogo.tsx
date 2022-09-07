@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function SnackLogo(props: IconProps) {
+export function SnackLogo(props: IconProps) {
   const { title = "Snack-logo", color, titleId } = props;
   return (
     <svg

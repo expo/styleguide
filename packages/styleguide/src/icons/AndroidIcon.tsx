@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function AndroidIcon(props: IconProps) {
+export function AndroidIcon(props: IconProps) {
   const { title = "Android-icon", size, color, width, height, titleId } = props;
   return (
     <svg

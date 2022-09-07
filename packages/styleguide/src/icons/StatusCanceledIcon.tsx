@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function StatusCanceledIcon(props: IconProps) {
+export function StatusCanceledIcon(props: IconProps) {
   const {
     title = "Status-canceled-icon",
     size,

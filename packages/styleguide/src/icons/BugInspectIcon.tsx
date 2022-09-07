@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function BugInspectIcon(props: IconProps) {
+export function BugInspectIcon(props: IconProps) {
   const {
     title = "Bug-inspect-icon",
     size,

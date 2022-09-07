@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function UserIcon(props: IconProps) {
+export function UserIcon(props: IconProps) {
   const { title = "User-icon", size, color, width, height, titleId } = props;
   return (
     <svg

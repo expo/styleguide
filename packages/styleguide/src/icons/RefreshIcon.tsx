@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function RefreshIcon(props: IconProps) {
+export function RefreshIcon(props: IconProps) {
   const { title = "Refresh-icon", size, color, width, height, titleId } = props;
   return (
     <svg

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function TriangleDownIcon(props: IconProps) {
+export function TriangleDownIcon(props: IconProps) {
   const {
     title = "Triangle-down-icon",
     size,

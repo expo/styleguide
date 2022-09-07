@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function PushToDeviceIcon(props: IconProps) {
+export function PushToDeviceIcon(props: IconProps) {
   const {
     title = "Push-to-device-icon",
     size,

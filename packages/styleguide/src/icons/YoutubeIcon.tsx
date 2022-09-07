@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function YoutubeIcon(props: IconProps) {
+export function YoutubeIcon(props: IconProps) {
   const { title = "Youtube-icon", size, color, width, height, titleId } = props;
   return (
     <svg

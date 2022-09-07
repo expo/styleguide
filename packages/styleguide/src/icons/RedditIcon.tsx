@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function RedditIcon(props: IconProps) {
+export function RedditIcon(props: IconProps) {
   const { title = "Reddit-icon", size, color, width, height, titleId } = props;
   return (
     <svg

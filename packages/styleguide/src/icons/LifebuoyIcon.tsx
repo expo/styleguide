@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function LifebuoyIcon(props: IconProps) {
+export function LifebuoyIcon(props: IconProps) {
   const {
     title = "Lifebuoy-icon",
     size,

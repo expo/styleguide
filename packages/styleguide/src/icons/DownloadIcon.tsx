@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function DownloadIcon(props: IconProps) {
+export function DownloadIcon(props: IconProps) {
   const {
     title = "Download-icon",
     size,

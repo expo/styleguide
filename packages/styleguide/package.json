@@ -7,8 +7,8 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "include-theme-css": "copyfiles --flat ./src/styles/expo-theme.css ./dist",
-    "build:icons": "rimraf ./src/icons && svgr ../../common/svg --config-file ./svgr-icon-config.js --out-dir ./src/icons",
-    "build:logos": "rimraf ./src/logos && svgr ../../common/logos --config-file ./svgr-logo-config.js --out-dir ./src/logos",
+    "build:icons": "rimraf ./src/icons && svgr ../../common/svg --config-file ./svgr-icon-config.js --out-dir ./src/icons --index-template ./svgr-index-template.js",
+    "build:logos": "rimraf ./src/logos && svgr ../../common/logos --config-file ./svgr-logo-config.js --out-dir ./src/logos --index-template ./svgr-index-template.js",
     "build": "yarn build:icons && yarn build:logos && yarn clean && yarn tsc && yarn include-theme-css",
     "dev": "yarn tsc -w"
   },

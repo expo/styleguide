@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ClipboardIcon(props: IconProps) {
+export function ClipboardIcon(props: IconProps) {
   const {
     title = "Clipboard-icon",
     size,

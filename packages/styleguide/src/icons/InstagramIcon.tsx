@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function InstagramIcon(props: IconProps) {
+export function InstagramIcon(props: IconProps) {
   const {
     title = "Instagram-icon",
     size,

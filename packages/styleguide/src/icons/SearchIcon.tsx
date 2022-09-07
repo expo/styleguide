@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function SearchIcon(props: IconProps) {
+export function SearchIcon(props: IconProps) {
   const { title = "Search-icon", size, color, width, height, titleId } = props;
   return (
     <svg

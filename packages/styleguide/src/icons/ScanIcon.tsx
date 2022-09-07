@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ScanIcon(props: IconProps) {
+export function ScanIcon(props: IconProps) {
   const { title = "Scan-icon", size, color, width, height, titleId } = props;
   return (
     <svg

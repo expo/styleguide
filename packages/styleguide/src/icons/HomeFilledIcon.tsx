@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function HomeFilledIcon(props: IconProps) {
+export function HomeFilledIcon(props: IconProps) {
   const {
     title = "Home-filled-icon",
     size,

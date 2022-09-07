@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function UpdateIcon(props: IconProps) {
+export function UpdateIcon(props: IconProps) {
   const { title = "Update-icon", size, color, width, height, titleId } = props;
   return (
     <svg

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function StatusFailedIcon(props: IconProps) {
+export function StatusFailedIcon(props: IconProps) {
   const {
     title = "Status-failed-icon",
     size,

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function SparklesIcon(props: IconProps) {
+export function SparklesIcon(props: IconProps) {
   const {
     title = "Sparkles-icon",
     size,

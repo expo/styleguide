@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ProjectTransferIcon(props: IconProps) {
+export function ProjectTransferIcon(props: IconProps) {
   const {
     title = "Project-transfer-icon",
     size,

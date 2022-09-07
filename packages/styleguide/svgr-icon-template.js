@@ -14,7 +14,7 @@ function iconTemplate(api, opts, { jsx }) {
     import React from 'react';
     import { IconProps } from '../types';
 
-    export default function ${exportName}(props: IconProps) {
+    export function ${exportName}(props: IconProps) {
       const { title = "${title}", size, color, width, height, titleId } = props;
 
       return ${jsx};

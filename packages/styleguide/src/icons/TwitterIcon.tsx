@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function TwitterIcon(props: IconProps) {
+export function TwitterIcon(props: IconProps) {
   const { title = "Twitter-icon", size, color, width, height, titleId } = props;
   return (
     <svg

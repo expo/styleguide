@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function TriangleLeftIcon(props: IconProps) {
+export function TriangleLeftIcon(props: IconProps) {
   const {
     title = "Triangle-left-icon",
     size,

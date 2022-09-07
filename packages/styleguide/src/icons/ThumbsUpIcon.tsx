@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ThumbsUpIcon(props: IconProps) {
+export function ThumbsUpIcon(props: IconProps) {
   const {
     title = "Thumbs-up-icon",
     size,

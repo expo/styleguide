@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function StatusWaitingIcon(props: IconProps) {
+export function StatusWaitingIcon(props: IconProps) {
   const {
     title = "Status-waiting-icon",
     size,

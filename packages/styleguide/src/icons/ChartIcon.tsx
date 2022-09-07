@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ChartIcon(props: IconProps) {
+export function ChartIcon(props: IconProps) {
   const { title = "Chart-icon", size, color, width, height, titleId } = props;
   return (
     <svg
