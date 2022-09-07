@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function StatusNewIcon(props: IconProps) {
+export function StatusNewIcon(props: IconProps) {
   const {
     title = "Status-new-icon",
     size,

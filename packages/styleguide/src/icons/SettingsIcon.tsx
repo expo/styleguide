@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function SettingsIcon(props: IconProps) {
+export function SettingsIcon(props: IconProps) {
   const {
     title = "Settings-icon",
     size,

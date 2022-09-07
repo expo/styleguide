@@ -4,7 +4,7 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function iconTemplate(api, opts, { jsx }) {
+function logoTemplate(api, opts, { jsx }) {
   const template = api.template.smart({ plugins: ['typescript'] });
   const { componentName, filePath } = opts.state;
   const exportName = componentName.replace('Svg', '');
@@ -14,7 +14,7 @@ function iconTemplate(api, opts, { jsx }) {
     import React from 'react';
     import { IconProps } from '../types';
 
-    export default function ${exportName}(props: IconProps) {
+    export function ${exportName}(props: IconProps) {
       const { title = "${title}", color, titleId } = props;
 
       return ${jsx};
@@ -22,4 +22,4 @@ function iconTemplate(api, opts, { jsx }) {
   `;
 }
 
-module.exports = iconTemplate;
+module.exports = logoTemplate;

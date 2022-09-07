@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ChevronLeftIcon(props: IconProps) {
+export function ChevronLeftIcon(props: IconProps) {
   const {
     title = "Chevron-left-icon",
     size,

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function FacebookIcon(props: IconProps) {
+export function FacebookIcon(props: IconProps) {
   const {
     title = "Facebook-icon",
     size,

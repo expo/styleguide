@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function AppleSimulatorIcon(props: IconProps) {
+export function AppleSimulatorIcon(props: IconProps) {
   const {
     title = "Apple-simulator-icon",
     size,

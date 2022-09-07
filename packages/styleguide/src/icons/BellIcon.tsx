@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function BellIcon(props: IconProps) {
+export function BellIcon(props: IconProps) {
   const { title = "Bell-icon", size, color, width, height, titleId } = props;
   return (
     <svg

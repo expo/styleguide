@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function InspectElementIcon(props: IconProps) {
+export function InspectElementIcon(props: IconProps) {
   const {
     title = "Inspect-element-icon",
     size,

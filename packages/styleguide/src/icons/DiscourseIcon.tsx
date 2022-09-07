@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function DiscourseIcon(props: IconProps) {
+export function DiscourseIcon(props: IconProps) {
   const {
     title = "Discourse-icon",
     size,

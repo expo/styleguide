@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function TrashIcon(props: IconProps) {
+export function TrashIcon(props: IconProps) {
   const { title = "Trash-icon", size, color, width, height, titleId } = props;
   return (
     <svg

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function PlusIcon(props: IconProps) {
+export function PlusIcon(props: IconProps) {
   const { title = "Plus-icon", size, color, width, height, titleId } = props;
   return (
     <svg

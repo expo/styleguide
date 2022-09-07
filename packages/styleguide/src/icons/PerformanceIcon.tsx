@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function PerformanceIcon(props: IconProps) {
+export function PerformanceIcon(props: IconProps) {
   const {
     title = "Performance-icon",
     size,

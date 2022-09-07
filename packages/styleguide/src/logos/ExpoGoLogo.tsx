@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ExpoGoLogo(props: IconProps) {
+export function ExpoGoLogo(props: IconProps) {
   const { title = "Expo-go-logo", color, titleId } = props;
   return (
     <svg

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ArrowUpRightIcon(props: IconProps) {
+export function ArrowUpRightIcon(props: IconProps) {
   const {
     title = "Arrow-up-right-icon",
     size,

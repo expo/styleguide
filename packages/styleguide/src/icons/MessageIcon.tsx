@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function MessageIcon(props: IconProps) {
+export function MessageIcon(props: IconProps) {
   const { title = "Message-icon", size, color, width, height, titleId } = props;
   return (
     <svg

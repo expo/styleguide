@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function RunIcon(props: IconProps) {
+export function RunIcon(props: IconProps) {
   const { title = "Run-icon", size, color, width, height, titleId } = props;
   return (
     <svg

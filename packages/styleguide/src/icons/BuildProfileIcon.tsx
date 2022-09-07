@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function BuildProfileIcon(props: IconProps) {
+export function BuildProfileIcon(props: IconProps) {
   const {
     title = "Build-profile-icon",
     size,

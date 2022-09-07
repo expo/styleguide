@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function AtSignIcon(props: IconProps) {
+export function AtSignIcon(props: IconProps) {
   const { title = "At-sign-icon", size, color, width, height, titleId } = props;
   return (
     <svg

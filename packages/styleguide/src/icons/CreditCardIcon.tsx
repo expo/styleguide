@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function CreditCardIcon(props: IconProps) {
+export function CreditCardIcon(props: IconProps) {
   const {
     title = "Credit-card-icon",
     size,

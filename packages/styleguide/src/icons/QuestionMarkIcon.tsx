@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function QuestionMarkIcon(props: IconProps) {
+export function QuestionMarkIcon(props: IconProps) {
   const {
     title = "Question-mark-icon",
     size,

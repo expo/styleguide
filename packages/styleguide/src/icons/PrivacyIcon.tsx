@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function PrivacyIcon(props: IconProps) {
+export function PrivacyIcon(props: IconProps) {
   const { title = "Privacy-icon", size, color, width, height, titleId } = props;
   return (
     <svg

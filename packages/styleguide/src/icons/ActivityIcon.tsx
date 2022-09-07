@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ActivityIcon(props: IconProps) {
+export function ActivityIcon(props: IconProps) {
   const {
     title = "Activity-icon",
     size,

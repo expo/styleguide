@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function BuildNumberIcon(props: IconProps) {
+export function BuildNumberIcon(props: IconProps) {
   const {
     title = "Build-number-icon",
     size,

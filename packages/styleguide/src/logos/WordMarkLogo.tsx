@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function WordMarkLogo(props: IconProps) {
+export function WordMarkLogo(props: IconProps) {
   const { title = "Word-mark-logo", color, titleId } = props;
   return (
     <svg

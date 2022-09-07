@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function MegaphoneIcon(props: IconProps) {
+export function MegaphoneIcon(props: IconProps) {
   const {
     title = "Megaphone-icon",
     size,

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function LogsIcon(props: IconProps) {
+export function LogsIcon(props: IconProps) {
   const { title = "Logs-icon", size, color, width, height, titleId } = props;
   return (
     <svg

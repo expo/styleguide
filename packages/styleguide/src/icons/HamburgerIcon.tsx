@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function HamburgerIcon(props: IconProps) {
+export function HamburgerIcon(props: IconProps) {
   const {
     title = "Hamburger-icon",
     size,

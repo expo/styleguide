@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ChevronDownIcon(props: IconProps) {
+export function ChevronDownIcon(props: IconProps) {
   const {
     title = "Chevron-down-icon",
     size,

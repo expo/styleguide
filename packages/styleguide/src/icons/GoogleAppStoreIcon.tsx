@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function GoogleAppStoreIcon(props: IconProps) {
+export function GoogleAppStoreIcon(props: IconProps) {
   const {
     title = "Google-app-store-icon",
     size,

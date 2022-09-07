@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function CredentialIcon(props: IconProps) {
+export function CredentialIcon(props: IconProps) {
   const {
     title = "Credential-icon",
     size,

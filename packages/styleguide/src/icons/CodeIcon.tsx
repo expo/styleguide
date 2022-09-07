@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function CodeIcon(props: IconProps) {
+export function CodeIcon(props: IconProps) {
   const { title = "Code-icon", size, color, width, height, titleId } = props;
   return (
     <svg

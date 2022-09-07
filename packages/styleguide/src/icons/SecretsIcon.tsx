@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function SecretsIcon(props: IconProps) {
+export function SecretsIcon(props: IconProps) {
   const { title = "Secrets-icon", size, color, width, height, titleId } = props;
   return (
     <svg

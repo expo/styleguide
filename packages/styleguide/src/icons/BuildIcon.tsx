@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function BuildIcon(props: IconProps) {
+export function BuildIcon(props: IconProps) {
   const { title = "Build-icon", size, color, width, height, titleId } = props;
   return (
     <svg

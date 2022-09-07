@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function UsersFilledIcon(props: IconProps) {
+export function UsersFilledIcon(props: IconProps) {
   const {
     title = "Users-filled-icon",
     size,

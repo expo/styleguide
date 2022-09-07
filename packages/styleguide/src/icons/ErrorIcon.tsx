@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ErrorIcon(props: IconProps) {
+export function ErrorIcon(props: IconProps) {
   const { title = "Error-icon", size, color, width, height, titleId } = props;
   return (
     <svg

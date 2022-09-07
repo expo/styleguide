@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function DocsLogo(props: IconProps) {
+export function DocsLogo(props: IconProps) {
   const { title = "Docs-logo", color, titleId } = props;
   return (
     <svg

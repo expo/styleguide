@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function AddPhotoIcon(props: IconProps) {
+export function AddPhotoIcon(props: IconProps) {
   const {
     title = "Add-photo-icon",
     size,

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function ThemeIcon(props: IconProps) {
+export function ThemeIcon(props: IconProps) {
   const { title = "Theme-icon", size, color, width, height, titleId } = props;
   return (
     <svg

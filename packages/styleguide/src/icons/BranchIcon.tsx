@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function BranchIcon(props: IconProps) {
+export function BranchIcon(props: IconProps) {
   const { title = "Branch-icon", size, color, width, height, titleId } = props;
   return (
     <svg

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function DeploymentsIcon(props: IconProps) {
+export function DeploymentsIcon(props: IconProps) {
   const {
     title = "Deployments-icon",
     size,

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function BadgeIcon(props: IconProps) {
+export function BadgeIcon(props: IconProps) {
   const { title = "Badge-icon", size, color, width, height, titleId } = props;
   return (
     <svg

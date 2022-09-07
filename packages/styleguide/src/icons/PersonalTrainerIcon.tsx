@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function PersonalTrainerIcon(props: IconProps) {
+export function PersonalTrainerIcon(props: IconProps) {
   const {
     title = "Personal-trainer-icon",
     size,

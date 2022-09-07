@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function TokensIcon(props: IconProps) {
+export function TokensIcon(props: IconProps) {
   const { title = "Tokens-icon", size, color, width, height, titleId } = props;
   return (
     <svg

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function DebugIcon(props: IconProps) {
+export function DebugIcon(props: IconProps) {
   const { title = "Debug-icon", size, color, width, height, titleId } = props;
   return (
     <svg

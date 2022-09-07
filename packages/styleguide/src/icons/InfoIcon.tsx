@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function InfoIcon(props: IconProps) {
+export function InfoIcon(props: IconProps) {
   const { title = "Info-icon", size, color, width, height, titleId } = props;
   return (
     <svg

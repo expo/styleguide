@@ -1,6 +1,6 @@
 import React from "react";
 import { IconProps } from "../types";
-export default function RolloutIcon(props: IconProps) {
+export function RolloutIcon(props: IconProps) {
   const { title = "Rollout-icon", size, color, width, height, titleId } = props;
   return (
     <svg
