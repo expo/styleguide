@@ -1,0 +1,112 @@
+[33mweb:build: [0mcache hit, replaying output [2mf212959bc5a24181[0m
+[33mweb:build: [0m$ next build
+[33mweb:build: [0minfo  - Linting and checking validity of types...
+[33mweb:build: [0minfo  - Creating an optimized production build...
+[33mweb:build: [0m{
+[33mweb:build: [0m  theme: {
+[33mweb:build: [0m    background: {
+[33mweb:build: [0m      default: 'var(--expo-theme-background-default)',
+[33mweb:build: [0m      screen: 'var(--expo-theme-background-screen)',
+[33mweb:build: [0m      secondary: 'var(--expo-theme-background-secondary)',
+[33mweb:build: [0m      tertiary: 'var(--expo-theme-background-tertiary)',
+[33mweb:build: [0m      quaternary: 'var(--expo-theme-background-quaternary)',
+[33mweb:build: [0m      error: 'var(--expo-theme-background-error)',
+[33mweb:build: [0m      warning: 'var(--expo-theme-background-warning)',
+[33mweb:build: [0m      success: 'var(--expo-theme-background-success)',
+[33mweb:build: [0m      info: 'var(--expo-theme-background-info)',
+[33mweb:build: [0m      overlay: 'var(--expo-theme-background-overlay)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    border: {
+[33mweb:build: [0m      default: 'var(--expo-theme-border-default)',
+[33mweb:build: [0m      error: 'var(--expo-theme-border-error)',
+[33mweb:build: [0m      warning: 'var(--expo-theme-border-warning)',
+[33mweb:build: [0m      success: 'var(--expo-theme-border-success)',
+[33mweb:build: [0m      info: 'var(--expo-theme-border-info)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    button: {
+[33mweb:build: [0m      primary: [Object],
+[33mweb:build: [0m      secondary: [Object],
+[33mweb:build: [0m      tertiary: [Object],
+[33mweb:build: [0m      transparent: [Object],
+[33mweb:build: [0m      ghost: [Object]
+[33mweb:build: [0m    },
+[33mweb:build: [0m    link: { default: 'var(--expo-theme-link-default)' },
+[33mweb:build: [0m    status: {
+[33mweb:build: [0m      default: 'var(--expo-theme-status-default)',
+[33mweb:build: [0m      error: 'var(--expo-theme-status-error)',
+[33mweb:build: [0m      warning: 'var(--expo-theme-status-warning)',
+[33mweb:build: [0m      success: 'var(--expo-theme-status-success)',
+[33mweb:build: [0m      info: 'var(--expo-theme-status-info)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    text: {
+[33mweb:build: [0m      default: 'var(--expo-theme-text-default)',
+[33mweb:build: [0m      secondary: 'var(--expo-theme-text-secondary)',
+[33mweb:build: [0m      error: 'var(--expo-theme-text-error)',
+[33mweb:build: [0m      warning: 'var(--expo-theme-text-warning)',
+[33mweb:build: [0m      success: 'var(--expo-theme-text-success)',
+[33mweb:build: [0m      info: 'var(--expo-theme-text-info)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    icon: {
+[33mweb:build: [0m      default: 'var(--expo-theme-icon-default)',
+[33mweb:build: [0m      secondary: 'var(--expo-theme-icon-secondary)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    code: {
+[33mweb:build: [0m      keyword: 'var(--expo-theme-code-keyword)',
+[33mweb:build: [0m      builtin: 'var(--expo-theme-code-builtin)',
+[33mweb:build: [0m      property: 'var(--expo-theme-code-property)',
+[33mweb:build: [0m      comment: 'var(--expo-theme-code-comment)',
+[33mweb:build: [0m      punctuation: 'var(--expo-theme-code-punctuation)',
+[33mweb:build: [0m      operator: 'var(--expo-theme-code-operator)',
+[33mweb:build: [0m      regex: 'var(--expo-theme-code-regex)',
+[33mweb:build: [0m      string: 'var(--expo-theme-code-string)',
+[33mweb:build: [0m      before: 'var(--expo-theme-code-before)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    highlight: {
+[33mweb:build: [0m      accent: 'var(--expo-theme-highlight-accent)',
+[33mweb:build: [0m      emphasis: 'var(--expo-theme-highlight-emphasis)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    project: {
+[33mweb:build: [0m      blue: 'var(--expo-theme-project-blue)',
+[33mweb:build: [0m      green: 'var(--expo-theme-project-green)',
+[33mweb:build: [0m      yellow: 'var(--expo-theme-project-yellow)',
+[33mweb:build: [0m      orange: 'var(--expo-theme-project-orange)',
+[33mweb:build: [0m      red: 'var(--expo-theme-project-red)',
+[33mweb:build: [0m      pink: 'var(--expo-theme-project-pink)',
+[33mweb:build: [0m      purple: 'var(--expo-theme-project-purple)'
+[33mweb:build: [0m    },
+[33mweb:build: [0m    palette: {
+[33mweb:build: [0m      gray: [Object],
+[33mweb:build: [0m      primary: [Object],
+[33mweb:build: [0m      blue: [Object],
+[33mweb:build: [0m      green: [Object],
+[33mweb:build: [0m      yellow: [Object],
+[33mweb:build: [0m      orange: [Object],
+[33mweb:build: [0m      red: [Object],
+[33mweb:build: [0m      pink: [Object],
+[33mweb:build: [0m      purple: [Object],
+[33mweb:build: [0m      white: 'var(--expo-theme-palette-white)',
+[33mweb:build: [0m      black: 'var(--expo-theme-palette-black)'
+[33mweb:build: [0m    }
+[33mweb:build: [0m  }
+[33mweb:build: [0m}
+[33mweb:build: [0minfo  - Compiled successfully
+[33mweb:build: [0minfo  - Collecting page data...
+[33mweb:build: [0minfo  - Generating static pages (0/3)
+[33mweb:build: [0minfo  - Generating static pages (3/3)
+[33mweb:build: [0minfo  - Finalizing page optimization...
+[33mweb:build: [0m
+[33mweb:build: [0mRoute (pages)                              Size     First Load JS
+[33mweb:build: [0m┌ ○ /                                      312 B            78 kB
+[33mweb:build: [0m├   /_app                                  0 B            77.7 kB
+[33mweb:build: [0m├ ○ /404                                   181 B          77.9 kB
+[33mweb:build: [0m└ λ /api/hello                             0 B            77.7 kB
+[33mweb:build: [0m+ First Load JS shared by all              79.1 kB
+[33mweb:build: [0m  ├ chunks/framework-8161f195fd1fa4bf.js   45.5 kB
+[33mweb:build: [0m  ├ chunks/main-19c7108e1fd51d4c.js        31 kB
+[33mweb:build: [0m  ├ chunks/pages/_app-d24f183ccf4baaf3.js  498 B
+[33mweb:build: [0m  ├ chunks/webpack-4e7214a60fad8e88.js     712 B
+[33mweb:build: [0m  └ css/e12a83443a801f9e.css               1.42 kB
+[33mweb:build: [0m
+[33mweb:build: [0mλ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+[33mweb:build: [0m○  (Static)  automatically rendered as static HTML (uses no initial props)
+[33mweb:build: [0m
