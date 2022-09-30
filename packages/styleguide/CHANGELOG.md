@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.3.0
+
+### Minor Changes
+
+- 3ae9f49: Adds more horizontal icon
+
 ## 4.2.0
 
 ### Minor Changes
