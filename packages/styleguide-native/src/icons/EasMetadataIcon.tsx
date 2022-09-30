@@ -1,7 +1,7 @@
 import React from "react";
 import Svg, { Path, G, Defs, ClipPath } from "react-native-svg";
 import { IconProps } from "../types";
-export default function StoreIcon(props: IconProps) {
+export default function EasMetadataIcon(props: IconProps) {
   const { size, color, width, height } = props;
   return (
     <Svg
@@ -11,7 +11,7 @@ export default function StoreIcon(props: IconProps) {
       height={size || height || 20}
       {...props}
     >
-      <G clipPath="url(#store-icon_svg__store-icon_svg__clip0_3475_2499)">
+      <G clipPath="url(#eas-metadata-icon_svg__eas-metadata-icon_svg__clip0_3475_2492)">
         <Path
           d="M3 8.32v9.18h14V8.32"
           stroke={color || "#000"}
@@ -31,7 +31,7 @@ export default function StoreIcon(props: IconProps) {
         <Path fill={color || "#000"} d="M7.25 12.5h5.5v4.736h-5.5z" />
       </G>
       <Defs>
-        <ClipPath id="store-icon_svg__store-icon_svg__clip0_3475_2499">
+        <ClipPath id="eas-metadata-icon_svg__eas-metadata-icon_svg__clip0_3475_2492">
           <Path fill="#fff" d="M0 0h20v20H0z" />
         </ClipPath>
       </Defs>

@@ -1,7 +1,14 @@
 import React from "react";
 import { IconProps } from "../types";
-export function StoreIcon(props: IconProps) {
-  const { title = "Store-icon", size, color, width, height, titleId } = props;
+export function EasMetadataIcon(props: IconProps) {
+  const {
+    title = "Eas-metadata-icon",
+    size,
+    color,
+    width,
+    height,
+    titleId,
+  } = props;
   return (
     <svg
       viewBox="0 0 20 20"
@@ -13,7 +20,7 @@ export function StoreIcon(props: IconProps) {
       {...props}
     >
       {title ? <title id={titleId}>{title}</title> : null}
-      <g clipPath="url(#store-icon_svg__store-icon_svg__clip0_3475_2499)">
+      <g clipPath="url(#eas-metadata-icon_svg__eas-metadata-icon_svg__clip0_3475_2492)">
         <path
           d="M3 8.32v9.18h14V8.32"
           stroke={color || "var(--expo-theme-icon-default)"}
@@ -36,7 +43,7 @@ export function StoreIcon(props: IconProps) {
         />
       </g>
       <defs>
-        <clipPath id="store-icon_svg__store-icon_svg__clip0_3475_2499">
+        <clipPath id="eas-metadata-icon_svg__eas-metadata-icon_svg__clip0_3475_2492">
           <path fill="#fff" d="M0 0h20v20H0z" />
         </clipPath>
       </defs>
