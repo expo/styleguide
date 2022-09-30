@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.2.0
+
+### Minor Changes
+
+- 36e6443: Adds icons
+
 ## 4.1.2
 
 ### Patch Changes
