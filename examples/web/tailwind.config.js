@@ -1,5 +1,4 @@
 const { theme } = require("@expo/styleguide/tailwind");
-console.log({ theme });
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
