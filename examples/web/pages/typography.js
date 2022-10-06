@@ -2,7 +2,7 @@ export default function Typography() {
   return (
     <div className="p-8">
       <h1 className="text-heading-5xl font-black">Typography</h1>
-      <div className="mt-20 flex flex-col gap-8">
+      <div className="mt-16 flex flex-col gap-8">
         <div className="flex items-center gap-2">
           <p className="w-32">Heading 5xl</p>
           <h2 className="text-heading-5xl font-black">
@@ -41,16 +41,16 @@ export default function Typography() {
 
         <div className="flex items-center gap-2">
           <p className="w-32">Heading base</p>
-          <h2 className="text-heading-base font-normal">Build developer trust.</h2>
+          <h2 className="text-heading-base font-medium">Build developer trust.</h2>
         </div>
         <div className="flex items-center gap-2">
           <p className="w-32">Heading sm</p>
-          <h2 className="text-heading-sm font-light">Build developer trust.</h2>
+          <h2 className="text-heading-sm font-medium">Build developer trust.</h2>
         </div>
 
         <div className="flex items-center gap-2">
           <p className="w-32">Heading xs</p>
-          <h2 className="text-heading-xs font-extralight">Build developer trust.</h2>
+          <h2 className="text-heading-xs font-medium">Build developer trust.</h2>
         </div>
       </div>
 
