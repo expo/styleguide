@@ -4,7 +4,6 @@ const {
   shadows,
   breakpoints,
 } = require("@expo/styleguide");
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -30,70 +29,96 @@ module.exports = {
       },
       boxShadow: shadows,
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-        mono: ["Menlo", ...defaultTheme.fontFamily.mono],
+        sans: [
+          "Inter var",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          '"Noto Sans"',
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+        mono: [
+          "Menlo",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          '"Liberation Mono"',
+          '"Courier New"',
+          "monospace",
+        ],
       },
       // Based on Major Third (1.250) type scale.
       // Sizes calculated at: https://type-scale.com
       fontSize: {
         "heading-5xl": [
-          "calc(var(--expo-theme-header-base-font-size) * 3.815)",
+          "calc(var(--expo-theme-heading-base-font-size) * 3.815)",
           {
             lineHeight: 1.2,
             letterSpacing: "-0.022rem",
           },
         ],
         "heading-4xl": [
-          "calc(var(--expo-theme-header-base-font-size) * 3.052)",
+          "calc(var(--expo-theme-heading-base-font-size) * 3.052)",
           {
             lineHeight: 1.2,
             letterSpacing: "-0.022rem",
           },
         ],
         "heading-3xl": [
-          "calc(var(--expo-theme-header-base-font-size) * 2.441)",
+          "calc(var(--expo-theme-heading-base-font-size) * 2.441)",
           {
             lineHeight: 1.3,
             letterSpacing: "-0.022rem",
           },
         ],
         "heading-2xl": [
-          "calc(var(--expo-theme-header-base-font-size) * 1.953)",
+          "calc(var(--expo-theme-heading-base-font-size) * 1.953)",
           {
             lineHeight: 1.4,
             letterSpacing: "-0.021rem",
           },
         ],
         "heading-xl": [
-          "calc(var(--expo-theme-header-base-font-size) * 1.563)",
+          "calc(var(--expo-theme-heading-base-font-size) * 1.563)",
           {
             lineHeight: 1.5,
             letterSpacing: "-0.017rem",
           },
         ],
         "heading-lg": [
-          "calc(var(--expo-theme-header-base-font-size) * 1.25)",
+          "calc(var(--expo-theme-heading-base-font-size) * 1.25)",
           {
             lineHeight: 1.5,
             letterSpacing: "-0.017rem",
           },
         ],
         "heading-base": [
-          "calc(var(--expo-theme-header-base-font-size) * 1)",
+          "calc(var(--expo-theme-heading-base-font-size) * 1)",
           {
             lineHeight: 1.625,
             letterSpacing: "-0.011rem",
           },
         ],
         "heading-sm": [
-          "calc(var(--expo-theme-header-base-font-size) * 0.8)",
+          "calc(var(--expo-theme-heading-base-font-size) * 0.8)",
           {
             lineHeight: 1.615,
             letterSpacing: "-0.003rem",
           },
         ],
         "heading-xs": [
-          "calc(var(--expo-theme-header-base-font-size) * 0.64)",
+          "calc(var(--expo-theme-heading-base-font-size) * 0.64)",
           {
             lineHeight: 1.58,
           },
