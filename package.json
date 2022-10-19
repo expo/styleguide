@@ -15,7 +15,8 @@
     "turbo": "^1.2.8"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "volta": {
     "node": "16.0.0"

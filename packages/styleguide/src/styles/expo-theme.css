@@ -367,9 +367,12 @@
   --expo-theme-shadows-button: var(--expo-theme-shadows-micro);
   --expo-theme-shadows-input: var(--expo-theme-shadows-micro);
   --expo-theme-shadows-popover: var(--expo-theme-shadows-small);
+
+  /* Heading Font sizing */
+  --expo-theme-heading-base-font-size: 12px;
 }
 
-[data-expo-theme='dark'] {
+[data-expo-theme="dark"] {
   /* Dark theme */
   --expo-theme-palette-gray-000: #0b0f13;
   --expo-theme-palette-gray-100: #14191f;
@@ -543,4 +546,16 @@
   --expo-theme-shadows-medium: 0 15px 25px rgba(0, 0, 0, 0.5),
     0 5px 10px rgba(0, 0, 0, 0.25);
   --expo-theme-shadows-large: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 401px) {
+  :root {
+    --expo-theme-heading-base-font-size: 14px;
+  }
+}
+
+@media (min-width: 901px) {
+  :root {
+    --expo-theme-heading-base-font-size: 16px;
+  }
 }
