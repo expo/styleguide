@@ -63,6 +63,7 @@ import {
   MegaphoneIcon,
   MessageIcon,
   MoreHorizontalIcon,
+  MoreVerticalIcon,
   OneTimePasswordIcon,
   OpenInternalIcon,
   OverviewIcon,
@@ -121,6 +122,7 @@ import {
   UsersFilledIcon,
   UsersIcon,
   VersionIcon,
+  WrapLinesIcon,
   XIcon,
   YoutubeIcon,
 } from "@expo/styleguide";
@@ -194,6 +196,7 @@ export default function Icons() {
         <IconCell label="megaphone" icon={MegaphoneIcon} />
         <IconCell label="message" icon={MessageIcon} />
         <IconCell label="more-horizontal" icon={MoreHorizontalIcon} />
+        <IconCell label="more-vertical" icon={MoreVerticalIcon} />
         <IconCell label="one-time-password" icon={OneTimePasswordIcon} />
         <IconCell label="open-internal" icon={OpenInternalIcon} />
         <IconCell label="overview" icon={OverviewIcon} />
@@ -252,6 +255,7 @@ export default function Icons() {
         <IconCell label="users-filled" icon={UsersFilledIcon} />
         <IconCell label="users" icon={UsersIcon} />
         <IconCell label="version" icon={VersionIcon} />
+        <IconCell label="wrap-lines" icon={WrapLinesIcon} />
         <IconCell label="x" icon={XIcon} />
         <IconCell label="youtube" icon={YoutubeIcon} />
       </div>
