@@ -10,6 +10,12 @@ export default function Home() {
           <ArrowRightIcon color="currentColor" className='w-6 h-6' />
         </a>
       </Link>
+      <Link href="/icons">
+        <a className="text-heading-xl font-medium flex items-center gap-2 hover:underline">
+          <span>Icons</span>
+          <ArrowRightIcon color="currentColor" className='w-6 h-6' />
+        </a>
+      </Link>
     </div>
   );
 }
