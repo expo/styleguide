@@ -66,6 +66,7 @@ import {
   MoreVerticalIcon,
   OneTimePasswordIcon,
   OpenInternalIcon,
+  OrganizationIcon,
   OverviewIcon,
   PerformanceIcon,
   PersonalTrainerIcon,
@@ -199,6 +200,7 @@ export default function Icons() {
         <IconCell label="more-vertical" icon={MoreVerticalIcon} />
         <IconCell label="one-time-password" icon={OneTimePasswordIcon} />
         <IconCell label="open-internal" icon={OpenInternalIcon} />
+        <IconCell label="organization" icon={OrganizationIcon} />
         <IconCell label="overview" icon={OverviewIcon} />
         <IconCell label="performace" icon={PerformanceIcon} />
         <IconCell label="personal-trainer" icon={PersonalTrainerIcon} />
