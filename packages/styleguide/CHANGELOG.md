@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.4.0
+
+### Minor Changes
+
+- a240ff6: Adds additional icons
+
 ## 4.3.0
 
 ### Minor Changes
