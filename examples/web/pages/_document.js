@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
-      <body>
+      <body className="bg-screen text-default">
         <BlockingSetInitialColorMode />
         <Main />
         <NextScript />

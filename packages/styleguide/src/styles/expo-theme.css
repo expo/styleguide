@@ -164,13 +164,13 @@
   --expo-theme-icon-default: var(--slate11);
   --expo-theme-icon-secondary: var(--slate10);
   --expo-theme-icon-tertiary: var(--slate9);
-  --expo-theme-icon-quarternary: var(--slate8);
+  --expo-theme-icon-quaternary: var(--slate8);
 
   /* Text */
   --expo-theme-text-default: var(--slate12);
   --expo-theme-text-secondary: var(--slate11);
   --expo-theme-text-tertiary: var(--slate10);
-  --expo-theme-text-quarternary: var(--slate9);
+  --expo-theme-text-quaternary: var(--slate9);
   --expo-theme-text-link: var(--blue10);
 
   /* Borders */
@@ -202,68 +202,6 @@
 }
 
 .dark-theme {
-  /* Colors */
-  --expo-color-green1: var(--greenDark1);
-  --expo-color-green2: var(--greenDark2);
-  --expo-color-green3: var(--greenDark3);
-  --expo-color-green4: var(--greenDark4);
-  --expo-color-green5: var(--greenDark5);
-  --expo-color-green6: var(--greenDark6);
-  --expo-color-green7: var(--greenDark7);
-  --expo-color-green8: var(--greenDark8);
-  --expo-color-green9: var(--greenDark9);
-  --expo-color-green10: var(--greenDark10);
-  --expo-color-green11: var(--greenDark11);
-  --expo-color-green12: var(--greenDark12);
-  --expo-color-yellow1: var(--yellowDark1);
-  --expo-color-yellow2: var(--yellowDark2);
-  --expo-color-yellow3: var(--yellowDark3);
-  --expo-color-yellow4: var(--yellowDark4);
-  --expo-color-yellow5: var(--yellowDark5);
-  --expo-color-yellow6: var(--yellowDark6);
-  --expo-color-yellow7: var(--yellowDark7);
-  --expo-color-yellow8: var(--yellowDark8);
-  --expo-color-yellow9: var(--yellowDark9);
-  --expo-color-yellow10: var(--yellowDark10);
-  --expo-color-yellow11: var(--yellowDark11);
-  --expo-color-yellow12: var(--yellowDark12);
-  --expo-color-red1: var(--redDark1);
-  --expo-color-red2: var(--redDark2);
-  --expo-color-red3: var(--redDark3);
-  --expo-color-red4: var(--redDark4);
-  --expo-color-red5: var(--redDark5);
-  --expo-color-red6: var(--redDark6);
-  --expo-color-red7: var(--redDark7);
-  --expo-color-red8: var(--redDark8);
-  --expo-color-red9: var(--redDark9);
-  --expo-color-red10: var(--redDark10);
-  --expo-color-red11: var(--redDark11);
-  --expo-color-red12: var(--redDark12);
-  --expo-color-blue1: var(--blueDark1);
-  --expo-color-blue2: var(--blueDark2);
-  --expo-color-blue3: var(--blueDark3);
-  --expo-color-blue4: var(--blueDark4);
-  --expo-color-blue5: var(--blueDark5);
-  --expo-color-blue6: var(--blueDark6);
-  --expo-color-blue7: var(--blueDark7);
-  --expo-color-blue8: var(--blueDark8);
-  --expo-color-blue9: var(--blueDark9);
-  --expo-color-blue10: var(--blueDark10);
-  --expo-color-blue11: var(--blueDark11);
-  --expo-color-blue12: var(--blueDark12);
-  --expo-color-gray1: var(--slateDark1);
-  --expo-color-gray2: var(--slateDark2);
-  --expo-color-gray3: var(--slateDark3);
-  --expo-color-gray4: var(--slateDark4);
-  --expo-color-gray5: var(--slateDark5);
-  --expo-color-gray6: var(--slateDark6);
-  --expo-color-gray7: var(--slateDark7);
-  --expo-color-gray8: var(--slateDark8);
-  --expo-color-gray9: var(--slateDark9);
-  --expo-color-gray10: var(--slateDark10);
-  --expo-color-gray11: var(--slateDark11);
-  --expo-color-gray12: var(--slateDark12);
-
   /* Statuses */
   --expo-theme-success-background: var(--green3);
   --expo-theme-success-border: var(--green7);
@@ -353,13 +291,13 @@
   --expo-theme-icon-default: var(--slate11);
   --expo-theme-icon-secondary: var(--slate10);
   --expo-theme-icon-tertiary: var(--slate9);
-  --expo-theme-icon-quarternary: var(--slate8);
+  --expo-theme-icon-quaternary: var(--slate8);
 
   /* Text */
   --expo-theme-text-default: var(--slate12);
   --expo-theme-text-secondary: var(--slate11);
   --expo-theme-text-tertiary: var(--slate10);
-  --expo-theme-text-quarternary: var(--slate9);
+  --expo-theme-text-quaternary: var(--slate9);
   --expo-theme-text-link: var(--blue10);
 
   /* Borders */
