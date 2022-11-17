@@ -1,10 +1,7 @@
 export const shadows = {
-  micro: 'var(--expo-theme-shadows-micro)',
-  tiny: 'var(--expo-theme-shadows-tiny)',
-  small: 'var(--expo-theme-shadows-small)',
-  medium: 'var(--expo-theme-shadows-medium)',
-  large: 'var(--expo-theme-shadows-large)',
-  input: 'var(--expo-theme-shadows-input)',
-  button: 'var(--expo-theme-shadows-button)',
-  popover: 'var(--expo-theme-shadows-popover)',
+  xs: 'var(--expo-theme-shadows-xs)',
+  sm: 'var(--expo-theme-shadows-sm)',
+  md: 'var(--expo-theme-shadows-md)',
+  lg: 'var(--expo-theme-shadows-lg)',
+  xl: 'var(--expo-theme-shadows-xl)',
 };

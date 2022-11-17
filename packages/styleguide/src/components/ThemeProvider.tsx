@@ -71,10 +71,10 @@ export function ThemeProvider(props: ThemeProviderProps) {
   function setDocumentTheme(themeName: Themes) {
     if (disabled) return;
 
-    if ([Themes.LIGHT, Themes.DARK].includes(themeName)) {
-      document.documentElement.setAttribute('data-expo-theme', themeName);
+    if (themeName === Themes.DARK) {
+      document.body.classList.add('dark-theme');
     } else {
-      document.documentElement.setAttribute('data-expo-theme', '');
+      document.body.classList.remove('dark-theme');
     }
   }
 

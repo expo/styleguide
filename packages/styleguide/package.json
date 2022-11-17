@@ -42,5 +42,8 @@
   "peerDependencies": {
     "react": "*"
   },
-  "gitHead": "94bfdec4905cfc8fa2c2540ed672219ec6949246"
+  "gitHead": "94bfdec4905cfc8fa2c2540ed672219ec6949246",
+  "dependencies": {
+    "@radix-ui/colors": "^0.1.8"
+  }
 }

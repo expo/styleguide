@@ -13,9 +13,7 @@ module.exports = {
     borderColor: theme.border,
     colors: {
       ...theme.palette,
-      link: theme.link.default,
-      status: theme.status,
-      code: theme.code,
+      link: theme.text.link,
       icon: theme.icon,
       default: theme.text.default,
       secondary: theme.text.secondary,

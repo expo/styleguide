@@ -41,9 +41,9 @@ function setInitialColorMode() {
 
   // add HTML attribute if dark mode
   if (colorMode === 'dark') {
-    document.documentElement.setAttribute('data-expo-theme', 'dark');
+    document.body.classList.add('dark-theme');
   } else {
-    document.documentElement.setAttribute('data-expo-theme', 'light');
+    document.body.classList.remove('dark-theme');
   }
 }
 
