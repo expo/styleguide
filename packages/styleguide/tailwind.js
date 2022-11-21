@@ -17,11 +17,11 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      ...theme,
       default: theme.text.default,
       secondary: theme.text.secondary,
       tertiary: theme.text.tertiary,
       quaternary: theme.text.quaternary,
+      ...theme,
     },
     boxShadow: shadows,
     fontFamily: {

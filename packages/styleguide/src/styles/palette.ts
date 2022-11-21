@@ -1,4 +1,4 @@
-import { blue, blueDark, red, redDark, yellow, yellowDark, green, greenDark, slate, slateDark } from '@radix-ui/colors'
+import { blue, blueDark, red, redDark, yellow, yellowDark, green, greenDark, orange, orangeDark, purple, purpleDark, pink, pinkDark, slate, slateDark } from '@radix-ui/colors'
 
 export const palette = {
   white: 'hsl(0, 0%, 100%)',
@@ -8,6 +8,9 @@ export const palette = {
     ...red,
     ...yellow,
     ...green,
+    ...orange,
+    ...purple,
+    ...pink,
     gray1: slate.slate1,
     gray2: slate.slate2,
     gray3: slate.slate3,
@@ -26,6 +29,9 @@ export const palette = {
     ...redDark,
     ...yellowDark,
     ...greenDark,
+    ...orangeDark,
+    ...purpleDark,
+    ...pinkDark,
     gray1: slateDark.slate1,
     gray2: slateDark.slate2,
     gray3: slateDark.slate3,

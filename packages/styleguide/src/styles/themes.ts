@@ -1,4 +1,14 @@
+import { red, green, blue, yellow, orange, pink, purple } from '@radix-ui/colors'
 import { palette } from "./palette";
+
+
+function getColorScaleCSSVariables(colorScale: { [colorKey: string]: string }) {
+  return Object.keys(colorScale).reduce((acc, colorKey) => ({
+    ...acc,
+    [colorKey]: `var(--${colorKey})`,
+  }), {});
+}
+
 
 export const theme = {
   success: {
@@ -137,68 +147,30 @@ export const theme = {
   palette: {
     white: 'var(--expo-color-white)',
     black: 'var(--expo-color-black)',
-    green1: 'var(--expo-color-green1)',
-    green2: 'var(--expo-color-green2)',
-    green3: 'var(--expo-color-green3)',
-    green4: 'var(--expo-color-green4)',
-    green5: 'var(--expo-color-green5)',
-    green6: 'var(--expo-color-green6)',
-    green7: 'var(--expo-color-green7)',
-    green8: 'var(--expo-color-green8)',
-    green9: 'var(--expo-color-green9)',
-    green10: 'var(--expo-color-green10)',
-    green11: 'var(--expo-color-green11)',
-    green12: 'var(--expo-color-green12)',
-    red1: 'var(--expo-color-red1)',
-    red2: 'var(--expo-color-red2)',
-    red3: 'var(--expo-color-red3)',
-    red4: 'var(--expo-color-red4)',
-    red5: 'var(--expo-color-red5)',
-    red6: 'var(--expo-color-red6)',
-    red7: 'var(--expo-color-red7)',
-    red8: 'var(--expo-color-red8)',
-    red9: 'var(--expo-color-red9)',
-    red10: 'var(--expo-color-red10)',
-    red11: 'var(--expo-color-red11)',
-    red12: 'var(--expo-color-red12)',
-    yellow1: 'var(--expo-color-yellow1)',
-    yellow2: 'var(--expo-color-yellow2)',
-    yellow3: 'var(--expo-color-yellow3)',
-    yellow4: 'var(--expo-color-yellow4)',
-    yellow5: 'var(--expo-color-yellow5)',
-    yellow6: 'var(--expo-color-yellow6)',
-    yellow7: 'var(--expo-color-yellow7)',
-    yellow8: 'var(--expo-color-yellow8)',
-    yellow9: 'var(--expo-color-yellow9)',
-    yellow10: 'var(--expo-color-yellow10)',
-    yellow11: 'var(--expo-color-yellow11)',
-    yellow12: 'var(--expo-color-yellow12)',
-    blue1: 'var(--expo-color-blue1)',
-    blue2: 'var(--expo-color-blue2)',
-    blue3: 'var(--expo-color-blue3)',
-    blue4: 'var(--expo-color-blue4)',
-    blue5: 'var(--expo-color-blue5)',
-    blue6: 'var(--expo-color-blue6)',
-    blue7: 'var(--expo-color-blue7)',
-    blue8: 'var(--expo-color-blue8)',
-    blue9: 'var(--expo-color-blue9)',
-    blue10: 'var(--expo-color-blue10)',
-    blue11: 'var(--expo-color-blue11)',
-    blue12: 'var(--expo-color-blue12)',
-    gray1: 'var(--expo-color-gray1)',
-    gray2: 'var(--expo-color-gray2)',
-    gray3: 'var(--expo-color-gray3)',
-    gray4: 'var(--expo-color-gray4)',
-    gray5: 'var(--expo-color-gray5)',
-    gray6: 'var(--expo-color-gray6)',
-    gray7: 'var(--expo-color-gray7)',
-    gray8: 'var(--expo-color-gray8)',
-    gray9: 'var(--expo-color-gray9)',
-    gray10: 'var(--expo-color-gray10)',
-    gray11: 'var(--expo-color-gray11)',
-    gray12: 'var(--expo-color-gray12)',
+    ...getColorScaleCSSVariables(red),
+    ...getColorScaleCSSVariables(blue),
+    ...getColorScaleCSSVariables(yellow),
+    ...getColorScaleCSSVariables(orange),
+    ...getColorScaleCSSVariables(pink),
+    ...getColorScaleCSSVariables(purple),
+    ...getColorScaleCSSVariables(green),
+    gray1: 'var(--slate1)',
+    gray2: 'var(--slate2)',
+    gray3: 'var(--slate3)',
+    gray4: 'var(--slate4)',
+    gray5: 'var(--slate5)',
+    gray6: 'var(--slate6)',
+    gray7: 'var(--slate7)',
+    gray8: 'var(--slate8)',
+    gray9: 'var(--slate9)',
+    gray10: 'var(--slate10)',
+    gray11: 'var(--slate11)',
+    gray12: 'var(--slate12)',
   },
 };
+
+console.log(theme.palette);
+
 
 export const lightTheme = {
   success: {
