@@ -169,9 +169,6 @@ export const theme = {
   },
 };
 
-console.log(theme.palette);
-
-
 export const lightTheme = {
   success: {
     background: palette.light.green3,
