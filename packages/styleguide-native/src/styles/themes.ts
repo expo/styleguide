@@ -53,8 +53,8 @@ export const lightTheme = {
     secondary: {
       background: palette.white,
       border: palette.light.gray7,
-      hover: palette.light.gray10,
-      icon: palette.light.gray2,
+      hover: palette.light.gray2,
+      icon: palette.light.gray10,
       text: palette.light.gray11,
       disabled: {
         background: palette.white,
@@ -154,15 +154,15 @@ export const darkTheme = {
   },
   button: {
     primary: {
-      background: palette.dark.blue10,
-      border: palette.dark.blue10,
-      hover: palette.dark.blue9,
+      background: palette.dark.blue9,
+      border: palette.dark.blue9,
+      hover: palette.dark.blue8,
       icon: palette.dark.blue3,
-      text: palette.black,
+      text: palette.white,
       disabled: {
-        background: palette.dark.blue8,
-        border: palette.dark.blue8,
-        text: palette.black,
+        background: palette.dark.blue7,
+        border: palette.dark.blue7,
+        text: palette.white,
       },
       destructive: {
         background: palette.dark.red10,
