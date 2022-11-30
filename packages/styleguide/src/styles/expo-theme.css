@@ -52,8 +52,8 @@
 
   --expo-theme-button-secondary-background: var(--expo-color-white);
   --expo-theme-button-secondary-border: var(--slate7);
-  --expo-theme-button-secondary-hover: var(--slate10);
-  --expo-theme-button-secondary-icon: var(--slate2);
+  --expo-theme-button-secondary-hover: var(--slate2);
+  --expo-theme-button-secondary-icon: var(--slate10);
   --expo-theme-button-secondary-text: var(--slate11);
   --expo-theme-button-secondary-disabled-background: var(--expo-color-white);
   --expo-theme-button-secondary-disabled-border: var(--slate6);
@@ -168,14 +168,14 @@
   --expo-theme-info-text: var(--blue11);
 
   /* Buttons */
-  --expo-theme-button-primary-background: var(--blue10);
-  --expo-theme-button-primary-border: var(--blue10);
-  --expo-theme-button-primary-hover: var(--blue9);
+  --expo-theme-button-primary-background: var(--blue9);
+  --expo-theme-button-primary-border: var(--blue9);
+  --expo-theme-button-primary-hover: var(--blue8);
   --expo-theme-button-primary-icon: var(--blue3);
-  --expo-theme-button-primary-text: var(--expo-color-black);
-  --expo-theme-button-primary-disabled-background: var(--blue8);
-  --expo-theme-button-primary-disabled-border: var(--blue8);
-  --expo-theme-button-primary-disabled-text: var(--expo-color-black);
+  --expo-theme-button-primary-text: var(--expo-color-white);
+  --expo-theme-button-primary-disabled-background: var(--blue7);
+  --expo-theme-button-primary-disabled-border: var(--blue7);
+  --expo-theme-button-primary-disabled-text: var(--slate11);
 
   --expo-theme-button-secondary-background: var(--slate2);
   --expo-theme-button-secondary-border: var(--slate7);
