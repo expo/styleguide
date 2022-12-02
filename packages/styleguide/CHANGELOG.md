@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.0
+
+### Minor Changes
+
+- 056f326: Refactors status colors
+
 ## 5.0.0
 
 ### Major Changes
