@@ -1,29 +1,47 @@
 import { palette } from "./palette";
 
 export const theme = {
-  success: {
-    background: 'var(--expo-theme-success-background)',
-    border: 'var(--expo-theme-success-border)',
-    icon: 'var(--expo-theme-success-icon)',
-    text: 'var(--expo-theme-success-text)',
+  background: {
+    default: 'var(--expo-theme-background-default)',
+    screen: 'var(--expo-theme-background-screen)',
+    subtle: 'var(--expo-theme-background-subtle)',
+    element: 'var(--expo-theme-background-element)',
+    hover: 'var(--expo-theme-background-hover)',
+    selected: 'var(--expo-theme-background-selected)',
+    overlay: 'var(--expo-theme-background-overlay)',
+    success: 'var(--expo-theme-background-success)',
+    warning: 'var(--expo-theme-background-warning)',
+    danger: 'var(--expo-theme-background-danger)',
+    info: 'var(--expo-theme-background-info)',
   },
-  warning: {
-    background: 'var(--expo-theme-warning-background)',
-    border: 'var(--expo-theme-warning-border)',
-    icon: 'var(--expo-theme-warning-icon)',
-    text: 'var(--expo-theme-warning-text)',
+  icon: {
+    default: 'var(--expo-theme-icon-default)',
+    secondary: 'var(--expo-theme-icon-secondary)',
+    tertiary: 'var(--expo-theme-icon-tertiary)',
+    quaternary: 'var(--expo-theme-icon-quaternary)',
+    success: 'var(--expo-theme-icon-success)',
+    warning: 'var(--expo-theme-icon-warning)',
+    danger: 'var(--expo-theme-icon-danger)',
+    info: 'var(--expo-theme-icon-info)',
   },
-  danger: {
-    background: 'var(--expo-theme-danger-background)',
-    border: 'var(--expo-theme-danger-border)',
-    icon: 'var(--expo-theme-danger-icon)',
-    text: 'var(--expo-theme-danger-text)',
+  text: {
+    default: 'var(--expo-theme-text-default)',
+    secondary: 'var(--expo-theme-text-secondary)',
+    tertiary: 'var(--expo-theme-text-tertiary)',
+    quaternary: 'var(--expo-theme-text-quaternary)',
+    link: 'var(--expo-theme-text-link)',
+    success: 'var(--expo-theme-text-success)',
+    warning: 'var(--expo-theme-text-warning)',
+    danger: 'var(--expo-theme-text-danger)',
+    info: 'var(--expo-theme-text-info)',
   },
-  info: {
-    background: 'var(--expo-theme-info-background)',
-    border: 'var(--expo-theme-info-border)',
-    icon: 'var(--expo-theme-info-icon)',
-    text: 'var(--expo-theme-info-text)',
+  border: {
+    default: 'var(--expo-theme-border-default)',
+    secondary: 'var(--expo-theme-border-secondary)',
+    success: 'var(--expo-theme-border-success)',
+    warning: 'var(--expo-theme-border-warning)',
+    danger: 'var(--expo-theme-border-danger)',
+    info: 'var(--expo-theme-border-info)',
   },
   button: {
     primary: {
@@ -98,32 +116,6 @@ export const theme = {
         text: 'var(--expo-theme-button-quaternary-disabled-text)',
       }
     },
-  },
-  background: {
-    default: 'var(--expo-theme-background-default)',
-    screen: 'var(--expo-theme-background-screen)',
-    subtle: 'var(--expo-theme-background-subtle)',
-    element: 'var(--expo-theme-background-element)',
-    hover: 'var(--expo-theme-background-hover)',
-    selected: 'var(--expo-theme-background-selected)',
-    overlay: 'var(--expo-theme-background-overlay)',
-  },
-  icon: {
-    default: 'var(--expo-theme-icon-default)',
-    secondary: 'var(--expo-theme-icon-secondary)',
-    tertiary: 'var(--expo-theme-icon-tertiary)',
-    quaternary: 'var(--expo-theme-icon-quaternary)',
-  },
-  text: {
-    default: 'var(--expo-theme-text-default)',
-    secondary: 'var(--expo-theme-text-secondary)',
-    tertiary: 'var(--expo-theme-text-tertiary)',
-    quaternary: 'var(--expo-theme-text-quaternary)',
-    link: 'var(--expo-theme-text-link)',
-  },
-  border: {
-    default: 'var(--expo-theme-border-default)',
-    secondary: 'var(--expo-theme-border-secondary)',
   },
   project: {
     blue: 'var(--expo-theme-project-blue)',
@@ -393,7 +385,7 @@ export const darkTheme = {
       background: palette.dark.blue10,
       border: palette.dark.blue10,
       hover: palette.dark.blue9,
-      icon: palette.dark.blue3,
+      icon: palette.dark.blue12,
       text: palette.black,
       disabled: {
         background: palette.dark.blue8,
