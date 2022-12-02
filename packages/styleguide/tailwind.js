@@ -8,23 +8,20 @@ const {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
-    borderRadius,
+    borderRadius: {
+      ...borderRadius,
+      DEFAULT: borderRadius.md,
+    },
     backgroundColor: theme.background,
     borderColor: theme.border,
     colors: {
-      ...theme.palette,
-      link: theme.link.default,
-      status: theme.status,
-      code: theme.code,
-      icon: theme.icon,
+      transparent: "transparent",
+      current: "currentColor",
       default: theme.text.default,
       secondary: theme.text.secondary,
-      error: theme.text.error,
-      warning: theme.text.warning,
-      success: theme.text.success,
-      info: theme.text.info,
-      highlight: theme.highlight,
-      project: theme.project,
+      tertiary: theme.text.tertiary,
+      quaternary: theme.text.quaternary,
+      ...theme,
     },
     boxShadow: shadows,
     fontFamily: {

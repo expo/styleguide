@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-native",
-  "version": "4.3.0",
+  "version": "5.0.0",
   "description": "Foundational styles for Expo interfaces.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -36,5 +36,8 @@
     "react": "*",
     "react-native-svg": "*"
   },
-  "gitHead": "94bfdec4905cfc8fa2c2540ed672219ec6949246"
+  "gitHead": "94bfdec4905cfc8fa2c2540ed672219ec6949246",
+  "dependencies": {
+    "@radix-ui/colors": "^0.1.8"
+  }
 }

@@ -1,351 +1,127 @@
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/greenDark.css";
+@import "@radix-ui/colors/yellow.css";
+@import "@radix-ui/colors/yellowDark.css";
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/redDark.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blueDark.css";
+@import "@radix-ui/colors/orange.css";
+@import "@radix-ui/colors/orangeDark.css";
+@import "@radix-ui/colors/purple.css";
+@import "@radix-ui/colors/purpleDark.css";
+@import "@radix-ui/colors/pink.css";
+@import "@radix-ui/colors/pinkDark.css";
+@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/slateDark.css";
+
 :root {
-  /* Light palette */
-  --expo-color-base-light-gray-000: #fdfdfe;
-  --expo-color-base-light-gray-100: #f8f9fa;
-  --expo-color-base-light-gray-200: #f0f1f2;
-  --expo-color-base-light-gray-300: #e1e4e8;
-  --expo-color-base-light-gray-400: #d1d5da;
-  --expo-color-base-light-gray-500: #9b9ea3;
-  --expo-color-base-light-gray-600: #6c737c;
-  --expo-color-base-light-gray-700: #595f68;
-  --expo-color-base-light-gray-800: #464c55;
-  --expo-color-base-light-gray-900: #30353c;
-  --expo-color-base-light-gray-1000: #25292e;
-  --expo-color-base-light-primary-000: #f9f7ff;
-  --expo-color-base-light-primary-100: #ede9ff;
-  --expo-color-base-light-primary-200: #d2cafd;
-  --expo-color-base-light-primary-300: #a193f9;
-  --expo-color-base-light-primary-400: #664fff;
-  --expo-color-base-light-primary-500: #4630eb;
-  --expo-color-base-light-primary-600: #3929c4;
-  --expo-color-base-light-primary-700: #2e2496;
-  --expo-color-base-light-primary-800: #261f73;
-  --expo-color-base-light-primary-900: #221e5c;
-  --expo-color-base-light-blue-000: #f1f8ff;
-  --expo-color-base-light-blue-100: #dbedff;
-  --expo-color-base-light-blue-200: #c8e1ff;
-  --expo-color-base-light-blue-300: #79b8ff;
-  --expo-color-base-light-blue-400: #2188ff;
-  --expo-color-base-light-blue-500: #0366d6;
-  --expo-color-base-light-blue-600: #005cc5;
-  --expo-color-base-light-blue-700: #044289;
-  --expo-color-base-light-blue-800: #032f62;
-  --expo-color-base-light-blue-900: #05264c;
-  --expo-color-base-light-green-000: #f0fff4;
-  --expo-color-base-light-green-100: #dcffe4;
-  --expo-color-base-light-green-200: #bef5cb;
-  --expo-color-base-light-green-300: #85e89d;
-  --expo-color-base-light-green-400: #34d058;
-  --expo-color-base-light-green-500: #28a745;
-  --expo-color-base-light-green-600: #22863a;
-  --expo-color-base-light-green-700: #176f2c;
-  --expo-color-base-light-green-800: #165c26;
-  --expo-color-base-light-green-900: #144620;
-  --expo-color-base-light-yellow-000: #fffdef;
-  --expo-color-base-light-yellow-100: #fffbdd;
-  --expo-color-base-light-yellow-200: #fff5b1;
-  --expo-color-base-light-yellow-300: #ffeb87;
-  --expo-color-base-light-yellow-400: #ffdf5d;
-  --expo-color-base-light-yellow-500: #ffd33d;
-  --expo-color-base-light-yellow-600: #f2c012;
-  --expo-color-base-light-yellow-700: #cfa108;
-  --expo-color-base-light-yellow-800: #9c7800;
-  --expo-color-base-light-yellow-900: #735c0f;
-  --expo-color-base-light-orange-000: #fff8f2;
-  --expo-color-base-light-orange-100: #ffebda;
-  --expo-color-base-light-orange-200: #ffd1ac;
-  --expo-color-base-light-orange-300: #ffab70;
-  --expo-color-base-light-orange-400: #fb8e41;
-  --expo-color-base-light-orange-500: #fa7c25;
-  --expo-color-base-light-orange-600: #de6614;
-  --expo-color-base-light-orange-700: #c45408;
-  --expo-color-base-light-orange-800: #96430b;
-  --expo-color-base-light-orange-900: #7a4018;
-  --expo-color-base-light-red-000: #ffeeee;
-  --expo-color-base-light-red-100: #ffdcdc;
-  --expo-color-base-light-red-200: #fdaeae;
-  --expo-color-base-light-red-300: #f97575;
-  --expo-color-base-light-red-400: #ea4a4a;
-  --expo-color-base-light-red-500: #d73a3a;
-  --expo-color-base-light-red-600: #cb2424;
-  --expo-color-base-light-red-700: #b31d1d;
-  --expo-color-base-light-red-800: #9e1e1c;
-  --expo-color-base-light-red-900: #861c18;
-  --expo-color-base-light-pink-000: #ffeef8;
-  --expo-color-base-light-pink-100: #fedbf0;
-  --expo-color-base-light-pink-200: #f9b3dd;
-  --expo-color-base-light-pink-300: #f692ce;
-  --expo-color-base-light-pink-400: #ec6cb9;
-  --expo-color-base-light-pink-500: #ea4aaa;
-  --expo-color-base-light-pink-600: #d03592;
-  --expo-color-base-light-pink-700: #b93a86;
-  --expo-color-base-light-pink-800: #99306f;
-  --expo-color-base-light-pink-900: #6d224f;
-  --expo-color-base-light-purple-000: #f5f0ff;
-  --expo-color-base-light-purple-100: #e6dcfd;
-  --expo-color-base-light-purple-200: #d1bcf9;
-  --expo-color-base-light-purple-300: #b392f0;
-  --expo-color-base-light-purple-400: #8a63d2;
-  --expo-color-base-light-purple-500: #6f42c1;
-  --expo-color-base-light-purple-600: #5a32a3;
-  --expo-color-base-light-purple-700: #4c2888;
-  --expo-color-base-light-purple-800: #3a1d6e;
-  --expo-color-base-light-purple-900: #29134e;
-  --expo-color-base-light-white: #ffffff;
-  --expo-color-base-light-black: #1b1f23;
+  --expo-color-white: #fff;
+  --expo-color-black: #000;
 
-  /* Dark palette */
-  --expo-color-base-dark-gray-000: #0b0f13;
-  --expo-color-base-dark-gray-100: #14191f;
-  --expo-color-base-dark-gray-200: #1c2026;
-  --expo-color-base-dark-gray-300: #262a31;
-  --expo-color-base-dark-gray-400: #32373e;
-  --expo-color-base-dark-gray-500: #49505a;
-  --expo-color-base-dark-gray-600: #737b87;
-  --expo-color-base-dark-gray-700: #9ba4b0;
-  --expo-color-base-dark-gray-800: #bcc3cd;
-  --expo-color-base-dark-gray-900: #e0e4eb;
-  --expo-color-base-dark-gray-1000: #f0f2f5;
-  --expo-color-base-dark-primary-000: #1b183d;
-  --expo-color-base-dark-primary-100: #201d52;
-  --expo-color-base-dark-primary-200: #2a2375;
-  --expo-color-base-dark-primary-300: #342a9c;
-  --expo-color-base-dark-primary-400: #4436c7;
-  --expo-color-base-dark-primary-500: #5c49eb;
-  --expo-color-base-dark-primary-600: #7766e8;
-  --expo-color-base-dark-primary-700: #a498ed;
-  --expo-color-base-dark-primary-800: #c9c2f2;
-  --expo-color-base-dark-primary-900: #e4e0f5;
-  --expo-color-base-dark-blue-000: #122447;
-  --expo-color-base-dark-blue-100: #173366;
-  --expo-color-base-dark-blue-200: #1e4894;
-  --expo-color-base-dark-blue-300: #2362c4;
-  --expo-color-base-dark-blue-400: #2d73e0;
-  --expo-color-base-dark-blue-500: #4794fd;
-  --expo-color-base-dark-blue-600: #61abff;
-  --expo-color-base-dark-blue-700: #8fcaff;
-  --expo-color-base-dark-blue-800: #addaff;
-  --expo-color-base-dark-blue-900: #cae8ff;
-  --expo-color-base-dark-green-000: #1a2b20;
-  --expo-color-base-dark-green-100: #1d3b27;
-  --expo-color-base-dark-green-200: #255232;
-  --expo-color-base-dark-green-300: #256936;
-  --expo-color-base-dark-green-400: #2e853f;
-  --expo-color-base-dark-green-500: #38a04b;
-  --expo-color-base-dark-green-600: #4ab959;
-  --expo-color-base-dark-green-700: #65d372;
-  --expo-color-base-dark-green-800: #8ae592;
-  --expo-color-base-dark-green-900: #b9f0bd;
-  --expo-color-base-dark-yellow-000: #30250a;
-  --expo-color-base-dark-yellow-100: #473510;
-  --expo-color-base-dark-yellow-200: #664b14;
-  --expo-color-base-dark-yellow-300: #856018;
-  --expo-color-base-dark-yellow-400: #a3751a;
-  --expo-color-base-dark-yellow-500: #bf8a1f;
-  --expo-color-base-dark-yellow-600: #d4a035;
-  --expo-color-base-dark-yellow-700: #e8bb51;
-  --expo-color-base-dark-yellow-800: #f2d06d;
-  --expo-color-base-dark-yellow-900: #fae296;
-  --expo-color-base-dark-orange-000: #2e1e17;
-  --expo-color-base-dark-orange-100: #472a1d;
-  --expo-color-base-dark-orange-200: #66361f;
-  --expo-color-base-dark-orange-300: #8f4824;
-  --expo-color-base-dark-orange-400: #ad5a2b;
-  --expo-color-base-dark-orange-500: #d67233;
-  --expo-color-base-dark-orange-600: #eb853d;
-  --expo-color-base-dark-orange-700: #f5a35b;
-  --expo-color-base-dark-orange-800: #fcc279;
-  --expo-color-base-dark-orange-900: #fcd49f;
-  --expo-color-base-dark-red-000: #3d1515;
-  --expo-color-base-dark-red-100: #541c1f;
-  --expo-color-base-dark-red-200: #732225;
-  --expo-color-base-dark-red-300: #962926;
-  --expo-color-base-dark-red-400: #bd3939;
-  --expo-color-base-dark-red-500: #e0514a;
-  --expo-color-base-dark-red-600: #f76f65;
-  --expo-color-base-dark-red-700: #ff8d82;
-  --expo-color-base-dark-red-800: #ffb1a8;
-  --expo-color-base-dark-red-900: #ffd2cc;
-  --expo-color-base-dark-pink-000: #3d182f;
-  --expo-color-base-dark-pink-100: #571e40;
-  --expo-color-base-dark-pink-200: #782a57;
-  --expo-color-base-dark-pink-300: #9c356e;
-  --expo-color-base-dark-pink-400: #bf4b8a;
-  --expo-color-base-dark-pink-500: #de62a4;
-  --expo-color-base-dark-pink-600: #f77ebd;
-  --expo-color-base-dark-pink-700: #ff9bce;
-  --expo-color-base-dark-pink-800: #ffbedd;
-  --expo-color-base-dark-pink-900: #ffcfe6;
-  --expo-color-base-dark-purple-000: #2b1d47;
-  --expo-color-base-dark-purple-100: #3c2563;
-  --expo-color-base-dark-purple-200: #553096;
-  --expo-color-base-dark-purple-300: #6e40c9;
-  --expo-color-base-dark-purple-400: #8957e5;
-  --expo-color-base-dark-purple-500: #a371f7;
-  --expo-color-base-dark-purple-600: #bc8cff;
-  --expo-color-base-dark-purple-700: #d2a8ff;
-  --expo-color-base-dark-purple-800: #e2c5ff;
-  --expo-color-base-dark-purple-900: #e9d6ff;
-  --expo-color-base-dark-white: #ffffff;
-  --expo-color-base-dark-black: #0d1117;
+  /* Statuses */
+  --expo-theme-success-background: var(--green3);
+  --expo-theme-success-border: var(--green7);
+  --expo-theme-success-icon: var(--green10);
+  --expo-theme-success-text: var(--green11);
 
-  /* Light theme */
-  --expo-theme-palette-gray-000: #fdfdfe;
-  --expo-theme-palette-gray-100: #f8f9fa;
-  --expo-theme-palette-gray-200: #f0f1f2;
-  --expo-theme-palette-gray-300: #e1e4e8;
-  --expo-theme-palette-gray-400: #d1d5da;
-  --expo-theme-palette-gray-500: #9b9ea3;
-  --expo-theme-palette-gray-600: #6c737c;
-  --expo-theme-palette-gray-700: #595f68;
-  --expo-theme-palette-gray-800: #464c55;
-  --expo-theme-palette-gray-900: #30353c;
-  --expo-theme-palette-gray-1000: #25292e;
-  --expo-theme-palette-primary-000: #f9f7ff;
-  --expo-theme-palette-primary-100: #ede9ff;
-  --expo-theme-palette-primary-200: #d2cafd;
-  --expo-theme-palette-primary-300: #a193f9;
-  --expo-theme-palette-primary-400: #664fff;
-  --expo-theme-palette-primary-500: #4630eb;
-  --expo-theme-palette-primary-600: #3929c4;
-  --expo-theme-palette-primary-700: #2e2496;
-  --expo-theme-palette-primary-800: #261f73;
-  --expo-theme-palette-primary-900: #221e5c;
-  --expo-theme-palette-blue-000: #f1f8ff;
-  --expo-theme-palette-blue-100: #dbedff;
-  --expo-theme-palette-blue-200: #c8e1ff;
-  --expo-theme-palette-blue-300: #79b8ff;
-  --expo-theme-palette-blue-400: #2188ff;
-  --expo-theme-palette-blue-500: #0366d6;
-  --expo-theme-palette-blue-600: #005cc5;
-  --expo-theme-palette-blue-700: #044289;
-  --expo-theme-palette-blue-800: #032f62;
-  --expo-theme-palette-blue-900: #05264c;
-  --expo-theme-palette-green-000: #f0fff4;
-  --expo-theme-palette-green-100: #dcffe4;
-  --expo-theme-palette-green-200: #bef5cb;
-  --expo-theme-palette-green-300: #85e89d;
-  --expo-theme-palette-green-400: #34d058;
-  --expo-theme-palette-green-500: #28a745;
-  --expo-theme-palette-green-600: #22863a;
-  --expo-theme-palette-green-700: #176f2c;
-  --expo-theme-palette-green-800: #165c26;
-  --expo-theme-palette-green-900: #144620;
-  --expo-theme-palette-yellow-000: #fffdef;
-  --expo-theme-palette-yellow-100: #fffbdd;
-  --expo-theme-palette-yellow-200: #fff5b1;
-  --expo-theme-palette-yellow-300: #ffeb87;
-  --expo-theme-palette-yellow-400: #ffdf5d;
-  --expo-theme-palette-yellow-500: #ffd33d;
-  --expo-theme-palette-yellow-600: #f2c012;
-  --expo-theme-palette-yellow-700: #cfa108;
-  --expo-theme-palette-yellow-800: #9c7800;
-  --expo-theme-palette-yellow-900: #735c0f;
-  --expo-theme-palette-orange-000: #fff8f2;
-  --expo-theme-palette-orange-100: #ffebda;
-  --expo-theme-palette-orange-200: #ffd1ac;
-  --expo-theme-palette-orange-300: #ffab70;
-  --expo-theme-palette-orange-400: #fb8e41;
-  --expo-theme-palette-orange-500: #fa7c25;
-  --expo-theme-palette-orange-600: #de6614;
-  --expo-theme-palette-orange-700: #c45408;
-  --expo-theme-palette-orange-800: #96430b;
-  --expo-theme-palette-orange-900: #7a4018;
-  --expo-theme-palette-red-000: #ffeeee;
-  --expo-theme-palette-red-100: #ffdcdc;
-  --expo-theme-palette-red-200: #fdaeae;
-  --expo-theme-palette-red-300: #f97575;
-  --expo-theme-palette-red-400: #ea4a4a;
-  --expo-theme-palette-red-500: #d73a3a;
-  --expo-theme-palette-red-600: #cb2424;
-  --expo-theme-palette-red-700: #b31d1d;
-  --expo-theme-palette-red-800: #9e1e1c;
-  --expo-theme-palette-red-900: #861c18;
-  --expo-theme-palette-pink-000: #ffeef8;
-  --expo-theme-palette-pink-100: #fedbf0;
-  --expo-theme-palette-pink-200: #f9b3dd;
-  --expo-theme-palette-pink-300: #f692ce;
-  --expo-theme-palette-pink-400: #ec6cb9;
-  --expo-theme-palette-pink-500: #ea4aaa;
-  --expo-theme-palette-pink-600: #d03592;
-  --expo-theme-palette-pink-700: #b93a86;
-  --expo-theme-palette-pink-800: #99306f;
-  --expo-theme-palette-pink-900: #6d224f;
-  --expo-theme-palette-purple-000: #f5f0ff;
-  --expo-theme-palette-purple-100: #e6dcfd;
-  --expo-theme-palette-purple-200: #d1bcf9;
-  --expo-theme-palette-purple-300: #b392f0;
-  --expo-theme-palette-purple-400: #8a63d2;
-  --expo-theme-palette-purple-500: #6f42c1;
-  --expo-theme-palette-purple-600: #5a32a3;
-  --expo-theme-palette-purple-700: #4c2888;
-  --expo-theme-palette-purple-800: #3a1d6e;
-  --expo-theme-palette-purple-900: #29134e;
-  --expo-theme-palette-white: #ffffff;
-  --expo-theme-palette-black: #1b1f23;
-  --expo-theme-background-default: var(--expo-color-base-light-white);
-  --expo-theme-background-screen: var(--expo-color-base-light-gray-100);
-  --expo-theme-background-secondary: var(--expo-color-base-light-gray-100);
-  --expo-theme-background-tertiary: var(--expo-color-base-light-gray-200);
-  --expo-theme-background-quaternary: var(--expo-color-base-light-gray-300);
-  --expo-theme-background-error: var(--expo-color-base-light-red-100);
-  --expo-theme-background-warning: var(--expo-color-base-light-yellow-100);
-  --expo-theme-background-success: var(--expo-color-base-light-green-100);
-  --expo-theme-background-info: var(--expo-color-base-light-blue-100);
-  --expo-theme-background-overlay: var(--expo-color-base-light-white);
-  --expo-theme-border-default: var(--expo-color-base-light-gray-300);
-  --expo-theme-border-error: var(--expo-color-base-light-red-300);
-  --expo-theme-border-warning: var(--expo-color-base-light-yellow-300);
-  --expo-theme-border-success: var(--expo-color-base-light-green-300);
-  --expo-theme-border-info: var(--expo-color-base-light-blue-300);
-  --expo-theme-button-primary-background: var(
-    --expo-color-base-light-primary-500
-  );
-  --expo-theme-button-primary-foreground: var(--expo-color-base-light-white);
-  --expo-theme-button-secondary-background: var(
-    --expo-color-base-light-gray-200
-  );
-  --expo-theme-button-secondary-foreground: var(
-    --expo-color-base-light-gray-1000
-  );
-  --expo-theme-button-tertiary-background: var(
-    --expo-color-base-light-gray-1000
-  );
-  --expo-theme-button-tertiary-foreground: var(
-    --expo-color-base-light-gray-000
-  );
-  --expo-theme-button-transparent-background: transparent;
-  --expo-theme-button-transparent-foreground: var(
-    --expo-color-base-light-gray-1000
-  );
-  --expo-theme-button-ghost-background: transparent;
-  --expo-theme-button-ghost-foreground: var(--expo-color-base-light-gray-800);
-  --expo-theme-button-ghost-border: var(--expo-color-base-light-gray-400);
-  --expo-theme-icon-default: var(--expo-color-base-light-gray-700);
-  --expo-theme-icon-secondary: var(--expo-color-base-light-gray-500);
-  --expo-theme-link-default: var(--expo-color-base-light-primary-500);
-  --expo-theme-status-default: var(--expo-color-base-light-gray-500);
-  --expo-theme-status-error: var(--expo-color-base-light-red-500);
-  --expo-theme-status-warning: var(--expo-color-base-light-yellow-500);
-  --expo-theme-status-success: var(--expo-color-base-light-green-500);
-  --expo-theme-status-info: var(--expo-color-base-light-blue-500);
-  --expo-theme-text-default: var(--expo-color-base-light-gray-1000);
-  --expo-theme-text-secondary: var(--expo-color-base-light-gray-700);
-  --expo-theme-text-error: var(--expo-color-base-light-red-600);
-  --expo-theme-text-warning: var(--expo-color-base-light-yellow-900);
-  --expo-theme-text-success: var(--expo-color-base-light-green-700);
-  --expo-theme-text-info: var(--expo-color-base-light-blue-600);
-  --expo-theme-code-keyword: var(--expo-color-base-light-blue-500);
-  --expo-theme-code-builtin: var(--expo-color-base-light-green-600);
-  --expo-theme-code-property: var(--expo-color-base-light-red-500);
-  --expo-theme-code-comment: var(--expo-color-base-light-gray-600);
-  --expo-theme-code-punctuation: var(--expo-color-base-light-gray-700);
-  --expo-theme-code-operator: var(--expo-color-base-light-yellow-800);
-  --expo-theme-code-regex: var(--expo-color-base-light-orange-600);
-  --expo-theme-code-string: var(--expo-color-base-light-yellow-700);
-  --expo-theme-code-before: var(--expo-color-base-light-gray-400);
-  --expo-theme-highlight-accent: var(--expo-color-base-light-primary-300);
-  --expo-theme-highlight-emphasis: var(--expo-color-base-light-yellow-300);
+  --expo-theme-warning-background: var(--yellow3);
+  --expo-theme-warning-border: var(--yellow7);
+  --expo-theme-warning-icon: var(--yellow11);
+  --expo-theme-warning-text: var(--yellow11);
+
+  --expo-theme-danger-background: var(--red3);
+  --expo-theme-danger-border: var(--red7);
+  --expo-theme-danger-icon: var(--red10);
+  --expo-theme-danger-text: var(--red11);
+
+  --expo-theme-info-background: var(--blue3);
+  --expo-theme-info-border: var(--blue7);
+  --expo-theme-info-icon: var(--blue10);
+  --expo-theme-info-text: var(--blue11);
+
+  /* Buttons */
+  --expo-theme-button-primary-background: var(--blue10);
+  --expo-theme-button-primary-border: var(--blue10);
+  --expo-theme-button-primary-hover: var(--blue11);
+  --expo-theme-button-primary-icon: var(--blue3);
+  --expo-theme-button-primary-text: var(--expo-color-white);
+  --expo-theme-button-primary-disabled-background: var(--blue7);
+  --expo-theme-button-primary-disabled-border: var(--blue7);
+  --expo-theme-button-primary-disabled-text: var(--expo-color-white);
+
+  --expo-theme-button-secondary-background: var(--expo-color-white);
+  --expo-theme-button-secondary-border: var(--slate7);
+  --expo-theme-button-secondary-hover: var(--slate2);
+  --expo-theme-button-secondary-icon: var(--slate10);
+  --expo-theme-button-secondary-text: var(--slate11);
+  --expo-theme-button-secondary-disabled-background: var(--expo-color-white);
+  --expo-theme-button-secondary-disabled-border: var(--slate6);
+  --expo-theme-button-secondary-disabled-text: var(--slate9);
+
+  --expo-theme-button-tertiary-background: transparent;
+  --expo-theme-button-tertiary-border: transparent;
+  --expo-theme-button-tertiary-hover: var(--blue4);
+  --expo-theme-button-tertiary-icon: var(--blue9);
+  --expo-theme-button-tertiary-text: var(--blue10);
+  --expo-theme-button-tertiary-disabled-background: transparent;
+  --expo-theme-button-tertiary-disabled-border: transparent;
+  --expo-theme-button-tertiary-disabled-text: var(--blue7);
+
+  --expo-theme-button-quaternary-background: transparent;
+  --expo-theme-button-quaternary-border: transparent;
+  --expo-theme-button-quaternary-hover: var(--slate4);
+  --expo-theme-button-quaternary-icon: var(--slate10);
+  --expo-theme-button-quaternary-text: var(--slate11);
+  --expo-theme-button-quaternary-disabled-background: transparent;
+  --expo-theme-button-quaternary-disabled-border: transparent;
+  --expo-theme-button-quaternary-disabled-text: var(--slate9);
+
+  --expo-theme-button-primary-destructive-background: var(--red10);
+  --expo-theme-button-primary-destructive-border: var(--red10);
+  --expo-theme-button-primary-destructive-hover: var(--red11);
+  --expo-theme-button-primary-destructive-icon: var(--red3);
+  --expo-theme-button-primary-destructive-text: var(--expo-color-white);
+  --expo-theme-button-primary-destructive-disabled-background: var(--red7);
+  --expo-theme-button-primary-destructive-disabled-border: var(--red7);
+  --expo-theme-button-primary-destructive-disabled-text: var(--expo-color-white);
+
+  --expo-theme-button-secondary-destructive-background: var(--expo-color-white);
+  --expo-theme-button-secondary-destructive-border: var(--red7);
+  --expo-theme-button-secondary-destructive-hover: var(--red3);
+  --expo-theme-button-secondary-destructive-icon: var(--red9);
+  --expo-theme-button-secondary-destructive-text: var(--red11);
+  --expo-theme-button-secondary-destructive-disabled-background: var(--expo-color-white);
+  --expo-theme-button-secondary-destructive-disabled-border: var(--red5);
+  --expo-theme-button-secondary-destructive-disabled-text: var(--red8);
+
+  /* Backgrounds */
+  --expo-theme-background-default: var(--expo-color-white);
+  --expo-theme-background-screen: var(--slate1);
+  --expo-theme-background-subtle: var(--slate2);
+  --expo-theme-background-element: var(--slate3);
+  --expo-theme-background-hover: var(--slate4);
+  --expo-theme-background-selected: var(--slate5);
+  --expo-theme-background-overlay: var(--expo-color-white);
+
+  /* Icons */
+  --expo-theme-icon-default: var(--slate11);
+  --expo-theme-icon-secondary: var(--slate10);
+  --expo-theme-icon-tertiary: var(--slate9);
+  --expo-theme-icon-quaternary: var(--slate8);
+
+  /* Text */
+  --expo-theme-text-default: var(--slate12);
+  --expo-theme-text-secondary: var(--slate11);
+  --expo-theme-text-tertiary: var(--slate10);
+  --expo-theme-text-quaternary: var(--slate9);
+  --expo-theme-text-link: var(--blue10);
+
+  /* Borders */
+  --expo-theme-border-default: var(--slate7);
+  --expo-theme-border-secondary: var(--slate6);
+
+  /* Project icon backgrounds */
   --expo-theme-project-blue: linear-gradient(#81b2eb, #6299d9);
   --expo-theme-project-green: linear-gradient(#6eb87f, #54a767);
   --expo-theme-project-yellow: linear-gradient(#edcd5f, #e5c145);
@@ -355,179 +131,124 @@
   --expo-theme-project-purple: linear-gradient(#a687e0, #8a66cc);
 
   /* Light shadows */
-  --expo-theme-shadows-micro: 0 1px 3px rgba(0, 0, 0, 0.025),
+  --expo-theme-shadows-xs: 0 1px 3px rgba(0, 0, 0, 0.025),
     0 1px 2px rgba(0, 0, 0, 0.05);
-  --expo-theme-shadows-tiny: 0 3px 6px rgba(0, 0, 0, 0.08),
+  --expo-theme-shadows-sm: 0 3px 6px rgba(0, 0, 0, 0.08),
     0 2px 4px rgba(0, 0, 0, 0.07);
-  --expo-theme-shadows-small: 0 10px 20px rgba(0, 0, 0, 0.1),
+  --expo-theme-shadows-md: 0 10px 20px rgba(0, 0, 0, 0.1),
     0 3px 6px rgba(0, 0, 0, 0.05);
-  --expo-theme-shadows-medium: 0 15px 25px rgba(0, 0, 0, 0.12),
+  --expo-theme-shadows-lg: 0 15px 25px rgba(0, 0, 0, 0.12),
     0 5px 10px rgba(0, 0, 0, 0.05);
-  --expo-theme-shadows-large: 0 20px 40px rgba(0, 0, 0, 0.15);
-  --expo-theme-shadows-button: var(--expo-theme-shadows-micro);
-  --expo-theme-shadows-input: var(--expo-theme-shadows-micro);
-  --expo-theme-shadows-popover: var(--expo-theme-shadows-small);
+  --expo-theme-shadows-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
 
   /* Heading Font sizing */
   --expo-theme-heading-base-font-size: 12px;
 }
 
-[data-expo-theme="dark"] {
-  /* Dark theme */
-  --expo-theme-palette-gray-000: #0b0f13;
-  --expo-theme-palette-gray-100: #14191f;
-  --expo-theme-palette-gray-200: #1c2026;
-  --expo-theme-palette-gray-300: #262a31;
-  --expo-theme-palette-gray-400: #32373e;
-  --expo-theme-palette-gray-500: #49505a;
-  --expo-theme-palette-gray-600: #737b87;
-  --expo-theme-palette-gray-700: #9ba4b0;
-  --expo-theme-palette-gray-800: #bcc3cd;
-  --expo-theme-palette-gray-900: #e0e4eb;
-  --expo-theme-palette-gray-1000: #f0f2f5;
-  --expo-theme-palette-primary-000: #1b183d;
-  --expo-theme-palette-primary-100: #201d52;
-  --expo-theme-palette-primary-200: #2a2375;
-  --expo-theme-palette-primary-300: #342a9c;
-  --expo-theme-palette-primary-400: #4436c7;
-  --expo-theme-palette-primary-500: #5c49eb;
-  --expo-theme-palette-primary-600: #7766e8;
-  --expo-theme-palette-primary-700: #a498ed;
-  --expo-theme-palette-primary-800: #c9c2f2;
-  --expo-theme-palette-primary-900: #e4e0f5;
-  --expo-theme-palette-blue-000: #122447;
-  --expo-theme-palette-blue-100: #173366;
-  --expo-theme-palette-blue-200: #1e4894;
-  --expo-theme-palette-blue-300: #2362c4;
-  --expo-theme-palette-blue-400: #2d73e0;
-  --expo-theme-palette-blue-500: #4794fd;
-  --expo-theme-palette-blue-600: #61abff;
-  --expo-theme-palette-blue-700: #8fcaff;
-  --expo-theme-palette-blue-800: #addaff;
-  --expo-theme-palette-blue-900: #cae8ff;
-  --expo-theme-palette-green-000: #1a2b20;
-  --expo-theme-palette-green-100: #1d3b27;
-  --expo-theme-palette-green-200: #255232;
-  --expo-theme-palette-green-300: #256936;
-  --expo-theme-palette-green-400: #2e853f;
-  --expo-theme-palette-green-500: #38a04b;
-  --expo-theme-palette-green-600: #4ab959;
-  --expo-theme-palette-green-700: #65d372;
-  --expo-theme-palette-green-800: #8ae592;
-  --expo-theme-palette-green-900: #b9f0bd;
-  --expo-theme-palette-yellow-000: #30250a;
-  --expo-theme-palette-yellow-100: #473510;
-  --expo-theme-palette-yellow-200: #664b14;
-  --expo-theme-palette-yellow-300: #856018;
-  --expo-theme-palette-yellow-400: #a3751a;
-  --expo-theme-palette-yellow-500: #bf8a1f;
-  --expo-theme-palette-yellow-600: #d4a035;
-  --expo-theme-palette-yellow-700: #e8bb51;
-  --expo-theme-palette-yellow-800: #f2d06d;
-  --expo-theme-palette-yellow-900: #fae296;
-  --expo-theme-palette-orange-000: #2e1e17;
-  --expo-theme-palette-orange-100: #472a1d;
-  --expo-theme-palette-orange-200: #66361f;
-  --expo-theme-palette-orange-300: #8f4824;
-  --expo-theme-palette-orange-400: #ad5a2b;
-  --expo-theme-palette-orange-500: #d67233;
-  --expo-theme-palette-orange-600: #eb853d;
-  --expo-theme-palette-orange-700: #f5a35b;
-  --expo-theme-palette-orange-800: #fcc279;
-  --expo-theme-palette-orange-900: #fcd49f;
-  --expo-theme-palette-red-000: #3d1515;
-  --expo-theme-palette-red-100: #541c1f;
-  --expo-theme-palette-red-200: #732225;
-  --expo-theme-palette-red-300: #962926;
-  --expo-theme-palette-red-400: #bd3939;
-  --expo-theme-palette-red-500: #e0514a;
-  --expo-theme-palette-red-600: #f76f65;
-  --expo-theme-palette-red-700: #ff8d82;
-  --expo-theme-palette-red-800: #ffb1a8;
-  --expo-theme-palette-red-900: #ffd2cc;
-  --expo-theme-palette-pink-000: #3d182f;
-  --expo-theme-palette-pink-100: #571e40;
-  --expo-theme-palette-pink-200: #782a57;
-  --expo-theme-palette-pink-300: #9c356e;
-  --expo-theme-palette-pink-400: #bf4b8a;
-  --expo-theme-palette-pink-500: #de62a4;
-  --expo-theme-palette-pink-600: #f77ebd;
-  --expo-theme-palette-pink-700: #ff9bce;
-  --expo-theme-palette-pink-800: #ffbedd;
-  --expo-theme-palette-pink-900: #ffcfe6;
-  --expo-theme-palette-purple-000: #2b1d47;
-  --expo-theme-palette-purple-100: #3c2563;
-  --expo-theme-palette-purple-200: #553096;
-  --expo-theme-palette-purple-300: #6e40c9;
-  --expo-theme-palette-purple-400: #8957e5;
-  --expo-theme-palette-purple-500: #a371f7;
-  --expo-theme-palette-purple-600: #bc8cff;
-  --expo-theme-palette-purple-700: #d2a8ff;
-  --expo-theme-palette-purple-800: #e2c5ff;
-  --expo-theme-palette-purple-900: #e9d6ff;
-  --expo-theme-palette-white: #ffffff;
-  --expo-theme-palette-black: var(--expo-color-base-dark-gray-000);
-  --expo-theme-background-default: var(--expo-color-base-dark-gray-100);
-  --expo-theme-background-screen: var(--expo-color-base-dark-gray-000);
-  --expo-theme-background-secondary: var(--expo-color-base-dark-gray-200);
-  --expo-theme-background-tertiary: var(--expo-color-base-dark-gray-300);
-  --expo-theme-background-quaternary: var(--expo-color-base-dark-gray-400);
-  --expo-theme-background-error: var(--expo-color-base-dark-red-000);
-  --expo-theme-background-warning: var(--expo-color-base-dark-yellow-000);
-  --expo-theme-background-success: var(--expo-color-base-dark-green-000);
-  --expo-theme-background-info: var(--expo-color-base-dark-blue-000);
-  --expo-theme-background-overlay: var(--expo-color-base-dark-gray-200);
-  --expo-theme-border-default: var(--expo-color-base-dark-gray-400);
-  --expo-theme-border-error: var(--expo-color-base-dark-red-200);
-  --expo-theme-border-warning: var(--expo-color-base-dark-yellow-300);
-  --expo-theme-border-success: var(--expo-color-base-dark-green-200);
-  --expo-theme-border-info: var(--expo-color-base-dark-blue-200);
-  --expo-theme-button-primary-background: var(
-    --expo-color-base-dark-primary-500
-  );
-  --expo-theme-button-primary-foreground: var(--expo-color-base-dark-white);
-  --expo-theme-button-secondary-background: var(
-    --expo-color-base-dark-gray-300
-  );
-  --expo-theme-button-secondary-foreground: var(
-    --expo-color-base-dark-gray-800
-  );
-  --expo-theme-button-tertiary-foreground: var(
-    --expo-color-base-dark-gray-1000
-  );
-  --expo-theme-button-tertiary-background: var(--expo-color-base-dark-gray-500);
-  --expo-theme-button-transparent-background: transparent;
-  --expo-theme-button-transparent-foreground: var(
-    --expo-color-base-dark-gray-800
-  );
-  --expo-theme-button-ghost-background: transparent;
-  --expo-theme-button-ghost-foreground: var(--expo-color-base-dark-gray-800);
-  --expo-theme-button-ghost-border: var(--expo-color-base-dark-gray-400);
-  --expo-theme-icon-default: var(--expo-color-base-dark-gray-700);
-  --expo-theme-icon-secondary: var(--expo-color-base-dark-gray-600);
-  --expo-theme-link-default: var(--expo-color-base-dark-primary-700);
-  --expo-theme-status-default: var(--expo-color-base-dark-gray-400);
-  --expo-theme-status-error: var(--expo-color-base-dark-red-500);
-  --expo-theme-status-warning: var(--expo-color-base-dark-yellow-500);
-  --expo-theme-status-success: var(--expo-color-base-dark-green-500);
-  --expo-theme-status-info: var(--expo-color-base-dark-blue-500);
-  --expo-theme-text-default: var(--expo-color-base-dark-gray-800);
-  --expo-theme-text-secondary: var(--expo-color-base-dark-gray-700);
-  --expo-theme-text-error: var(--expo-color-base-dark-red-600);
-  --expo-theme-text-warning: var(--expo-color-base-dark-yellow-900);
-  --expo-theme-text-success: var(--expo-color-base-dark-green-700);
-  --expo-theme-text-info: var(--expo-color-base-dark-blue-700);
-  --expo-theme-code-keyword: var(--expo-color-base-dark-blue-600);
-  --expo-theme-code-builtin: var(--expo-color-base-dark-green-600);
-  --expo-theme-code-property: var(--expo-color-base-dark-red-600);
-  --expo-theme-code-comment: var(--expo-color-base-dark-gray-600);
-  --expo-theme-code-punctuation: var(--expo-color-base-dark-gray-700);
-  --expo-theme-code-operator: var(--expo-color-base-dark-yellow-800);
-  --expo-theme-code-regex: var(--expo-color-base-dark-orange-600);
-  --expo-theme-code-string: var(--expo-color-base-dark-yellow-700);
-  --expo-theme-code-before: var(--expo-color-base-dark-gray-400);
-  --expo-theme-highlight-accent: var(--expo-color-base-dark-primary-700);
-  --expo-theme-highlight-emphasis: var(--expo-color-base-dark-yellow-300);
+.dark-theme {
+  /* Statuses */
+  --expo-theme-success-background: var(--green3);
+  --expo-theme-success-border: var(--green7);
+  --expo-theme-success-icon: var(--green10);
+  --expo-theme-success-text: var(--green11);
+
+  --expo-theme-warning-background: var(--yellow3);
+  --expo-theme-warning-border: var(--yellow7);
+  --expo-theme-warning-icon: var(--yellow11);
+  --expo-theme-warning-text: var(--yellow11);
+
+  --expo-theme-danger-background: var(--red3);
+  --expo-theme-danger-border: var(--red7);
+  --expo-theme-danger-icon: var(--red10);
+  --expo-theme-danger-text: var(--red11);
+
+  --expo-theme-info-background: var(--blue3);
+  --expo-theme-info-border: var(--blue7);
+  --expo-theme-info-icon: var(--blue10);
+  --expo-theme-info-text: var(--blue11);
+
+  /* Buttons */
+  --expo-theme-button-primary-background: var(--blue9);
+  --expo-theme-button-primary-border: var(--blue9);
+  --expo-theme-button-primary-hover: var(--blue8);
+  --expo-theme-button-primary-icon: var(--blue3);
+  --expo-theme-button-primary-text: var(--expo-color-white);
+  --expo-theme-button-primary-disabled-background: var(--blue7);
+  --expo-theme-button-primary-disabled-border: var(--blue7);
+  --expo-theme-button-primary-disabled-text: var(--slate11);
+
+  --expo-theme-button-secondary-background: var(--slate2);
+  --expo-theme-button-secondary-border: var(--slate7);
+  --expo-theme-button-secondary-hover: var(--slate2);
+  --expo-theme-button-secondary-icon: var(--slate10);
+  --expo-theme-button-secondary-text: var(--slate11);
+  --expo-theme-button-secondary-disabled-background: var(--slate1);
+  --expo-theme-button-secondary-disabled-border: var(--slate6);
+  --expo-theme-button-secondary-disabled-text: var(--slate9);
+
+  --expo-theme-button-tertiary-background: transparent;
+  --expo-theme-button-tertiary-border: transparent;
+  --expo-theme-button-tertiary-hover: var(--blue4);
+  --expo-theme-button-tertiary-icon: var(--blue10);
+  --expo-theme-button-tertiary-text: var(--blue11);
+  --expo-theme-button-tertiary-disabled-background: transparent;
+  --expo-theme-button-tertiary-disabled-border: transparent;
+  --expo-theme-button-tertiary-disabled-text: var(--blue8);
+
+  --expo-theme-button-quaternary-background: transparent;
+  --expo-theme-button-quaternary-border: transparent;
+  --expo-theme-button-quaternary-hover: var(--slate4);
+  --expo-theme-button-quaternary-icon: var(--slate10);
+  --expo-theme-button-quaternary-text: var(--slate11);
+  --expo-theme-button-quaternary-disabled-background: transparent;
+  --expo-theme-button-quaternary-disabled-border: transparent;
+  --expo-theme-button-quaternary-disabled-text: var(--slate9);
+
+  --expo-theme-button-primary-destructive-background: var(--red10);
+  --expo-theme-button-primary-destructive-border: var(--red10);
+  --expo-theme-button-primary-destructive-hover: var(--red9);
+  --expo-theme-button-primary-destructive-icon: var(--red3);
+  --expo-theme-button-primary-destructive-text: var(--expo-color-black);
+  --expo-theme-button-primary-destructive-disabled-background: var(--red7);
+  --expo-theme-button-primary-destructive-disabled-border: var(--red7);
+  --expo-theme-button-primary-destructive-disabled-text: var(--expo-color-black);
+
+  --expo-theme-button-secondary-destructive-background: var(--slate2);
+  --expo-theme-button-secondary-destructive-border: var(--red7);
+  --expo-theme-button-secondary-destructive-hover: var(--red3);
+  --expo-theme-button-secondary-destructive-icon: var(--red9);
+  --expo-theme-button-secondary-destructive-text: var(--red11);
+  --expo-theme-button-secondary-destructive-disabled-background: var(--slate2);
+  --expo-theme-button-secondary-destructive-disabled-border: var(--red5);
+  --expo-theme-button-secondary-destructive-disabled-text: var(--red8);
+
+  /* Backgrounds */
+  --expo-theme-background-default: var(--slate1);
+  --expo-theme-background-screen: var(--expo-color-black);
+  --expo-theme-background-subtle: var(--slate2);
+  --expo-theme-background-element: var(--slate3);
+  --expo-theme-background-hover: var(--slate4);
+  --expo-theme-background-selected: var(--slate5);
+  --expo-theme-background-overlay: var(--slate2);
+
+  /* Icons */
+  --expo-theme-icon-default: var(--slate11);
+  --expo-theme-icon-secondary: var(--slate10);
+  --expo-theme-icon-tertiary: var(--slate9);
+  --expo-theme-icon-quaternary: var(--slate8);
+
+  /* Text */
+  --expo-theme-text-default: var(--slate12);
+  --expo-theme-text-secondary: var(--slate11);
+  --expo-theme-text-tertiary: var(--slate10);
+  --expo-theme-text-quaternary: var(--slate9);
+  --expo-theme-text-link: var(--blue10);
+
+  /* Borders */
+  --expo-theme-border-default: var(--slate7);
+  --expo-theme-border-secondary: var(--slate6);
+
+  /* Project icon backgrounds */
   --expo-theme-project-blue: linear-gradient(#537296, #395a80);
   --expo-theme-project-green: linear-gradient(#4b7d56, #32633d);
   --expo-theme-project-yellow: linear-gradient(#a67f35, #8a6319);
@@ -537,15 +258,15 @@
   --expo-theme-project-purple: linear-gradient(#715c99, #4e3973);
 
   /* Dark shadows */
-  --expo-theme-shadows-micro: 0 1px 3px rgba(0, 0, 0, 0.3),
+  --expo-theme-shadows-xs: 0 1px 3px rgba(0, 0, 0, 0.3),
     0 1px 2px rgba(0, 0, 0, 0.3);
-  --expo-theme-shadows-tiny: 0 3px 6px rgba(0, 0, 0, 0.4),
+  --expo-theme-shadows-sm: 0 3px 6px rgba(0, 0, 0, 0.4),
     0 2px 4px rgba(0, 0, 0, 0.25);
-  --expo-theme-shadows-small: 0 10px 20px rgba(0, 0, 0, 0.25),
+  --expo-theme-shadows-md: 0 10px 20px rgba(0, 0, 0, 0.25),
     0 3px 6px rgba(0, 0, 0, 0.25);
-  --expo-theme-shadows-medium: 0 15px 25px rgba(0, 0, 0, 0.5),
+  --expo-theme-shadows-lg: 0 15px 25px rgba(0, 0, 0, 0.5),
     0 5px 10px rgba(0, 0, 0, 0.25);
-  --expo-theme-shadows-large: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --expo-theme-shadows-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 401px) {

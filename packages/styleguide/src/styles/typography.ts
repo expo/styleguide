@@ -313,7 +313,7 @@ const body = {
 
 const utility = {
   anchor: {
-    color: theme.link.default,
+    color: theme.text.link,
     fontWeight: 400,
     textDecoration: 'none',
     cursor: 'pointer',
@@ -323,7 +323,7 @@ const utility = {
     transform: 'translate3d(0,0,0)',
 
     ':visited': {
-      color: theme.link.default,
+      color: theme.text.link,
     },
 
     ':hover': {
@@ -335,9 +335,9 @@ const utility = {
     ...body.code,
     fontWeight: 400,
     display: 'inline-block',
-    backgroundColor: theme.background.secondary,
+    backgroundColor: theme.background.subtle,
     border: `1px solid ${theme.border.default}`,
-    borderRadius: borderRadius.medium,
+    borderRadius: borderRadius.md,
     padding: '2px 4px',
     lineHeight: '130%',
   },
@@ -345,18 +345,18 @@ const utility = {
     ...body.code,
     fontWeight: 400,
     display: 'inline-block',
-    backgroundColor: darkTheme.background.secondary,
+    backgroundColor: darkTheme.background.subtle,
     color: darkTheme.text.default,
     border: `1px solid ${darkTheme.border.default}`,
-    borderRadius: borderRadius.medium,
+    borderRadius: borderRadius.md,
     padding: '2px 4px',
     lineHeight: '130%',
   },
   pre: {
     ...body.code,
     fontWeight: 400,
-    backgroundColor: theme.background.secondary,
-    borderRadius: borderRadius.medium,
+    backgroundColor: theme.background.subtle,
+    borderRadius: borderRadius.md,
     border: `1px solid ${theme.border.default}`,
     padding: spacing[4],
     whiteSpace: 'pre-wrap' as 'pre-wrap',
@@ -365,9 +365,9 @@ const utility = {
   terminalPre: {
     ...body.code,
     fontWeight: 400,
-    backgroundColor: darkTheme.background.secondary,
+    backgroundColor: darkTheme.background.subtle,
     color: darkTheme.text.default,
-    borderRadius: borderRadius.medium,
+    borderRadius: borderRadius.md,
     border: `1px solid ${darkTheme.border.default}`,
     padding: spacing[4],
     margin: `${spacing[4]}px 0`,

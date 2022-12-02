@@ -1,4 +1,3 @@
-import { legacyColors as colors } from './styles/legacy-colors';
 import { palette } from './styles/palette';
 import { shadows } from './styles/shadows';
 import { borderRadius, iconSize } from './styles/sizing';
@@ -16,7 +15,6 @@ export {
   borderRadius,
   BlockingSetInitialColorMode,
   breakpoints,
-  colors,
   darkTheme,
   iconSize,
   lightTheme,
