@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.0.0
+
+### Major Changes
+
+- 81e7146: refactors color
+
 ## 5.1.0
 
 ### Minor Changes
