@@ -298,10 +298,10 @@ export const lightTheme = {
     },
     secondary: {
       background: palette.white,
-      border: palette.light.gray7,
-      hover: palette.light.gray10,
-      icon: palette.light.gray2,
-      text: palette.light.gray11,
+      border: palette.light.gray8,
+      hover: palette.light.gray3,
+      icon: palette.light.gray11,
+      text: palette.light.gray12,
       disabled: {
         background: palette.white,
         border: palette.light.gray6,
@@ -329,15 +329,15 @@ export const lightTheme = {
       disabled: {
         background: 'transparent',
         border: 'transparent',
-        text: palette.light.blue7,
+        text: palette.light.blue8,
       }
     },
     quaternary: {
       background: 'transparent',
       border: 'transparent',
       hover: palette.light.gray4,
-      icon: palette.light.gray10,
-      text: palette.light.gray11,
+      icon: palette.light.gray11,
+      text: palette.light.gray12,
       disabled: {
         background: 'transparent',
         border: 'transparent',
@@ -392,50 +392,50 @@ export const darkTheme = {
   },
   button: {
     primary: {
-      background: palette.dark.blue10,
-      border: palette.dark.blue10,
-      hover: palette.dark.blue9,
+      background: palette.dark.blue8,
+      border: palette.dark.blue8,
+      hover: palette.dark.blue7,
       icon: palette.dark.blue12,
-      text: palette.black,
+      text: palette.white,
       disabled: {
-        background: palette.dark.blue8,
-        border: palette.dark.blue8,
-        text: palette.black,
+        background: palette.dark.blue7,
+        border: palette.dark.blue7,
+        text: palette.dark.gray11,
       },
       destructive: {
-        background: palette.dark.red10,
-        border: palette.dark.red10,
-        hover: palette.dark.red9,
-        icon: palette.dark.red3,
-        text: palette.black,
+        background: palette.dark.red8,
+        border: palette.dark.red8,
+        hover: palette.dark.red7,
+        icon: palette.dark.red12,
+        text: palette.white,
         disabled: {
-          background: palette.dark.red7,
-          border: palette.dark.red7,
-          text: palette.black,
+          background: palette.dark.red6,
+          border: palette.dark.red6,
+          text: palette.dark.red11,
         }
       }
     },
     secondary: {
-      background: palette.light.gray2,
-      border: palette.dark.gray7,
-      hover: palette.dark.gray3,
-      icon: palette.dark.gray10,
-      text: palette.dark.gray11,
+      background: palette.dark.gray3,
+      border: palette.dark.gray8,
+      hover: palette.dark.gray4,
+      icon: palette.dark.gray12,
+      text: palette.white,
       disabled: {
-        background: palette.light.gray1,
-        border: palette.dark.gray6,
-        text: palette.dark.gray9,
+        background: palette.dark.gray1,
+        border: palette.dark.gray7,
+        text: palette.dark.gray11,
       },
       destructive: {
-        background: palette.light.gray2,
+        background: palette.dark.red3,
         border: palette.dark.red7,
-        hover: palette.dark.red3,
+        hover: palette.dark.red2,
         icon: palette.dark.red9,
-        text: palette.dark.red11,
+        text: palette.white,
         disabled: {
-          background: palette.light.gray2,
-          border: palette.dark.red5,
-          text: palette.dark.red8,
+          background: palette.dark.red2,
+          border: palette.dark.red6,
+          text: palette.dark.red10,
         }
       }
     },

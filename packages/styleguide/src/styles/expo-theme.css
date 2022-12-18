@@ -72,10 +72,10 @@
   --expo-theme-button-primary-disabled-text: var(--expo-color-white);
 
   --expo-theme-button-secondary-background: var(--expo-color-white);
-  --expo-theme-button-secondary-border: var(--slate7);
-  --expo-theme-button-secondary-hover: var(--slate2);
-  --expo-theme-button-secondary-icon: var(--slate10);
-  --expo-theme-button-secondary-text: var(--slate11);
+  --expo-theme-button-secondary-border: var(--slate8);
+  --expo-theme-button-secondary-hover: var(--slate3);
+  --expo-theme-button-secondary-icon: var(--slate11);
+  --expo-theme-button-secondary-text: var(--slate12);
   --expo-theme-button-secondary-disabled-background: var(--expo-color-white);
   --expo-theme-button-secondary-disabled-border: var(--slate6);
   --expo-theme-button-secondary-disabled-text: var(--slate9);
@@ -87,13 +87,13 @@
   --expo-theme-button-tertiary-text: var(--blue10);
   --expo-theme-button-tertiary-disabled-background: transparent;
   --expo-theme-button-tertiary-disabled-border: transparent;
-  --expo-theme-button-tertiary-disabled-text: var(--blue7);
+  --expo-theme-button-tertiary-disabled-text: var(--blue8);
 
   --expo-theme-button-quaternary-background: transparent;
   --expo-theme-button-quaternary-border: transparent;
   --expo-theme-button-quaternary-hover: var(--slate4);
-  --expo-theme-button-quaternary-icon: var(--slate10);
-  --expo-theme-button-quaternary-text: var(--slate11);
+  --expo-theme-button-quaternary-icon: var(--slate11);
+  --expo-theme-button-quaternary-text: var(--slate12);
   --expo-theme-button-quaternary-disabled-background: transparent;
   --expo-theme-button-quaternary-disabled-border: transparent;
   --expo-theme-button-quaternary-disabled-text: var(--slate9);
@@ -184,23 +184,23 @@
   --expo-theme-border-info: var(--blue7);
 
   /* Buttons */
-  --expo-theme-button-primary-background: var(--blue9);
-  --expo-theme-button-primary-border: var(--blue9);
-  --expo-theme-button-primary-hover: var(--blue8);
+  --expo-theme-button-primary-background: var(--blue8);
+  --expo-theme-button-primary-border: var(--blue8);
+  --expo-theme-button-primary-hover: var(--blue7);
   --expo-theme-button-primary-icon: var(--blue12);
   --expo-theme-button-primary-text: var(--expo-color-white);
   --expo-theme-button-primary-disabled-background: var(--blue7);
   --expo-theme-button-primary-disabled-border: var(--blue7);
   --expo-theme-button-primary-disabled-text: var(--slate11);
 
-  --expo-theme-button-secondary-background: var(--slate2);
-  --expo-theme-button-secondary-border: var(--slate7);
-  --expo-theme-button-secondary-hover: var(--slate2);
-  --expo-theme-button-secondary-icon: var(--slate10);
-  --expo-theme-button-secondary-text: var(--slate11);
+  --expo-theme-button-secondary-background: var(--slate3);
+  --expo-theme-button-secondary-border: var(--slate8);
+  --expo-theme-button-secondary-hover: var(--slate4);
+  --expo-theme-button-secondary-icon: var(--slate12);
+  --expo-theme-button-secondary-text: var(--expo-color-white);
   --expo-theme-button-secondary-disabled-background: var(--slate1);
-  --expo-theme-button-secondary-disabled-border: var(--slate6);
-  --expo-theme-button-secondary-disabled-text: var(--slate9);
+  --expo-theme-button-secondary-disabled-border: var(--slate7);
+  --expo-theme-button-secondary-disabled-text: var(--slate11);
 
   --expo-theme-button-tertiary-background: transparent;
   --expo-theme-button-tertiary-border: transparent;
@@ -209,34 +209,34 @@
   --expo-theme-button-tertiary-text: var(--blue11);
   --expo-theme-button-tertiary-disabled-background: transparent;
   --expo-theme-button-tertiary-disabled-border: transparent;
-  --expo-theme-button-tertiary-disabled-text: var(--blue8);
+  --expo-theme-button-tertiary-disabled-text: var(--blue9);
 
   --expo-theme-button-quaternary-background: transparent;
   --expo-theme-button-quaternary-border: transparent;
   --expo-theme-button-quaternary-hover: var(--slate4);
-  --expo-theme-button-quaternary-icon: var(--slate10);
-  --expo-theme-button-quaternary-text: var(--slate11);
+  --expo-theme-button-quaternary-icon: var(--slate12);
+  --expo-theme-button-quaternary-text: var(--expo-color-white);
   --expo-theme-button-quaternary-disabled-background: transparent;
   --expo-theme-button-quaternary-disabled-border: transparent;
-  --expo-theme-button-quaternary-disabled-text: var(--slate9);
+  --expo-theme-button-quaternary-disabled-text: var(--slate11);
 
-  --expo-theme-button-primary-destructive-background: var(--red10);
-  --expo-theme-button-primary-destructive-border: var(--red10);
-  --expo-theme-button-primary-destructive-hover: var(--red9);
-  --expo-theme-button-primary-destructive-icon: var(--red3);
-  --expo-theme-button-primary-destructive-text: var(--expo-color-black);
-  --expo-theme-button-primary-destructive-disabled-background: var(--red7);
-  --expo-theme-button-primary-destructive-disabled-border: var(--red7);
-  --expo-theme-button-primary-destructive-disabled-text: var(--expo-color-black);
+  --expo-theme-button-primary-destructive-background: var(--red8);
+  --expo-theme-button-primary-destructive-border: var(--red8);
+  --expo-theme-button-primary-destructive-hover: var(--red7);
+  --expo-theme-button-primary-destructive-icon: var(--red12);
+  --expo-theme-button-primary-destructive-text: var(--expo-color-white);
+  --expo-theme-button-primary-destructive-disabled-background: var(--red6);
+  --expo-theme-button-primary-destructive-disabled-border: var(--red6);
+  --expo-theme-button-primary-destructive-disabled-text: var(--red11);
 
-  --expo-theme-button-secondary-destructive-background: var(--slate2);
+  --expo-theme-button-secondary-destructive-background: var(--red3);
   --expo-theme-button-secondary-destructive-border: var(--red7);
-  --expo-theme-button-secondary-destructive-hover: var(--red3);
+  --expo-theme-button-secondary-destructive-hover: var(--red2);
   --expo-theme-button-secondary-destructive-icon: var(--red9);
-  --expo-theme-button-secondary-destructive-text: var(--red11);
-  --expo-theme-button-secondary-destructive-disabled-background: var(--slate2);
-  --expo-theme-button-secondary-destructive-disabled-border: var(--red5);
-  --expo-theme-button-secondary-destructive-disabled-text: var(--red8);
+  --expo-theme-button-secondary-destructive-text: var(--expo-color-white);
+  --expo-theme-button-secondary-destructive-disabled-background: var(--red2);
+  --expo-theme-button-secondary-destructive-disabled-border: var(--red6);
+  --expo-theme-button-secondary-destructive-disabled-text: var(--red10);
 
   /* Project icon backgrounds */
   --expo-theme-project-blue: linear-gradient(#537296, #395a80);
