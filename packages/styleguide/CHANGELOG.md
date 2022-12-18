@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.0
+
+### Minor Changes
+
+- d1e58f8: Updates button colors
+
 ## 6.0.0
 
 ### Major Changes
