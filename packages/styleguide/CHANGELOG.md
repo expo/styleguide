@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.1
+
+### Patch Changes
+
+- 75fe04c: Updates dark mode screen color
+
 ## 6.1.0
 
 ### Minor Changes
