@@ -47,7 +47,7 @@
   --expo-theme-text-secondary: var(--slate11);
   --expo-theme-text-tertiary: var(--slate10);
   --expo-theme-text-quaternary: var(--slate9);
-  --expo-theme-text-link: var(--blue10);
+  --expo-theme-text-link: var(--blue11);
   --expo-theme-text-success: var(--green11);
   --expo-theme-text-warning: var(--yellow11);
   --expo-theme-text-danger: var(--red11);
@@ -169,7 +169,7 @@
   --expo-theme-text-secondary: var(--slate11);
   --expo-theme-text-tertiary: var(--slate10);
   --expo-theme-text-quaternary: var(--slate9);
-  --expo-theme-text-link: var(--blue10);
+  --expo-theme-text-link: var(--blue11);
   --expo-theme-text-success: var(--green11);
   --expo-theme-text-warning: var(--yellow11);
   --expo-theme-text-danger: var(--red11);
