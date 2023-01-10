@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.2
+
+### Patch Changes
+
+- 1103895: Make links Blue/11
+
 ## 6.1.1
 
 ### Patch Changes
