@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.3
+
+### Patch Changes
+
+- 7bca391: add dark-theme class to document element
+
 ## 6.1.2
 
 ### Patch Changes
