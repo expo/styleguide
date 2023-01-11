@@ -72,9 +72,9 @@ export function ThemeProvider(props: ThemeProviderProps) {
     if (disabled) return;
 
     if (themeName === Themes.DARK) {
-      document.body.classList.add('dark-theme');
+      document.documentElement.classList.add('dark-theme');
     } else {
-      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.remove('dark-theme');
     }
   }
 

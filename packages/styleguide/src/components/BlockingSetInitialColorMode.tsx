@@ -41,9 +41,9 @@ function setInitialColorMode() {
 
   // add HTML attribute if dark mode
   if (colorMode === 'dark') {
-    document.body.classList.add('dark-theme');
+    document.documentElement.classList.add('dark-theme');
   } else {
-    document.body.classList.remove('dark-theme');
+    document.documentElement.classList.remove('dark-theme');
   }
 }
 
