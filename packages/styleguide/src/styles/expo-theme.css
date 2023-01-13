@@ -257,6 +257,73 @@
   --expo-theme-shadows-lg: 0 15px 25px rgba(0, 0, 0, 0.5),
     0 5px 10px rgba(0, 0, 0, 0.25);
   --expo-theme-shadows-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+  /* Palette extension */
+  --blue12: hsl(211, 100%, 35%);
+  --blue13: hsl(211, 100%, 25%);
+  --blue14: hsl(211, 100%, 15%);
+
+  --red12: hsl(354, 50%, 35%);
+  --red13: hsl(354, 50%, 25%);
+  --red14: hsl(354, 50%, 14.6%);
+
+  --green12: hsl(155, 40%, 34%);
+  --green13: hsl(155, 40%, 24%);
+  --green14: hsl(155, 40%, 14%);
+
+  --yellow12: hsl(40, 55%, 34%);
+  --yellow13: hsl(40, 55%, 24%);
+  --yellow14: hsl(40, 55%, 13.5%);
+
+  --orange12: hsl(15, 60%, 37%);
+  --orange13: hsl(15, 60%, 27%);
+  --orange14: hsl(15, 60%, 17%);
+
+  --purple12: hsl(272, 66%, 36%);
+  --purple13: hsl(272, 66%, 26%);
+  --purple14: hsl(272, 66%, 16%);
+
+  --pink12: hsl(320, 70%, 34%);
+  --pink13: hsl(320, 70%, 24%);
+  --pink14: hsl(320, 70%, 13.5%);
+
+  --gray12: hsl(206, 10%, 30%);
+  --gray13: hsl(206, 18%, 16%);
+  --gray14: hsl(206, 24%, 9%);
+}
+
+.dark-theme {
+  --blue12: hsl(206, 98%, 76%);
+  --blue13: hsl(206, 98%, 86%);
+  --blue14: hsl(206, 98%, 95.8%);
+
+  --red12: hsl(351, 89%, 76%);
+  --red13: hsl(351, 89%, 86%);
+  --red14: hsl(351, 89%, 96%);
+
+  --yellow12: hsl(53, 100%, 71%);
+  --yellow13: hsl(53, 100%, 81%);
+  --yellow14: hsl(53, 100%, 91%);
+
+  --green12: hsl(137, 72%, 74%);
+  --green13: hsl(137, 72%, 84%);
+  --green14: hsl(137, 72%, 94%);
+
+  --orange12: hsl(24, 97%, 73%);
+  --orange13: hsl(24, 97%, 83%);
+  --orange14: hsl(24, 97%, 93.2%);
+
+  --purple12: hsl(279, 75%, 76%);
+  --purple13: hsl(279, 75%, 86%);
+  --purple14: hsl(279, 75%, 95.7%);
+
+  --pink12: hsl(322, 90%, 76%);
+  --pink13: hsl(322, 90%, 86%);
+  --pink14: hsl(322, 90%, 95.8%);
+
+  --gray12: hsl(210, 6%, 73%);
+  --gray13: hsl(210, 6%, 83%);
+  --gray14: hsl(210, 6%, 93%)
 }
 
 @media (min-width: 401px) {
