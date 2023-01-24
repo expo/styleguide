@@ -1,4 +1,5 @@
 export const shadows = {
+  none: 'var(--expo-theme-shadows-none)',
   xs: 'var(--expo-theme-shadows-xs)',
   sm: 'var(--expo-theme-shadows-sm)',
   md: 'var(--expo-theme-shadows-md)',
