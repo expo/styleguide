@@ -17,28 +17,6 @@ function rem(px: number) {
   return `${round(px / baseFontSize)}rem`;
 }
 
-const fontFaces = {
-  black: 'Inter-Black',
-  semiBold: 'Inter-SemiBold',
-  medium: 'Inter-Medium',
-  regular: 'Inter-Regular',
-  mono: 'Menlo-Regular',
-};
-
-const defaultFontStack =
-  "system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'";
-
-const defaultMonoStack =
-  "Monaco,Consolas,'Liberation Mono','Courier New',monospace, 'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'";
-
-const fontStacks = {
-  black: `${fontFaces.black}, ${defaultFontStack}`,
-  semiBold: `${fontFaces.semiBold}, ${defaultFontStack}`,
-  medium: `${fontFaces.medium}, ${defaultFontStack}`,
-  regular: `${fontFaces.regular}, ${defaultFontStack}`,
-  mono: `${fontFaces.mono}, ${defaultMonoStack}`,
-};
-
 const fontSizes = {
   61: {
     fontSize: rem(61),
@@ -151,135 +129,114 @@ const fontSizes = {
 const headers = {
   xl: {
     huge: {
-      fontFamily: fontStacks.black,
       fontWeight: 900,
       ...fontSizes[61],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[53],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[46],
     },
     h1: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[49],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[43],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[37],
     },
     h2: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[39],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[34],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[29],
     },
     h3: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[31],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[27],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[23],
     },
     h4: {
-      fontFamily: fontStacks.medium,
       fontWeight: 500,
       ...fontSizes[25],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[22],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[19],
     },
     h5: {
-      fontFamily: fontStacks.medium,
       fontWeight: 500,
       ...fontSizes[20],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[18],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[16],
     },
     h6: {
-      fontFamily: fontStacks.medium,
       fontWeight: 500,
       ...fontSizes[16],
     },
   },
   default: {
     huge: {
-      fontFamily: fontStacks.black,
-      fontWeight: 500,
+      fontWeight: 900,
       ...fontSizes[39],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[34],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[29],
     },
     h1: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[31],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[27],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[23],
     },
     h2: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[25],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[22],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[19],
     },
     h3: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[20],
       [`@media (max-width: ${breakpoints.medium}px)`]: fontSizes[18],
       [`@media (max-width: ${breakpoints.small}px)`]: fontSizes[16],
     },
     h4: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[16],
     },
     h5: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[13],
     },
     h6: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
       ...fontSizes[12],
     },
   },
 };
 
 const baseStyle = {
-  fontFamily: fontStacks.regular,
   fontWeight: 400,
   ...fontSizes[16],
 };
 
 const body = {
   headline: {
-    fontFamily: fontStacks.medium,
-    fontWeight: 400,
+    fontWeight: 500,
     ...fontSizes[16],
   },
   paragraph: baseStyle,
   label: {
-    fontFamily: fontStacks.medium,
-    fontWeight: 400,
+    fontWeight: 500,
     ...fontSizes[15],
   },
   callout: {
-    fontFamily: fontStacks.regular,
     fontWeight: 400,
     ...fontSizes[14],
   },
   footnote: {
-    fontFamily: fontStacks.regular,
     fontWeight: 400,
     ...fontSizes[13],
   },
   caption: {
-    fontFamily: fontStacks.regular,
     fontWeight: 400,
     ...fontSizes[12],
   },
   code: {
-    fontFamily: fontStacks.mono,
     fontWeight: 400,
     ...fontSizes[13],
   },
@@ -317,7 +274,7 @@ const utility = {
     fontWeight: 400,
     textDecoration: 'none',
     cursor: 'pointer',
-    opacity: 1,
+    transition: '200ms',
 
     // transform prevents a 1px shift on hover on Safari
     transform: 'translate3d(0,0,0)',
@@ -327,13 +284,11 @@ const utility = {
     },
 
     ':hover': {
-      transition: '200ms',
       opacity: 0.8,
     },
   },
   inlineCode: {
     ...body.code,
-    fontWeight: 400,
     display: 'inline-block',
     backgroundColor: theme.background.subtle,
     border: `1px solid ${theme.border.default}`,
@@ -343,7 +298,6 @@ const utility = {
   },
   terminalCode: {
     ...body.code,
-    fontWeight: 400,
     display: 'inline-block',
     backgroundColor: darkTheme.background.subtle,
     color: darkTheme.text.default,
@@ -354,24 +308,22 @@ const utility = {
   },
   pre: {
     ...body.code,
-    fontWeight: 400,
     backgroundColor: theme.background.subtle,
     borderRadius: borderRadius.md,
     border: `1px solid ${theme.border.default}`,
     padding: spacing[4],
-    whiteSpace: 'pre-wrap' as 'pre-wrap',
+    whiteSpace: 'pre-wrap',
     margin: `${spacing[4]}px 0`,
   },
   terminalPre: {
     ...body.code,
-    fontWeight: 400,
     backgroundColor: darkTheme.background.subtle,
     color: darkTheme.text.default,
     borderRadius: borderRadius.md,
     border: `1px solid ${darkTheme.border.default}`,
     padding: spacing[4],
     margin: `${spacing[4]}px 0`,
-    whiteSpace: 'pre-wrap' as 'pre-wrap',
+    whiteSpace: 'pre-wrap',
 
     '&:before': {
       content: '"➜ "',
@@ -386,19 +338,15 @@ const utility = {
   },
   weight: {
     black: {
-      fontFamily: fontStacks.black,
       fontWeight: 900,
     },
     semiBold: {
-      fontFamily: fontStacks.semiBold,
-      fontWeight: 500,
+      fontWeight: 600,
     },
     medium: {
-      fontFamily: fontStacks.medium,
       fontWeight: 500,
     },
     regular: {
-      fontFamily: fontStacks.regular,
       fontWeight: 400,
     },
   },
@@ -409,7 +357,5 @@ export const typography = {
   headers,
   body,
   utility,
-  fontFaces,
-  fontStacks,
   fontSizes,
 };
