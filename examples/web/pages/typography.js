@@ -1,8 +1,10 @@
+import Header from "../components/Header";
+
 export default function Typography() {
   return (
-    <div className="p-8">
-      <h1 className="text-heading-5xl font-black">Typography</h1>
-      <div className="mt-16 flex flex-col gap-8">
+    <>
+      <Header>Typography</Header>
+      <div className="flex flex-col gap-8">
         <div className="flex items-center gap-2">
           <p className="w-32">Heading 5xl</p>
           <h2 className="text-heading-5xl font-black">
@@ -86,6 +88,6 @@ export default function Typography() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

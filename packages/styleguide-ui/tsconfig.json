@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "declaration": true,
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}

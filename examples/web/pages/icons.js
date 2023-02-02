@@ -128,11 +128,13 @@ import {
   YoutubeIcon,
 } from "@expo/styleguide";
 
+import Header from "../components/Header";
+
 export default function Icons() {
   return (
-    <div className="p-8">
-      <h1 className="text-heading-5xl font-black">Icons</h1>
-      <div className="mt-8 grid grid-flow-col grid-rows-[repeat(36,_minmax(0,_1fr))]">
+    <>
+      <Header>Icons</Header>
+      <div className="grid grid-cols-6">
         <IconCell label="activity" icon={ActivityIcon} />
         <IconCell label="add-photo" icon={AddPhotoIcon} />
         <IconCell label="android" icon={AndroidIcon} />
@@ -261,7 +263,7 @@ export default function Icons() {
         <IconCell label="x" icon={XIcon} />
         <IconCell label="youtube" icon={YoutubeIcon} />
       </div>
-    </div>
+    </>
   );
 }
 

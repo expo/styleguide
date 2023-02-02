@@ -20,11 +20,10 @@ Then in a React component:
 import { colors, shadows, ... } from "@expo/styleguide";
 ```
 
+## Changing styles in `tailwind.config`
 
-## Changing styles in tailwind.config 
+In order to see changes made to the exported **tailwind.js** config: 
 
-In order to see changes made to the exported `tailwind.js` config: 
-
-- Change a value in `packages/styleguide/tailwind.js`
-- Run yarn tsc in `packages/styleguide`
-- Navigate to `examples/web` and restart the dev server
+- Change a value in **packages/styleguide/tailwind.js**
+- Run `yarn tsc` in **packages/styleguide**
+- Navigate to **examples/web** and restart the dev server
