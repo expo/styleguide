@@ -10,7 +10,7 @@ const outputters = [
   require('@figma-export/output-components-as-svgr')({
     getFileExtension: () => '.tsx',
     getComponentName: ({ componentName, pageName }) => {
-      if (pageName === 'outline') {
+      if (pageName === 'outline' || pageName === 'custom') {
         return capitalize(componentName) + 'Icon';
       }
 
@@ -25,6 +25,7 @@ const outputters = [
       },
       replaceAttrValues: {
         currentColor: '{color || "var(--expo-theme-icon-default)"}',
+        '#000': '{color || "var(--expo-theme-icon-default)"}',
       },
       template,
     }),
@@ -55,6 +56,18 @@ const solidSVGOConfig = [
         fill: "currentColor"
       }
     }
+  }
+];
+
+/** @type {import('svgo').PluginConfig[]} */
+const customSVGOConfig = [
+  {
+    name: 'removeDimensions',
+    active: true
+  },
+  {
+    name: 'sortAttrs',
+    active: true,
   }
 ];
 
@@ -102,6 +115,15 @@ module.exports = {
         fileId,
         onlyFromPages: ['solid'],
         transformers: [svgo({ multipass: true, plugins: solidSVGOConfig })],
+        outputters,
+      },
+    ],
+    [
+      'components',
+      {
+        fileId,
+        onlyFromPages: ['custom'],
+        transformers: [svgo({ multipass: true, plugins: customSVGOConfig })],
         outputters,
       },
     ]
