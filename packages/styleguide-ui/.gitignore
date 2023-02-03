@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# build
+/dist
+/tmp
+
+# misc
+.DS_Store
+.npm
+.eslintcache
+.yarn-integrity
+
+# env files
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo/styleguide": "*",
+    "@expo/styleguide-ui": "*",
     "autoprefixer": "^10.4.12",
     "next": "12.3.1",
     "postcss": "^8.4.17",
