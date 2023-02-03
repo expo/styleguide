@@ -25,7 +25,7 @@ const outputters = [
       },
       replaceAttrValues: {
         currentColor: '{color || "var(--expo-theme-icon-default)"}',
-        '#000': '{color || "var(--expo-theme-icon-default)"}',
+        black: '{color || "var(--expo-theme-icon-default)"}',
       },
       template,
     }),
