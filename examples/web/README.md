@@ -1,2 +1,0 @@
-## Expo Styleguide - Web 
-

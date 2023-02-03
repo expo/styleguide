@@ -1,43 +1,30 @@
-# Expo styleguide
+<div style="display: flex; gap: 16px; align-items: center; margin-bottom: 2rem;">
+<img src="https://user-images.githubusercontent.com/6455018/218336661-5380d173-79a6-4238-80b4-dc971c34b1d3.png" height="40" width="40"/>
+<h1 style="border: none; margin: 0;">@expo/styleguide-*</h1>
+</div>
 
-A collection of packages use to share styles and icons across Expo websites and projects.
+A collection of packages used to share styles and icons across Expo websites and projects.
 
 ## Get started
 
-Install dependencies with
+1. Install dependencies with
 
-```bash
-yarn
-```
+    ```bash
+    yarn
+    ```
 
-Then build the packages with
+2. Configure styleguide-icons. Read **packages/styleguide-icons/README.md** to set up your credentials (Expo staff only) to generate icons.
 
-```bash
-yarn build
-```
+3. Build the packages with
 
-Then develop with
+    ```bash
+    yarn build
+    ```
 
-```bash
-yarn dev
-```
+    It can take several minutes to build the icons package.
 
-## Releasing new versions
+4. Develop with
 
-This repo uses [changesets](https://github.com/changesets/changesets). To start a release, run:
-
-```bash
-yarn create:release
-```
-
-This will create a changeset file. Once created, run
-
-```bash
-yarn version
-```
-
-Then commit the changes and run
-
-```bash
-yarn publish
-```
+    ```bash
+    yarn dev
+    ```

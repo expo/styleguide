@@ -1,21 +1,9 @@
 # @expo/styleguide-native
 
-This package is meant for use in Expo projects.
+Expo's React Native styleguide components.
 
 ## Get started
 
-Install
-
-```bash
-yarn add @expo/styleguide-native
-
-# or
-
-npm install @expo/styleguide-native
-```
-
-Then in a component:
-
-```tsx
-import { lightTheme, darkTheme, ... } from "@expo/styleguide-native";
-```
+1. Install dependencies with `yarn`.
+2. Build everything with `yarn build`.
+3. Develop with `yarn dev`.

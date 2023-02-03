@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
-    "declaration": true,
-    "baseUrl": "./src",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "strict": true,
     "jsx": "react",
+    "strict": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": true
-  }
+    "declaration": true
+  },
+  "include": ["./src/**/*.tsx", "./src/**/*.ts", "./index.ts"],
+  "exclude": ["node_modules"]
 }

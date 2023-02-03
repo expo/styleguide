@@ -1,8 +1,5 @@
-import { theme, darkTheme } from './themes';
-import { borderRadius } from './sizing';
-import { spacing } from './spacing';
-
-import { breakpoints } from './breakpoints';
+import { darkTheme, breakpoints, spacing, borderRadius } from '@expo/styleguide-base';
+import { theme } from './themes';
 
 const baseFontSize = 16;
 

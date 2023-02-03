@@ -1,25 +1,20 @@
 {
+  "name": "styleguide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "private": true,
   "scripts": {
-    "rename-icons": "find ./common/svg -depth -type f \\( -name '*.svg' ! -name '*-icon.svg' \\) -exec sh -c 'mv \"$1\" \"${1%.svg}-icon.svg\"' _ {} \\;",
-    "dev": "turbo run dev --parallel --no-cache",
-    "build": "turbo run build --force",
-    "create:release": "changeset",
-    "version": "changeset version",
-    "publish:patch": "turbo run build --force && changeset publish --patch",
-    "publish:minor": "turbo run build --force && changeset publish --minor",
-    "publish:major": "turbo run build --force && changeset publish --major"
+    "build": "lerna run build",
+    "dev": "lerna run dev --parallel"
   },
-  "devDependencies": {
-    "@changesets/cli": "^2.22.0",
-    "turbo": "^1.2.8"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "workspaces": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
-  "volta": {
-    "node": "16.0.0"
-  },
-  "version": "7.0.0"
+  "devDependencies": {
+    "lerna": "^6.4.1"
+  }
 }
