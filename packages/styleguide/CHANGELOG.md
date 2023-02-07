@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0
+
+### Major Changes
+
+- 9fa4778: Make styleguide font agnostic
+
 ## 6.1.3
 
 ### Patch Changes
