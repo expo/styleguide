@@ -1,20 +1,33 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function PinIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgPinIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M15.755 14.337l-1.453 2.517-5.034-2.907-2.906 5.034-1.323.354-.354-1.323L7.59 12.98l-5.034-2.906L4.01 7.556a1.937 1.937 0 012.647-.71l2.906-5.033a1.937 1.937 0 012.646-.709l5.034 2.906a1.937 1.937 0 01.709 2.647l-2.906 5.033a1.937 1.937 0 01.709 2.647z"
+        d="M15.755 14.3367L14.302 16.8535L9.26845 13.9473L6.36236 18.9808L5.03909 19.3354L4.68453 18.0121L7.59062 12.9786L2.55713 10.0726L4.01018 7.55583C4.54517 6.62919 5.73007 6.3117 6.65671 6.8467L9.5628 1.81314C10.0978 0.886495 11.2827 0.569005 12.2093 1.104L17.2428 4.0101C18.1695 4.54509 18.487 5.72999 17.952 6.65663L15.0459 11.6902C15.9725 12.2252 16.29 13.4101 15.755 14.3367Z"
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgPinIcon;

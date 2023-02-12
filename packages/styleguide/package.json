@@ -1,16 +1,14 @@
 {
   "name": "@expo/styleguide",
   "version": "6.1.3",
-  "description": "Foundational styles for Expo interfaces.",
+  "description": "Expo's styleguide components for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf ./dist",
-    "include-theme-css": "copyfiles --flat ./src/styles/expo-theme.css ./dist",
-    "build:icons": "rimraf ./src/icons && svgr ../../common/svg --config-file ./svgr-icon-config.js --out-dir ./src/icons --index-template ./svgr-index-template.js",
-    "build:logos": "rimraf ./src/logos && svgr ../../common/logos --config-file ./svgr-logo-config.js --out-dir ./src/logos --index-template ./svgr-index-template.js",
-    "build": "yarn build:icons && yarn build:logos && yarn clean && yarn tsc && yarn include-theme-css",
-    "dev": "yarn tsc -w"
+    "clean": "rimraf dist",
+    "bundle": "rollup --config",
+    "build": "run-s clean bundle",
+    "dev": "rollup --config --watch"
   },
   "files": [
     "dist",
@@ -31,11 +29,12 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "devDependencies": {
-    "@svgr/cli": "^5.5.0",
-    "@types/node": "^15.3.1",
-    "@types/react": "^17.0.6",
-    "copyfiles": "^2.4.1",
-    "rimraf": "^3.0.2",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.28",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^4.1.2",
+    "rollup": "^3.15.0",
+    "rollup-plugin-copy": "^3.4.0",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.2.4"
   },
@@ -44,6 +43,8 @@
   },
   "gitHead": "94bfdec4905cfc8fa2c2540ed672219ec6949246",
   "dependencies": {
-    "@radix-ui/colors": "^0.1.8"
+    "@expo/styleguide-base": "*",
+    "@radix-ui/colors": "^0.1.8",
+    "tailwind-merge": "^1.9.1"
   }
 }

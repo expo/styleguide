@@ -8,8 +8,8 @@ module.exports = {
   typescript: true,
   filenameCase: 'pascal',
   svgProps: {
-    width: '{size || width || 20}',
-    height: '{size || height || 20}',
+    width: '{_width}',
+    height: '{_height}',
   },
   prettierConfig: {
     parser: 'typescript',
@@ -21,11 +21,20 @@ module.exports = {
   },
   svgoConfig: {
     multipass: true,
-    plugins: {
-      removeDesc: true,
-      removeViewBox: false,
-      removeXMLNS: true,
-    },
+    plugins: [
+      {
+        name: 'removeDesc',
+        active: true,
+      },
+      {
+        name: 'removeViewBox',
+        active: true,
+      },
+      {
+        name: 'removeXMLNS',
+        active: true,
+      }
+    ],
   },
   template,
 };

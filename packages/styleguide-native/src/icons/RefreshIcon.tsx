@@ -1,33 +1,49 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function RefreshIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgRefreshIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M17.143 9.524v-.762a4 4 0 00-4-4H6.667"
-        stroke={color || "#000"}
-        strokeWidth={2}
-        strokeLinecap="round"
-      />
-      <Path d="M7.619 9.524V0L0 4.535l7.619 4.989z" fill={color || "#000"} />
-      <Path
-        d="M2.857 10.476v.762a4 4 0 004 4h6.476"
+        d="M17.1429 9.52387V8.76196C17.1429 6.55283 15.352 4.76196 13.1429 4.76196H6.66666"
         stroke={color || "#000"}
         strokeWidth={2}
         strokeLinecap="round"
       />
       <Path
-        d="M12.381 10.476V20L20 15.465l-7.619-4.989z"
+        d="M7.61905 9.5238L7.61905 -5.63119e-06L5.94892e-08 4.53514L7.61905 9.5238Z"
+        fill={color || "#000"}
+      />
+      <Path
+        d="M2.85714 10.4761L2.85714 11.238C2.85715 13.4472 4.64801 15.238 6.85715 15.238L13.3333 15.238"
+        stroke={color || "#000"}
+        strokeWidth={2}
+        strokeLinecap="round"
+      />
+      <Path
+        d="M12.381 10.4762L12.381 20L20 15.4649L12.381 10.4762Z"
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgRefreshIcon;

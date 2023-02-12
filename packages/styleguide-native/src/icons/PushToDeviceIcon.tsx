@@ -1,39 +1,52 @@
-import React from "react";
-import Svg, { Path, Rect } from "react-native-svg";
-import { IconProps } from "../types";
-export default function PushToDeviceIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path, Rect } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgPushToDeviceIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 22"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M8.164 7.57v6.816l5.453-3.407L8.164 7.57z"
+        d="M8.16436 7.57068L8.16436 14.3865L13.617 10.9786L8.16436 7.57068Z"
         fill={color || "#000"}
       />
       <Path
-        d="M8.164 11.079H1.148"
+        d="M8.16434 11.0789L1.14806 11.0789"
         stroke={color || "#000"}
-        strokeWidth={1.503}
+        strokeWidth={1.50349}
         strokeLinecap="round"
       />
       <Path
-        d="M4.69 13.35v4.545a2.272 2.272 0 002.272 2.272h7.951a2.272 2.272 0 002.272-2.272V4.263a2.272 2.272 0 00-2.272-2.272H6.962A2.272 2.272 0 004.69 4.263v4.544"
+        d="M4.68959 13.3508V17.8947C4.68959 19.1494 5.70677 20.1666 6.96153 20.1666H14.9133C16.1681 20.1666 17.1853 19.1494 17.1853 17.8947V4.26303C17.1853 3.00827 16.1681 1.99109 14.9133 1.99109H6.96153C5.70677 1.99109 4.68959 3.00827 4.68959 4.26303V8.80691"
         stroke={color || "#000"}
-        strokeWidth={2.005}
+        strokeWidth={2.00465}
       />
       <Rect
-        x={8.164}
-        y={1.056}
-        width={6.014}
-        height={3.007}
-        rx={1.002}
+        x={8.16434}
+        y={1.05554}
+        width={6.01396}
+        height={3.00698}
+        rx={1.00233}
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgPushToDeviceIcon;

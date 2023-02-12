@@ -1,24 +1,45 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function MegaphoneIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgMegaphoneIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M15.91 1.667c-2.006 0-9 5.09-9 5.09v6.182s6.994 5.09 9 5.09c2.331 0 4.09-3.517 4.09-8.18 0-4.665-1.759-8.182-4.09-8.182zm0 14.545c-.928 0-2.274-2.479-2.274-6.364 0-3.884 1.346-6.363 2.273-6.363s2.273 2.479 2.273 6.363c0 3.885-1.346 6.364-2.273 6.364z"
+        d="M15.9091 1.66663C13.9044 1.66663 6.90906 6.75751 6.90906 6.75751V12.9391C6.90906 12.9391 13.9044 18.0297 15.9091 18.0297C18.2413 18.0297 19.9999 14.5124 19.9999 9.84818C19.9999 5.18396 18.2413 1.66663 15.9091 1.66663ZM15.9091 16.212C14.9824 16.212 13.6362 13.7331 13.6362 9.84818C13.6362 5.96373 14.9824 3.48463 15.9091 3.48463C16.8359 3.48463 18.1819 5.96351 18.1819 9.84818C18.1817 13.7331 16.8359 16.212 15.9091 16.212Z"
         fill={color || "#000"}
       />
       <Path
-        d="M15.91 12.342c.602 0 1.09-1.116 1.09-2.494 0-1.377-.488-2.494-1.09-2.494-.603 0-1.092 1.117-1.092 2.494 0 1.378.489 2.494 1.091 2.494zM3.333 17.667c0 .7.573 1.273 1.273 1.273h1.273c.7 0 1.273-.573 1.273-1.273v-3.292l-.243-.208-.417-.319H3.333v3.819zm2.485-4.727V6.757H3.091a3.09 3.09 0 100 6.181h2.727z"
+        d="M15.9091 12.3425C16.5116 12.3425 17 11.2259 17 9.84849C17 8.47109 16.5116 7.35449 15.9091 7.35449C15.3066 7.35449 14.8182 8.47109 14.8182 9.84849C14.8182 11.2259 15.3066 12.3425 15.9091 12.3425Z"
+        fill={color || "#000"}
+      />
+      <Path
+        d="M3.33331 17.6667C3.33331 18.3665 3.9062 18.9396 4.60598 18.9396H5.87887C6.57864 18.9396 7.15153 18.3669 7.15153 17.6667V15.7575V14.3747L6.90906 14.1667L6.49239 13.8483H5.24242H3.33331V17.6667Z"
+        fill={color || "#000"}
+      />
+      <Path
+        d="M5.81822 12.9391V6.75757H3.09089C1.384 6.75757 0 8.14112 0 9.84823C0 11.5553 1.384 12.9391 3.09089 12.9391H5.81822Z"
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgMegaphoneIcon;

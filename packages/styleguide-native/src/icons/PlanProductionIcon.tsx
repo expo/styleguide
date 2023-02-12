@@ -1,23 +1,39 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function PlanProductionIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgPlanProductionIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M16.564 16.274L10 5.05 3.436 16.274h13.128zM10.932 1.83a1.08 1.08 0 00-1.864 0L.149 17.078a1.08 1.08 0 00.933 1.626h17.836a1.08 1.08 0 00.933-1.626L10.932 1.831z"
+        d="M16.5644 16.2736L10 5.0504L3.43562 16.2736H16.5644ZM10.9324 1.83082C10.5153 1.11775 9.4847 1.11775 9.06763 1.83082L0.149401 17.0784C-0.271764 17.7985 0.247568 18.7039 1.08176 18.7039H18.9182C19.7524 18.7039 20.2718 17.7985 19.8506 17.0784L10.9324 1.83082Z"
         fill={color || "#000"}
       />
-      <Path d="M10 8.633l3.445 5.889h-6.89L10 8.632z" fill={color || "#000"} />
+      <Path
+        d="M10 8.63256L13.4446 14.5218H6.55543L10 8.63256Z"
+        fill={color || "#000"}
+      />
     </Svg>
   );
 }
+export default SvgPlanProductionIcon;

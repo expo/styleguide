@@ -1,28 +1,48 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function ChangelogIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgChangelogIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M2.5 12.857h15m-15 4.286h15"
+        d="M2.5 12.8572H17.5"
         stroke={color || "#000"}
-        strokeWidth={2.143}
+        strokeWidth={2.14286}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <Path
-        d="M16.071 2.857H3.93c-.79 0-1.429.64-1.429 1.429v2.857c0 .789.64 1.428 1.429 1.428h12.14c.79 0 1.429-.64 1.429-1.428V4.286c0-.79-.64-1.429-1.429-1.429z"
+        d="M2.5 17.1429H17.5"
         stroke={color || "#000"}
-        strokeWidth={2.143}
+        strokeWidth={2.14286}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M16.0713 2.85715H3.92857C3.13959 2.85715 2.5 3.49674 2.5 4.28572V7.14286C2.5 7.93184 3.13959 8.57143 3.92857 8.57143H16.0713C16.8603 8.57143 17.4999 7.93184 17.4999 7.14286V4.28572C17.4999 3.49674 16.8603 2.85715 16.0713 2.85715Z"
+        stroke={color || "#000"}
+        strokeWidth={2.14286}
       />
     </Svg>
   );
 }
+export default SvgChangelogIcon;

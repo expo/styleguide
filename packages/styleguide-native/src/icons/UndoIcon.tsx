@@ -1,20 +1,33 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function UndoIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgUndoIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M7.982 7.664v3.98L0 6.657l7.982-4.99v3.98h6.941a5.044 5.044 0 015.044 5.045v7.938a1.009 1.009 0 11-2.017 0v-7.938a3.026 3.026 0 00-3.027-3.027h-6.94z"
+        d="M7.98246 7.66444V11.6447L0 6.65566L7.98245 1.66663V5.64689C7.98245 5.64689 7.98246 5.64689 7.98245 5.64689H14.9233C17.7089 5.64689 19.9671 7.9051 19.9671 10.6907V18.6293C19.9671 19.1865 19.5155 19.6381 18.9583 19.6381C18.4012 19.6381 17.9496 19.1865 17.9496 18.6293V10.6907C17.9496 9.01936 16.5946 7.66444 14.9233 7.66444H7.98246C7.98246 7.66444 7.98245 7.66444 7.98246 7.66444Z"
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgUndoIcon;

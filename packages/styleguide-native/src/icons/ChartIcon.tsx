@@ -1,24 +1,36 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function ChartIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgChartIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M18.928 18.887H1.072V1.147"
+        d="M18.9276 18.8867H1.07242V1.14721"
         stroke={color || "#000"}
         strokeWidth={2}
         strokeLinecap="round"
       />
       <Path
-        d="M4.477 12.993L9.22 7.007l4.329 5.763 4.565-5.763"
+        d="M4.47729 12.9932L9.21872 7.00684L13.5476 12.7703L18.1125 7.00684"
         stroke={color || "#000"}
         strokeWidth={2}
         strokeLinecap="round"
@@ -27,3 +39,4 @@ export default function ChartIcon(props: IconProps) {
     </Svg>
   );
 }
+export default SvgChartIcon;

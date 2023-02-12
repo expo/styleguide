@@ -1,18 +1,30 @@
-import React from "react";
-import Svg, { Path, Rect } from "react-native-svg";
-import { IconProps } from "../types";
-export default function PlansIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path, Rect } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgPlansIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 21"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M10 5.22l1.545 3.13L15 8.855l-2.5 2.435.59 3.44L10 13.105 6.91 14.73l.59-3.44L5 8.855l3.455-.505L10 5.22z"
+        d="M10 5.22034L11.545 8.35034L15 8.85534L12.5 11.2903L13.09 14.7303L10 13.1053L6.91 14.7303L7.5 11.2903L5 8.85534L8.455 8.35034L10 5.22034Z"
         stroke={color || "#000"}
         strokeWidth={1.75}
         strokeLinecap="round"
@@ -20,9 +32,9 @@ export default function PlansIcon(props: IconProps) {
       />
       <Rect
         x={0.875}
-        y={2.009}
+        y={2.00867}
         width={18.25}
-        height={16.423}
+        height={16.4233}
         rx={3.125}
         stroke={color || "#000"}
         strokeWidth={1.75}
@@ -30,3 +42,4 @@ export default function PlansIcon(props: IconProps) {
     </Svg>
   );
 }
+export default SvgPlansIcon;

@@ -1,26 +1,45 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function RunIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgRunIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 22"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M15.75 2.959C15.75 4.087 14.823 5 13.676 5c-1.146 0-2.075-.914-2.075-2.042 0-1.128.93-2.042 2.075-2.042 1.147 0 2.076.914 2.076 2.042z"
+        d="M15.7508 2.95888C15.7508 4.08676 14.8216 5.00108 13.6753 5.00108C12.5291 5.00108 11.5998 4.08676 11.5998 2.95888C11.5998 1.83101 12.5291 0.916687 13.6753 0.916687C14.8216 0.916687 15.7508 1.83101 15.7508 2.95888Z"
         fill={color || "#000"}
       />
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M11.444 5.832h2.472l4.065 3.914h1.186v1.998h-2.014L14.368 9.06l-.252 3.683 1.785 1.757v6.582h-2.03v-5.755l-1.97-1.94-.825 4.374-6.172-1.012.334-1.97 4.205.69.804-4.263.244-2.836-1.335.535v2.52h-2.03V7.563l4.318-1.731zM2.909 2.428H8.4v1.998H2.91V2.428zm-1.384 3.83h3.676v1.997H1.525V6.257zm-.692 3.786h4.324v1.997H.833v-1.997z"
+        d="M11.4442 5.83169H13.9164L17.9809 9.74591H19.1667V11.7436H17.1527L14.3676 9.06142L14.1164 12.7443L15.9012 14.5005V21.0834H13.871V15.328L11.9002 13.3888L11.0757 17.7625L4.90388 16.7504L5.23765 14.7799L9.44312 15.4696L10.2467 11.2067L10.4914 8.37077L9.15582 8.90617V11.4255H7.12557V7.56293L11.4442 5.83169Z"
+        fill={color || "#000"}
+      />
+      <Path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2.90891 2.42803H8.40016V4.42572H2.90891V2.42803ZM1.52523 6.25716H5.20056V8.25485H1.52523V6.25716ZM0.833344 10.0437H5.15729V12.0414H0.833344V10.0437Z"
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgRunIcon;

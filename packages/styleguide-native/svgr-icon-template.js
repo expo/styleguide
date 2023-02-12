@@ -1,20 +1,35 @@
-function iconTemplate(api, opts, rest) {
-  const { jsx } = rest;
-  const template = api.template.smart({ plugins: ['typescript'] });
-  const { componentName } = opts.state;
-  const exportName = componentName.replace('Svg', '');
+const svgrTemplate = (
+  { imports, interfaces, componentName, props, jsx, exports },
+  { tpl, options }
+) => {
+  return tpl`${imports}
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
 
-  return template.ast`
-    import React from 'react';
-    import Svg, { Path } from 'react-native-svg';
-    import { IconProps } from '../types';
+function ${componentName}(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: { [i: string]: number } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  }
 
-    export default function ${exportName}(props: IconProps) {
-      const { size, color, width, height } = props;
+  if (size && typeof size === 'string' && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
 
-      return ${jsx};
-    }
-  `;
+  return ${jsx};
 }
 
-module.exports = iconTemplate;
+${exports}
+  `;
+};
+
+module.exports = svgrTemplate;

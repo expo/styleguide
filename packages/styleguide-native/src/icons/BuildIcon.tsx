@@ -1,22 +1,35 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function BuildIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgBuildIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M10 .023l8.962 4.485v10.984L10 19.977l-8.96-4.485V4.508L10 .023zM2.89 6.576v7.773l6.186 3.096V9.67L2.89 6.576zm8.036 3.093v7.776l6.186-3.096V6.576L10.925 9.67zm5.044-4.59L10 8.064 4.031 5.079l5.97-2.987 5.968 2.987z"
+        d="M10.0001 0.0230713L18.9615 4.50809V15.4923L10.0001 19.9769L1.03861 15.4923V4.50809L10.0001 0.0230713ZM2.88861 6.57621V14.3494L9.07507 17.4453V9.66943L2.88861 6.57621ZM10.9251 9.66943V17.4453L17.1115 14.3494V6.57621L10.9251 9.66943ZM15.969 5.07913L10.0001 8.06357L4.03118 5.07913L10.0001 2.09183L15.969 5.07913Z"
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgBuildIcon;

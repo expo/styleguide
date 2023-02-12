@@ -1,26 +1,39 @@
-import React from "react";
-import Svg, { Path } from "react-native-svg";
-import { IconProps } from "../types";
-export default function BadgeIcon(props: IconProps) {
-  const { size, color, width, height } = props;
+import * as React from "react";
+import Svg, { SvgProps, Path } from "react-native-svg";
+type Props = {
+  size?: number | string;
+  color?: string;
+} & SvgProps;
+function SvgBadgeIcon(props: Props) {
+  const { size, color, width = 24, height = 24 } = props;
+  let _width = width;
+  let _height = height;
+  const sizes: {
+    [i: string]: number;
+  } = {
+    xs: 16,
+    sm: 20,
+    md: 24,
+    lg: 28,
+    xl: 32,
+  };
+  if (size && typeof size === "string" && sizes[size]) {
+    _width = sizes[size];
+    _height = sizes[size];
+  }
   return (
-    <Svg
-      viewBox="0 0 20 20"
-      fill="none"
-      width={size || width || 20}
-      height={size || height || 20}
-      {...props}
-    >
+    <Svg width={_width} height={_height} fill="none" {...props}>
       <Path
-        d="M10 1a.91.91 0 00-.91.91v3.635a.91.91 0 101.82 0V1.91A.91.91 0 0010 1z"
+        d="M10 1C9.49794 1 9.09093 1.40701 9.09093 1.90909V3.724L9.09092 3.72728V5.54547C9.09092 6.04754 9.49793 6.45456 10 6.45456C10.5021 6.45456 10.9091 6.04754 10.9091 5.54547V3.73057L10.9091 3.72727V1.90909C10.9091 1.40701 10.5021 1 10 1Z"
         fill={color || "#000"}
       />
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M11.818 3.727h6.364c1.004 0 1.818.814 1.818 1.818v11.819a1.818 1.818 0 01-1.818 1.818H1.818A1.818 1.818 0 010 17.364V5.545c0-1.004.814-1.818 1.818-1.818h6.364v1.818a1.818 1.818 0 003.636 0V3.727zm5.455 7.728h-6.364v-.91h6.364v.91zm-6.364 1.818h6.364v-.91h-6.364v.91zm6.364 1.818h-6.364v-.91h6.364v.91zM5.91 9.18c2.204 0 2.039 2.952 1.06 4.42.979 0 2.123.965 2.12 1.944H2.728c0-.979 1.142-1.944 2.121-1.944-.979-1.469-1.142-4.42 1.062-4.42z"
+        d="M11.8182 3.72727H18.1818C19.186 3.72727 20 4.5413 20 5.54545V17.3636C20 18.3678 19.186 19.1818 18.1818 19.1818H1.81818C0.81403 19.1818 0 18.3678 0 17.3636V5.54546C0 4.5413 0.814028 3.72727 1.81818 3.72727H8.18182V5.54547C8.18182 6.54962 8.99585 7.36365 10 7.36365C11.0042 7.36365 11.8182 6.54962 11.8182 5.54547V3.72727ZM17.2727 11.4546H10.9091V10.5455H17.2727V11.4546ZM10.9091 13.2727H17.2727V12.3637H10.9091V13.2727ZM17.2727 15.0909H10.9091V14.1818H17.2727V15.0909ZM5.90992 9.18182C8.11354 9.18182 7.94872 12.1325 6.9697 13.601C7.94872 13.601 9.09256 14.5664 9.09091 15.5455H2.72727C2.72727 14.5664 3.86946 13.601 4.84848 13.601C3.86946 12.1325 3.70629 9.18182 5.90992 9.18182Z"
         fill={color || "#000"}
       />
     </Svg>
   );
 }
+export default SvgBadgeIcon;
