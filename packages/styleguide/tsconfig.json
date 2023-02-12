@@ -4,7 +4,8 @@
     "strict": true,
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
     "outDir": "dist"
-  }
+  },
+  "include": ["**/*.tsx", "**/*.ts"],
+  "exclude": ["node_modules"]
 }

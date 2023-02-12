@@ -5,7 +5,9 @@
   "description": "Expo's icons for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "check-env": "sh ./check-env.sh",
     "clean": "rimraf dist tmp",
@@ -35,6 +37,7 @@
     "react": "^18.2.0",
     "rimraf": "^4.1.2",
     "rollup": "^3.12.1",
+    "tslib": "^2.5.0",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {

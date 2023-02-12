@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,7 +16,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "module": "CommonJS"
   },
   "include": [
     "next-env.d.ts",
