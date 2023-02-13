@@ -122,7 +122,7 @@ export const lightTheme = {
 export const darkTheme = {
   background: {
     default: palette.dark.gray1,
-    screen: palette.black,
+    screen: '#0C0D0E',
     subtle: palette.dark.gray2,
     element: palette.dark.gray3,
     hover: palette.dark.gray4,
