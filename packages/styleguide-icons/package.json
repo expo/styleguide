@@ -1,7 +1,6 @@
 {
   "name": "@expo/styleguide-icons",
   "version": "1.0.0",
-  "private": true,
   "description": "Expo's icons for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +15,7 @@
     "build": "run-s check-env clean export bundle"
   },
   "author": "Jon Samp",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "homepage": "https://github.com/expo/styleguide",
   "repository": {
     "type": "git",
