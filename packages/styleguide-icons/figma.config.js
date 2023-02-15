@@ -6,16 +6,18 @@ const template = require('./svgr-icon-template');
 const pascalCase = figmaUtils.pascalCase
 const fileId = process.env.FILE_ID;
 
+function getComponentName({ componentName, pageName }) {
+  if (pageName === 'outline' || pageName === 'custom') {
+    return pascalCase(componentName) + 'Icon';
+  }
+
+  return pascalCase(componentName) + pascalCase(pageName) + 'Icon';
+}
+
 const outputters = [
   require('@figma-export/output-components-as-svgr')({
     getFileExtension: () => '.tsx',
-    getComponentName: ({ componentName, pageName }) => {
-      if (pageName === 'outline' || pageName === 'custom') {
-        return pascalCase(componentName) + 'Icon';
-      }
-
-      return pascalCase(componentName) + pascalCase(pageName) + 'Icon';
-    },
+    getComponentName,
     getSvgrConfig: () => ({
       typescript: true,
       svgProps: {
@@ -29,6 +31,12 @@ const outputters = [
       },
       template,
     }),
+    // Exports the component as a named export without the '.tsx' extension inside the generated index.ts file. By default the '.tsx' extension is added, which makes TypeScript complain.
+    getExportTemplate: ({ componentName, pageName }) =>
+      `export { default as ${getComponentName({
+        componentName,
+        pageName,
+      })} } from './${getComponentName({ componentName, pageName })}';`,
     output: './tmp',
   }),
 ];

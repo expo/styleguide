@@ -8,7 +8,7 @@ const config = [
       format: 'module',
     },
     plugins: [typescript()],
-    external: ['react']
+    external: ['react'],
   },
 ];
 
