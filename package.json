@@ -1,16 +1,10 @@
 {
-  "name": "styleguide",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "root",
   "private": true,
   "scripts": {
     "build": "lerna run build --stream",
     "dev": "lerna run dev --parallel"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "workspaces": [
     "packages/*"
   ],

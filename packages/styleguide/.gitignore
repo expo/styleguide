@@ -10,6 +10,7 @@
 .npm
 .eslintcache
 .yarn-integrity
+.idea
 
 # env files
 .env

@@ -1,20 +1,20 @@
 require('dotenv').config();
 
 const svgo = require('@figma-export/transform-svg-with-svgo');
+const figmaUtils = require('@figma-export/utils');
 const template = require('./svgr-icon-template');
+const pascalCase = figmaUtils.pascalCase
 const fileId = process.env.FILE_ID;
-const capitalize = (s) => {
-  return s.split('-').map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join('');
-};
+
 const outputters = [
   require('@figma-export/output-components-as-svgr')({
     getFileExtension: () => '.tsx',
     getComponentName: ({ componentName, pageName }) => {
       if (pageName === 'outline' || pageName === 'custom') {
-        return capitalize(componentName) + 'Icon';
+        return pascalCase(componentName) + 'Icon';
       }
 
-      return capitalize(componentName) + capitalize(pageName) + 'Icon';
+      return pascalCase(componentName) + pascalCase(pageName) + 'Icon';
     },
     getSvgrConfig: () => ({
       typescript: true,
