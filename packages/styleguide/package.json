@@ -4,16 +4,19 @@
   "description": "Expo's styleguide components for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "tailwind.js"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "bundle": "rollup --config",
     "build": "run-s clean bundle",
     "dev": "rollup --config --watch"
   },
-  "files": [
-    "dist",
-    "tailwind.js"
-  ],
   "homepage": "https://github.com/expo/styleguide",
   "repository": {
     "type": "git",

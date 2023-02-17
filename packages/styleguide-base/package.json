@@ -4,6 +4,10 @@
   "description": "Expo's base colors and style values.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "bundle": "rollup --config",

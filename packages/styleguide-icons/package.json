@@ -2,17 +2,22 @@
   "name": "@expo/styleguide-icons",
   "version": "1.0.0",
   "description": "Expo's icons for use on the web.",
-  "main": "dist/index.js",
+  "main": "dist/index",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "check-env": "sh ./check-env.sh",
     "clean": "rimraf dist tmp",
     "export": "figma-export use-config figma.config.js",
     "bundle": "rollup --config",
-    "build": "run-s check-env clean export bundle"
+    "build": "run-s check-env",
+    "build-stub": "export STUB=true && run-s clean bundle",
+    "build-icons": "run-s clean export bundle"
   },
   "author": "Jon Samp",
   "license": "UNLICENSED",
@@ -36,6 +41,7 @@
     "react": "^18.2.0",
     "rimraf": "^4.1.2",
     "rollup": "^3.12.1",
+    "rollup-plugin-copy": "^3.4.0",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
   },
