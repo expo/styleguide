@@ -6,7 +6,6 @@ Expo's icons for use on the web.
 
 1. Install dependencies with `yarn`.
 2. Build everything with `yarn build`.
-3. Develop with `yarn dev`.
 
 ### Icon generation
 

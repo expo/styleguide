@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 import type { DOMAttributes, PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge'
-import { theme } from '../styles/themes';
 
 type Props = DOMAttributes<HTMLButtonElement | HTMLAnchorElement> & PropsWithChildren<{
   className?: string;
