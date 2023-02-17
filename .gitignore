@@ -1,3 +1,6 @@
 .DS_Store
+.npm
+.eslintcache
+.yarn-integrity
 .idea
 node_modules

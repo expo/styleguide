@@ -1,30 +1,17 @@
 # @expo/styleguide
 
-This package is meant for use in the DOM.
+Expo's styleguide components for use on the web.
 
 ## Get started
 
-Install
+1. Install dependencies with `yarn`.
+2. Build everything with `yarn build`.
+3. Develop with `yarn dev`.
 
-```bash
-yarn add @expo/styleguide
+## Changing Tailwind styles
 
-# or
+In order to see changes made to the exported **tailwind.js** config:
 
-npm install @expo/styleguide
-```
-
-Then in a React component:
-
-```tsx
-import { colors, shadows, ... } from "@expo/styleguide";
-```
-
-
-## Changing styles in tailwind.config 
-
-In order to see changes made to the exported `tailwind.js` config: 
-
-- Change a value in `packages/styleguide/tailwind.js`
-- Run yarn tsc in `packages/styleguide`
-- Navigate to `examples/web` and restart the dev server
+- Change a value in **packages/styleguide/tailwind.js**
+- Run yarn tsc in **packages/styleguide**
+- Navigate to **example-web** and restart the dev server
