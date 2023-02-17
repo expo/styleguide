@@ -4,7 +4,7 @@
   "scripts": {
     "build": "lerna run build --stream",
     "dev": "lerna run dev --parallel",
-    "publish": "lerna run publish --no-private"
+    "npm-publish": "lerna publish --no-private"
   },
   "workspaces": [
     "packages/*"
