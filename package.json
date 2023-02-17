@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "lerna run build --stream",
-    "dev": "lerna run dev --parallel"
+    "dev": "lerna run dev --parallel",
+    "publish": "lerna run publish --no-private"
   },
   "workspaces": [
     "packages/*"
