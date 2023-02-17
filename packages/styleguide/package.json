@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide",
-  "version": "7.0.0",
+  "version": "8.0.0-alpha.0",
   "description": "Expo's styleguide components for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -43,7 +43,7 @@
     "react": ">= 16"
   },
   "dependencies": {
-    "@expo/styleguide-base": "*",
+    "@expo/styleguide-base": "^1.0.0-alpha.0",
     "@radix-ui/colors": "^0.1.8",
     "tailwind-merge": "^1.9.1"
   }
