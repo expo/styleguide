@@ -3,6 +3,8 @@ import { ThemeProvider } from "@expo/styleguide";
 import { Inter } from "@next/font/google";
 import { twMerge } from 'tailwind-merge';
 import Head from "next/head";
+import Image from 'next/image';
+import Link from 'next/link';
 
 import { SidebarLink } from "@/components/SidebarLink";
 
@@ -23,6 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <main className={twMerge(regularFont.variable, "flex p-8 gap-8")}>
         <div>
+          <Link href="/">
+            <Image src="/icon.png" width="72" height="72" alt="Styleguide logo" className="mb-4" />
+          </Link>
           <SidebarLink href="/colors" text="Colors" />
           <SidebarLink href="/typography" text="Typography" />
           <SidebarLink href="/icons" text="Icons" />
