@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from "@expo/styleguide";
 import { Inter } from "@next/font/google";
 import { twMerge } from 'tailwind-merge';
+import Head from "next/head";
 
 import { SidebarLink } from "@/components/SidebarLink";
 
@@ -16,6 +17,10 @@ export const regularFont = Inter({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
+      <Head>
+        <title>Expo Styleguide</title>
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+      </Head>
       <main className={twMerge(regularFont.variable, "flex p-8 gap-8")}>
         <div>
           <SidebarLink href="/colors" text="Colors" />
