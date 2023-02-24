@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Icon } from "@/components/Icon";
+import { Icon } from "@expo/styleguide";
 import { useRouter } from "next/router";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 export function SidebarLink({ href, text }: Props) {
   const { pathname } = useRouter();
   return (
-    <Link href={href} className={`text-heading-xl font-medium flex items-center gap-2 hover:underline ${pathname === href && "text-palette-blue11"}`}>
+    <Link href={href} className={`text-heading-xl font-medium flex items-center gap-2 hover:underline ${pathname === href && "text-link"}`}>
       <span>{text}</span>
       <Icon name="ArrowRightIcon" className="icon-md text-icon-secondary" />
     </Link>

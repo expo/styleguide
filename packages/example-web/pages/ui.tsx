@@ -28,8 +28,8 @@ export default function UI() {
     <>
       <h1 className="text-heading-5xl font-black">UI</h1>
       <h3 className="text-heading-3xl font-bold mt-4 mb-4">Button Base</h3>
-      <ButtonBase onClick={() => alert('ButtonBase clicked')}>Button base</ButtonBase>
-      <h3 className="text-heading-3xl font-bold mt-4 mb-4">Buttons</h3>
+      <ButtonBase onClick={() => alert('ButtonBase clicked')}>Button base (onClick)</ButtonBase>
+      <h3 className="text-heading-3xl font-bold mt-8 mb-4">Buttons</h3>
       {THEMES.map(buttonTheme => (
         <Fragment key={`buttons-${buttonTheme}`}>
           <ButtonRow theme={buttonTheme} />

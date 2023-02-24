@@ -1,7 +1,8 @@
 import React from "react";
 import { ButtonBase, ButtonBaseProps } from "./ButtonBase";
 import { twMerge } from "tailwind-merge";
-import { BuildIcon } from "@expo/styleguide-icons";
+
+import { Icon } from "../Icon";
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'primary-destructive' | 'secondary-destructive';
@@ -38,7 +39,7 @@ export const Button = ({ children, size = 'sm', theme = 'primary', disabled }: B
       `disabled:cursor-default`,
       disabled && 'opacity-80',
     )} disabled={disabled}>
-      <BuildIcon className={`icon-${size} text-button-${theme}-icon`} />
+      <Icon name="Earth01Icon" className={`icon-${size} text-button-${theme}-icon`} />
       <span className={`flex self-center text-button-${theme}`}>{children}</span>
     </ButtonBase>
   )
