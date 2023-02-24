@@ -1,15 +1,16 @@
+import { createElement } from "react";
+
 type DemoTileProps = {
   title: string;
   className: string;
+  tag?: string;
 };
 
-function DemoTile({ title, className }: DemoTileProps) {
+function DemoTile({ title, className, tag = "p" }: DemoTileProps) {
   return (
     <div className="flex items-center gap-2">
       <p className="w-32 text-secondary">{title}</p>
-      <p className={className}>
-        Build developer trust.
-      </p>
+      {createElement(tag, { className }, "Build developer trust.")}
     </div>
   )
 }
@@ -39,7 +40,7 @@ export default function Typography() {
         <DemoTile title="Callout" className="text-xs" />
         <DemoTile title="Footnote" className="text-2xs" />
         <DemoTile title="Caption" className="text-3xs" />
-        <DemoTile title="Code" className="text-base font-mono" />
+        <DemoTile tag="code" title="Code" className="text-base" />
       </div>
     </>
   );

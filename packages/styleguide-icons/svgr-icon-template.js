@@ -4,7 +4,6 @@ const svgrTemplate = (
 ) => {
   return tpl`${imports}
 type Props = {
-  size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
   className?: string;
 } & SVGProps<SVGSVGElement>;
 
