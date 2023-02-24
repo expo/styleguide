@@ -1,90 +1,45 @@
+type DemoTileProps = {
+  title: string;
+  className: string;
+};
+
+function DemoTile({ title, className }: DemoTileProps) {
+  return (
+    <div className="flex items-center gap-2">
+      <p className="w-32 text-secondary">{title}</p>
+      <p className={className}>
+        Build developer trust.
+      </p>
+    </div>
+  )
+}
+
 export default function Typography() {
   return (
     <>
       <h1 className="text-heading-5xl font-black">Typography</h1>
-      <div className="mt-8 flex flex-col gap-8">
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading 5xl</p>
-          <h2 className="text-heading-5xl font-black">
-            Build developer trust.
-          </h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading 4xl</p>
-          <h2 className="text-heading-4xl font-extrabold">
-            Build developer trust.
-          </h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading 3xl</p>
-          <h2 className="text-heading-3xl font-bold">Build developer trust.</h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading 2xl</p>
-          <h2 className="text-heading-2xl font-semibold">
-            Build developer trust.
-          </h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading xl</p>
-          <h2 className="text-heading-xl font-medium">
-            Build developer trust.
-          </h2>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading lg</p>
-          <h2 className="text-heading-lg font-medium">
-            Build developer trust.
-          </h2>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading base</p>
-          <h2 className="text-heading-base font-medium">Build developer trust.</h2>
-        </div>
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading sm</p>
-          <h2 className="text-heading-sm font-medium">Build developer trust.</h2>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <p className="w-32 text-secondary">Heading xs</p>
-          <h2 className="text-heading-xs font-medium">Build developer trust.</h2>
-        </div>
+      <h3 className="text-heading-3xl font-bold mt-8 mb-4">Headings</h3>
+      <div className="flex flex-col gap-8">
+        <DemoTile title="Heading 5xl" className="text-heading-5xl font-black" />
+        <DemoTile title="Heading 4xl" className="text-heading-4xl font-extrabold" />
+        <DemoTile title="Heading 3xl" className="text-heading-3xl font-bold" />
+        <DemoTile title="Heading 2xl" className="text-heading-2xl font-semibold" />
+        <DemoTile title="Heading xl" className="text-heading-xl font-medium" />
+        <DemoTile title="Heading lg" className="text-heading-lg font-medium" />
+        <DemoTile title="Heading base" className="text-heading-base font-medium" />
+        <DemoTile title="Heading sm" className="text-heading-sm font-medium" />
+        <DemoTile title="Heading xs" className="text-heading-xs font-medium" />
       </div>
-
-      <div className="my-20">
-        <div className="mt-4 flex flex-col gap-6">
-          <div className="flex items-center gap-2">
-            <p className="w-32 text-secondary">Headline</p>
-            <p className="text-base font-medium">Build developer trust.</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <p className="w-32 text-secondary">Paragraph</p>
-            <p className="text-base font-normal">Build developer trust.</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <p className="w-32 text-secondary">Label</p>
-            <p className="text-sm font-medium">Build developer trust.</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <p className="w-32 text-secondary">Callout</p>
-            <p className="text-xs">Build developer trust.</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <p className="w-32 text-secondary">Footnote</p>
-            <p className="text-2xs">Build developer trust.</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <p className="w-32 text-secondary">Caption</p>
-            <p className="text-3xs">Build developer trust.</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <p className="w-32 text-secondary">Code</p>
-            <p className="text-3xs font-mono">Build developer trust.</p>
-          </div>
-        </div>
+      <div className="mt-16" />
+      <h3 className="text-heading-3xl font-bold mt-8 mb-4">Elements</h3>
+      <div className="flex flex-col gap-6">
+        <DemoTile title="Headline" className="text-base font-medium" />
+        <DemoTile title="Paragraph" className="text-base font-normal" />
+        <DemoTile title="Label" className="text-sm font-medium" />
+        <DemoTile title="Callout" className="text-xs" />
+        <DemoTile title="Footnote" className="text-2xs" />
+        <DemoTile title="Caption" className="text-3xs" />
+        <DemoTile title="Code" className="text-base font-mono" />
       </div>
     </>
   );

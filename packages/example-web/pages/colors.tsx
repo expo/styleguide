@@ -3,7 +3,7 @@ function renderPalette(colorName: string) {
     <div className='flex gap-4 flex-wrap' key={colorName}>
       {Array.from(Array(12).keys()).map((index) => (
         <div key={index}>
-          <div className={`w-14 h-14 rounded-sm bg-palette-${colorName}${index + 1}`}/>
+          <div className={`w-14 h-14 rounded-sm bg-palette-${colorName}${index + 1} mb-1 transition-transform hover:scale-110`}/>
           <p className='text-3xs text-secondary text-center'>{colorName}{index+1}</p>
         </div>
       ))}

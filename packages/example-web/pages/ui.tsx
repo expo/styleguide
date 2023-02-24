@@ -18,7 +18,7 @@ function ButtonRow({ theme, disabled = false }: ButtonProps) {
       <Button theme={theme} size="md" disabled={disabled}>Button CTA</Button>
       <Button theme={theme} size="lg" disabled={disabled}>Button CTA</Button>
       <Button theme={theme} size="xl" disabled={disabled}>Button CTA</Button>
-      <Button theme={theme} size="2xl"disabled={disabled}>Button CTA</Button>
+      <Button theme={theme} size="2xl" disabled={disabled}>Button CTA</Button>
     </div>
   )
 }
