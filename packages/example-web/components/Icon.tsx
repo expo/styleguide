@@ -1,11 +1,12 @@
 import * as StyleguideIcons from '@expo/styleguide-icons';
 
-export type StyleguideIconNames = keyof typeof StyleguideIcons;
+export type IconNames = keyof typeof StyleguideIcons;
+export type IconSizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 type Props = {
-  name: StyleguideIconNames;
+  name: IconNames;
   className?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  size?: IconSizes;
 };
 
 export function Icon({ name, ...rest }: Props) {

@@ -6,9 +6,9 @@ import { BuildIcon } from "@expo/styleguide-icons";
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'primary-destructive' | 'secondary-destructive';
 
-type Props = ButtonBaseProps & {
+export type ButtonProps = ButtonBaseProps & {
   size?: ButtonSize;
-  buttonTheme?: ButtonTheme;
+  theme?: ButtonTheme;
 };
 
 export function getButtonSizes(size: ButtonSize) {
@@ -22,23 +22,24 @@ export function getButtonSizes(size: ButtonSize) {
   }
 }
 
-export const Button = ({ size = 'sm', buttonTheme = 'primary', disabled }: Props) => {
+export const Button = ({ children, size = 'sm', theme = 'primary', disabled }: ButtonProps) => {
   return (
     <ButtonBase className={twMerge(
       getButtonSizes(size),
       `inline-flex border rounded-md transition-colors font-medium gap-2 items-center`,
-      `border-button-${buttonTheme}`,
-      `bg-button-${buttonTheme}`,
-      buttonTheme === 'tertiary' || buttonTheme === 'quaternary' ? 'shadow-none' : 'shadow-xs',
-      `hover:bg-button-${buttonTheme}-hover`,
-      `disabled:bg-button-${buttonTheme}-disabled`,
-      `disabled:border-button-${buttonTheme}-disabled`,
-      `disabled:text-button-${buttonTheme}-disabled`,
+      `border-button-${theme}`,
+      `bg-button-${theme}`,
+      `text-button-${theme}`,
+      theme === 'tertiary' || theme === 'quaternary' ? 'shadow-none' : 'shadow-xs',
+      `hover:bg-button-${theme}-hover`,
+      `disabled:bg-button-${theme}-disabled`,
+      `disabled:border-button-${theme}-disabled`,
+      `disabled:text-button-${theme}-disabled`,
       `disabled:cursor-default`,
       disabled && 'opacity-80',
     )} disabled={disabled}>
-      <BuildIcon className={`icon-${size} fill-button-${buttonTheme}-icon stroke-button-${buttonTheme}-icon`} />
-      <span className={`flex self-center text-button-${buttonTheme}`}>Button CTA</span>
+      <BuildIcon className={`icon-${size} fill-button-${theme}-icon stroke-button-${theme}-icon`} />
+      <span className={`flex self-center text-button-${theme}`}>{children}</span>
     </ButtonBase>
   )
 }

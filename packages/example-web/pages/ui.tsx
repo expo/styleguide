@@ -1,5 +1,5 @@
-import { ButtonBase, Button, ButtonTheme } from "@expo/styleguide";
-import React from "react";
+import { ButtonBase, Button, ButtonTheme, ButtonProps } from "@expo/styleguide";
+import { Fragment } from "react";
 
 const THEMES = [
   'primary',
@@ -10,26 +10,16 @@ const THEMES = [
   'secondary-destructive'
 ] as ButtonTheme[];
 
-function ButtonRow({ theme }: { theme: ButtonTheme }) {
+function ButtonRow({ theme, disabled = false }: ButtonProps) {
   return (
-    <>
-      <div className="flex gap-6 mt-6" >
-        <Button buttonTheme={theme} size="xs" />
-        <Button buttonTheme={theme} size="sm" />
-        <Button buttonTheme={theme} size="md" />
-        <Button buttonTheme={theme} size="lg" />
-        <Button buttonTheme={theme} size="xl" />
-        <Button buttonTheme={theme} size="2xl" />
-      </div>
-      <div className="flex gap-6 mt-6" >
-        <Button buttonTheme={theme} size="xs" disabled />
-        <Button buttonTheme={theme} size="sm" disabled />
-        <Button buttonTheme={theme} size="md" disabled />
-        <Button buttonTheme={theme} size="lg" disabled />
-        <Button buttonTheme={theme} size="xl" disabled />
-        <Button buttonTheme={theme} size="2xl" disabled />
-      </div>
-    </>
+    <div className="flex gap-6 mt-6" >
+      <Button theme={theme} size="xs" disabled={disabled}>Button CTA</Button>
+      <Button theme={theme} size="sm" disabled={disabled}>Button CTA</Button>
+      <Button theme={theme} size="md" disabled={disabled}>Button CTA</Button>
+      <Button theme={theme} size="lg" disabled={disabled}>Button CTA</Button>
+      <Button theme={theme} size="xl" disabled={disabled}>Button CTA</Button>
+      <Button theme={theme} size="2xl"disabled={disabled}>Button CTA</Button>
+    </div>
   )
 }
 
@@ -40,7 +30,12 @@ export default function UI() {
       <h3 className="text-heading-3xl font-bold mt-4 mb-4">Button Base</h3>
       <ButtonBase onClick={() => alert('ButtonBase clicked')}>Button base</ButtonBase>
       <h3 className="text-heading-3xl font-bold mt-4 mb-4">Buttons</h3>
-      {THEMES.map(buttonTheme => <ButtonRow theme={buttonTheme} key={`buttons-${buttonTheme}`} />)}
+      {THEMES.map(buttonTheme => (
+        <Fragment key={`buttons-${buttonTheme}`}>
+          <ButtonRow theme={buttonTheme} />
+          <ButtonRow theme={buttonTheme} disabled />
+        </Fragment>
+      ))}
     </>
   );
 }

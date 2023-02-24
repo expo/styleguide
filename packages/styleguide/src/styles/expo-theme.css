@@ -234,7 +234,7 @@
   --expo-theme-button-secondary-destructive-border: var(--red7);
   --expo-theme-button-secondary-destructive-hover: var(--red2);
   --expo-theme-button-secondary-destructive-icon: var(--red9);
-  --expo-theme-button-secondary-destructive-text: var(--expo-color-white);
+  --expo-theme-button-secondary-destructive-text: var(--red12);
   --expo-theme-button-secondary-destructive-disabled-background: var(--red2);
   --expo-theme-button-secondary-destructive-disabled-border: var(--red6);
   --expo-theme-button-secondary-destructive-disabled-text: var(--red10);
