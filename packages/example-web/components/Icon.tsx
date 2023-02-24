@@ -4,7 +4,7 @@ export type StyleguideIconNames = keyof typeof StyleguideIcons;
 
 type Props = {
   name: StyleguideIconNames;
-  color?: string;
+  className?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 };
 
@@ -13,6 +13,5 @@ export function Icon({ name, ...rest }: Props) {
     const _Icon = StyleguideIcons[name];
     return <_Icon {...rest} />;
   }
-
   return null;
 }

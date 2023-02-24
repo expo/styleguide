@@ -7,12 +7,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "../../node_modules/@expo/styleguide/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  safelist: [
-    {
-      pattern: /^(bg|color|text|border|shadow|rounded|opacity)+/,
-      variants: ['hover', 'disabled'],
-    }
-  ],
   plugins: [],
   ...expoTheme
 };

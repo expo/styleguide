@@ -22,13 +22,12 @@ const outputters = [
     getSvgrConfig: () => ({
       typescript: true,
       svgProps: {
-        width: '{_width}',
-        height: '{_height}',
+        className: '{_className}',
         role: 'img',
       },
       replaceAttrValues: {
-        currentColor: '{color || "var(--expo-theme-icon-default)"}',
-        black: '{color || "var(--expo-theme-icon-default)"}',
+        currentColor: 'inherit',
+        black: 'inherit',
       },
       template,
     }),

@@ -292,6 +292,12 @@ const expoTailwindConfig = {
           lineHeight: 1.58,
         },
       ],
+      lg: [
+        '18px',
+        {
+          lineHeight: 1.5,
+        },
+      ],
       base: [
         '16px',
         {
@@ -334,13 +340,19 @@ const expoTailwindConfig = {
     },
     extend: {
       height: {
-        'h-15': '3.75rem'
+        '15': '3.75rem',
       }
     },
   },
   corePlugins: {
     fontFamily: false,
-  }
+  },
+  safelist: [
+    {
+      pattern: /^(bg|color|text|fill|border|shadow|rounded|opacity|icon)+/,
+      variants: ['hover', 'disabled'],
+    }
+  ],
 };
 
 module.exports = expoTailwindConfig;

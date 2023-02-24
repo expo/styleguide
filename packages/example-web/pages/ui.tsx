@@ -28,7 +28,8 @@ function ButtonRow({ theme }: { theme: ButtonTheme }) {
         <Button buttonTheme={theme} size="lg" disabled />
         <Button buttonTheme={theme} size="xl" disabled />
         <Button buttonTheme={theme} size="2xl" disabled />
-      </div></>
+      </div>
+    </>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { ButtonBase, ButtonBaseProps } from "./ButtonBase";
 import { twMerge } from "tailwind-merge";
+import { BuildIcon } from "@expo/styleguide-icons";
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'primary-destructive' | 'secondary-destructive';
@@ -12,12 +13,12 @@ type Props = ButtonBaseProps & {
 
 export function getButtonSizes(size: ButtonSize) {
   switch (size) {
-    case "xs": return "h-8 p-3";
-    case "sm": return "h-9 p-4";
-    case "md": return "h-10 p-4";
-    case "lg": return "h-11 p-6";
-    case "xl": return "h-12 p-6";
-    case "2xl": return "h-16 p-6";
+    case "xs": return "h-8 px-3 text-3xs";
+    case "sm": return "h-9 px-4 text-xs";
+    case "md": return "h-10 px-4 text-xs";
+    case "lg": return "h-11 px-6 text-base";
+    case "xl": return "h-12 px-6 text-base";
+    case "2xl": return "h-15 px-6 text-lg";
   }
 }
 
@@ -25,7 +26,7 @@ export const Button = ({ size = 'sm', buttonTheme = 'primary', disabled }: Props
   return (
     <ButtonBase className={twMerge(
       getButtonSizes(size),
-      `border rounded-md transition-colors`,
+      `inline-flex border rounded-md transition-colors font-medium gap-2 items-center`,
       `border-button-${buttonTheme}`,
       `bg-button-${buttonTheme}`,
       buttonTheme === 'tertiary' || buttonTheme === 'quaternary' ? 'shadow-none' : 'shadow-xs',
@@ -36,6 +37,7 @@ export const Button = ({ size = 'sm', buttonTheme = 'primary', disabled }: Props
       `disabled:cursor-default`,
       disabled && 'opacity-80',
     )} disabled={disabled}>
+      <BuildIcon className={`icon-${size} fill-button-${buttonTheme}-icon stroke-button-${buttonTheme}-icon`} />
       <span className={`flex self-center text-button-${buttonTheme}`}>Button CTA</span>
     </ButtonBase>
   )
