@@ -26,8 +26,7 @@ const outputters = [
         role: 'img',
       },
       replaceAttrValues: {
-        currentColor: 'inherit',
-        black: 'inherit',
+        black: 'currentColor',
       },
       template,
     }),

@@ -9,7 +9,7 @@ type Props = {
 } & SVGProps<SVGSVGElement>;
 
 function ${componentName}(props: Props) {
-  const _className = ['icon-' + (props.size ?? 'md'), 'fill-inherit', 'stroke-inherit', props.className].filter(Boolean).join(' ');
+  const _className = ['icon-' + (props.size ?? 'md'), props.className].filter(Boolean).join(' ');
   return ${jsx};
 }
 

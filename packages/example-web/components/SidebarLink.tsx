@@ -12,7 +12,7 @@ export function SidebarLink({ href, text }: Props) {
   return (
     <Link href={href} className={`text-heading-xl font-medium flex items-center gap-2 hover:underline ${pathname === href && "text-palette-blue11"}`}>
       <span>{text}</span>
-      <Icon name="ArrowRightIcon" className="icon-md icon-secondary" />
+      <Icon name="ArrowRightIcon" className="icon-md text-icon-secondary" />
     </Link>
   )
 }

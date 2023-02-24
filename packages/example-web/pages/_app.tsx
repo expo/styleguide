@@ -25,8 +25,8 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <main className={twMerge(regularFont.variable, "flex p-8 gap-8")}>
         <div className="fixed w-[240px]">
-          <Link href="/">
-            <Image src="/icon.png" width="72" height="72" alt="Styleguide logo" className="mb-4" />
+          <Link href="/" className="inline-block mb-4">
+            <Image src="/icon.png" width="72" height="72" alt="Styleguide logo" />
           </Link>
           <SidebarLink href="/colors" text="Colors" />
           <SidebarLink href="/typography" text="Typography" />

@@ -38,7 +38,7 @@ export const Button = ({ children, size = 'sm', theme = 'primary', disabled }: B
       `disabled:cursor-default`,
       disabled && 'opacity-80',
     )} disabled={disabled}>
-      <BuildIcon className={`icon-${size} fill-button-${theme}-icon stroke-button-${theme}-icon`} />
+      <BuildIcon className={`icon-${size} text-button-${theme}-icon`} />
       <span className={`flex self-center text-button-${theme}`}>{children}</span>
     </ButtonBase>
   )

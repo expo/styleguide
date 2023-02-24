@@ -10,17 +10,4 @@
   .icon-lg { @apply h-6 w-6; }
   .icon-xl { @apply h-8 w-8; }
   .icon-2xl { @apply h-10 w-10; }
-
-  .icon-default {
-    @apply fill-icon-default stroke-icon-default;
-  }
-  .icon-secondary {
-    @apply fill-icon-secondary stroke-icon-secondary;
-  }
-  .icon-tertiary {
-    @apply fill-icon-tertiary stroke-icon-tertiary;
-  }
-  .icon-quaternary {
-    @apply fill-icon-quaternary stroke-icon-quaternary;
-  }
 }
