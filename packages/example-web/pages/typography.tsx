@@ -1,19 +1,4 @@
-import { createElement } from "react";
-
-type DemoTileProps = {
-  title: string;
-  className: string;
-  tag?: string;
-};
-
-function DemoTile({ title, className, tag = "p" }: DemoTileProps) {
-  return (
-    <div className="flex items-center gap-2">
-      <p className="w-32 text-secondary">{title}</p>
-      {createElement(tag, { className }, "Build developer trust.")}
-    </div>
-  )
-}
+import { DemoTile } from "@/components/DemoTile";
 
 export default function Typography() {
   return (
