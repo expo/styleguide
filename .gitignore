@@ -3,4 +3,29 @@
 .eslintcache
 .yarn-integrity
 .idea
+.pnp
+.pnp.js
+
 node_modules
+
+# build
+dist
+tmp
+out
+build
+
+# env files
+.env
+
+# Next
+.next
+next-env.d.ts
+
+# logs
+logs
+*.log
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*

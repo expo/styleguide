@@ -64,7 +64,7 @@ function getThemeIconClasses(theme: ButtonTheme) {
     case "primary": return "text-button-primary-icon";
     case "primary-destructive": return "text-button-primary-destructive-icon";
     case "secondary": return "text-button-secondary-icon";
-    case "secondary-destructive": return twMerge("text-button-secondary-destructive-icon");
+    case "secondary-destructive": return "text-button-secondary-destructive-icon";
     case "tertiary": return "text-button-tertiary-icon";
     case "quaternary": return "text-button-quaternary-icon";
   }
