@@ -2,7 +2,7 @@ import React from "react";
 import { ButtonBase, ButtonBaseProps } from "./ButtonBase";
 import { twMerge } from "tailwind-merge";
 
-import { Icon } from "../Icon";
+import { Icon, IconNames } from "../Icon";
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'primary-destructive' | 'secondary-destructive';
@@ -10,9 +10,10 @@ export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 
 export type ButtonProps = ButtonBaseProps & {
   size?: ButtonSize;
   theme?: ButtonTheme;
+  icon?: IconNames;
 };
 
-export function getButtonSizes(size: ButtonSize) {
+function getSizeClasses(size: ButtonSize) {
   switch (size) {
     case "xs": return "h-8 px-3 text-3xs";
     case "sm": return "h-9 px-4 text-xs";
@@ -23,24 +24,64 @@ export function getButtonSizes(size: ButtonSize) {
   }
 }
 
-export const Button = ({ children, size = 'sm', theme = 'primary', disabled }: ButtonProps) => {
+function getThemeClasses(theme: ButtonTheme) {
+  switch (theme) {
+    case "primary": return twMerge(
+      "border-button-primary bg-button-primary text-button-primary shadow-xs",
+      "hover:bg-button-primary-hover",
+      "disabled:bg-button-primary-disabled disabled:border-button-primary-disabled disabled:text-button-primary-disabled"
+    );
+    case "primary-destructive": return twMerge(
+      "border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive shadow-xs",
+      "hover:bg-button-primary-destructive-hover",
+      "disabled:bg-button-primary-destructive-disabled disabled:border-button-primary-destructive-disabled disabled:text-button-primary-destructive-disabled"
+    );
+    case "secondary": return twMerge(
+      "border-button-secondary bg-button-secondary text-button-secondary shadow-xs",
+      "hover:bg-button-secondary-hover",
+      "disabled:bg-button-secondary-disabled disabled:border-button-secondary-disabled disabled:text-button-secondary-disabled"
+    );
+    case "secondary-destructive": return twMerge(
+      "border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive shadow-xs",
+      "hover:bg-button-secondary-destructive-hover",
+      "disabled:bg-button-secondary-destructive-disabled disabled:border-button-secondary-destructive-disabled disabled:text-button-secondary-destructive-disabled"
+    );
+    case "tertiary": return twMerge(
+      "border-button-tertiary bg-button-tertiary text-button-tertiary shadow-none",
+      "hover:bg-button-tertiary-hover",
+      "disabled:bg-button-tertiary-disabled disabled:border-button-tertiary-disabled disabled:text-button-tertiary-disabled"
+    );
+    case "quaternary": return twMerge(
+      "border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none",
+      "hover:bg-button-quaternary-hover",
+      "disabled:bg-button-quaternary-disabled disabled:border-button-quaternary-disabled disabled:text-button-quaternary-disabled"
+    );
+  }
+}
+
+function getThemeIconClasses(theme: ButtonTheme) {
+  switch (theme) {
+    case "primary": return "text-button-primary-icon";
+    case "primary-destructive": return "text-button-primary-destructive-icon";
+    case "secondary": return "text-button-secondary-icon";
+    case "secondary-destructive": return twMerge("text-button-secondary-destructive-icon");
+    case "tertiary": return "text-button-tertiary-icon";
+    case "quaternary": return "text-button-quaternary-icon";
+  }
+}
+
+export const Button = (props: ButtonProps) => {
+  const { children, size = 'sm', theme = 'primary', disabled, className, icon, ...rest } = props;
   return (
     <ButtonBase className={twMerge(
-      getButtonSizes(size),
       `inline-flex border rounded-md transition-colors font-medium gap-2 items-center`,
-      `border-button-${theme}`,
-      `bg-button-${theme}`,
-      `text-button-${theme}`,
-      theme === 'tertiary' || theme === 'quaternary' ? 'shadow-none' : 'shadow-xs',
-      `hover:bg-button-${theme}-hover`,
-      `disabled:bg-button-${theme}-disabled`,
-      `disabled:border-button-${theme}-disabled`,
-      `disabled:text-button-${theme}-disabled`,
-      `disabled:cursor-default`,
-      disabled && 'opacity-80',
-    )} disabled={disabled}>
-      <Icon name="Earth01Icon" className={`icon-${size} text-button-${theme}-icon`} />
-      <span className={`flex self-center text-button-${theme}`}>{children}</span>
+      getSizeClasses(size),
+      getThemeClasses(theme),
+      `disabled:cursor-default disabled:opacity-80`,
+      className,
+    )} disabled={disabled} {...rest}>
+      {icon && <Icon name={icon} className={twMerge(`icon-${size}`, getThemeIconClasses(theme))} />}
+      {children && <span className="flex self-center text-inherit">{children}</span>}
     </ButtonBase>
   )
 }

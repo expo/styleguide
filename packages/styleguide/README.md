@@ -5,8 +5,14 @@ Expo's styleguide components for use on the web.
 ## Usage
 
 1. Install `@expo/styleguide` package
-2. Import global CSS file from the package in your main stylesheet:
+2. Import global CSS files from the package in your JS(X)/TS(X) code:
+   ```jsx
+   import "@expo/styleguide/dist/expo-theme.css";
+   import "@expo/styleguide/dist/global.css";
+   ```
+   or import it the main stylesheet file:
    ```css
+   @import "@expo/styleguide/dist/expo-theme.css";
    @import "@expo/styleguide/dist/global.css";
    ```
 

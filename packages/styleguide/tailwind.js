@@ -355,12 +355,6 @@ const expoTailwindConfig = {
   corePlugins: {
     fontFamily: false,
   },
-  safelist: [
-    {
-      pattern: /^(bg|color|text|fill|border|shadow|rounded|opacity|icon)+/,
-      variants: ['hover', 'disabled'],
-    }
-  ],
 };
 
 module.exports = expoTailwindConfig;

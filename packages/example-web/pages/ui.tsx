@@ -12,7 +12,7 @@ const THEMES = [
 
 function ButtonRow({ theme, disabled = false }: ButtonProps) {
   return (
-    <div className="flex gap-6 mt-6" >
+    <div className="flex gap-6 mt-4" >
       <Button theme={theme} size="xs" disabled={disabled}>Button CTA</Button>
       <Button theme={theme} size="sm" disabled={disabled}>Button CTA</Button>
       <Button theme={theme} size="md" disabled={disabled}>Button CTA</Button>

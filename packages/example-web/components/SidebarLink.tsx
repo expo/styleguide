@@ -10,7 +10,7 @@ type Props = {
 export function SidebarLink({ href, text }: Props) {
   const { pathname } = useRouter();
   return (
-    <Link href={href} className={`text-heading-xl font-medium flex items-center gap-2 hover:underline ${pathname === href && "text-link"}`}>
+    <Link href={href} className={`text-heading-xl font-medium flex items-center gap-2 transition-colors hover:underline ${pathname === href && "text-link"}`}>
       <span>{text}</span>
       <Icon name="ArrowRightIcon" className="icon-md text-icon-secondary" />
     </Link>
