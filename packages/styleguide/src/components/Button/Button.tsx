@@ -3,14 +3,16 @@ import { ButtonBase, ButtonBaseProps } from "./ButtonBase";
 import { twMerge } from "tailwind-merge";
 
 import { Icon, IconNames } from "../Icon";
+import { LinkBase, LinkBaseProps } from "../LinkBase";
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'primary-destructive' | 'secondary-destructive';
 
-export type ButtonProps = ButtonBaseProps & {
+export type ButtonProps = ButtonBaseProps & LinkBaseProps & {
   size?: ButtonSize;
   theme?: ButtonTheme;
   icon?: IconNames;
+  iconRight?: IconNames;
 };
 
 function getSizeClasses(size: ButtonSize) {
@@ -59,7 +61,18 @@ function getThemeClasses(theme: ButtonTheme) {
   }
 }
 
-function getThemeIconClasses(theme: ButtonTheme) {
+function getIconSizeClasses(size: ButtonSize) {
+  switch (size) {
+    case "xs": return "icon-xs";
+    case "sm": return "icon-sm";
+    case "md": return "icon-md";
+    case "lg": return "icon-md";
+    case "xl": return "icon-lg";
+    case "2xl": return "icon-lg";
+  }
+}
+
+function getThemedIconClasses(theme: ButtonTheme) {
   switch (theme) {
     case "primary": return "text-button-primary-icon";
     case "primary-destructive": return "text-button-primary-destructive-icon";
@@ -71,17 +84,21 @@ function getThemeIconClasses(theme: ButtonTheme) {
 }
 
 export const Button = (props: ButtonProps) => {
-  const { children, size = 'sm', theme = 'primary', disabled, className, icon, ...rest } = props;
+  const { children, size = 'sm', theme = 'primary', href, disabled, className, icon, iconRight, openInNewTab, ...rest } = props;
+  const Element = href ? LinkBase : ButtonBase;
+  const iconClasses = (icon || iconRight) && twMerge(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
   return (
-    <ButtonBase className={twMerge(
-      `inline-flex border rounded-md transition-colors font-medium gap-2 items-center`,
+    <Element href={href} className={twMerge(
+      `inline-flex border rounded-md font-medium gap-2 items-center whitespace-nowrap transition-colors transition-opacity`,
       getSizeClasses(size),
       getThemeClasses(theme),
       `disabled:cursor-default disabled:opacity-80`,
       className,
     )} disabled={disabled} {...rest}>
-      {icon && <Icon name={icon} className={twMerge(`icon-${size}`, getThemeIconClasses(theme))} />}
+      {icon && <Icon name={icon} className={iconClasses} />}
       {children && <span className="flex self-center text-inherit">{children}</span>}
-    </ButtonBase>
+      {iconRight && <Icon name={iconRight} className={iconClasses} />}
+      {!icon && !iconRight && href && openInNewTab && <Icon name="ArrowUpRightIcon" className="icon-sm text-icon-secondary" />}
+    </Element>
   )
 }

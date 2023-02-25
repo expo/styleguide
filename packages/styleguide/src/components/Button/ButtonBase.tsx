@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import type { DOMAttributes, PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge'
 
-export type ButtonBaseProps = DOMAttributes<HTMLButtonElement | HTMLAnchorElement> & PropsWithChildren<{
+export type ButtonBaseProps = DOMAttributes<HTMLButtonElement> & PropsWithChildren<{
   className?: string;
   testID?: string;
   type?: 'button' | 'submit' | 'reset';
@@ -10,7 +10,7 @@ export type ButtonBaseProps = DOMAttributes<HTMLButtonElement | HTMLAnchorElemen
 }>;
 
 export const ButtonBase = forwardRef<HTMLButtonElement, ButtonBaseProps>(
-  ({ children, testID, className, type = 'button', disabled = false, ...rest }, ref) => {
+  ({ children, testID, className, onClick, type = 'button', disabled = false, ...rest }, ref) => {
     return (
       <button
         className={twMerge("flex text-left border-0, p-0 cursor-pointer", className)}
@@ -18,6 +18,7 @@ export const ButtonBase = forwardRef<HTMLButtonElement, ButtonBaseProps>(
         disabled={disabled}
         ref={ref}
         type={type}
+        onClick={disabled ? undefined : onClick}
         {...rest}>
         {children}
       </button>

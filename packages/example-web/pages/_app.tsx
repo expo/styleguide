@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <main className="flex p-8 gap-8">
         <Sidebar />
-        <div className="pl-[240px]">
+        <div className="pl-[240px] max-w-full">
           <Component {...pageProps} />
         </div>
       </main>
