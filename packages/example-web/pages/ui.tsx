@@ -15,7 +15,7 @@ const THEMES = [
 
 function ButtonRow({ theme, disabled = false }: ButtonProps) {
   return (
-    <DemoTile title={`${theme}${disabled ? ' (disabled)' : ''}`}>
+    <DemoTile title={`${theme}${disabled ? ' (disabled)' : ''}`} tag="div">
       <div className="flex gap-6 mt-4" >
         <Button theme={theme} size="xs" disabled={disabled}>Button XS</Button>
         <Button theme={theme} size="sm" disabled={disabled}>Button SM</Button>
