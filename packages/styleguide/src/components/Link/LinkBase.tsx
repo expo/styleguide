@@ -1,11 +1,10 @@
 import React, { forwardRef } from "react";
-import type { AnchorHTMLAttributes, PropsWithChildren } from "react";
+import type { AnchorHTMLAttributes } from "react";
 
-export type LinkBaseProps = AnchorHTMLAttributes<HTMLAnchorElement> & PropsWithChildren<{
-  className?: string;
+export type LinkBaseProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   testID?: string;
   openInNewTab?: boolean;
-}>;
+};
 
 export const LinkBase = forwardRef<HTMLAnchorElement, LinkBaseProps>(
   ({ children, testID, className, href, openInNewTab, target, rel, ...rest }, ref) => {

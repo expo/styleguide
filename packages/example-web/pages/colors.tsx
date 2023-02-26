@@ -1,3 +1,5 @@
+import { H1 } from "@/components/headers";
+
 function getPaletteClasses(colorName: string) {
   switch (colorName) {
     case 'red':
@@ -47,10 +49,10 @@ function getPaletteClasses(colorName: string) {
 
 function renderPalette(colorName: string) {
   return (
-    <div className='flex gap-4 flex-wrap' key={colorName}>
+    <div className='flex flex-wrap mb-2' key={colorName}>
       {getPaletteClasses(colorName).map((className, index) => (
         <div key={index}>
-          <div className={`w-14 h-14 rounded-md mb-1 transition-transform hover:scale-110 ${className}`}/>
+          <div className={`w-16 h-16 mb-1 transition hover:scale-110 hover:shadow-md ${className}`}/>
           <p className='text-3xs text-secondary text-center'>{colorName}{index + 1}</p>
         </div>
       ))}
@@ -61,8 +63,8 @@ function renderPalette(colorName: string) {
 export default function Colors() {
   return (
     <>
-      <h1 className='text-heading-5xl font-black'>Colors</h1>
-      <div className='grid gap-2 mt-4'>
+      <H1>Colors</H1>
+      <div className='grid gap-2 mt-8'>
         {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'gray'].map(renderPalette)}
       </div>
     </>

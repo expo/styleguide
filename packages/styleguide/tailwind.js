@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 const palette = {
   'palette-white': 'var(--expo-color-white)',
   'palette-black': 'var(--expo-color-black)',
@@ -355,6 +357,11 @@ const expoTailwindConfig = {
   corePlugins: {
     fontFamily: false,
   },
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant('hocus', ['&:hover', '&:focus'])
+    })
+  ]
 };
 
 module.exports = expoTailwindConfig;
