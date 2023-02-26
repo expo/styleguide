@@ -30,32 +30,32 @@ function getThemeClasses(theme: ButtonTheme) {
   switch (theme) {
     case "primary": return twMerge(
       "border-button-primary bg-button-primary text-button-primary shadow-xs",
-      "hocus:bg-button-primary-hover",
+      "hover:bg-button-primary-hover",
       "disabled:bg-button-primary-disabled disabled:border-button-primary-disabled disabled:text-button-primary-disabled"
     );
     case "primary-destructive": return twMerge(
       "border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive shadow-xs",
-      "hocus:bg-button-primary-destructive-hover",
+      "hover:bg-button-primary-destructive-hover",
       "disabled:bg-button-primary-destructive-disabled disabled:border-button-primary-destructive-disabled disabled:text-button-primary-destructive-disabled"
     );
     case "secondary": return twMerge(
       "border-button-secondary bg-button-secondary text-button-secondary shadow-xs",
-      "hocus:bg-button-secondary-hover",
+      "hover:bg-button-secondary-hover",
       "disabled:bg-button-secondary-disabled disabled:border-button-secondary-disabled disabled:text-button-secondary-disabled"
     );
     case "secondary-destructive": return twMerge(
       "border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive shadow-xs",
-      "hocus:bg-button-secondary-destructive-hover",
+      "hover:bg-button-secondary-destructive-hover",
       "disabled:bg-button-secondary-destructive-disabled disabled:border-button-secondary-destructive-disabled disabled:text-button-secondary-destructive-disabled"
     );
     case "tertiary": return twMerge(
       "border-button-tertiary bg-button-tertiary text-button-tertiary shadow-none",
-      "hocus:bg-button-tertiary-hover",
+      "hover:bg-button-tertiary-hover",
       "disabled:bg-button-tertiary-disabled disabled:border-button-tertiary-disabled disabled:text-button-tertiary-disabled"
     );
     case "quaternary": return twMerge(
       "border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none",
-      "hocus:bg-button-quaternary-hover",
+      "hover:bg-button-quaternary-hover",
       "disabled:bg-button-quaternary-disabled disabled:border-button-quaternary-disabled disabled:text-button-quaternary-disabled"
     );
   }
