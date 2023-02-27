@@ -1,10 +1,13 @@
 # @expo/styleguide
 
-Expo's styleguide components for use on the web.
+Expo's styleguide and components for use on the web.
 
 ## Usage
 
-1. Install `@expo/styleguide` package
+1. Install Expo Styleguide and peer packages:
+   ```shell
+   yarn add @expo/styleguide @expo/styleguide-icons
+   ```
 2. Import global CSS files from the package in your JS(X)/TS(X) code:
    ```jsx
    import "@expo/styleguide/dist/expo-theme.css";
@@ -24,10 +27,10 @@ Expo's styleguide components for use on the web.
 2. Build everything with `yarn build`.
 3. Develop with `yarn dev`.
 
-### Changing Tailwind styles
+### Changing Tailwind theme
 
 In order to see changes made to the exported **tailwind.js** config:
 
 - Change a value in **packages/styleguide/tailwind.js**
-- Run yarn tsc in **packages/styleguide**
+- Run `yarn build` in **packages/styleguide**
 - Navigate to **example-web** and restart the dev server
