@@ -6,7 +6,7 @@ let config = [
     input: 'index.ts',
     output: {
       dir: 'dist',
-      format: 'module',
+      format: 'cjs',
     },
     plugins: [typescript()],
     external: ['react'],
@@ -18,8 +18,8 @@ if (process.env.STUB) {
     {
       input: 'index-stub.js',
       output: {
-        format: 'module',
         file: 'dist/index.js',
+        format: 'cjs',
       },
       plugins: [
         copy({
