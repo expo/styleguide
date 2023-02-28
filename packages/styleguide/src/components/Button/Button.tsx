@@ -128,7 +128,9 @@ export const Button = (props: ButtonProps) => {
         )}>{typeof children === 'string' ? apStyleTitleCase(children) : children}</span>
       )}
       {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
-      {!leftSlot && !rightSlot && href && openInNewTab && <ArrowUpRightIcon className="icon-sm text-icon-secondary" />}
+      {!leftSlot && !rightSlot && href && openInNewTab && (
+        <ArrowUpRightIcon className={twMerge(getIconSizeClasses(size), 'text-icon-secondary')} />
+      )}
     </Element>
   )
 }
