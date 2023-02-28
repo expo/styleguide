@@ -93,7 +93,7 @@ function isIconElement(element: ReactElement) {
 }
 
 function getIconProps(element: ReactElement, classNames: string) {
-  return { ...element.props, className: [classNames, element.props.className].filter(Boolean).join(' ') }
+  return { ...element.props, className: twMerge(classNames, element.props.className) }
 }
 
 export const Button = (props: ButtonProps) => {
