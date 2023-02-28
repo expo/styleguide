@@ -4,7 +4,14 @@ import { Fragment } from "react";
 
 import { DemoTile } from "@/components/DemoTile";
 import { H1, H3 } from "@/components/headers";
-import { AlignTopArrow01Icon, BookClosedIcon, PaletteIcon } from "@expo/styleguide-icons";
+import {
+  AlignTopArrow01Icon,
+  BookClosedIcon,
+  Diamond01Icon,
+  EasMetadataIcon,
+  PaletteIcon,
+  Trash01Icon
+} from "@expo/styleguide-icons";
 
 const THEMES = [
   'primary',
@@ -69,8 +76,33 @@ export default function UI() {
       <DemoTile title="external link with icon">
         <Button href="https://docs.expo.dev" leftSlot={<BookClosedIcon />} openInNewTab theme="tertiary">Docs</Button>
       </DemoTile>
+      <DemoTile title="disabled link">
+        <Button disabled href="https://docs.expo.dev" leftSlot={<Trash01Icon />} openInNewTab theme="secondary-destructive">Delete</Button>
+      </DemoTile>
+      <H3>Customized Buttons</H3>
+      <DemoTile title="icon with custom classes">
+        <Button theme="secondary" size="lg" leftSlot={<Diamond01Icon className="text-palette-pink10" />}>Subscribe</Button>
+        <Button className="ml-4" href="#" theme="secondary" size="lg" leftSlot={<Diamond01Icon className="text-palette-pink10" />}>Subscribe</Button>
+      </DemoTile>
+      <DemoTile title="custom button">
+        <Button
+          className="bg-palette-green3 border-palette-green7 text-success hover:bg-palette-green4"
+          rightSlot={<EasMetadataIcon className="text-success" />}
+        >EAS Metadata</Button>
+        <Button
+          href="#"
+          className="ml-4 bg-palette-green3 border-palette-green7 text-success hover:bg-palette-green4"
+          rightSlot={<EasMetadataIcon className="text-success" />}
+        >EAS Metadata</Button>
+      </DemoTile>
       <DemoTile title="custom slot content">
-        <Button href="#" theme="quaternary" rightSlot={<span className="icon-xs bg-palette-yellow10 rounded-md" />}>Check status</Button>
+        <Button theme="quaternary" className="hover:bg-palette-yellow2 hover:border-palette-yellow6" leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}>Check status</Button>
+        <Button
+          href="#"
+          theme="quaternary"
+          className="ml-4 hover:bg-palette-yellow2 hover:border-palette-yellow6"
+          leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}
+        >Check status</Button>
       </DemoTile>
     </>
   );

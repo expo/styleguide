@@ -351,6 +351,9 @@ const expoTailwindConfig = {
     extend: {
       height: {
         '15': '3.75rem',
+      },
+      opacity: {
+        'inherit': 'inherit',
       }
     },
   },

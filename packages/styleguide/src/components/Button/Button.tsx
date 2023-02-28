@@ -27,36 +27,36 @@ function getSizeClasses(size: ButtonSize) {
   }
 }
 
-function getThemeClasses(theme: ButtonTheme) {
+function getThemeClasses(theme: ButtonTheme, disabled = false) {
   switch (theme) {
     case "primary": return twMerge(
       "border-button-primary bg-button-primary text-button-primary shadow-xs",
-      "hover:bg-button-primary-hover",
+      !disabled && "hover:bg-button-primary-hover",
       "disabled:bg-button-primary-disabled disabled:border-button-primary-disabled disabled:text-button-primary-disabled"
     );
     case "primary-destructive": return twMerge(
       "border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive shadow-xs",
-      "hover:bg-button-primary-destructive-hover",
+      !disabled && "hover:bg-button-primary-destructive-hover",
       "disabled:bg-button-primary-destructive-disabled disabled:border-button-primary-destructive-disabled disabled:text-button-primary-destructive-disabled"
     );
     case "secondary": return twMerge(
       "border-button-secondary bg-button-secondary text-button-secondary shadow-xs",
-      "hover:bg-button-secondary-hover",
+      !disabled && "hover:bg-button-secondary-hover",
       "disabled:bg-button-secondary-disabled disabled:border-button-secondary-disabled disabled:text-button-secondary-disabled"
     );
     case "secondary-destructive": return twMerge(
       "border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive shadow-xs",
-      "hover:bg-button-secondary-destructive-hover",
+      !disabled && "hover:bg-button-secondary-destructive-hover",
       "disabled:bg-button-secondary-destructive-disabled disabled:border-button-secondary-destructive-disabled disabled:text-button-secondary-destructive-disabled"
     );
     case "tertiary": return twMerge(
       "border-button-tertiary bg-button-tertiary text-button-tertiary shadow-none",
-      "hover:bg-button-tertiary-hover",
+      !disabled && "hover:bg-button-tertiary-hover",
       "disabled:bg-button-tertiary-disabled disabled:border-button-tertiary-disabled disabled:text-button-tertiary-disabled"
     );
     case "quaternary": return twMerge(
       "border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none",
-      "hover:bg-button-quaternary-hover",
+      !disabled && "hover:bg-button-quaternary-hover",
       "disabled:bg-button-quaternary-disabled disabled:border-button-quaternary-disabled disabled:text-button-quaternary-disabled"
     );
   }
@@ -109,12 +109,18 @@ export const Button = (props: ButtonProps) => {
     <Element href={href} className={twMerge(
       `inline-flex border rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
       getSizeClasses(size),
-      getThemeClasses(theme),
-      `disabled:cursor-default disabled:opacity-80`,
+      getThemeClasses(theme, disabled),
+      disabled && 'cursor-default opacity-80 pointer-event-none',
       className,
     )} disabled={disabled} {...rest}>
       {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
-      {children && <span className="flex self-center text-inherit leading-none">{children}</span>}
+      {children && (
+        <span className={twMerge(
+          "flex self-center text-inherit leading-none",
+          href && "select-none",
+          disabled && href && "opacity-inherit"
+        )}>{children}</span>
+      )}
       {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
       {!leftSlot && !rightSlot && href && openInNewTab && <ArrowUpRightIcon className="icon-sm text-icon-secondary" />}
     </Element>
