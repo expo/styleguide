@@ -18,7 +18,14 @@ const config = [
         ],
       }),
     ],
-    external: ['next/link', 'react', '@expo/styleguide-base', '@expo/styleguide-icons', 'tailwind-merge'],
+    external: [
+      '@expo/styleguide-base',
+      '@expo/styleguide-icons',
+      'ap-style-title-case',
+      'next/link',
+      'react',
+      'tailwind-merge'
+    ],
   },
 ];
 

@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "@expo/styleguide-base": "^1.0.0-alpha.0",
+    "ap-style-title-case": "^2.0.0",
     "tailwind-merge": "^1.10.0"
   },
   "eslintConfig": {
