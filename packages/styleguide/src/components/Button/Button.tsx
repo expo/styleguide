@@ -98,7 +98,7 @@ function getIconProps(element: ReactElement, classNames: string) {
 }
 
 export const Button = (props: ButtonProps) => {
-  const { children, size = 'sm', theme = 'primary', href, disabled, className, leftSlot, rightSlot, openInNewTab, onClick, ...rest } = props;
+  const { children, size = 'sm', theme = 'primary', href, disabled, className, leftSlot, rightSlot, openInNewTab, ...rest } = props;
 
   const Element = href ? LinkBase : ButtonBase;
 
