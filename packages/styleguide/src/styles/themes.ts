@@ -60,11 +60,13 @@ export const theme = {
         icon: 'var(--expo-theme-button-primary-destructive-icon)',
         text: 'var(--expo-theme-button-primary-destructive-text)',
         disabled: {
-          background: 'var(--expo-theme-button-primary-destructive-disabled-background)',
-          border: 'var(--expo-theme-button-primary-destructive-disabled-border)',
+          background:
+            'var(--expo-theme-button-primary-destructive-disabled-background)',
+          border:
+            'var(--expo-theme-button-primary-destructive-disabled-border)',
           text: 'var(--expo-theme-button-primary-destructive-disabled-text)',
-        }
-      }
+        },
+      },
     },
     secondary: {
       background: 'var(--expo-theme-button-secondary-background)',
@@ -84,11 +86,13 @@ export const theme = {
         icon: 'var(--expo-theme-button-secondary-destructive-icon)',
         text: 'var(--expo-theme-button-secondary-destructive-text)',
         disabled: {
-          background: 'var(--expo-theme-button-secondary-destructive-disabled-background)',
-          border: 'var(--expo-theme-button-secondary-destructive-disabled-border)',
+          background:
+            'var(--expo-theme-button-secondary-destructive-disabled-background)',
+          border:
+            'var(--expo-theme-button-secondary-destructive-disabled-border)',
           text: 'var(--expo-theme-button-secondary-destructive-disabled-text)',
-        }
-      }
+        },
+      },
     },
     tertiary: {
       background: 'var(--expo-theme-button-tertiary-background)',
@@ -100,7 +104,7 @@ export const theme = {
         background: 'var(--expo-theme-button-tertiary-disabled-background)',
         border: 'var(--expo-theme-button-tertiary-disabled-border)',
         text: 'var(--expo-theme-button-tertiary-disabled-text)',
-      }
+      },
     },
     quaternary: {
       background: 'var(--expo-theme-button-quaternary-background)',
@@ -112,7 +116,7 @@ export const theme = {
         background: 'var(--expo-theme-button-quaternary-disabled-background)',
         border: 'var(--expo-theme-button-quaternary-disabled-border)',
         text: 'var(--expo-theme-button-quaternary-disabled-text)',
-      }
+      },
     },
   },
   project: {
@@ -222,6 +226,6 @@ export const theme = {
     gray9: 'var(--slate9)',
     gray10: 'var(--slate10)',
     gray11: 'var(--slate11)',
-    gray12: 'var(--slate12)'
+    gray12: 'var(--slate12)',
   },
 };

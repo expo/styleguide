@@ -2,8 +2,9 @@ require('dotenv').config();
 
 const svgo = require('@figma-export/transform-svg-with-svgo');
 const figmaUtils = require('@figma-export/utils');
+
 const template = require('./svgr-icon-template');
-const pascalCase = figmaUtils.pascalCase
+const pascalCase = figmaUtils.pascalCase;
 const fileId = process.env.FILE_ID;
 
 function getComponentName({ componentName, pageName }) {
@@ -45,7 +46,7 @@ const outputters = [
 const solidSVGOConfig = [
   {
     name: 'removeDimensions',
-    active: true
+    active: true,
   },
   {
     name: 'sortAttrs',
@@ -54,29 +55,29 @@ const solidSVGOConfig = [
   {
     name: 'removeAttrs',
     params: {
-      attrs: "fill"
-    }
+      attrs: 'fill',
+    },
   },
   {
     name: 'addAttributesToSVGElement',
     params: {
       attribute: {
-        fill: "currentColor"
-      }
-    }
-  }
+        fill: 'currentColor',
+      },
+    },
+  },
 ];
 
 /** @type {import('svgo').PluginConfig[]} */
 const customSVGOConfig = [
   {
     name: 'removeDimensions',
-    active: true
+    active: true,
   },
   {
     name: 'sortAttrs',
     active: true,
-  }
+  },
 ];
 
 /** @type {import('svgo').PluginConfig[]} */
@@ -134,6 +135,6 @@ module.exports = {
         transformers: [svgo({ multipass: true, plugins: customSVGOConfig })],
         outputters,
       },
-    ]
+    ],
   ],
 };

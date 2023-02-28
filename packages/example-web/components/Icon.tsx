@@ -1,4 +1,4 @@
-import * as StyleguideIcons from "@expo/styleguide-icons";
+import * as StyleguideIcons from '@expo/styleguide-icons';
 
 export type StyleguideIconNames = keyof typeof StyleguideIcons;
 

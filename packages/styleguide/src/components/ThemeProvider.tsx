@@ -5,7 +5,11 @@ import React, {
   useContext,
   ReactNode,
 } from 'react';
-import { getInitialColorMode, isLocalStorageAvailable } from './BlockingSetInitialColorMode';
+
+import {
+  getInitialColorMode,
+  isLocalStorageAvailable,
+} from './BlockingSetInitialColorMode';
 
 export enum Themes {
   AUTO = 'auto',

@@ -24,6 +24,9 @@
     "tailwindcss": "^3.2.6"
   },
   "eslintConfig": {
-    "extends": ["universe/web", "next/core-web-vitals"]
+    "extends": ["universe/web", "next/core-web-vitals"],
+    "rules": {
+      "@next/next/no-html-link-for-pages": ["error", "packages/example-web/pages"]
+    }
   }
 }

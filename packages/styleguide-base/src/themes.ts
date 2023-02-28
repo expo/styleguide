@@ -1,4 +1,4 @@
-import { palette } from "./palette";
+import { palette } from './palette';
 
 export const lightTheme = {
   background: {
@@ -65,8 +65,8 @@ export const lightTheme = {
           background: palette.light.red7,
           border: palette.light.red7,
           text: palette.white,
-        }
-      }
+        },
+      },
     },
     secondary: {
       background: palette.white,
@@ -89,8 +89,8 @@ export const lightTheme = {
           background: palette.white,
           border: palette.light.red5,
           text: palette.light.red8,
-        }
-      }
+        },
+      },
     },
     tertiary: {
       background: 'transparent',
@@ -102,7 +102,7 @@ export const lightTheme = {
         background: 'transparent',
         border: 'transparent',
         text: palette.light.blue8,
-      }
+      },
     },
     quaternary: {
       background: 'transparent',
@@ -114,7 +114,7 @@ export const lightTheme = {
         background: 'transparent',
         border: 'transparent',
         text: palette.light.gray9,
-      }
+      },
     },
   },
 };
@@ -184,8 +184,8 @@ export const darkTheme = {
           background: palette.dark.red6,
           border: palette.dark.red6,
           text: palette.dark.red11,
-        }
-      }
+        },
+      },
     },
     secondary: {
       background: palette.dark.gray3,
@@ -208,8 +208,8 @@ export const darkTheme = {
           background: palette.dark.red2,
           border: palette.dark.red6,
           text: palette.dark.red10,
-        }
-      }
+        },
+      },
     },
     tertiary: {
       background: 'transparent',
@@ -221,7 +221,7 @@ export const darkTheme = {
         background: 'transparent',
         border: 'transparent',
         text: palette.dark.blue8,
-      }
+      },
     },
     quaternary: {
       background: 'transparent',
@@ -233,7 +233,7 @@ export const darkTheme = {
         background: 'transparent',
         border: 'transparent',
         text: palette.dark.gray9,
-      }
+      },
     },
   },
 };

@@ -46,6 +46,6 @@
     "react": ">= 16"
   },
   "eslintConfig": {
-    "extends": "universe/web"
+    "extends": ["universe/web", "universe/node"]
   }
 }
