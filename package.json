@@ -4,12 +4,22 @@
   "scripts": {
     "build": "lerna run build --stream",
     "dev": "lerna run dev --parallel",
-    "npm-publish": "lerna publish --no-private"
+    "npm-publish": "lerna publish --no-private",
+    "lint": "eslint ./packages/**"
   },
   "workspaces": [
     "packages/*"
   ],
-  "devDependencies": {
+  "dependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-universe": "11.2.0",
     "lerna": "^6.4.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "ignorePatterns": ["node_modules", "dist", "tmp", ".next"]
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

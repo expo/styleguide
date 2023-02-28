@@ -46,5 +46,8 @@
     "@expo/styleguide-base": "^1.0.0-alpha.0",
     "@radix-ui/colors": "^0.1.8",
     "tailwind-merge": "^1.9.1"
+  },
+  "eslintConfig": {
+    "extends": "universe/web"
   }
 }

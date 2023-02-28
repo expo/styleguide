@@ -34,5 +34,8 @@
   "peerDependencies": {
     "react": "*",
     "react-native-svg": "*"
+  },
+  "eslintConfig": {
+    "extends": "universe/native"
   }
 }

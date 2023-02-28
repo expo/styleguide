@@ -44,5 +44,8 @@
   },
   "peerDependencies": {
     "react": ">= 16"
+  },
+  "eslintConfig": {
+    "extends": "universe/web"
   }
 }
