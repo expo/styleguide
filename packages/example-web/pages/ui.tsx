@@ -80,7 +80,7 @@ export default function UI() {
         <Button disabled href="https://docs.expo.dev" leftSlot={<Trash01Icon />} openInNewTab theme="secondary-destructive">Delete</Button>
       </DemoTile>
       <H3>Customized Buttons</H3>
-      <DemoTile title="icon with custom classes">
+      <DemoTile title="icon with custom color">
         <Button theme="secondary" size="lg" leftSlot={<Diamond01Icon className="text-palette-pink10" />}>Subscribe</Button>
         <Button className="ml-4" href="#" theme="secondary" size="lg" leftSlot={<Diamond01Icon className="text-palette-pink10" />}>Subscribe</Button>
       </DemoTile>
