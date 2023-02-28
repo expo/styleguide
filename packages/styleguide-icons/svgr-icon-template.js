@@ -3,15 +3,13 @@ const svgrTemplate = (
   { tpl, options }
 ) => {
   return tpl`${imports}
-type Props = {
-  className?: string;
-} & SVGProps<SVGSVGElement>;
 
-function ${componentName}(props: Props) {
-  const _className = props.className;
+function ${componentName}(props: SVGProps<SVGSVGElement>) {
+  const _className = props.className || 'icon-md text-icon-default';
   return ${jsx};
 }
 
+${componentName}.displayName = "${componentName}";
 ${exports}
   `;
 };

@@ -39,8 +39,7 @@
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "react": ">= 16",
-    "@expo/styleguide-icons": "*"
+    "react": ">= 16"
   },
   "dependencies": {
     "@expo/styleguide-base": "^1.0.0-alpha.0",

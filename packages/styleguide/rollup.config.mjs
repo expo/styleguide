@@ -18,7 +18,7 @@ const config = [
         ],
       }),
     ],
-    external: ['react', '@expo/styleguide-base', '@expo/styleguide-icons', 'tailwind-merge'],
+    external: ['react', '@expo/styleguide-base', 'tailwind-merge'],
   },
 ];
 

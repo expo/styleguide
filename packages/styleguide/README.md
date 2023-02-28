@@ -4,9 +4,9 @@ Expo's styleguide and components for use on the web.
 
 ## Usage
 
-1. Install Expo Styleguide and peer packages:
+1. Install Expo Styleguide package:
    ```shell
-   yarn add @expo/styleguide @expo/styleguide-icons
+   yarn add @expo/styleguide
    ```
 2. Import global CSS files from the package in your JS(X)/TS(X) code:
    ```jsx

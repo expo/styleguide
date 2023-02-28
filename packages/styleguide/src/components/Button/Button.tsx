@@ -1,9 +1,10 @@
-import React from "react";
+import React, { cloneElement } from "react";
 import { ButtonBase, ButtonBaseProps } from "./ButtonBase";
 import { twMerge } from "tailwind-merge";
+import type { ReactElement } from 'react';
 
-import { Icon, IconNames } from "../Icon";
 import { LinkBase, LinkBaseProps } from "../Link";
+import { ArrowUpRightIcon } from "@expo/styleguide-icons";
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'primary-destructive' | 'secondary-destructive';
@@ -11,8 +12,8 @@ export type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 
 export type ButtonProps = ButtonBaseProps & LinkBaseProps & {
   size?: ButtonSize;
   theme?: ButtonTheme;
-  icon?: IconNames;
-  iconRight?: IconNames;
+  leftSlot?: ReactElement;
+  rightSlot?: ReactElement;
 };
 
 function getSizeClasses(size: ButtonSize) {
@@ -83,10 +84,27 @@ function getThemedIconClasses(theme: ButtonTheme) {
   }
 }
 
+function isIconElement(element: ReactElement) {
+  if (React.isValidElement(element)) {
+    // @ts-ignore React Portal did not have `displayName` prop, but it is a valid element
+    return element.type?.displayName?.endsWith("Icon") ?? false;
+  }
+  return false;
+}
+
+function getIconProps(element: ReactElement, classNames: string) {
+  return { ...element.props, className: [classNames, element.props.className].filter(Boolean).join(' ') }
+}
+
 export const Button = (props: ButtonProps) => {
-  const { children, size = 'sm', theme = 'primary', href, disabled, className, icon, iconRight, openInNewTab, ...rest } = props;
+  const { children, size = 'sm', theme = 'primary', href, disabled, className, leftSlot, rightSlot, openInNewTab, ...rest } = props;
+
   const Element = href ? LinkBase : ButtonBase;
-  const iconClasses = (icon || iconRight) && twMerge(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
+
+  const isLeftSlotIcon = leftSlot && isIconElement(leftSlot);
+  const isRightSlotIcon = rightSlot && isIconElement(rightSlot);
+  const iconClasses = (isLeftSlotIcon || isRightSlotIcon) && twMerge(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
+
   return (
     <Element href={href} className={twMerge(
       `inline-flex border rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
@@ -95,10 +113,10 @@ export const Button = (props: ButtonProps) => {
       `disabled:cursor-default disabled:opacity-80`,
       className,
     )} disabled={disabled} {...rest}>
-      {icon && <Icon name={icon} className={iconClasses} />}
-      {children && <span className="flex self-center text-inherit">{children}</span>}
-      {iconRight && <Icon name={iconRight} className={iconClasses} />}
-      {!icon && !iconRight && href && openInNewTab && <Icon name="ArrowUpRightIcon" className="icon-sm text-icon-secondary" />}
+      {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
+      {children && <span className="flex self-center text-inherit leading-none">{children}</span>}
+      {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
+      {!leftSlot && !rightSlot && href && openInNewTab && <ArrowUpRightIcon className="icon-sm text-icon-secondary" />}
     </Element>
   )
 }

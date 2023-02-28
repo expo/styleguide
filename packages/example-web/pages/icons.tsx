@@ -1,7 +1,9 @@
-import { Icon, IconNames } from "@expo/styleguide";
 import * as StyleguideIcons from "@expo/styleguide-icons";
+import { createElement } from "react";
 
 import { H1 } from "@/components/headers";
+
+type IconNames = keyof typeof StyleguideIcons;
 
 export default function Icons() {
   const iconNames = Object.keys(StyleguideIcons).filter((key) => key.endsWith("Icon")) as IconNames[];
@@ -14,7 +16,7 @@ export default function Icons() {
             className='flex flex-col items-center justify-center gap-2'
             key={iconName}
           >
-            <Icon name={iconName} className="icon-xl text-default" />
+            {createElement(StyleguideIcons[iconName], { className: 'icon-xl' })}
             <span className='text-2xs text-secondary'>{iconName}</span>
           </div>
         ))}
