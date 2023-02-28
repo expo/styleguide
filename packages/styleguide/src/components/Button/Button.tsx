@@ -97,7 +97,7 @@ function getIconProps(element: ReactElement, classNames: string) {
 }
 
 export const Button = (props: ButtonProps) => {
-  const { children, size = 'sm', theme = 'primary', href, disabled, className, leftSlot, rightSlot, openInNewTab, ...rest } = props;
+  const { children, size = 'sm', theme = 'primary', href, disabled, className, leftSlot, rightSlot, openInNewTab, onClick, ...rest } = props;
 
   const Element = href ? LinkBase : ButtonBase;
 
@@ -106,13 +106,19 @@ export const Button = (props: ButtonProps) => {
   const iconClasses = (isLeftSlotIcon || isRightSlotIcon) && twMerge(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
 
   return (
-    <Element href={href} className={twMerge(
-      `inline-flex border rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
-      getSizeClasses(size),
-      getThemeClasses(theme, disabled),
-      disabled && 'cursor-default opacity-80 pointer-event-none',
-      className,
-    )} disabled={disabled} {...rest}>
+    <Element
+      href={href}
+      className={twMerge(
+        `inline-flex border rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
+        getSizeClasses(size),
+        getThemeClasses(theme, disabled),
+        disabled && 'cursor-default opacity-80 pointer-event-none',
+        className,
+      )}
+      disabled={disabled}
+      {...(openInNewTab ? { openInNewTab } : {})}
+      {...rest}
+    >
       {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
       {children && (
         <span className={twMerge(

@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import type { AnchorHTMLAttributes } from "react";
+import Link from "next/link";
 
 export type LinkBaseProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   testID?: string;
@@ -8,20 +9,25 @@ export type LinkBaseProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 export const LinkBase = forwardRef<HTMLAnchorElement, LinkBaseProps>(
-  ({ children, testID, className, href, openInNewTab, target, disabled, rel, ...rest }, ref) => {
+  ({ children, testID, href, openInNewTab, onClick, target, disabled, rel, ...rest }, ref) => {
     if (!href) return null;
+
+    if (disabled) {
+      return <a ref={ref} data-testid={testID} {...rest}>{children}</a>;
+    }
+
     return (
-      <a
+      <Link
+        href={href}
         ref={ref}
-        href={disabled ? undefined : href}
-        className={className}
+        onClick={onClick}
         target={openInNewTab ? '_blank' : target}
         rel={openInNewTab ? 'noopener noreferrer' : rel}
         data-testid={testID}
         {...rest}
       >
         {children}
-      </a>
+      </Link>
     )
   }
 );
