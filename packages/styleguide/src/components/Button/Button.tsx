@@ -32,32 +32,32 @@ function getThemeClasses(theme: ButtonTheme, disabled = false) {
   switch (theme) {
     case "primary": return twMerge(
       "border-button-primary bg-button-primary text-button-primary shadow-xs",
-      !disabled && "hover:bg-button-primary-hover",
+      !disabled && "hocus:bg-button-primary-hover",
       disabled && "bg-button-primary-disabled border-button-primary-disabled text-button-primary-disabled"
     );
     case "primary-destructive": return twMerge(
       "border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive shadow-xs",
-      !disabled && "hover:bg-button-primary-destructive-hover",
+      !disabled && "hocus:bg-button-primary-destructive-hover",
       disabled && "bg-button-primary-destructive-disabled border-button-primary-destructive-disabled text-button-primary-destructive-disabled"
     );
     case "secondary": return twMerge(
       "border-button-secondary bg-button-secondary text-button-secondary shadow-xs",
-      !disabled && "hover:bg-button-secondary-hover",
+      !disabled && "hocus:bg-button-secondary-hover",
       disabled && "bg-button-secondary-disabled border-button-secondary-disabled text-button-secondary-disabled"
     );
     case "secondary-destructive": return twMerge(
       "border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive shadow-xs",
-      !disabled && "hover:bg-button-secondary-destructive-hover",
+      !disabled && "hocus:bg-button-secondary-destructive-hover",
       disabled && "bg-button-secondary-destructive-disabled border-button-secondary-destructive-disabled text-button-secondary-destructive-disabled"
     );
     case "tertiary": return twMerge(
       "border-button-tertiary bg-button-tertiary text-button-tertiary shadow-none",
-      !disabled && "hover:bg-button-tertiary-hover",
+      !disabled && "hocus:bg-button-tertiary-hover",
       disabled && "bg-button-tertiary-disabled border-button-tertiary-disabled text-button-tertiary-disabled"
     );
     case "quaternary": return twMerge(
       "border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none",
-      !disabled && "hover:bg-button-quaternary-hover",
+      !disabled && "hocus:bg-button-quaternary-hover",
       disabled && "bg-button-quaternary-disabled border-button-quaternary-disabled text-button-quaternary-disabled"
     );
   }
@@ -117,7 +117,7 @@ export const Button = (props: ButtonProps) => {
         className,
       )}
       disabled={disabled}
-      {...(openInNewTab ? { openInNewTab } : {})}
+      {...(href ? { openInNewTab } : {})}
       {...rest}
     >
       {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}

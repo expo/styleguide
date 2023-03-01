@@ -86,12 +86,12 @@ export default function UI() {
       </DemoTile>
       <DemoTile title="custom button">
         <Button
-          className="bg-palette-green3 border-palette-green7 text-success hover:bg-palette-green4"
+          className="bg-palette-green3 border-palette-green7 text-success hocus:bg-palette-green4"
           rightSlot={<EasMetadataIcon className="text-success" />}
         >EAS Metadata</Button>
         <Button
           href="#"
-          className="ml-4 bg-palette-green3 border-palette-green7 text-success hover:bg-palette-green4"
+          className="ml-4 bg-palette-green3 border-palette-green7 text-success hocus:bg-palette-green4"
           rightSlot={<EasMetadataIcon className="text-success" />}
         >EAS Metadata</Button>
       </DemoTile>
