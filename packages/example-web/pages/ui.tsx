@@ -98,14 +98,14 @@ export default function UI() {
       <DemoTile title="custom slot content">
         <Button
           theme="quaternary"
-          className="hover:bg-palette-yellow2 hover:border-palette-yellow6"
+          className="hocus:bg-palette-yellow2 hocus:border-palette-yellow6"
           leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}
           testID="test-button"
         >Check status</Button>
         <Button
           href="#"
           theme="quaternary"
-          className="ml-4 hover:bg-palette-yellow2 hover:border-palette-yellow6"
+          className="ml-4 hocus:bg-palette-yellow2 hocus:border-palette-yellow6"
           leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}
           testID="test-link"
         >Check status</Button>
