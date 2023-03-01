@@ -240,68 +240,6 @@ const expoTailwindConfig = {
       xl: 'var(--expo-theme-shadows-xl)',
     },
     fontSize: {
-      'heading-5xl': [
-        'calc(var(--expo-theme-heading-base-font-size) * 3.815)',
-        {
-          lineHeight: 1.2,
-          letterSpacing: '-0.022rem',
-        },
-      ],
-      'heading-4xl': [
-        'calc(var(--expo-theme-heading-base-font-size) * 3.052)',
-        {
-          lineHeight: 1.2,
-          letterSpacing: '-0.022rem',
-        },
-      ],
-      'heading-3xl': [
-        'calc(var(--expo-theme-heading-base-font-size) * 2.441)',
-        {
-          lineHeight: 1.3,
-          letterSpacing: '-0.022rem',
-        },
-      ],
-      'heading-2xl': [
-        'calc(var(--expo-theme-heading-base-font-size) * 1.953)',
-        {
-          lineHeight: 1.4,
-          letterSpacing: '-0.021rem',
-        },
-      ],
-      'heading-xl': [
-        'calc(var(--expo-theme-heading-base-font-size) * 1.563)',
-        {
-          lineHeight: 1.5,
-          letterSpacing: '-0.017rem',
-        },
-      ],
-      'heading-lg': [
-        'calc(var(--expo-theme-heading-base-font-size) * 1.25)',
-        {
-          lineHeight: 1.5,
-          letterSpacing: '-0.017rem',
-        },
-      ],
-      'heading-base': [
-        'calc(var(--expo-theme-heading-base-font-size) * 1)',
-        {
-          lineHeight: 1.625,
-          letterSpacing: '-0.011rem',
-        },
-      ],
-      'heading-sm': [
-        'calc(var(--expo-theme-heading-base-font-size) * 0.8)',
-        {
-          lineHeight: 1.615,
-          letterSpacing: '-0.003rem',
-        },
-      ],
-      'heading-xs': [
-        'calc(var(--expo-theme-heading-base-font-size) * 0.64)',
-        {
-          lineHeight: 1.58,
-        },
-      ],
       lg: [
         '18px',
         {
@@ -343,6 +281,52 @@ const expoTailwindConfig = {
         },
       ],
     },
+    heading: {
+      '5xl': {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 3.815)',
+        lineHeight: 1.2,
+        letterSpacing: '-0.022rem',
+      },
+      '4xl': {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 3.052)',
+        lineHeight: 1.2,
+        letterSpacing: '-0.022rem',
+      },
+      '3xl': {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 2.441)',
+        lineHeight: 1.3,
+        letterSpacing: '-0.022rem',
+      },
+      '2xl': {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 1.953)',
+        lineHeight: 1.4,
+        letterSpacing: '-0.021rem',
+      },
+      xl: {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 1.563)',
+        lineHeight: 1.5,
+        letterSpacing: '-0.017rem',
+      },
+      lg: {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 1.25)',
+        lineHeight: 1.5,
+        letterSpacing: '-0.017rem',
+      },
+      base: {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 1)',
+        lineHeight: 1.625,
+        letterSpacing: '-0.011rem',
+      },
+      sm: {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 0.8)',
+        lineHeight: 1.615,
+        letterSpacing: '-0.003rem',
+      },
+      xs: {
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 0.64)',
+        lineHeight: 1.58,
+      },
+    },
     screens: {
       small: '400px',
       medium: '900px',
@@ -361,8 +345,12 @@ const expoTailwindConfig = {
     fontFamily: false,
   },
   plugins: [
-    plugin(({ addVariant }) => {
+    plugin(({ addVariant, matchUtilities, theme }) => {
       addVariant('hocus', ['&:hover', '&:focus'])
+      matchUtilities(
+        { heading: (value) => value },
+        { values: theme('heading') }
+      )
     })
   ]
 };

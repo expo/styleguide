@@ -7,15 +7,15 @@ export default function Typography() {
       <H1>Typography</H1>
       <H3>Headings</H3>
       <div className="flex flex-col gap-8">
-        <DemoTile title="Heading 5xl" className="text-heading-5xl font-black" />
-        <DemoTile title="Heading 4xl" className="text-heading-4xl font-extrabold" />
-        <DemoTile title="Heading 3xl" className="text-heading-3xl font-bold" />
-        <DemoTile title="Heading 2xl" className="text-heading-2xl font-semibold" />
-        <DemoTile title="Heading xl" className="text-heading-xl font-medium" />
-        <DemoTile title="Heading lg" className="text-heading-lg font-medium" />
-        <DemoTile title="Heading base" className="text-heading-base font-medium" />
-        <DemoTile title="Heading sm" className="text-heading-sm font-medium" />
-        <DemoTile title="Heading xs" className="text-heading-xs font-medium" />
+        <DemoTile title="Heading 5xl" className="heading-5xl font-black" />
+        <DemoTile title="Heading 4xl" className="heading-4xl font-extrabold" />
+        <DemoTile title="Heading 3xl" className="heading-3xl font-bold" />
+        <DemoTile title="Heading 2xl" className="heading-2xl font-semibold" />
+        <DemoTile title="Heading xl" className="heading-xl font-medium" />
+        <DemoTile title="Heading lg" className="heading-lg font-medium" />
+        <DemoTile title="Heading base" className="heading-base font-medium" />
+        <DemoTile title="Heading sm" className="heading-sm font-medium" />
+        <DemoTile title="Heading xs" className="heading-xs font-medium" />
       </div>
       <H3>Elements</H3>
       <div className="flex flex-col gap-8">
