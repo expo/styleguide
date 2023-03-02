@@ -4,13 +4,7 @@ import { IconProps } from '../types';
 export function SnackLogo(props: IconProps) {
   const { title = 'Snack-logo', color, titleId } = props;
   return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      role="img"
-      aria-labelledby={titleId}
-      {...props}
-    >
+    <svg viewBox="0 0 20 20" fill="none" role="img" aria-labelledby={titleId} {...props}>
       {title ? <title id={titleId}>{title}</title> : null}
       <path
         fillRule="evenodd"

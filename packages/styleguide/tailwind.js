@@ -334,11 +334,11 @@ const expoTailwindConfig = {
     },
     extend: {
       height: {
-        '15': '3.75rem',
+        15: '3.75rem',
       },
       opacity: {
-        'inherit': 'inherit',
-      }
+        inherit: 'inherit',
+      },
     },
   },
   corePlugins: {
@@ -346,13 +346,10 @@ const expoTailwindConfig = {
   },
   plugins: [
     plugin(({ addVariant, matchUtilities, theme }) => {
-      addVariant('hocus', ['&:hover', '&:focus'])
-      matchUtilities(
-        { heading: (value) => value },
-        { values: theme('heading') }
-      )
-    })
-  ]
+      addVariant('hocus', ['&:hover', '&:focus']);
+      matchUtilities({ heading: (value) => value }, { values: theme('heading') });
+    }),
+  ],
 };
 
 module.exports = expoTailwindConfig;

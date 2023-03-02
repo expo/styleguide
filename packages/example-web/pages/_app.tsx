@@ -1,12 +1,12 @@
-import { ThemeProvider } from "@expo/styleguide";
-import { Inter, Fira_Code } from "@next/font/google";
+import { ThemeProvider } from '@expo/styleguide';
+import { Inter, Fira_Code } from '@next/font/google';
 import type { AppProps } from 'next/app';
-import Head from "next/head";
+import Head from 'next/head';
 
-import { Sidebar } from "@/components/Sidebar";
+import { Sidebar } from '@/components/Sidebar';
 
-import "@expo/styleguide/dist/expo-theme.css";
-import "@expo/styleguide/dist/global.css";
+import '@expo/styleguide/dist/expo-theme.css';
+import '@expo/styleguide/dist/global.css';
 
 export const regularFont = Inter({
   variable: '--inter-font',
@@ -23,10 +23,16 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider>
       <style jsx global>
         {`
-          html, body, kbd, button, input, select {
+          html,
+          body,
+          kbd,
+          button,
+          input,
+          select {
             font-family: ${regularFont.style.fontFamily}, sans-serif;
           }
-          code, pre {
+          code,
+          pre {
             font-family: ${monospaceFont.style.fontFamily}, monospace;
           }
         `}

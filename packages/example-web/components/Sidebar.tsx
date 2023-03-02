@@ -1,8 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
-import { SidebarLink } from "@/components/SidebarLink";
-import { Button, useTheme, Themes } from "@expo/styleguide";
-import { ThemeIcon } from "@expo/styleguide-icons";
+import { Button, useTheme, Themes } from '@expo/styleguide';
+import { ThemeIcon } from '@expo/styleguide-icons';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { SidebarLink } from '@/components/SidebarLink';
 
 export function Sidebar() {
   const { themeName, setDarkMode, setLightMode } = useTheme();
@@ -28,5 +29,5 @@ export function Sidebar() {
         Toggle theme
       </Button>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { H1 } from "@/components/headers";
+import { H1 } from '@/components/headers';
 
 export default function Home() {
   return (

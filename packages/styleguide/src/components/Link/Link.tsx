@@ -1,14 +1,13 @@
-import React from "react";
-import { twMerge } from "tailwind-merge";
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-import { LinkBase, LinkBaseProps } from "./LinkBase";
+import { LinkBase, LinkBaseProps } from './LinkBase';
 
 export function Link({ className, disabled, ...rest }: LinkBaseProps) {
   return (
-    <LinkBase className={twMerge(
-      "text-link transition-opacity",
-      !disabled && "hocus:opacity-80",
-      className
-    )} {...rest} />
-  )
+    <LinkBase
+      className={twMerge('text-link transition-opacity', !disabled && 'hocus:opacity-80', className)}
+      {...rest}
+    />
+  );
 }

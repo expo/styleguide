@@ -1,7 +1,4 @@
-const svgrTemplate = (
-  { imports, interfaces, componentName, props, jsx, exports },
-  { tpl, options }
-) => {
+const svgrTemplate = ({ imports, interfaces, componentName, props, jsx, exports }, { tpl, options }) => {
   return tpl`${imports}
 
 function ${componentName}(props: SVGProps<SVGSVGElement>) {

@@ -17,9 +17,16 @@
   },
   "eslintConfig": {
     "root": true,
-    "ignorePatterns": ["node_modules", "dist", "tmp", ".next"]
+    "ignorePatterns": ["node_modules", "dist", "tmp", ".next"],
+    "rules": {
+      "max-len": ["warn", {
+        "code": 120
+      }]
+    }
   },
   "prettier": {
-    "singleQuote": true
+    "printWidth": 120,
+    "singleQuote": true,
+    "bracketSameLine": true
   }
 }

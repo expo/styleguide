@@ -1,5 +1,5 @@
-import { DemoTile } from "@/components/DemoTile";
-import { H1, H3 } from "@/components/headers";
+import { DemoTile } from '@/components/DemoTile';
+import { H1, H3 } from '@/components/headers';
 
 export default function Typography() {
   return (

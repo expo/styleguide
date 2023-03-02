@@ -4,13 +4,7 @@ import { IconProps } from '../types';
 export function DocsLogo(props: IconProps) {
   const { title = 'Docs-logo', color, titleId } = props;
   return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      role="img"
-      aria-labelledby={titleId}
-      {...props}
-    >
+    <svg viewBox="0 0 20 20" fill="none" role="img" aria-labelledby={titleId} {...props}>
       {title ? <title id={titleId}>{title}</title> : null}
       <path
         d="M12.07 8a.157.157 0 01.166.015l5.374 4.141a.16.16 0 01.055.168l-.37 1.298a.157.157 0 01-.234.09l-4.416-2.768-.846 5.47a.157.157 0 01-.219.12l-1.158-.518a.157.157 0 01-.093-.154l.477-7.132a.157.157 0 01.085-.129L12.069 8z"
