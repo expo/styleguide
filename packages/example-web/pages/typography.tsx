@@ -41,16 +41,22 @@ export default function Typography() {
 
         <div className="flex items-center gap-2">
           <p className="w-32">Heading base</p>
-          <h2 className="text-heading-base font-medium">Build developer trust.</h2>
+          <h2 className="text-heading-base font-medium">
+            Build developer trust.
+          </h2>
         </div>
         <div className="flex items-center gap-2">
           <p className="w-32">Heading sm</p>
-          <h2 className="text-heading-sm font-medium">Build developer trust.</h2>
+          <h2 className="text-heading-sm font-medium">
+            Build developer trust.
+          </h2>
         </div>
 
         <div className="flex items-center gap-2">
           <p className="w-32">Heading xs</p>
-          <h2 className="text-heading-xs font-medium">Build developer trust.</h2>
+          <h2 className="text-heading-xs font-medium">
+            Build developer trust.
+          </h2>
         </div>
       </div>
 

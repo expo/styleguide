@@ -7,7 +7,7 @@ export const borderRadius = {
   xl: 16,
   '2xl': 20,
   '3xl': 24,
-  'full': 9999,
+  full: 9999,
 };
 
 export const iconSize = {
