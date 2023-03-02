@@ -19,7 +19,7 @@ export default function Icons() {
             className={twMerge(
               'flex flex-col items-center justify-center py-4 px-2 gap-1 border border-transparent rounded-md transition',
               'hocus:border-secondary hocus:shadow-xs hover:cursor-pointer',
-              'active:scale-97.5'
+              'active:scale-98'
             )}
             onClick={() => copy(iconName)}
             key={iconName}>

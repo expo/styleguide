@@ -20,8 +20,6 @@ const config = [
     ],
     external: [
       '@expo/styleguide-base',
-      '@expo/styleguide-icons',
-      'ap-style-title-case',
       'next/link',
       'react',
       'tailwind-merge'

@@ -1,4 +1,3 @@
-import { ArrowUpRightIcon } from '@expo/styleguide-icons';
 import React, { cloneElement } from 'react';
 import type { ReactElement } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -46,39 +45,39 @@ function getThemeClasses(theme: ButtonTheme, disabled = false) {
     case 'primary':
       return twMerge(
         'border-button-primary bg-button-primary text-button-primary shadow-xs',
-        !disabled && 'hocus:bg-button-primary-hover',
+        !disabled && 'hocus:bg-button-primary-hover active:scale-98',
         disabled && 'bg-button-primary-disabled border-button-primary-disabled text-button-primary-disabled'
       );
     case 'primary-destructive':
       return twMerge(
         'border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive shadow-xs',
-        !disabled && 'hocus:bg-button-primary-destructive-hover',
+        !disabled && 'hocus:bg-button-primary-destructive-hover active:scale-98',
         disabled &&
           'bg-button-primary-destructive-disabled border-button-primary-destructive-disabled text-button-primary-destructive-disabled'
       );
     case 'secondary':
       return twMerge(
         'border-button-secondary bg-button-secondary text-button-secondary shadow-xs',
-        !disabled && 'hocus:bg-button-secondary-hover',
+        !disabled && 'hocus:bg-button-secondary-hover active:scale-98',
         disabled && 'bg-button-secondary-disabled border-button-secondary-disabled text-button-secondary-disabled'
       );
     case 'secondary-destructive':
       return twMerge(
         'border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive shadow-xs',
-        !disabled && 'hocus:bg-button-secondary-destructive-hover',
+        !disabled && 'hocus:bg-button-secondary-destructive-hover active:scale-98',
         disabled &&
           'bg-button-secondary-destructive-disabled border-button-secondary-destructive-disabled text-button-secondary-destructive-disabled'
       );
     case 'tertiary':
       return twMerge(
         'border-button-tertiary bg-button-tertiary text-button-tertiary shadow-none',
-        !disabled && 'hocus:bg-button-tertiary-hover',
+        !disabled && 'hocus:bg-button-tertiary-hover active:scale-98',
         disabled && 'bg-button-tertiary-disabled border-button-tertiary-disabled text-button-tertiary-disabled'
       );
     case 'quaternary':
       return twMerge(
         'border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none',
-        !disabled && 'hocus:bg-button-quaternary-hover',
+        !disabled && 'hocus:bg-button-quaternary-hover active:scale-98',
         disabled && 'bg-button-quaternary-disabled border-button-quaternary-disabled text-button-quaternary-disabled'
       );
   }
@@ -175,9 +174,6 @@ export const Button = (props: ButtonProps) => {
         </span>
       )}
       {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
-      {!leftSlot && !rightSlot && href && openInNewTab && (
-        <ArrowUpRightIcon className={twMerge(getIconSizeClasses(size), 'text-icon-secondary')} />
-      )}
     </Element>
   );
 };

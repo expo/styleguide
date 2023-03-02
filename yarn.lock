@@ -1996,11 +1996,6 @@ anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-ap-style-title-case@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ap-style-title-case/-/ap-style-title-case-2.0.0.tgz#c9fddb3ca94f0eb87078e3f6164efd36df2dfb82"
-  integrity sha512-8vCoCer8ZTXjvCK+JQLU0YW0EWI+70lyP9Q33mafLG0VRT7UY1BHoDq7WzaQYwzh9t+eG94tEJuVHrEDcRP1Fg==
-
 "aproba@^1.0.3 || ^2.0.0", aproba@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-2.0.0.tgz#52520b8ae5b569215b354efc0caa3fe1e45a8adc"
