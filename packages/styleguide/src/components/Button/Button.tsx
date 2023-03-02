@@ -1,10 +1,10 @@
 import { ArrowUpRightIcon } from '@expo/styleguide-icons';
-import { apStyleTitleCase } from 'ap-style-title-case';
 import React, { cloneElement } from 'react';
 import type { ReactElement } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { ButtonBase, ButtonBaseProps } from './ButtonBase';
+import { titleCase } from './helpers';
 import { LinkBase, LinkBaseProps } from '../Link';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
@@ -171,7 +171,7 @@ export const Button = (props: ButtonProps) => {
       {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
       {children && (
         <span className={twMerge('flex self-center text-inherit leading-none', href && 'select-none')}>
-          {typeof children === 'string' ? apStyleTitleCase(children) : children}
+          {typeof children === 'string' ? titleCase(children) : children}
         </span>
       )}
       {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}

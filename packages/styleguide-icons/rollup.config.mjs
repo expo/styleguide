@@ -26,6 +26,7 @@ if (process.env.STUB) {
           targets: [{ src: './stub.d.ts', dest: 'dist', rename: 'index.d.ts' }],
         }),
       ],
+      external: ['tailwind-merge'],
     },
   ];
 }

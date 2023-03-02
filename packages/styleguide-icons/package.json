@@ -27,6 +27,9 @@
   "bugs": {
     "url": "https://github.com/expo/styleguide/issues"
   },
+  "dependencies": {
+    "tailwind-merge": "^1.10.0"
+  },
   "devDependencies": {
     "@figma-export/cli": "^4.5.0",
     "@figma-export/output-components-as-svgr": "^4.5.0",

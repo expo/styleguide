@@ -92,7 +92,11 @@ export default function UI() {
         </Button>
       </DemoTile>
       <DemoTile title="external link with icon">
-        <Button href="https://docs.expo.dev" leftSlot={<BookClosedIcon />} openInNewTab theme="tertiary">
+        <Button
+          href="https://docs.expo.dev"
+          leftSlot={<BookClosedIcon className="icon-lg" />}
+          openInNewTab
+          theme="tertiary">
           Docs
         </Button>
       </DemoTile>
