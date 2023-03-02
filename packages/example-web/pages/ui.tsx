@@ -2,6 +2,7 @@ import { ButtonBase, Button, Link, LinkBase } from '@expo/styleguide';
 import type { ButtonTheme, ButtonProps } from '@expo/styleguide';
 import {
   AlignTopArrow01Icon,
+  ArrowUpRightIcon,
   BookClosedIcon,
   Diamond01Icon,
   EasMetadataIcon,
@@ -87,7 +88,7 @@ export default function UI() {
         </Button>
       </DemoTile>
       <DemoTile title="external link">
-        <Button href="https://snack.expo.dev" openInNewTab size="xs" theme="secondary">
+        <Button href="https://snack.expo.dev" openInNewTab size="xs" theme="secondary" rightSlot={<ArrowUpRightIcon />}>
           Snack
         </Button>
       </DemoTile>

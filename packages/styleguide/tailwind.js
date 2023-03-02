@@ -342,7 +342,7 @@ const expoTailwindConfig = {
         inherit: 'inherit',
       },
       scale: {
-        97.5: '.975',
+        98: '.98',
       },
     },
   },
