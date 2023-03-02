@@ -1,15 +1,6 @@
-import React, {
-  createContext,
-  useEffect,
-  useState,
-  useContext,
-  ReactNode,
-} from 'react';
+import React, { createContext, useEffect, useState, useContext, ReactNode } from 'react';
 
-import {
-  getInitialColorMode,
-  isLocalStorageAvailable,
-} from './BlockingSetInitialColorMode';
+import { getInitialColorMode, isLocalStorageAvailable } from './BlockingSetInitialColorMode';
 
 export enum Themes {
   AUTO = 'auto',
@@ -31,12 +22,8 @@ type ThemeProviderProps = {
 
 export function ThemeProvider(props: ThemeProviderProps) {
   const { children, disabled = false } = props;
-  const initialTheme = (process as any).browser
-    ? (document.documentElement.dataset.expoTheme as Themes)
-    : Themes.AUTO;
-  const [themeName, setThemeName] = useState(
-    disabled ? Themes.LIGHT : initialTheme
-  );
+  const initialTheme = (process as any).browser ? (document.documentElement.dataset.expoTheme as Themes) : Themes.AUTO;
+  const [themeName, setThemeName] = useState(disabled ? Themes.LIGHT : initialTheme);
 
   useEffect(function didMount() {
     if (disabled) return;
@@ -131,8 +118,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
         setLightMode,
         setAutoMode,
         themeName,
-      }}
-    >
+      }}>
       {children}
     </ThemeContext.Provider>
   );

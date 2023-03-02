@@ -1,8 +1,6 @@
-import { theme } from '@expo/styleguide';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-import { Icon } from '@/components/Icon';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   href: string;
@@ -14,12 +12,11 @@ export function SidebarLink({ href, text }: Props) {
   return (
     <Link
       href={href}
-      className={`text-heading-xl font-medium flex items-center gap-2 hover:underline ${
-        pathname === href && 'text-palette-blue11'
-      }`}
-    >
+      className={twMerge(
+        'heading-xl font-medium flex items-center gap-2 transition-colors hover:underline',
+        pathname === href && 'text-link'
+      )}>
       <span>{text}</span>
-      <Icon name="ArrowRightIcon" color={theme.icon.secondary} />
     </Link>
   );
 }

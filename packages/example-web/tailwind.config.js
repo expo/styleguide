@@ -1,4 +1,4 @@
-const { theme } = require('@expo/styleguide/tailwind');
+const expoTheme = require('@expo/styleguide/tailwind');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,8 +7,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     '../../node_modules/@expo/styleguide/dist/**/*.{js,ts,jsx,tsx}',
   ],
-  theme: {
-    extend: theme,
-  },
   plugins: [],
+  ...expoTheme,
 };

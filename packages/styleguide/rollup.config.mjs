@@ -13,11 +13,19 @@ const config = [
       copy({
         targets: [
           { src: './src/styles/expo-theme.css', dest: 'dist' },
+          { src: './src/styles/global.css', dest: 'dist' },
           { src: './tailwind.js', dest: 'dist' },
         ],
       }),
     ],
-    external: ['react', '@expo/styleguide-base', 'tailwind-merge'],
+    external: [
+      '@expo/styleguide-base',
+      '@expo/styleguide-icons',
+      'ap-style-title-case',
+      'next/link',
+      'react',
+      'tailwind-merge'
+    ],
   },
 ];
 

@@ -1,22 +1,30 @@
-import * as UI from '@expo/styleguide-icons';
+import * as StyleguideIcons from '@expo/styleguide-icons';
+import { createElement } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-import { Icon, StyleguideIconNames } from '@/components/Icon';
+import { H1 } from '@/components/headers';
+import useCopy from '@/hooks/useCopy';
+
+type IconNames = keyof typeof StyleguideIcons;
 
 export default function Icons() {
-  const iconNames = Object.keys(UI).filter((key) =>
-    key.endsWith('Icon')
-  ) as StyleguideIconNames[];
+  const [, copy] = useCopy();
+  const iconNames = Object.keys(StyleguideIcons).filter((key) => key.endsWith('Icon')) as IconNames[];
   return (
     <>
-      <h1 className="text-heading-5xl font-black">Icons</h1>
-      <div className="mt-8 grid grid-cols-1 gap-6 2xl:grid-cols-8 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 ">
+      <H1>Icons</H1>
+      <div className="mt-8 grid grid-cols-1 gap-2 large:grid-cols-6 medium:grid-cols-4 small:grid-cols-3 ">
         {iconNames.map((iconName) => (
           <div
-            className="flex flex-col items-center justify-center gap-2"
-            key={iconName}
-          >
-            <Icon name={iconName} color="currentColor" />
-            <span className="text-xs text-secondary">{iconName}</span>
+            className={twMerge(
+              'flex flex-col items-center justify-center py-4 px-2 gap-1 border border-transparent rounded-md transition',
+              'hocus:border-secondary hocus:shadow-xs hover:cursor-pointer',
+              'active:scale-97.5'
+            )}
+            onClick={() => copy(iconName)}
+            key={iconName}>
+            {createElement(StyleguideIcons[iconName], { className: 'icon-xl' })}
+            <span className="text-2xs text-tertiary">{iconName}</span>
           </div>
         ))}
       </div>

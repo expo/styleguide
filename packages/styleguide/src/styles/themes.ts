@@ -60,10 +60,8 @@ export const theme = {
         icon: 'var(--expo-theme-button-primary-destructive-icon)',
         text: 'var(--expo-theme-button-primary-destructive-text)',
         disabled: {
-          background:
-            'var(--expo-theme-button-primary-destructive-disabled-background)',
-          border:
-            'var(--expo-theme-button-primary-destructive-disabled-border)',
+          background: 'var(--expo-theme-button-primary-destructive-disabled-background)',
+          border: 'var(--expo-theme-button-primary-destructive-disabled-border)',
           text: 'var(--expo-theme-button-primary-destructive-disabled-text)',
         },
       },
@@ -86,10 +84,8 @@ export const theme = {
         icon: 'var(--expo-theme-button-secondary-destructive-icon)',
         text: 'var(--expo-theme-button-secondary-destructive-text)',
         disabled: {
-          background:
-            'var(--expo-theme-button-secondary-destructive-disabled-background)',
-          border:
-            'var(--expo-theme-button-secondary-destructive-disabled-border)',
+          background: 'var(--expo-theme-button-secondary-destructive-disabled-background)',
+          border: 'var(--expo-theme-button-secondary-destructive-disabled-border)',
           text: 'var(--expo-theme-button-secondary-destructive-disabled-text)',
         },
       },
