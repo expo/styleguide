@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-base",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Expo's base colors and style values.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
