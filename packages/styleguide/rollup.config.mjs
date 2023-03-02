@@ -1,13 +1,12 @@
 import typescript from '@rollup/plugin-typescript';
 import copy from 'rollup-plugin-copy';
-import commonjs from '@rollup/plugin-commonjs';
 
 const config = [
   {
     input: 'index.ts',
     output: {
       dir: 'dist',
-      format: 'module',
+      format: 'cjs',
     },
     plugins: [
       typescript(),

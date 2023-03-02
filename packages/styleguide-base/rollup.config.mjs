@@ -5,7 +5,7 @@ const config = [
     input: 'index.ts',
     output: {
       dir: 'dist',
-      format: 'module',
+      format: 'cjs',
     },
     plugins: [
       typescript(),
