@@ -351,7 +351,7 @@ const expoTailwindConfig = {
   },
   plugins: [
     plugin(({ addVariant, matchUtilities, theme }) => {
-      addVariant('hocus', ['&:hover', '&:focus']);
+      addVariant('hocus', ['&:hover', '&:focus-visible']);
       matchUtilities({ heading: (value) => value }, { values: theme('heading') });
     }),
   ],
