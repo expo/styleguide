@@ -1,4 +1,3 @@
-import { ArrowUpRightIcon } from '@expo/styleguide-icons';
 import React, { cloneElement } from 'react';
 import type { ReactElement } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -175,9 +174,6 @@ export const Button = (props: ButtonProps) => {
         </span>
       )}
       {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
-      {!leftSlot && !rightSlot && href && openInNewTab && (
-        <ArrowUpRightIcon className={twMerge(getIconSizeClasses(size), 'text-icon-secondary')} />
-      )}
     </Element>
   );
 };
