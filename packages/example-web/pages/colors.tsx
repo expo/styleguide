@@ -1,6 +1,7 @@
 import { twMerge } from 'tailwind-merge';
 
 import { H1, H3 } from '@/components/headers';
+import useCopy from '@/hooks/useCopy';
 
 function getPaletteClasses(colorName: string) {
   switch (colorName) {
@@ -148,38 +149,45 @@ function getProjectGradientClass(color: string) {
   }
 }
 
-function renderPalette(colorName: string) {
-  return (
-    <div className="flex flex-wrap mb-2" key={colorName}>
-      {getPaletteClasses(colorName).map((className, index) => (
-        <div key={index}>
-          <div className={twMerge('w-16 h-16 mb-1 transition hover:scale-110 hover:shadow-md', className)} />
-          <p className="text-3xs text-secondary text-center">
-            {colorName}
-            {index + 1}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function Colors() {
+  const [, copy] = useCopy();
   return (
     <>
       <H1>Colors</H1>
+      <H3>Palette</H3>
       <div className="grid gap-2 mt-8">
-        {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'gray'].map(renderPalette)}
+        {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'gray'].map((color) => (
+          <div className="flex flex-wrap mb-2" key={color}>
+            {getPaletteClasses(color).map((className, index) => (
+              <div key={index}>
+                <div
+                  className={twMerge(
+                    'w-16 h-16 mb-1 transition',
+                    'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                    className
+                  )}
+                  onClick={() => copy(`palette-${color}${index + 1}`)}
+                />
+                <p className="text-3xs text-secondary text-center">
+                  {color}
+                  {index + 1}
+                </p>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
       <H3>Project gradients</H3>
-      <div className="flex gap-2 mt-8">
+      <div className="flex gap-4 mt-8">
         {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'].map((color, index) => (
           <div className="flex flex-col gap-1 items-center" key={index}>
             <div
               className={twMerge(
-                'w-16 h-16 mb-1 transition hover:scale-110 hover:shadow-md',
+                'w-16 h-16 mb-1 transition',
+                'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
                 getProjectGradientClass(color)
               )}
+              onClick={() => copy(`bg-project-${color}`)}
             />
             <p className="text-3xs text-secondary text-center">bg-project-{color}</p>
           </div>

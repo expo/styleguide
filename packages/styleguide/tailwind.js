@@ -167,6 +167,7 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-border-warning)',
       danger: 'var(--expo-theme-border-danger)',
       info: 'var(--expo-theme-border-info)',
+      transparent: 'transparent',
 
       'button-primary': 'var(--expo-theme-button-primary-border)',
       'button-primary-disabled': 'var(--expo-theme-button-primary-disabled-border)',
@@ -339,6 +340,9 @@ const expoTailwindConfig = {
       },
       opacity: {
         inherit: 'inherit',
+      },
+      scale: {
+        97.5: '.975',
       },
     },
   },
