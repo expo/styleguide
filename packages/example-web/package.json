@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "yarn clean && next dev",
-    "build": "ANALYZE=true next build",
+    "build": "next build",
+    "analyze-build": "ANALYZE=true next build",
     "clean": "rimraf .next"
   },
   "dependencies": {

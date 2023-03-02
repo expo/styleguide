@@ -1,4 +1,6 @@
-import { H1 } from '@/components/headers';
+import { twMerge } from 'tailwind-merge';
+
+import { H1, H3 } from '@/components/headers';
 
 function getPaletteClasses(colorName: string) {
   switch (colorName) {
@@ -127,12 +129,31 @@ function getPaletteClasses(colorName: string) {
   }
 }
 
+function getProjectGradientClass(color: string) {
+  switch (color) {
+    case 'red':
+      return 'bg-project-red';
+    case 'orange':
+      return 'bg-project-orange';
+    case 'yellow':
+      return 'bg-project-yellow';
+    case 'green':
+      return 'bg-project-green';
+    case 'blue':
+      return 'bg-project-blue';
+    case 'purple':
+      return 'bg-project-purple';
+    case 'pink':
+      return 'bg-project-pink';
+  }
+}
+
 function renderPalette(colorName: string) {
   return (
     <div className="flex flex-wrap mb-2" key={colorName}>
       {getPaletteClasses(colorName).map((className, index) => (
         <div key={index}>
-          <div className={`w-16 h-16 mb-1 transition hover:scale-110 hover:shadow-md ${className}`} />
+          <div className={twMerge('w-16 h-16 mb-1 transition hover:scale-110 hover:shadow-md', className)} />
           <p className="text-3xs text-secondary text-center">
             {colorName}
             {index + 1}
@@ -149,6 +170,20 @@ export default function Colors() {
       <H1>Colors</H1>
       <div className="grid gap-2 mt-8">
         {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'gray'].map(renderPalette)}
+      </div>
+      <H3>Project gradients</H3>
+      <div className="flex gap-2 mt-8">
+        {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'].map((color, index) => (
+          <div className="flex flex-col gap-1 items-center" key={index}>
+            <div
+              className={twMerge(
+                'w-16 h-16 mb-1 transition hover:scale-110 hover:shadow-md',
+                getProjectGradientClass(color)
+              )}
+            />
+            <p className="text-3xs text-secondary text-center">bg-project-{color}</p>
+          </div>
+        ))}
       </div>
     </>
   );

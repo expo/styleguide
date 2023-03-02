@@ -127,14 +127,6 @@ const expoTailwindConfig = {
       danger: 'var(--expo-theme-background-danger)',
       info: 'var(--expo-theme-background-info)',
 
-      'project-blue': 'var(--expo-theme-project-blue)',
-      'project-green': 'var(--expo-theme-project-green)',
-      'project-yellow': 'var(--expo-theme-project-yellow)',
-      'project-orange': 'var(--expo-theme-project-orange)',
-      'project-red': 'var(--expo-theme-project-red)',
-      'project-pink': 'var(--expo-theme-project-pink)',
-      'project-purple': 'var(--expo-theme-project-purple)',
-
       'button-primary': 'var(--expo-theme-button-primary-background)',
       'button-primary-hover': 'var(--expo-theme-button-primary-hover)',
       'button-primary-disabled': 'var(--expo-theme-button-primary-disabled-background)',
@@ -158,6 +150,15 @@ const expoTailwindConfig = {
       'button-quaternary-disabled': 'var(--expo-theme-button-quaternary-disabled-background)',
 
       ...palette,
+    },
+    backgroundImage: {
+      'project-blue': 'var(--expo-theme-project-blue)',
+      'project-green': 'var(--expo-theme-project-green)',
+      'project-yellow': 'var(--expo-theme-project-yellow)',
+      'project-orange': 'var(--expo-theme-project-orange)',
+      'project-red': 'var(--expo-theme-project-red)',
+      'project-pink': 'var(--expo-theme-project-pink)',
+      'project-purple': 'var(--expo-theme-project-purple)',
     },
     borderColor: {
       default: 'var(--expo-theme-border-default)',
