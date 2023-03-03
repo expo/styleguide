@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide",
-  "version": "8.0.0-alpha.1",
+  "version": "8.0.0-alpha.2",
   "description": "Expo's styleguide components for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -43,7 +43,7 @@
     "react": ">= 16"
   },
   "dependencies": {
-    "@expo/styleguide-base": "^1.0.0-alpha.0",
+    "@expo/styleguide-base": "^1.0.0-alpha.2",
     "tailwind-merge": "^1.10.0"
   },
   "eslintConfig": {
