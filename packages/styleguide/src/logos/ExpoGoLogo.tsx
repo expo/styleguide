@@ -1,8 +1,9 @@
 import React, { HTMLAttributes } from 'react';
-import { twMerge } from 'tailwind-merge';
+
+import { mergeClasses } from '../helpers/mergeClasses';
 
 export function ExpoGoLogo({ className, ...rest }: HTMLAttributes<SVGSVGElement>) {
-  const _className = twMerge('icon-md text-icon-default', className);
+  const _className = mergeClasses('icon-md text-icon-default', className);
   return (
     <svg viewBox="0 0 20 20" fill="none" role="img" className={_className} {...rest}>
       <path
