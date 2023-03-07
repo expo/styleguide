@@ -1,4 +1,4 @@
-import { twMerge } from 'tailwind-merge';
+import { mergeClasses } from '@expo/styleguide';
 
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
@@ -161,7 +161,7 @@ export default function Colors() {
             {getPaletteClasses(color).map((className, index) => (
               <div key={index}>
                 <div
-                  className={twMerge(
+                  className={mergeClasses(
                     'w-16 h-16 mb-1 transition',
                     'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
                     className
@@ -182,7 +182,7 @@ export default function Colors() {
         {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'].map((color, index) => (
           <div className="flex flex-col gap-1 items-center" key={index}>
             <div
-              className={twMerge(
+              className={mergeClasses(
                 'w-16 h-16 mb-1 transition',
                 'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
                 getProjectGradientClass(color)

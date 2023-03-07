@@ -1,6 +1,6 @@
+import { mergeClasses } from '@expo/styleguide';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { twMerge } from 'tailwind-merge';
 
 type Props = {
   href: string;
@@ -12,7 +12,7 @@ export function SidebarLink({ href, text }: Props) {
   return (
     <Link
       href={href}
-      className={twMerge(
+      className={mergeClasses(
         'heading-xl font-medium flex items-center gap-2 transition-colors hover:underline',
         pathname === href && 'text-link'
       )}>

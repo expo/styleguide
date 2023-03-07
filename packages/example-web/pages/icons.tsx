@@ -1,14 +1,13 @@
-import { Logo, DocsLogo, SnackLogo, WordMarkLogo } from '@expo/styleguide';
+import { Logo, DocsLogo, SnackLogo, WordMarkLogo, mergeClasses } from '@expo/styleguide';
 import * as StyleguideIcons from '@expo/styleguide-icons';
 import { createElement } from 'react';
-import { twMerge } from 'tailwind-merge';
 
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
 
 type IconNames = keyof typeof StyleguideIcons;
 
-const iconClasses = twMerge(
+const iconClasses = mergeClasses(
   'flex flex-col items-center justify-center py-4 px-2 gap-1 border border-transparent rounded-md transition',
   'hocus:border-secondary hocus:shadow-xs hover:cursor-pointer',
   'active:scale-98'
