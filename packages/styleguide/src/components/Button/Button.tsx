@@ -1,9 +1,9 @@
 import React, { cloneElement } from 'react';
 import type { ReactElement } from 'react';
-import { twMerge } from 'tailwind-merge';
 
 import { ButtonBase, ButtonBaseProps } from './ButtonBase';
 import { titleCase } from './helpers';
+import { mergeClasses } from '../../helpers/mergeClasses';
 import { LinkBase, LinkBaseProps } from '../Link';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
@@ -43,39 +43,39 @@ function getSizeClasses(size: ButtonSize) {
 function getThemeClasses(theme: ButtonTheme, disabled = false) {
   switch (theme) {
     case 'primary':
-      return twMerge(
+      return mergeClasses(
         'border-button-primary bg-button-primary text-button-primary shadow-xs',
         !disabled && 'hocus:bg-button-primary-hover active:scale-98',
         disabled && 'bg-button-primary-disabled border-button-primary-disabled text-button-primary-disabled'
       );
     case 'primary-destructive':
-      return twMerge(
+      return mergeClasses(
         'border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive shadow-xs',
         !disabled && 'hocus:bg-button-primary-destructive-hover active:scale-98',
         disabled &&
           'bg-button-primary-destructive-disabled border-button-primary-destructive-disabled text-button-primary-destructive-disabled'
       );
     case 'secondary':
-      return twMerge(
+      return mergeClasses(
         'border-button-secondary bg-button-secondary text-button-secondary shadow-xs',
         !disabled && 'hocus:bg-button-secondary-hover active:scale-98',
         disabled && 'bg-button-secondary-disabled border-button-secondary-disabled text-button-secondary-disabled'
       );
     case 'secondary-destructive':
-      return twMerge(
+      return mergeClasses(
         'border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive shadow-xs',
         !disabled && 'hocus:bg-button-secondary-destructive-hover active:scale-98',
         disabled &&
           'bg-button-secondary-destructive-disabled border-button-secondary-destructive-disabled text-button-secondary-destructive-disabled'
       );
     case 'tertiary':
-      return twMerge(
+      return mergeClasses(
         'border-button-tertiary bg-button-tertiary text-button-tertiary shadow-none',
         !disabled && 'hocus:bg-button-tertiary-hover active:scale-98',
         disabled && 'bg-button-tertiary-disabled border-button-tertiary-disabled text-button-tertiary-disabled'
       );
     case 'quaternary':
-      return twMerge(
+      return mergeClasses(
         'border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none',
         !disabled && 'hocus:bg-button-quaternary-hover active:scale-98',
         disabled && 'bg-button-quaternary-disabled border-button-quaternary-disabled text-button-quaternary-disabled'
@@ -128,7 +128,7 @@ function isIconElement(element: ReactElement) {
 function getIconProps(element: ReactElement, classNames: string) {
   return {
     ...element.props,
-    className: twMerge(classNames, element.props.className),
+    className: mergeClasses(classNames, element.props.className),
   };
 }
 
@@ -152,13 +152,13 @@ export const Button = (props: ButtonProps) => {
   const isRightSlotIcon = rightSlot && isIconElement(rightSlot);
   const iconClasses =
     (isLeftSlotIcon || isRightSlotIcon) &&
-    twMerge(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
+    mergeClasses(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
 
   return (
     <Element
       href={href}
-      className={twMerge(
-        `inline-flex border rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
+      className={mergeClasses(
+        `inline-flex border border-solid rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
         getSizeClasses(size),
         getThemeClasses(theme, disabled),
         disabled && 'cursor-default opacity-80 pointer-event-none',
@@ -169,7 +169,7 @@ export const Button = (props: ButtonProps) => {
       {...rest}>
       {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
       {children && (
-        <span className={twMerge('flex self-center text-inherit leading-none', href && 'select-none')}>
+        <span className={mergeClasses('flex self-center text-inherit leading-none', href && 'select-none')}>
           {typeof children === 'string' ? titleCase(children) : children}
         </span>
       )}
