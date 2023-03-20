@@ -344,6 +344,16 @@ const expoTailwindConfig = {
       scale: {
         98: '.98',
       },
+      gridTemplateColumns: {
+        'auto-min-1': 'auto',
+        'auto-min-2': 'minmax(min-content, auto) min-content',
+        'auto-min-3': 'minmax(min-content, auto) repeat(2, min-content)',
+        'auto-min-4': 'minmax(min-content, auto) repeat(3, min-content)',
+        'auto-min-5': 'minmax(min-content, auto) repeat(4, min-content)',
+        'auto-min-6': 'minmax(min-content, auto) repeat(5, min-content)',
+        'auto-min-7': 'minmax(min-content, auto) repeat(6, min-content)',
+        'auto-min-8': 'minmax(min-content, auto) repeat(7, min-content)',
+      },
     },
   },
   corePlugins: {
