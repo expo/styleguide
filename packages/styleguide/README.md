@@ -11,21 +11,19 @@ Expo's styleguide and components for use on the web.
 2. Import global CSS files from the package in your JS(X)/TS(X) code:
    ```jsx
    import "@expo/styleguide/dist/expo-theme.css";
-   import "@expo/styleguide/dist/global.css";
    ```
    or import it the main stylesheet file:
    ```css
    @import "@expo/styleguide/dist/expo-theme.css";
-   @import "@expo/styleguide/dist/global.css";
    ```
 
 ### Tailwind theme
 
 For the Styleguide we use our custom Tailwind theme, which is based on the default TW theme, with the following differences:
-* only valid media screen scopes are: `small:`, `medium:` and `large:`
+* only valid media screen scopes are: `xs:`, `sm:`, `md:`, `lg:` and `xl:`
 * there is a custom `hocus:` scope which is a shorthand for hover and focus states
 * typography elements are predefined as a `heading-[size]` styles sets
-* `icon-[size]` are custom classes defined for icons sizing 
+* `icon-[size]` are custom component classes defined for icons sizing 
 
 ## Development
 

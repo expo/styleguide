@@ -7,6 +7,5 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     '../../node_modules/@expo/styleguide/dist/**/*.{js,ts,jsx,tsx}',
   ],
-  plugins: [],
   ...expoTheme,
 };
