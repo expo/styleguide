@@ -330,9 +330,15 @@ const expoTailwindConfig = {
       },
     },
     screens: {
-      small: '400px',
-      medium: '900px',
-      large: '1200px',
+      xs: '340px',
+      sm: '420px',
+      'sm-gutters': '468px',
+      md: '740px',
+      'md-gutters': '788px',
+      lg: '960px',
+      'lg-gutters': '1008px',
+      xl: '1200px',
+      'xl-gutters': '1248px',
     },
     extend: {
       height: {
@@ -354,15 +360,49 @@ const expoTailwindConfig = {
         'auto-min-7': 'minmax(min-content, auto) repeat(6, min-content)',
         'auto-min-8': 'minmax(min-content, auto) repeat(7, min-content)',
       },
+      transitionDuration: {
+        default: '150ms',
+      },
     },
   },
   corePlugins: {
     fontFamily: false,
   },
   plugins: [
-    plugin(({ addVariant, matchUtilities, theme }) => {
+    plugin(({ addComponents, addVariant, matchUtilities, theme }) => {
       addVariant('hocus', ['&:hover', '&:focus-visible']);
       matchUtilities({ heading: (value) => value }, { values: theme('heading') });
+      addComponents({
+        '.icon-2xs': {
+          height: theme('height.3'),
+          width: theme('width.3'),
+        },
+        '.icon-xs': {
+          // note(simek): figure out how to access `h-3.5` using path
+          height: '0.875rem',
+          width: '0.875rem',
+        },
+        '.icon-sm': {
+          height: theme('height.4'),
+          width: theme('width.4'),
+        },
+        '.icon-md': {
+          height: theme('height.5'),
+          width: theme('width.5'),
+        },
+        '.icon-lg': {
+          height: theme('height.6'),
+          width: theme('width.6'),
+        },
+        '.icon-xl': {
+          height: theme('height.8'),
+          width: theme('width.8'),
+        },
+        '.icon-2xl': {
+          height: theme('height.10'),
+          width: theme('width.10'),
+        },
+      });
     }),
   ],
 };

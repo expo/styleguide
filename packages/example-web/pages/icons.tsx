@@ -20,7 +20,7 @@ export default function Icons() {
     <>
       <H1>Icons</H1>
       <H3>Logs</H3>
-      <div className="mt-8 grid grid-cols-1 gap-2 large:grid-cols-6 medium:grid-cols-4 small:grid-cols-3 ">
+      <div className="mt-8 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 ">
         {[
           { name: 'WordMarkLogo', element: WordMarkLogo },
           { name: 'Logo', element: Logo },
@@ -34,7 +34,7 @@ export default function Icons() {
         ))}
       </div>
       <H3>Icon set</H3>
-      <div className="mt-8 grid grid-cols-1 gap-2 large:grid-cols-6 medium:grid-cols-4 small:grid-cols-3 ">
+      <div className="mt-8 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 ">
         {iconNames.map((iconName) => (
           <div className={iconClasses} onClick={() => copy(iconName)} key={iconName}>
             {createElement(StyleguideIcons[iconName], { className: 'icon-xl text-default' })}
