@@ -1,4 +1,4 @@
-const STOPWORDS = 'a an and at but by for in nor of on or so the to up yet'.split(' ');
+const STOPWORDS = 'a an and at but by for in nor of on or out so the to up with yet'.split(' ');
 
 type Options = {
   keepSpaces?: boolean | undefined;
