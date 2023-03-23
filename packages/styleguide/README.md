@@ -16,6 +16,7 @@ Expo's styleguide and components for use on the web.
    ```css
    @import "@expo/styleguide/dist/expo-theme.css";
    ```
+3. Add `'./node_modules/@expo/styleguide/dist/**/*.{js,ts,jsx,tsx}'` to the Tailwind `content` paths.
 
 ### Tailwind theme
 
