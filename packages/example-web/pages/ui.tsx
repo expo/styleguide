@@ -143,7 +143,8 @@ export default function UI() {
           theme="quaternary"
           className="hocus:bg-palette-yellow2 hocus:border-palette-yellow6"
           leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}
-          testID="test-button">
+          testID="test-button"
+          skipCapitalization>
           Check status
         </Button>
         <Button
@@ -151,7 +152,8 @@ export default function UI() {
           theme="quaternary"
           className="ml-4 hocus:bg-palette-yellow2 hocus:border-palette-yellow6"
           leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}
-          testID="test-link">
+          testID="test-link"
+          skipCapitalization>
           Check status
         </Button>
       </DemoTile>

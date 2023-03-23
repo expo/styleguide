@@ -21,6 +21,7 @@ export type ButtonProps = ButtonBaseProps &
     theme?: ButtonTheme;
     leftSlot?: ReactElement;
     rightSlot?: ReactElement;
+    skipCapitalization?: boolean;
   };
 
 function getSizeClasses(size: ButtonSize) {
@@ -137,6 +138,7 @@ export const Button = (props: ButtonProps) => {
     children,
     size = 'sm',
     theme = 'primary',
+    skipCapitalization = false,
     href,
     disabled,
     className,
@@ -170,7 +172,7 @@ export const Button = (props: ButtonProps) => {
       {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
       {children && (
         <span className={mergeClasses('flex self-center text-inherit leading-none', href && 'select-none')}>
-          {typeof children === 'string' ? titleCase(children) : children}
+          {typeof children === 'string' && !skipCapitalization ? titleCase(children) : children}
         </span>
       )}
       {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
