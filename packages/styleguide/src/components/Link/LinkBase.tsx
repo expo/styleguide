@@ -34,3 +34,5 @@ export const LinkBase = forwardRef<HTMLAnchorElement, LinkBaseProps>(
     );
   }
 );
+
+LinkBase.displayName = 'LinkBase';

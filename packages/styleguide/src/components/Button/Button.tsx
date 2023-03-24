@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react';
+import React, { cloneElement, forwardRef } from 'react';
 import type { ReactElement } from 'react';
 
 import { ButtonBase, ButtonBaseProps } from './ButtonBase';
@@ -133,49 +133,54 @@ function getIconProps(element: ReactElement, classNames: string) {
   };
 }
 
-export const Button = (props: ButtonProps) => {
-  const {
-    children,
-    size = 'sm',
-    theme = 'primary',
-    skipCapitalization = false,
-    href,
-    disabled,
-    className,
-    leftSlot,
-    rightSlot,
-    openInNewTab,
-    ...rest
-  } = props;
+export const Button = forwardRef<HTMLButtonElement | HTMLLinkElement, ButtonProps>(
+  (
+    {
+      children,
+      size = 'sm',
+      theme = 'primary',
+      skipCapitalization = false,
+      href,
+      disabled,
+      className,
+      leftSlot,
+      rightSlot,
+      openInNewTab,
+      ...rest
+    },
+    ref
+  ) => {
+    const Element = href ? LinkBase : ButtonBase;
 
-  const Element = href ? LinkBase : ButtonBase;
+    const isLeftSlotIcon = leftSlot && isIconElement(leftSlot);
+    const isRightSlotIcon = rightSlot && isIconElement(rightSlot);
+    const iconClasses =
+      (isLeftSlotIcon || isRightSlotIcon) &&
+      mergeClasses(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
 
-  const isLeftSlotIcon = leftSlot && isIconElement(leftSlot);
-  const isRightSlotIcon = rightSlot && isIconElement(rightSlot);
-  const iconClasses =
-    (isLeftSlotIcon || isRightSlotIcon) &&
-    mergeClasses(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
+    return (
+      <Element
+        href={href}
+        className={mergeClasses(
+          `inline-flex border border-solid rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
+          getSizeClasses(size),
+          getThemeClasses(theme, disabled),
+          disabled && 'cursor-default opacity-80 pointer-event-none',
+          className
+        )}
+        disabled={disabled}
+        {...(href ? { openInNewTab } : {})}
+        {...rest}>
+        {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
+        {children && (
+          <span className={mergeClasses('flex self-center text-inherit leading-none', href && 'select-none')}>
+            {typeof children === 'string' && !skipCapitalization ? titleCase(children) : children}
+          </span>
+        )}
+        {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
+      </Element>
+    );
+  }
+);
 
-  return (
-    <Element
-      href={href}
-      className={mergeClasses(
-        `inline-flex border border-solid rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
-        getSizeClasses(size),
-        getThemeClasses(theme, disabled),
-        disabled && 'cursor-default opacity-80 pointer-event-none',
-        className
-      )}
-      disabled={disabled}
-      {...(href ? { openInNewTab } : {})}
-      {...rest}>
-      {isLeftSlotIcon ? cloneElement(leftSlot, getIconProps(leftSlot, iconClasses)) : leftSlot}
-      {children && (
-        <span className={mergeClasses('flex self-center text-inherit leading-none', href && 'select-none')}>
-          {typeof children === 'string' && !skipCapitalization ? titleCase(children) : children}
-        </span>
-      )}
-      {isRightSlotIcon ? cloneElement(rightSlot, getIconProps(rightSlot, iconClasses)) : rightSlot}
-    </Element>
-  );
-};
+Button.displayName = 'Button';
