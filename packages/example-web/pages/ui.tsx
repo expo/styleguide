@@ -5,7 +5,9 @@ import {
   ArrowUpRightIcon,
   BookClosedIcon,
   Diamond01Icon,
+  DotsHorizontalIcon,
   EasMetadataIcon,
+  EyeOffIcon,
   PaletteIcon,
   Trash01Icon,
 } from '@expo/styleguide-icons';
@@ -111,6 +113,19 @@ export default function UI() {
           Delete
         </Button>
       </DemoTile>
+      <H3>Icon Buttons</H3>
+      <DemoTile title="default size">
+        <Button href="#" theme="secondary" leftSlot={<AlignTopArrow01Icon />} />
+      </DemoTile>
+      <DemoTile title="medium">
+        <Button theme="primary-destructive" size="md" leftSlot={<Trash01Icon />} />
+      </DemoTile>
+      <DemoTile title="xs">
+        <Button theme="secondary-destructive" size="xs" leftSlot={<EyeOffIcon />} />
+      </DemoTile>
+      <DemoTile title="2xl">
+        <Button theme="quaternary" size="2xl" leftSlot={<DotsHorizontalIcon />} />
+      </DemoTile>
       <H3>Customized Buttons</H3>
       <DemoTile title="icon with custom color">
         <Button theme="secondary" size="lg" leftSlot={<Diamond01Icon className="text-palette-pink10" />}>
@@ -156,6 +171,16 @@ export default function UI() {
           skipCapitalization>
           Check status
         </Button>
+      </DemoTile>
+      <DemoTile title="forced dark theme">
+        <span className="dark-theme flex bg-screen p-4 rounded-lg gap-4">
+          <Button theme="secondary" className="dark-theme">
+            Dark button
+          </Button>
+          <Button href="#" theme="secondary-destructive" className="dark-theme">
+            Dark button #2
+          </Button>
+        </span>
       </DemoTile>
     </>
   );

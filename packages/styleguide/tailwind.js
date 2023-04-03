@@ -344,6 +344,9 @@ const expoTailwindConfig = {
       height: {
         15: '3.75rem',
       },
+      width: {
+        15: '3.75rem',
+      },
       opacity: {
         inherit: 'inherit',
       },
@@ -363,6 +366,18 @@ const expoTailwindConfig = {
       transitionDuration: {
         default: '150ms',
       },
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            sm: null,
+            base: null,
+            lg: null,
+            xl: null,
+            '2xl': null,
+            invert: null,
+          },
+        },
+      }),
     },
   },
   corePlugins: {
@@ -404,6 +419,7 @@ const expoTailwindConfig = {
         },
       });
     }),
+    require('@tailwindcss/typography'),
   ],
 };
 

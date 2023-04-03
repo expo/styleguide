@@ -118,6 +118,23 @@ function getThemedIconClasses(theme: ButtonTheme) {
   }
 }
 
+function getButtonIconClasses(size: ButtonSize) {
+  switch (size) {
+    case 'xs':
+      return 'px-0 w-8 justify-center items-center';
+    case 'sm':
+      return 'px-0 w-9 justify-center items-center';
+    case 'md':
+      return 'px-0 w-10 justify-center items-center';
+    case 'lg':
+      return 'px-0 w-11 justify-center items-center';
+    case 'xl':
+      return 'px-0 w-12 justify-center items-center';
+    case '2xl':
+      return 'px-0 w-15 justify-center items-center';
+  }
+}
+
 function isIconElement(element: ReactElement) {
   if (React.isValidElement(element)) {
     // @ts-ignore React Portal did not have `displayName` prop, but it is a valid element
@@ -157,6 +174,7 @@ export const Button = forwardRef<HTMLButtonElement | HTMLLinkElement, ButtonProp
     const iconClasses =
       (isLeftSlotIcon || isRightSlotIcon) &&
       mergeClasses(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
+    const isSingleIconButton = (leftSlot || rightSlot) && !children;
 
     return (
       <Element
@@ -165,6 +183,7 @@ export const Button = forwardRef<HTMLButtonElement | HTMLLinkElement, ButtonProp
           `inline-flex border border-solid rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
           getSizeClasses(size),
           getThemeClasses(theme, disabled),
+          isSingleIconButton && getButtonIconClasses(size),
           disabled && 'cursor-default opacity-80 pointer-event-none',
           className
         )}
