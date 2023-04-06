@@ -10,11 +10,17 @@ export type LinkBaseProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export const LinkBase = forwardRef<HTMLAnchorElement, LinkBaseProps>(
   ({ children, testID, href, openInNewTab, onClick, target, disabled, rel, ...rest }, ref) => {
-    if (!href) return null;
-
     if (disabled) {
       return (
         <a ref={ref} data-testid={testID} {...rest}>
+          {children}
+        </a>
+      );
+    }
+
+    if (!href || href.startsWith('#')) {
+      return (
+        <a href={href} ref={ref} onClick={onClick} data-testid={testID} {...rest}>
           {children}
         </a>
       );

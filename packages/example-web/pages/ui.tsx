@@ -68,6 +68,9 @@ export default function UI() {
           LinkBase
         </LinkBase>
       </DemoTile>
+      <DemoTile title="no href">
+        <LinkBase>LinkBase</LinkBase>
+      </DemoTile>
       <H3>Link</H3>
       <DemoTile title="default link">
         <Link href="#">Link</Link>
