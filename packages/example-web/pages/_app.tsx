@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@expo/styleguide';
-import { Inter, Fira_Code } from '@next/font/google';
 import type { AppProps } from 'next/app';
+import { Inter, Fira_Code } from 'next/font/google';
 import Head from 'next/head';
 
 import { Sidebar } from '@/components/Sidebar';
@@ -11,11 +11,13 @@ import 'public/global.css';
 export const regularFont = Inter({
   variable: '--inter-font',
   display: 'swap',
+  subsets: ['latin'],
 });
 
 export const monospaceFont = Fira_Code({
   weight: '400',
   display: 'swap',
+  subsets: ['latin'],
 });
 
 export default function App({ Component, pageProps }: AppProps) {

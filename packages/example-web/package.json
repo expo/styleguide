@@ -9,23 +9,22 @@
     "clean": "rimraf .next"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
-    "@types/node": "18.13.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.10",
-    "next": "13.1.6",
+    "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwind-merge": "^1.12.0",
-    "typescript": "4.9.5"
+    "tailwind-merge": "^1.12.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.1.6",
-    "autoprefixer": "^10.4.13",
-    "eslint-config-next": "^13.1.6",
-    "postcss": "^8.4.21",
-    "rimraf": "^4.1.2",
-    "tailwindcss": "^3.2.7"
+    "@next/bundle-analyzer": "^13.3.0",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.14",
+    "eslint-config-next": "^13.3.0",
+    "postcss": "^8.4.22",
+    "rimraf": "^5.0.0",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.4"
   },
   "eslintConfig": {
     "extends": ["universe/web", "next/core-web-vitals"],
