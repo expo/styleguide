@@ -151,15 +151,6 @@ const expoTailwindConfig = {
 
       ...palette,
     },
-    backgroundImage: {
-      'project-blue': 'var(--expo-theme-project-blue)',
-      'project-green': 'var(--expo-theme-project-green)',
-      'project-yellow': 'var(--expo-theme-project-yellow)',
-      'project-orange': 'var(--expo-theme-project-orange)',
-      'project-red': 'var(--expo-theme-project-red)',
-      'project-pink': 'var(--expo-theme-project-pink)',
-      'project-purple': 'var(--expo-theme-project-purple)',
-    },
     borderColor: {
       default: 'var(--expo-theme-border-default)',
       secondary: 'var(--expo-theme-border-secondary)',

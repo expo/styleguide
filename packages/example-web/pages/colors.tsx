@@ -130,25 +130,6 @@ function getPaletteClasses(colorName: string) {
   }
 }
 
-function getProjectGradientClass(color: string) {
-  switch (color) {
-    case 'red':
-      return 'bg-project-red';
-    case 'orange':
-      return 'bg-project-orange';
-    case 'yellow':
-      return 'bg-project-yellow';
-    case 'green':
-      return 'bg-project-green';
-    case 'blue':
-      return 'bg-project-blue';
-    case 'purple':
-      return 'bg-project-purple';
-    case 'pink':
-      return 'bg-project-pink';
-  }
-}
-
 export default function Colors() {
   const [, copy] = useCopy();
   return (
@@ -174,22 +155,6 @@ export default function Colors() {
                 </p>
               </div>
             ))}
-          </div>
-        ))}
-      </div>
-      <H3>Project gradients</H3>
-      <div className="flex gap-4 mt-8">
-        {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'].map((color, index) => (
-          <div className="flex flex-col gap-1 items-center" key={index}>
-            <div
-              className={mergeClasses(
-                'w-16 h-16 mb-1 transition',
-                'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
-                getProjectGradientClass(color)
-              )}
-              onClick={() => copy(`bg-project-${color}`)}
-            />
-            <p className="text-3xs text-secondary text-center">bg-project-{color}</p>
           </div>
         ))}
       </div>

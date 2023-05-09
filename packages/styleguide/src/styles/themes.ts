@@ -115,15 +115,6 @@ export const theme = {
       },
     },
   },
-  project: {
-    blue: 'var(--expo-theme-project-blue)',
-    green: 'var(--expo-theme-project-green)',
-    yellow: 'var(--expo-theme-project-yellow)',
-    orange: 'var(--expo-theme-project-orange)',
-    red: 'var(--expo-theme-project-red)',
-    pink: 'var(--expo-theme-project-pink)',
-    purple: 'var(--expo-theme-project-purple)',
-  },
   palette: {
     white: 'var(--expo-color-white)',
     black: 'var(--expo-color-black)',

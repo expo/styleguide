@@ -116,15 +116,6 @@
   --expo-theme-button-secondary-destructive-disabled-border: var(--red5);
   --expo-theme-button-secondary-destructive-disabled-text: var(--red8);
 
-  /* Project icon backgrounds */
-  --expo-theme-project-blue: linear-gradient(#81b2eb, #6299d9);
-  --expo-theme-project-green: linear-gradient(#6eb87f, #54a767);
-  --expo-theme-project-yellow: linear-gradient(#edcd5f, #e5c145);
-  --expo-theme-project-orange: linear-gradient(#eb9f6a, #d9864c);
-  --expo-theme-project-red: linear-gradient(#eb7171, #d95757);
-  --expo-theme-project-pink: linear-gradient(#eb8dc5, #d977b2);
-  --expo-theme-project-purple: linear-gradient(#a687e0, #8a66cc);
-
   /* Light shadows */
   --expo-theme-shadows-none: 0 0 transparent;
   --expo-theme-shadows-xs: 0 1px 3px rgba(0, 0, 0, 0.025),
@@ -238,15 +229,6 @@
   --expo-theme-button-secondary-destructive-disabled-background: var(--red2);
   --expo-theme-button-secondary-destructive-disabled-border: var(--red6);
   --expo-theme-button-secondary-destructive-disabled-text: var(--red10);
-
-  /* Project icon backgrounds */
-  --expo-theme-project-blue: linear-gradient(#537296, #395a80);
-  --expo-theme-project-green: linear-gradient(#4b7d56, #32633d);
-  --expo-theme-project-yellow: linear-gradient(#a67f35, #8a6319);
-  --expo-theme-project-orange: linear-gradient(#ab744d, #8c5731);
-  --expo-theme-project-red: linear-gradient(#b25656, #8c3838);
-  --expo-theme-project-pink: linear-gradient(#995c81, #8a4c71);
-  --expo-theme-project-purple: linear-gradient(#715c99, #4e3973);
 
   /* Dark shadows */
   --expo-theme-shadows-none: 0 0 transparent;
