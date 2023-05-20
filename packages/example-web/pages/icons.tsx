@@ -1,4 +1,4 @@
-import { Logo, DocsLogo, SnackLogo, WordMarkLogo, mergeClasses } from '@expo/styleguide';
+import { Logo, DocsLogo, ExpoGoLogo, SnackLogo, WordMarkLogo, RouterLogo, mergeClasses } from '@expo/styleguide';
 import * as StyleguideIcons from '@expo/styleguide-icons';
 import { createElement } from 'react';
 
@@ -25,6 +25,8 @@ export default function Icons() {
           { name: 'WordMarkLogo', element: WordMarkLogo },
           { name: 'Logo', element: Logo },
           { name: 'DocsLogo', element: DocsLogo },
+          { name: 'ExpoGoLogo', element: ExpoGoLogo },
+          { name: 'RouterLogo', element: RouterLogo },
           { name: 'SnackLogo', element: SnackLogo },
         ].map((logo) => (
           <div className={iconClasses} onClick={() => copy(logo.name)} key={logo.name}>
