@@ -104,6 +104,32 @@ const outlineSVGOConfig = [
   },
 ];
 
+/** @type {import('svgo').PluginConfig[]} */
+const duotoneSVGOConfig = [
+  {
+    name: 'removeDimensions',
+    active: true,
+  },
+  {
+    name: 'sortAttrs',
+    active: true,
+  },
+  {
+    name: 'removeAttrs',
+    params: {
+      attrs: 'stroke',
+    },
+  },
+  {
+    name: 'addAttributesToSVGElement',
+    params: {
+      attribute: {
+        stroke: 'currentColor',
+      },
+    },
+  },
+];
+
 /** @type {import('@figma-export/types').FigmaExportRC} */
 module.exports = {
   commands: [
@@ -113,6 +139,15 @@ module.exports = {
         fileId,
         onlyFromPages: ['outline'],
         transformers: [svgo({ multipass: true, plugins: outlineSVGOConfig })],
+        outputters,
+      },
+    ],
+    [
+      'components',
+      {
+        fileId,
+        onlyFromPages: ['duotone'],
+        transformers: [svgo({ multipass: true, plugins: duotoneSVGOConfig })],
         outputters,
       },
     ],

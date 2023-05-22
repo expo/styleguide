@@ -19,7 +19,7 @@ export default function Icons() {
   return (
     <>
       <H1>Icons</H1>
-      <H3>Logs</H3>
+      <H3>Logos</H3>
       <div className="mt-8 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 ">
         {[
           { name: 'WordMarkLogo', element: WordMarkLogo },
