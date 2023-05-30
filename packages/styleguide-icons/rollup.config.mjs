@@ -1,3 +1,4 @@
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import copy from 'rollup-plugin-copy';
 
@@ -8,8 +9,8 @@ let config = [
       dir: 'dist',
       format: 'cjs',
     },
-    plugins: [typescript()],
-    external: ['react'],
+    plugins: [typescript(), terser()],
+    external: ['react', 'tailwind-merge'],
   },
 ];
 

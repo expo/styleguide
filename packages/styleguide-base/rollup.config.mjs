@@ -1,3 +1,4 @@
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
 const config = [
@@ -9,6 +10,7 @@ const config = [
     },
     plugins: [
       typescript(),
+      terser()
     ],
     external: ['@radix-ui/colors'],
   },
