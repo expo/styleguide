@@ -1,3 +1,4 @@
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
 const config = [
@@ -7,7 +8,7 @@ const config = [
       dir: 'dist',
       format: 'cjs',
     },
-    plugins: [typescript()],
+    plugins: [typescript(), terser()],
     external: ['react', 'react-native-svg'],
   },
 ];

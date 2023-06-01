@@ -1,3 +1,4 @@
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import copy from 'rollup-plugin-copy';
 
@@ -10,6 +11,7 @@ const config = [
     },
     plugins: [
       typescript(),
+      terser(),
       copy({
         targets: [
           { src: './src/styles/expo-theme.css', dest: 'dist' },
