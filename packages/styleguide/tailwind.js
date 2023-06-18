@@ -332,6 +332,19 @@ const expoTailwindConfig = {
       'xl-gutters': '1248px',
     },
     extend: {
+      stroke: {
+        'bg-default': 'var(--expo-theme-background-default)',
+        'bg-screen': 'var(--expo-theme-background-screen)',
+        'bg-subtle': 'var(--expo-theme-background-subtle)',
+        'bg-element': 'var(--expo-theme-background-element)',
+        'bg-hover': 'var(--expo-theme-background-hover)',
+        'bg-selected': 'var(--expo-theme-background-selected)',
+        'bg-overlay': 'var(--expo-theme-background-overlay)',
+        'bg-success': 'var(--expo-theme-background-success)',
+        'bg-warning': 'var(--expo-theme-background-warning)',
+        'bg-danger': 'var(--expo-theme-background-danger)',
+        'bg-info': 'var(--expo-theme-background-info)',
+      },
       height: {
         15: '3.75rem',
       },
