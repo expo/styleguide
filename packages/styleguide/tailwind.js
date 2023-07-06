@@ -102,6 +102,8 @@ const palette = {
 };
 
 const expoTailwindConfig = {
+  safelist: ['icon-md', 'text-icon-default'],
+  darkMode: ['class', '[class="dark-theme"]'],
   theme: {
     borderRadius: {
       none: 0,
@@ -345,6 +347,21 @@ const expoTailwindConfig = {
         'bg-danger': 'var(--expo-theme-background-danger)',
         'bg-info': 'var(--expo-theme-background-info)',
       },
+      backgroundColor: {
+        'app-cyan': '#07c0cb',
+        'app-light-blue': '#1e92c4',
+        'app-dark-blue': '#0b67af',
+        'app-indigo': '#4b50b2',
+        'app-purple': '#8945a3',
+        'app-pink': '#c04891',
+        'app-orange': '#e96d3c',
+        'app-gold': '#f38f2f',
+        'app-yellow': '#eebc01',
+        'app-lime': '#aabd04',
+        'app-light-green': '#6aa72a',
+        'app-dark-green': '#3a8e39',
+        transparent: 'transparent',
+      },
       height: {
         15: '3.75rem',
       },
@@ -356,6 +373,9 @@ const expoTailwindConfig = {
       },
       scale: {
         98: '.98',
+        1025: '1.025',
+        175: '1.75',
+        200: '2.0',
       },
       gridTemplateColumns: {
         'auto-min-1': 'auto',
@@ -420,6 +440,12 @@ const expoTailwindConfig = {
         '.icon-2xl': {
           height: theme('height.10'),
           width: theme('width.10'),
+        },
+        '.break-words': { 'word-break': 'break-word' },
+        '.pause-animation': { 'animation-play-state': 'paused' },
+        '.transform-box': { 'transform-box': 'fill-box' },
+        '.backface-hidden': {
+          'backface-visibility': 'hidden',
         },
       });
     }),
