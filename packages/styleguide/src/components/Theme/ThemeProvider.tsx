@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useEffect, useState, useContext, PropsWithChildren } from 'react';
 
 import { getInitialColorMode, isLocalStorageAvailable } from './BlockingSetInitialColorMode';
 
@@ -15,18 +15,29 @@ const ThemeContext = createContext({
   themeName: Themes.AUTO,
 });
 
-type ThemeProviderProps = {
-  children: ReactNode;
-  disabled?: boolean;
-};
+const LOCAL_STORAGE_KEY = 'data-expo-theme';
 
-export function ThemeProvider(props: ThemeProviderProps) {
-  const { children, disabled = false } = props;
-  const initialTheme = (process as any).browser ? (document.documentElement.dataset.expoTheme as Themes) : Themes.AUTO;
+type ThemeProviderProps = PropsWithChildren<{
+  disabled?: boolean;
+}>;
+
+function getInitialTheme() {
+  if (isLocalStorageAvailable()) {
+    return window.localStorage.getItem(LOCAL_STORAGE_KEY) as Themes;
+  } else if ((process as any).browser) {
+    return document.documentElement.dataset.expoTheme as Themes;
+  }
+  return Themes.AUTO;
+}
+
+export function ThemeProvider({ children, disabled = false }: ThemeProviderProps) {
+  const initialTheme = getInitialTheme();
   const [themeName, setThemeName] = useState(disabled ? Themes.LIGHT : initialTheme);
 
   useEffect(function didMount() {
     if (disabled) return;
+
+    setDocumentTheme(initialTheme);
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -38,7 +49,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
 
     if (isLocalStorageAvailable()) {
-      const themePreference = window.localStorage.getItem('data-expo-theme');
+      const themePreference = window.localStorage.getItem(LOCAL_STORAGE_KEY);
 
       if (themePreference === Themes.LIGHT || themePreference === Themes.DARK) {
         setThemeName(themePreference);
@@ -71,7 +82,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
 
   function onThemeChange(event: MediaQueryListEvent | MediaQueryList) {
     if (isLocalStorageAvailable()) {
-      const themePreference = window.localStorage.getItem('data-expo-theme');
+      const themePreference = window.localStorage.getItem(LOCAL_STORAGE_KEY);
 
       if (!themePreference) {
         if (event.matches) {
@@ -87,7 +98,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
 
   function setDarkMode() {
     if (isLocalStorageAvailable()) {
-      window.localStorage.setItem('data-expo-theme', Themes.DARK);
+      window.localStorage.setItem(LOCAL_STORAGE_KEY, Themes.DARK);
     }
     setDocumentTheme(Themes.DARK);
     setThemeName(Themes.DARK);
@@ -95,7 +106,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
 
   function setLightMode() {
     if (isLocalStorageAvailable()) {
-      window.localStorage.setItem('data-expo-theme', Themes.LIGHT);
+      window.localStorage.setItem(LOCAL_STORAGE_KEY, Themes.LIGHT);
     }
     setDocumentTheme(Themes.LIGHT);
     setThemeName(Themes.LIGHT);
@@ -103,7 +114,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
 
   function setAutoMode() {
     if (isLocalStorageAvailable()) {
-      window.localStorage.removeItem('data-expo-theme');
+      window.localStorage.removeItem(LOCAL_STORAGE_KEY);
     }
 
     const themeName = getInitialColorMode() as Themes;
