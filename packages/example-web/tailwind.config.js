@@ -1,5 +1,7 @@
 const expoTheme = require('@expo/styleguide/tailwind');
 
+console.log(expoTheme);
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,5 +9,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     '../../node_modules/@expo/styleguide/dist/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: ['class', '[class="dark-theme"]'],
   ...expoTheme,
 };

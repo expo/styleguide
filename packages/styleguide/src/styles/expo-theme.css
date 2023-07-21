@@ -254,3 +254,11 @@
     --expo-theme-heading-base-font-size: 16px;
   }
 }
+
+.expo-duotone-icon-opacity {
+  opacity: 0.12;
+}
+
+.dark-theme .expo-duotone-icon-opacity {
+  opacity: 0.25;
+}

@@ -1,0 +1,7 @@
+.class-name-test {
+    opacity: 0.12;
+  }
+
+.dark-theme .class-name-test {
+  opacity: 0.25;
+}

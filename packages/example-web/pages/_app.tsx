@@ -7,6 +7,7 @@ import { Sidebar } from '@/components/Sidebar';
 
 import '@expo/styleguide/dist/expo-theme.css';
 import 'public/global.css';
+import '../test-css.css';
 
 export const regularFont = Inter({
   variable: '--inter-font',
