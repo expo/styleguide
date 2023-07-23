@@ -11,7 +11,9 @@ const config = [
     },
     plugins: [
       typescript(),
-      terser(),
+      terser({
+        keep_fnames: /.+ColorMode/
+      }),
       copy({
         targets: [
           { src: './src/styles/expo-theme.css', dest: 'dist' },
