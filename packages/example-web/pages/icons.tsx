@@ -5,6 +5,7 @@ import {
   SnackLogo,
   WordMarkLogo,
   RouterLogo,
+  OrbitLogo,
   mergeClasses,
   Button,
 } from '@expo/styleguide';
@@ -49,6 +50,7 @@ export default function Icons() {
           { name: 'Logo', element: Logo },
           { name: 'DocsLogo', element: DocsLogo },
           { name: 'ExpoGoLogo', element: ExpoGoLogo },
+          { name: 'OrbitLogo', element: OrbitLogo },
           { name: 'RouterLogo', element: RouterLogo },
           { name: 'SnackLogo', element: SnackLogo },
         ].map((logo) => (
