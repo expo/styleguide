@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide",
-  "version": "8.0.3",
+  "version": "8.1.0",
   "description": "Expo's styleguide components for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
