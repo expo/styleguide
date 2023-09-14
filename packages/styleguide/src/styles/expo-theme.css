@@ -19,6 +19,20 @@
   --expo-color-white: #fff;
   --expo-color-black: #000;
 
+  /* App Icon Backgrounds */
+  --expo-color-app-cyan: #07c0cb;
+  --expo-color-app-light-blue: #1e92c4;
+  --expo-color-app-dark-blue: #0b67af;
+  --expo-color-app-indigo: #4b50b2;
+  --expo-color-app-purple: #8945a3;
+  --expo-color-app-pink: #c04891;
+  --expo-color-app-orange: #e96d3c;
+  --expo-color-app-gold: #f38f2f;
+  --expo-color-app-yellow: #eebc01;
+  --expo-color-app-lime: #aabd04;
+  --expo-color-app-light-green: #6aa72a;
+  --expo-color-app-dark-green: #3a8e39;
+
   /* Backgrounds */
   --expo-theme-background-default: var(--expo-color-white);
   --expo-theme-background-screen: var(--slate1);
