@@ -5,24 +5,28 @@ import React, { useEffect, useState, Dispatch, SetStateAction } from 'react';
 
 import { BarLoader } from './BarLoader';
 import { CommandFooter } from './CommandFooter';
-import { RNDirectoryItem, RNDocsItem, ExpoDocsItem, ExpoItem } from '../Items';
-import { entries } from '../expoEntries';
-import type { ExpoItemType, RNDirectoryItemType, AlgoliaItemType, CommandMenuConfig } from '../types';
+import { RNDirectoryItem, RNDocsItem, ExpoDocsItem } from '../Items';
+import type { RNDirectoryItemType, AlgoliaItemType, CommandMenuConfig, CommandMenuSection } from '../types';
 import { getExpoDocsResults, getRNDocsResults, getDirectoryResults, getItemsAsync } from '../utils';
 
 type Props = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
   config: CommandMenuConfig;
+  customSections?: CommandMenuSection[];
 };
 
-export const CommandMenu = ({ config: { docsVersion, docsTransformUrl, disableDashboardSection }, open, setOpen }: Props) => {
+export const CommandMenu = ({
+  config: { docsVersion, docsTransformUrl },
+  open,
+  setOpen,
+  customSections = [],
+}: Props) => {
   const [initialized, setInitialized] = useState(false);
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
 
   const [expoDocsItems, setExpoDocsItems] = useState<AlgoliaItemType[]>([]);
-  const [expoItems, setExpoItems] = useState<ExpoItemType[]>([]);
   const [rnDocsItems, setRnDocsItems] = useState<AlgoliaItemType[]>([]);
   const [directoryItems, setDirectoryItems] = useState<RNDirectoryItemType[]>([]);
 
@@ -30,16 +34,15 @@ export const CommandMenu = ({ config: { docsVersion, docsTransformUrl, disableDa
   const getRNDocsItems = async () => getItemsAsync(query, getRNDocsResults, setRnDocsItems);
   const getDirectoryItems = async () => getItemsAsync(query, getDirectoryResults, setDirectoryItems);
 
-  const getExpoItems = async () => {
-    if (!disableDashboardSection) {
-      setExpoItems(entries.filter((entry) => entry.label.toLowerCase().includes(query.toLowerCase())));
-    }
-  };
-
   const dismiss = () => setOpen(false);
 
   const fetchData = (callback: () => void) => {
-    Promise.all([getExpoDocsItems(), getRNDocsItems(), getDirectoryItems(), getExpoItems()]).then(callback);
+    Promise.all([
+      getExpoDocsItems(),
+      getRNDocsItems(),
+      getDirectoryItems(),
+      ...customSections.map((section) => section.getItemsAsync(query)),
+    ]).then(callback);
   };
 
   const onQueryChange = () => {
@@ -62,7 +65,11 @@ export const CommandMenu = ({ config: { docsVersion, docsTransformUrl, disableDa
   useEffect(onMenuOpen, [open]);
   useEffect(onQueryChange, [query]);
 
-  const totalCount = expoDocsItems.length + rnDocsItems.length + directoryItems.length + expoItems.length;
+  const totalCount =
+    expoDocsItems.length +
+    rnDocsItems.length +
+    directoryItems.length +
+    customSections.reduce((acc, section) => acc + section.items.length, 0);
 
   const expoDocsGroupedItems = groupBy(
     expoDocsItems.map((expoDocsItem: AlgoliaItemType) => ({
@@ -83,6 +90,14 @@ export const CommandMenu = ({ config: { docsVersion, docsTransformUrl, disableDa
       <Command.List>
         {initialized && (
           <>
+            {customSections.map(
+              (section) =>
+                section.items.length > 0 && (
+                  <Command.Group heading={section.heading} key={section.heading}>
+                    {section.items}
+                  </Command.Group>
+                )
+            )}
             {expoDocsItems.length > 0 && (
               <Command.Group heading="Expo documentation">
                 {Object.values(expoDocsGroupedItems).map((values) =>
@@ -99,13 +114,6 @@ export const CommandMenu = ({ config: { docsVersion, docsTransformUrl, disableDa
                       />
                     ))
                 )}
-              </Command.Group>
-            )}
-            {!disableDashboardSection && expoItems.length > 0 && (
-              <Command.Group heading="Expo dashboard">
-                {expoItems.map((item: ExpoItemType) => (
-                  <ExpoItem item={item} onSelect={dismiss} key={`hit-expo-${item.url}`} query={query} />
-                ))}
               </Command.Group>
             )}
             {rnDocsItems.length > 0 && (

@@ -1,9 +1,15 @@
-import type { ComponentType } from 'react';
+import type { ReactNode } from 'react';
 
 export type CommandMenuConfig = {
   docsVersion: string;
   docsTransformUrl?: (url: string) => string;
   disableDashboardSection?: boolean;
+};
+
+export type CommandMenuSection = {
+  heading: string;
+  getItemsAsync: (query: string) => Promise<void>;
+  items: ReactNode[];
 };
 
 export type AlgoliaHighlight = {
@@ -30,12 +36,6 @@ export type AlgoliaItemType = {
     content: AlgoliaHighlight | null;
     hierarchy: AlgoliaItemHierarchy<AlgoliaHighlight>;
   };
-};
-
-export type ExpoItemType = {
-  label: string;
-  url: string;
-  Icon?: ComponentType<any>;
 };
 
 export type RNDirectoryItemType = {
