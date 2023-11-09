@@ -1,3 +1,4 @@
+import { CommandMenu, CommandMenuTrigger } from '@expo/search-ui';
 import { ButtonBase, Button, Link, LinkBase } from '@expo/styleguide';
 import type { ButtonTheme, ButtonProps } from '@expo/styleguide';
 import {
@@ -11,7 +12,7 @@ import {
   PaletteIcon,
   Trash01Icon,
 } from '@expo/styleguide-icons';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 import { DemoTile } from '@/components/DemoTile';
 import { H1, H3 } from '@/components/headers';
@@ -53,9 +54,15 @@ function ButtonRow({ theme, disabled = false }: ButtonProps) {
 }
 
 export default function UI() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <H1>UI</H1>
+      <H3>Search</H3>
+      <DemoTile title="@expo/search-ui">
+        <CommandMenu config={{ docsVersion: 'latest', disableDashboardSection: true }} open={open} setOpen={setOpen} />
+        <CommandMenuTrigger setOpen={setOpen} className="min-w-[180px]" />
+      </DemoTile>
       <H3>Link Base</H3>
       <DemoTile title="local anchor">
         <LinkBase href="#buttons">LinkBase</LinkBase>

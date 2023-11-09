@@ -1,0 +1,48 @@
+{
+  "name": "@expo/search-ui",
+  "version": "1.0.0-alpha.0",
+  "description": "Expo's common search component for use on the web.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "bundle": "rollup --config",
+    "build": "run-s clean bundle",
+    "dev": "rollup --config --watch"
+  },
+  "homepage": "https://github.com/expo/styleguide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo/styleguide.git",
+    "directory": "packages/search-ui"
+  },
+  "keywords": [
+    "expo"
+  ],
+  "author": "Expo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/expo/styleguide/issues"
+  },
+  "dependencies": {
+    "@expo/styleguide": "^8.1.0",
+    "@expo/styleguide-icons": "^1.0.3",
+    "cmdk": "^0.2.0",
+    "lodash.groupby": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/lodash.groupby": "^4.6.9",
+    "user-agent-data-types": "^0.4.2",
+    "tailwindcss": "^3.3.2"
+  },
+  "peerDependencies": {
+    "next": ">= 13",
+    "react": ">= 16"
+  },
+  "eslintConfig": {
+    "extends": "universe/web"
+  }
+}

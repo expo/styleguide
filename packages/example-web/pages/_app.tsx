@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { Sidebar } from '@/components/Sidebar';
 
 import '@expo/styleguide/dist/expo-theme.css';
+import '@expo/search-ui/dist/expo-search-ui.css';
 import 'public/global.css';
 
 export const regularFont = Inter({
