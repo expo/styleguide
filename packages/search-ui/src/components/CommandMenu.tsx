@@ -79,6 +79,58 @@ export const CommandMenu = ({
     'baseUrl'
   );
 
+  const data = [
+    expoDocsItems.length > 0 && (
+      <Command.Group heading="Expo documentation">
+        {Object.values(expoDocsGroupedItems).map((values) =>
+          values
+            .sort((a, b) => a.url.localeCompare(a.baseUrl) - b.url.localeCompare(b.baseUrl))
+            .slice(0, 6)
+            .map((item, index) => (
+              <ExpoDocsItem
+                isNested={index !== 0}
+                item={item}
+                onSelect={dismiss}
+                key={`hit-expo-docs-${item.objectID}`}
+                transformUrl={docsTransformUrl}
+              />
+            ))
+        )}
+      </Command.Group>
+    ),
+    rnDocsItems.length > 0 && (
+      <Command.Group heading="React Native documentation">
+        {rnDocsItems.map((item) => (
+          <RNDocsItem item={item} onSelect={dismiss} key={`hit-rn-docs-${item.objectID}`} />
+        ))}
+      </Command.Group>
+    ),
+    directoryItems.length > 0 && (
+      <Command.Group heading="React Native directory">
+        {directoryItems.map((item) => (
+          <RNDirectoryItem item={item} onSelect={dismiss} key={`hit-rn-dir-${item.npmPkg}`} query={query} />
+        ))}
+      </Command.Group>
+    ),
+    !loading && totalCount === 0 && (
+      <Command.Empty>
+        <p className="text-secondary text-xs">No results found.</p>
+      </Command.Empty>
+    ),
+  ];
+
+  customSections?.forEach(
+    ({ items, heading, sectionIndex }) =>
+      items.length > 0 &&
+      data.splice(
+        sectionIndex,
+        0,
+        <Command.Group heading={heading} key={heading}>
+          {items}
+        </Command.Group>
+      )
+  );
+
   return (
     <Command.Dialog open={open} onOpenChange={setOpen} label="Search Menu" shouldFilter={false}>
       <SearchSmIcon className="text-icon-secondary absolute top-[29px] left-[29px] transition-opacity duration-200" />
@@ -87,57 +139,7 @@ export const CommandMenu = ({
       </div>
       <Command.Input value={query} onValueChange={setQuery} placeholder="Search…" />
       <BarLoader isLoading={loading} />
-      <Command.List>
-        {initialized && (
-          <>
-            {customSections.map(
-              (section) =>
-                section.items.length > 0 && (
-                  <Command.Group heading={section.heading} key={section.heading}>
-                    {section.items}
-                  </Command.Group>
-                )
-            )}
-            {expoDocsItems.length > 0 && (
-              <Command.Group heading="Expo documentation">
-                {Object.values(expoDocsGroupedItems).map((values) =>
-                  values
-                    .sort((a, b) => a.url.localeCompare(a.baseUrl) - b.url.localeCompare(b.baseUrl))
-                    .slice(0, 6)
-                    .map((item, index) => (
-                      <ExpoDocsItem
-                        isNested={index !== 0}
-                        item={item}
-                        onSelect={dismiss}
-                        key={`hit-expo-docs-${item.objectID}`}
-                        transformUrl={docsTransformUrl}
-                      />
-                    ))
-                )}
-              </Command.Group>
-            )}
-            {rnDocsItems.length > 0 && (
-              <Command.Group heading="React Native documentation">
-                {rnDocsItems.map((item) => (
-                  <RNDocsItem item={item} onSelect={dismiss} key={`hit-rn-docs-${item.objectID}`} />
-                ))}
-              </Command.Group>
-            )}
-            {directoryItems.length > 0 && (
-              <Command.Group heading="React Native directory">
-                {directoryItems.map((item) => (
-                  <RNDirectoryItem item={item} onSelect={dismiss} key={`hit-rn-dir-${item.npmPkg}`} query={query} />
-                ))}
-              </Command.Group>
-            )}
-            {!loading && totalCount === 0 && (
-              <Command.Empty>
-                <p className="text-secondary text-xs">No results found.</p>
-              </Command.Empty>
-            )}
-          </>
-        )}
-      </Command.List>
+      <Command.List>{initialized && data}</Command.List>
       <CommandFooter />
     </Command.Dialog>
   );

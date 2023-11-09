@@ -78,6 +78,7 @@ export default function UI() {
               heading: 'Expo Dashboard',
               items: expoItems,
               getItemsAsync: getExpoItems,
+              sectionIndex: 1,
             },
           ]}
         />

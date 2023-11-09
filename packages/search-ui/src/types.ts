@@ -10,6 +10,7 @@ export type CommandMenuSection = {
   heading: string;
   getItemsAsync: (query: string) => Promise<void>;
   items: ReactNode[];
+  sectionIndex: number;
 };
 
 export type AlgoliaHighlight = {
