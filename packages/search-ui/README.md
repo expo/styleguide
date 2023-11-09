@@ -1,4 +1,4 @@
-# @expo/search-ui
+# @expo/styleguide-search-ui
 
 Expo's common search component for use on the web.
 
@@ -6,17 +6,17 @@ Expo's common search component for use on the web.
 
 1. Install Expo Search UI package:
    ```shell
-   yarn add @expo/search-ui
+   yarn add @expo/styleguide-search-ui
    ```
 2. Import global CSS files from the package in your JS(X)/TS(X) code:
    ```jsx
-   import "@expo/search-ui/dist/expo-search-ui.css";
+   import "@expo/styleguide-search-ui/dist/expo-search-ui.css";
    ```
    or import it the main stylesheet file:
    ```css
-   @import "@expo/search-ui/dist/expo-search-ui.css";
+   @import "@expo/styleguide-search-ui/dist/expo-search-ui.css";
    ```
-3. Add `'./node_modules/@expo/search-ui/dist/**/*.{js,ts,jsx,tsx}'` to the Tailwind `content` paths.
+3. Add `'./node_modules/@expo/styleguide-search-ui/dist/**/*.{js,ts,jsx,tsx}'` to the Tailwind `content` paths.
 
 ## Development
 

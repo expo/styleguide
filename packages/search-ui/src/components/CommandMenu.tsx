@@ -23,7 +23,7 @@ export const CommandMenu = ({
   customSections = [],
 }: Props) => {
   const [initialized, setInitialized] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');
 
   const [expoDocsItems, setExpoDocsItems] = useState<AlgoliaItemType[]>([]);

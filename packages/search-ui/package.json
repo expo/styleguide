@@ -1,5 +1,5 @@
 {
-  "name": "@expo/search-ui",
+  "name": "@expo/styleguide-search-ui",
   "version": "1.0.0-alpha.0",
   "description": "Expo's common search component for use on the web.",
   "main": "dist/index.js",

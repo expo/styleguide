@@ -1,6 +1,4 @@
-import { CommandMenu, CommandMenuTrigger } from '@expo/search-ui';
-import { ButtonBase, Button, Link, LinkBase } from '@expo/styleguide';
-import type { ButtonTheme, ButtonProps } from '@expo/styleguide';
+import { ButtonBase, Button, Link, LinkBase, type ButtonTheme, type ButtonProps } from '@expo/styleguide';
 import {
   AlignTopArrow01Icon,
   ArrowUpRightIcon,
@@ -12,6 +10,7 @@ import {
   PaletteIcon,
   Trash01Icon,
 } from '@expo/styleguide-icons';
+import { CommandMenu, CommandMenuTrigger } from '@expo/styleguide-search-ui';
 import { Fragment, ReactNode, useState } from 'react';
 
 import { DemoTile } from '@/components/DemoTile';

@@ -1,5 +1,5 @@
-import { CommandItemBase, addHighlight } from '@expo/search-ui';
 import { BuildIcon } from '@expo/styleguide-icons';
+import { CommandItemBase, addHighlight } from '@expo/styleguide-search-ui';
 import React, { type ComponentType } from 'react';
 
 type Props = {
