@@ -1,5 +1,4 @@
-import { ButtonBase, Button, Link, LinkBase } from '@expo/styleguide';
-import type { ButtonTheme, ButtonProps } from '@expo/styleguide';
+import { ButtonBase, Button, Link, LinkBase, type ButtonTheme, type ButtonProps } from '@expo/styleguide';
 import {
   AlignTopArrow01Icon,
   ArrowUpRightIcon,
@@ -11,10 +10,13 @@ import {
   PaletteIcon,
   Trash01Icon,
 } from '@expo/styleguide-icons';
-import { Fragment } from 'react';
+import { CommandMenu, CommandMenuTrigger } from '@expo/styleguide-search-ui';
+import { Fragment, ReactNode, useState } from 'react';
 
 import { DemoTile } from '@/components/DemoTile';
+import { ExpoItem } from '@/components/ExpoItem';
 import { H1, H3 } from '@/components/headers';
+import { entries } from '@/data/expoEntries';
 
 const THEMES = [
   'primary',
@@ -53,9 +55,34 @@ function ButtonRow({ theme, disabled = false }: ButtonProps) {
 }
 
 export default function UI() {
+  const [open, setOpen] = useState(false);
+  const [expoItems, setExpoItems] = useState<ReactNode[]>([]);
+
+  const getExpoItems = async (query: string) => {
+    const filteredEntries = entries.filter((entry) => entry.label.toLowerCase().includes(query.toLowerCase()));
+    setExpoItems(filteredEntries.map((item) => <ExpoItem item={item} query={query} key={item.url} />));
+  };
+
   return (
     <>
       <H1>UI</H1>
+      <H3>Search</H3>
+      <DemoTile title="@expo/search-ui">
+        <CommandMenu
+          config={{ docsVersion: 'latest', disableDashboardSection: true }}
+          open={open}
+          setOpen={setOpen}
+          customSections={[
+            {
+              heading: 'Expo Dashboard',
+              items: expoItems,
+              getItemsAsync: getExpoItems,
+              sectionIndex: 1,
+            },
+          ]}
+        />
+        <CommandMenuTrigger setOpen={setOpen} className="min-w-[180px]" />
+      </DemoTile>
       <H3>Link Base</H3>
       <DemoTile title="local anchor">
         <LinkBase href="#buttons">LinkBase</LinkBase>

@@ -6,6 +6,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     '../../node_modules/@expo/styleguide/dist/**/*.{js,ts,jsx,tsx}',
+    '../../node_modules/@expo/styleguide-search-ui/dist/**/*.{js,ts}',
   ],
   ...expoTheme,
 };

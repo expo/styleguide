@@ -1,0 +1,212 @@
+@keyframes searchUIBarLoader {
+  0% {
+    width: 0;
+  }
+  80% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+#__next[aria-hidden] {
+  filter: blur(3.33px);
+}
+
+[cmdk-overlay] {
+  background-color: rgba(0, 0, 0, 0.33);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 200;
+}
+
+@media screen and (max-width: 788px) {
+  [cmdk-overlay] {
+    display: none;
+  }
+}
+
+[cmdk-root] {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 75vh;
+  max-height: 75vh;
+  background: var(--expo-theme-background-default);
+  border-radius: 10px;
+  box-shadow: var(--expo-theme-shadows-sm);
+  width: 40vw;
+  min-width: 680px;
+  border: 1px solid var(--expo-theme-border-default);
+  z-index: 1001;
+}
+
+@media screen and (max-width: 788px) {
+  [cmdk-root] {
+    top: 50%;
+    width: 96vw;
+    min-width: 96vw;
+    min-height: 96dvh;
+    max-height: 96dvh;
+  }
+}
+
+[cmdk-root] kbd, #cmdk-trigger kbd {
+  font-size: 0.8125rem;
+  line-height: 19px;
+  letter-spacing: -0.003rem;
+  background-color: var(--expo-theme-background-subtle);
+  border: 1px solid var(--expo-theme-border-default);
+  white-space: pre-wrap;
+  font-weight: 500;
+  color: var(--expo-theme-text-secondary);
+  padding: 0 4px;
+  box-shadow: 0 0.1rem 0 1px var(--expo-theme-border-default);
+  border-radius: 4px;
+  position: relative;
+  display: inline-flex;
+  min-width: 22px;
+  justify-content: center;
+  top: -1px;
+}
+
+[cmdk-input] {
+  appearance: none;
+  background: transparent;
+  color: var(--expo-theme-text-default);
+  flex: 1;
+  font: inherit;
+  height: 100%;
+  outline: none;
+  padding: 12px 44px;
+  margin: 16px 16px 0;
+  border: 1px solid var(--expo-theme-border-default);
+  border-radius: 6px;
+  width: calc(100% - 32px);
+  box-sizing: border-box;
+  box-shadow: var(--expo-theme-shadows-xs);
+}
+
+[cmdk-input]::placeholder {
+  color: var(--expo-theme-icon-secondary);
+}
+
+[cmdk-item] {
+  content-visibility: auto;
+  cursor: pointer;
+  min-height: 52px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 12px;
+  color: var(--expo-theme-text-default);
+  user-select: none;
+  will-change: background, color;
+  transition: all 150ms ease;
+  transition-property: none;
+}
+
+[cmdk-item][aria-selected='true'],
+[cmdk-item]:active {
+  background: var(--expo-theme-background-element);
+  color: var(--expo-theme-text-default);
+}
+
+[cmdk-item][aria-disabled='true'] {
+  color: var(--expo-theme-icon-secondary);
+  cursor: not-allowed;
+}
+
+[cmdk-item] + [cmdk-item] {
+  margin-top: 4px;
+}
+
+[cmdk-item][data-nested] + [cmdk-item] {
+  margin-top: 8px;
+}
+
+[cmdk-item] mark {
+  color: var(--blue12);
+  background: var(--blue4);
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+[cmdk-list] {
+  height: calc(75vh - 50px - 50px - 20px);
+  max-height: calc(75vh - 50px - 50px - 20px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-top: 1px solid var(--expo-theme-border-default);
+  border-bottom: 1px solid var(--expo-theme-border-default);
+  padding: 0 16px;
+  margin: 12px 0 0;
+}
+
+@media screen and (max-width: 788px) {
+  [cmdk-list] {
+    height: calc(96dvh - 50px - 50px - 20px);
+    max-height: calc(96dvh - 50px - 50px - 20px);
+  }
+}
+
+[cmdk-separator] {
+  height: 1px;
+  width: 100%;
+  background: var(--expo-theme-border-default);
+  margin: 4px 0;
+}
+
+[cmdk-group-heading] {
+  font-size: 0.75rem;
+  line-height: 1.58;
+  user-select: none;
+  color: var(--expo-theme-text-secondary);
+  padding: 16px 8px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 2px;
+}
+
+[cmdk-empty] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre-wrap;
+  padding: 32px 0;
+}
+
+html.dark-theme [cmdk-item] mark {
+  background: var(--blue6);
+}
+
+html.dark-theme [cmdk-item][data-selected='true'] mark {
+  background: var(--blue7);
+}
+
+[cmdk-list]::-webkit-scrollbar {
+  width: 6px;
+}
+
+[cmdk-list]::-webkit-scrollbar-track {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+[cmdk-list]::-webkit-scrollbar-thumb {
+  background-color: var(--slate5);
+  border-radius: 10px;
+}
+
+[cmdk-list]::-webkit-scrollbar-thumb:hover {
+  background-color: var(--slate6);
+}
