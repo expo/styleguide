@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@types/lodash.groupby": "^4.6.9",
-    "user-agent-data-types": "^0.4.2",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "user-agent-data-types": "^0.4.2"
   },
   "peerDependencies": {
     "next": ">= 13",
