@@ -82,7 +82,7 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl = (url: st
 
   return (
     <CommandItemBase
-      className={mergeClasses(isNested && 'ml-8 mt-0.5 min-h-[32px]')}
+      className={mergeClasses(isNested && 'ml-8 !min-h-[32px]')}
       value={`expodocs-${item.objectID}`}
       onSelect={onSelect}
       url={transformUrl(item.url)}

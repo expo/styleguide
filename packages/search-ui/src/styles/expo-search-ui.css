@@ -129,10 +129,6 @@
   margin-top: 4px;
 }
 
-[cmdk-item][data-nested] + [cmdk-item] {
-  margin-top: 8px;
-}
-
 [cmdk-item] mark {
   color: var(--blue12);
   background: var(--blue4);
