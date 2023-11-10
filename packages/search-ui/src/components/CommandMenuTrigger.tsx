@@ -44,7 +44,7 @@ export const CommandMenuTrigger = ({ setOpen, className }: Props) => {
       }
       className={mergeClasses('bg-default pl-2.5 pr-3 border border-default shadow-xs min-h-[40px]', className)}
       onClick={() => setOpen(true)}>
-      <p className="text-secondary text-xs">Search</p>
+      <p className="text-secondary font-normal leading-normal text-xs">Search</p>
     </Button>
   );
 };
