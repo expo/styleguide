@@ -22,7 +22,7 @@ export const CommandMenuTrigger = ({ setOpen, className }: Props) => {
       leftSlot={<SearchSmIcon className="icon-md text-icon-secondary" />}
       rightSlot={
         isMac !== null ? (
-          <div className="ml-auto max-lg-gutters:hidden">
+          <div className="ml-auto max-md-gutters:hidden">
             <kbd className="!h-5 !leading-[19px]">{isMac ? '⌘' : 'Ctrl'}</kbd>{' '}
             <kbd className="!h-5 !leading-[19px]">K</kbd>
           </div>
