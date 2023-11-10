@@ -7,7 +7,7 @@ import { BarLoader } from './BarLoader';
 import { CommandFooter } from './CommandFooter';
 import { RNDirectoryItem, RNDocsItem, ExpoDocsItem } from '../Items';
 import type { RNDirectoryItemType, AlgoliaItemType, CommandMenuConfig, CommandMenuSection } from '../types';
-import { getExpoDocsResults, getRNDocsResults, getDirectoryResults, getItemsAsync } from '../utils';
+import { getExpoDocsResults, getRNDocsResults, getDirectoryResults, getItemsAsync, isAppleDevice } from '../utils';
 
 type Props = {
   open: boolean;
@@ -25,6 +25,7 @@ export const CommandMenu = ({
   const [initialized, setInitialized] = useState(false);
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');
+  const [isMac, setIsMac] = useState<boolean | null>(null);
 
   const [expoDocsItems, setExpoDocsItems] = useState<AlgoliaItemType[]>([]);
   const [rnDocsItems, setRnDocsItems] = useState<AlgoliaItemType[]>([]);
@@ -61,6 +62,23 @@ export const CommandMenu = ({
       });
     }
   };
+
+  useEffect(() => {
+    setIsMac(typeof navigator !== 'undefined' && isAppleDevice());
+  }, []);
+
+  useEffect(() => {
+    if (isMac !== null) {
+      const keyDownListener = (e: KeyboardEvent) => {
+        if (e.key === 'k' && (isMac ? e.metaKey : e.ctrlKey)) {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }
+      };
+      document.addEventListener('keydown', keyDownListener, false);
+      return () => document.removeEventListener('keydown', keyDownListener);
+    }
+  }, [isMac]);
 
   useEffect(onMenuOpen, [open]);
   useEffect(onQueryChange, [query]);

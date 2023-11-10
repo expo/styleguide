@@ -67,21 +67,24 @@ export default function UI() {
     <>
       <H1>UI</H1>
       <H3>Search</H3>
+      <CommandMenu
+        config={{ docsVersion: 'latest' }}
+        open={open}
+        setOpen={setOpen}
+        customSections={[
+          {
+            heading: 'Expo Dashboard',
+            items: expoItems,
+            getItemsAsync: getExpoItems,
+            sectionIndex: 1,
+          },
+        ]}
+      />
       <DemoTile title="@expo/search-ui">
-        <CommandMenu
-          config={{ docsVersion: 'latest', disableDashboardSection: true }}
-          open={open}
-          setOpen={setOpen}
-          customSections={[
-            {
-              heading: 'Expo Dashboard',
-              items: expoItems,
-              getItemsAsync: getExpoItems,
-              sectionIndex: 1,
-            },
-          ]}
-        />
-        <CommandMenuTrigger setOpen={setOpen} className="min-w-[180px]" />
+        <CommandMenuTrigger setOpen={setOpen} />
+      </DemoTile>
+      <DemoTile title="@expo/search-ui custom trigger">
+        <CommandMenuTrigger setOpen={setOpen} className="min-w-[220px] border-info bg-info hocus:bg-palette-blue4" />
       </DemoTile>
       <H3>Link Base</H3>
       <DemoTile title="local anchor">

@@ -23,13 +23,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 200;
-}
-
-@media screen and (max-width: 788px) {
-  [cmdk-overlay] {
-    display: none;
-  }
+  z-index: 1000;
 }
 
 [cmdk-root] {
@@ -58,7 +52,7 @@
   }
 }
 
-[cmdk-root] kbd, #cmdk-trigger kbd {
+[cmdk-root] kbd, .cmdk-trigger kbd {
   font-size: 0.8125rem;
   line-height: 19px;
   letter-spacing: -0.003rem;
@@ -85,7 +79,8 @@
   font: inherit;
   height: 100%;
   outline: none;
-  padding: 12px 44px;
+  padding: 0 44px;
+  min-height: 46px;
   margin: 16px 16px 0;
   border: 1px solid var(--expo-theme-border-default);
   border-radius: 6px;
