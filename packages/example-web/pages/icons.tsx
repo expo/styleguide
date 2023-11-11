@@ -61,7 +61,7 @@ export default function Icons() {
         ))}
       </div>
       <H3 id="set">Icon set</H3>
-      <div className="flex items-center gap-4">
+      <div className={mergeClasses('flex items-center gap-4', 'max-sm-gutters:flex-col max-sm-gutters:items-start')}>
         <div className="relative">
           <SearchMdIcon className="icon-sm absolute top-[9px] left-2.5" />
           <input

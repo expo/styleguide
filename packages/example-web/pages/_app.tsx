@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@expo/styleguide';
+import { mergeClasses, ThemeProvider } from '@expo/styleguide';
 import type { AppProps } from 'next/app';
 import { Inter, Fira_Code } from 'next/font/google';
 import Head from 'next/head';
@@ -48,7 +48,12 @@ export default function App({ Component, pageProps }: AppProps) {
           <title>@expo/styleguide</title>
           <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
         </Head>
-        <main className="grid grid-cols-[240px_1fr] p-8 gap-8">
+        <main
+          className={mergeClasses(
+            'grid grid-cols-[240px_1fr] p-8 gap-8',
+            'max-md-gutters:grid-cols-[140px_1fr]',
+            'max-sm-gutters:grid-cols-1 max-sm-gutters:gap-16'
+          )}>
           <Sidebar />
           <div>
             <Component {...pageProps} />
