@@ -11,7 +11,7 @@ export function H1({ children, className, ...rest }: HTMLAttributes<HTMLHeadingE
 
 export function H3({ children, className, ...rest }: HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <h3 className={mergeClasses('heading-3xl font-bold mt-10 mb-4', className)} {...rest}>
+    <h3 className={mergeClasses('heading-3xl font-bold mt-10 mb-4 scroll-mt-5', className)} {...rest}>
       {children}
     </h3>
   );

@@ -43,7 +43,7 @@ export default function Icons() {
   return (
     <div>
       <H1>Icons</H1>
-      <H3>Logos</H3>
+      <H3 id="logos">Logos</H3>
       <div className="mt-8 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 ">
         {[
           { name: 'WordMarkLogo', element: WordMarkLogo },
@@ -60,7 +60,7 @@ export default function Icons() {
           </div>
         ))}
       </div>
-      <H3>Icon set</H3>
+      <H3 id="set">Icon set</H3>
       <div className="flex items-center gap-4">
         <div className="relative">
           <SearchMdIcon className="icon-sm absolute top-[9px] left-2.5" />
