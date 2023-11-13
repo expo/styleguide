@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Head>
         <main
           className={mergeClasses(
-            'grid grid-cols-[240px_1fr] p-8 gap-8',
+            'grid grid-cols-[240px_1fr] p-8 gap-8 min-h-[100dvh]',
             'max-md-gutters:grid-cols-[140px_1fr]',
             'max-sm-gutters:grid-cols-1 max-sm-gutters:gap-16'
           )}>
