@@ -83,12 +83,6 @@ export const CommandMenu = ({
   useEffect(onMenuOpen, [open]);
   useEffect(onQueryChange, [query]);
 
-  const totalCount =
-    expoDocsItems.length +
-    rnDocsItems.length +
-    directoryItems.length +
-    customSections.reduce((acc, section) => acc + section.items.length, 0);
-
   const expoDocsGroupedItems = groupBy(
     expoDocsItems.map((expoDocsItem: AlgoliaItemType) => ({
       ...expoDocsItem,
@@ -130,11 +124,6 @@ export const CommandMenu = ({
         ))}
       </Command.Group>
     ),
-    !loading && totalCount === 0 && (
-      <Command.Empty key="no-results-group">
-        <p className="text-secondary text-xs">No results found.</p>
-      </Command.Empty>
-    ),
   ];
 
   customSections?.forEach(
@@ -157,7 +146,14 @@ export const CommandMenu = ({
       </div>
       <Command.Input value={query} onValueChange={setQuery} placeholder="Search…" />
       <BarLoader isLoading={loading} />
-      <Command.List>{initialized && data}</Command.List>
+      <Command.List>
+        {initialized && data}
+        {data.filter(Boolean).length === 0 && (
+          <Command.Empty key="no-results-group">
+            <p className="text-secondary text-xs">No results found.</p>
+          </Command.Empty>
+        )}
+      </Command.List>
       <CommandFooter />
     </Command.Dialog>
   );

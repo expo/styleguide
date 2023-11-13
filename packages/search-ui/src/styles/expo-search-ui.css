@@ -138,7 +138,7 @@
   overscroll-behavior: contain;
   border-top: 1px solid var(--expo-theme-border-default);
   border-bottom: 1px solid var(--expo-theme-border-default);
-  padding: 0 16px;
+  padding: 0 16px 12px;
   margin: 12px 0 0;
 }
 

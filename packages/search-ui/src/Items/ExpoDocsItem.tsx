@@ -9,7 +9,7 @@ import {
 import React from 'react';
 
 import { FootnoteSection } from './FootnoteSection';
-import { FootnoteArrowIcon } from './icons';
+import { ExternalLinkIcon, FootnoteArrowIcon } from './icons';
 import { CommandItemBaseWithCopy } from '../components/CommandItemBaseWithCopy';
 import type { AlgoliaItemType } from '../types';
 import {
@@ -74,7 +74,7 @@ const ItemFootnotePrefix = ({ url, isNested = false }: { url: string; isNested?:
   );
 };
 
-export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl = (url: string) => url }: Props) => {
+export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) => {
   const { lvl0, lvl2, lvl3, lvl4, lvl6 } = item.hierarchy;
 
   const titleClasses = mergeClasses(isNested ? 'text-2xs' : 'text-xs font-medium');
@@ -85,74 +85,78 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl = (url: st
       className={mergeClasses(isNested && 'ml-8 !min-h-[32px]')}
       value={`expodocs-${item.objectID}`}
       onSelect={onSelect}
-      url={transformUrl(item.url)}
-      isNested={isNested}>
-      <div className={mergeClasses('inline-flex items-center gap-3 break-words')}>
-        <ItemIcon url={item.url} isNested={isNested} className="shrink-0" />
-        <div>
-          {lvl6 && (
-            <>
-              <p className={titleClasses} {...getHighlightHTML(item, 'lvl6')} />
-              {!isNested && (
-                <p className="text-3xs text-quaternary">
-                  <ItemFootnotePrefix url={item.url} isNested />
-                  <span {...getHighlightHTML(item, 'lvl0')} />
-                  <FootnoteSection item={item} levelKey="lvl2" />
-                  <FootnoteSection item={item} levelKey="lvl3" />
-                  <FootnoteSection item={item} levelKey="lvl4" />
-                </p>
-              )}
-            </>
-          )}
-          {!lvl6 && lvl4 && (
-            <>
-              <p className={titleClasses} {...getHighlightHTML(item, 'lvl4')} />
-              {!isNested && (
-                <p className={hierarchyClasses}>
-                  <ItemFootnotePrefix url={item.url} isNested />
-                  <span {...getHighlightHTML(item, 'lvl0')} />
-                  <FootnoteSection item={item} levelKey="lvl2" />
-                  <FootnoteSection item={item} levelKey="lvl3" />
-                </p>
-              )}
-            </>
-          )}
-          {!lvl6 && !lvl4 && lvl3 && (
-            <>
-              <p className={titleClasses} {...getHighlightHTML(item, 'lvl3')} />
-              {!isNested && (
-                <p className={hierarchyClasses}>
-                  <ItemFootnotePrefix url={item.url} isNested />
-                  <span {...getHighlightHTML(item, 'lvl0')} />
-                  <FootnoteSection item={item} levelKey="lvl2" />
-                </p>
-              )}
-            </>
-          )}
-          {!lvl6 && !lvl4 && !lvl3 && lvl2 && (
-            <>
-              <p className={titleClasses} {...getHighlightHTML(item, 'lvl2')} />
-              {!isNested && (
-                <p className={hierarchyClasses}>
-                  <ItemFootnotePrefix url={item.url} isNested />
-                  <span {...getHighlightHTML(item, 'lvl0')} />
-                </p>
-              )}
-            </>
-          )}
-          {!lvl6 && !lvl4 && !lvl3 && !lvl2 && lvl0 && (
-            <>
-              <p className={titleClasses} {...getHighlightHTML(item, 'lvl0')} />
-              <ItemFootnotePrefix url={item.url} />
-            </>
-          )}
-          {(!isNested || item.content) && (
-            <p
-              className={mergeClasses('text-secondary', isNested ? 'text-3xs' : 'text-2xs')}
-              {...getContentHighlightHTML(item)}
-            />
-          )}
+      url={transformUrl ? transformUrl(item.url) : item.url}
+      isNested={isNested}
+      isExternalLink={!transformUrl}>
+      <div className="flex gap-3 jutify-between">
+        <div className="inline-flex items-center gap-3 break-words">
+          <ItemIcon url={item.url} isNested={isNested} className="shrink-0" />
+          <div>
+            {lvl6 && (
+              <>
+                <p className={titleClasses} {...getHighlightHTML(item, 'lvl6')} />
+                {!isNested && (
+                  <p className="text-3xs text-quaternary">
+                    <ItemFootnotePrefix url={item.url} isNested />
+                    <span {...getHighlightHTML(item, 'lvl0')} />
+                    <FootnoteSection item={item} levelKey="lvl2" />
+                    <FootnoteSection item={item} levelKey="lvl3" />
+                    <FootnoteSection item={item} levelKey="lvl4" />
+                  </p>
+                )}
+              </>
+            )}
+            {!lvl6 && lvl4 && (
+              <>
+                <p className={titleClasses} {...getHighlightHTML(item, 'lvl4')} />
+                {!isNested && (
+                  <p className={hierarchyClasses}>
+                    <ItemFootnotePrefix url={item.url} isNested />
+                    <span {...getHighlightHTML(item, 'lvl0')} />
+                    <FootnoteSection item={item} levelKey="lvl2" />
+                    <FootnoteSection item={item} levelKey="lvl3" />
+                  </p>
+                )}
+              </>
+            )}
+            {!lvl6 && !lvl4 && lvl3 && (
+              <>
+                <p className={titleClasses} {...getHighlightHTML(item, 'lvl3')} />
+                {!isNested && (
+                  <p className={hierarchyClasses}>
+                    <ItemFootnotePrefix url={item.url} isNested />
+                    <span {...getHighlightHTML(item, 'lvl0')} />
+                    <FootnoteSection item={item} levelKey="lvl2" />
+                  </p>
+                )}
+              </>
+            )}
+            {!lvl6 && !lvl4 && !lvl3 && lvl2 && (
+              <>
+                <p className={titleClasses} {...getHighlightHTML(item, 'lvl2')} />
+                {!isNested && (
+                  <p className={hierarchyClasses}>
+                    <ItemFootnotePrefix url={item.url} isNested />
+                    <span {...getHighlightHTML(item, 'lvl0')} />
+                  </p>
+                )}
+              </>
+            )}
+            {!lvl6 && !lvl4 && !lvl3 && !lvl2 && lvl0 && (
+              <>
+                <p className={titleClasses} {...getHighlightHTML(item, 'lvl0')} />
+                <ItemFootnotePrefix url={item.url} />
+              </>
+            )}
+            {(!isNested || item.content) && (
+              <p
+                className={mergeClasses('text-secondary', isNested ? 'text-3xs' : 'text-2xs')}
+                {...getContentHighlightHTML(item)}
+              />
+            )}
+          </div>
         </div>
+        {!transformUrl && <ExternalLinkIcon />}
       </div>
     </CommandItemBaseWithCopy>
   );
