@@ -1,4 +1,4 @@
-import { ButtonBase, Button, Link, LinkBase, type ButtonTheme, type ButtonProps } from '@expo/styleguide';
+import { ButtonBase, Button, Link, LinkBase, type ButtonTheme } from '@expo/styleguide';
 import {
   AlignTopArrow01Icon,
   ArrowUpRightIcon,
@@ -7,16 +7,13 @@ import {
   DotsHorizontalIcon,
   EasMetadataIcon,
   EyeOffIcon,
-  PaletteIcon,
   Trash01Icon,
 } from '@expo/styleguide-icons';
-import { CommandMenu, CommandMenuTrigger } from '@expo/styleguide-search-ui';
-import { Fragment, ReactNode, useState } from 'react';
+import { Fragment } from 'react';
 
+import { ButtonsRow } from '@/components/ButtonsRow';
 import { DemoTile } from '@/components/DemoTile';
-import { ExpoItem } from '@/components/ExpoItem';
 import { H1, H3 } from '@/components/headers';
-import { entries } from '@/data/expoEntries';
 
 const THEMES = [
   'primary',
@@ -27,65 +24,10 @@ const THEMES = [
   'secondary-destructive',
 ] as ButtonTheme[];
 
-function ButtonRow({ theme, disabled = false }: ButtonProps) {
-  return (
-    <DemoTile title={`${theme}${disabled ? ' (disabled)' : ''}`} tag="div">
-      <div className="flex flex-wrap gap-6">
-        <Button theme={theme} size="xs" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button XS
-        </Button>
-        <Button theme={theme} size="sm" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button SM
-        </Button>
-        <Button theme={theme} size="md" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button MD
-        </Button>
-        <Button theme={theme} size="lg" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button LG
-        </Button>
-        <Button theme={theme} size="xl" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button XL
-        </Button>
-        <Button theme={theme} size="2xl" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button 2XL
-        </Button>
-      </div>
-    </DemoTile>
-  );
-}
-
-export default function UI() {
-  const [open, setOpen] = useState(false);
-  const [expoItems, setExpoItems] = useState<ReactNode[]>([]);
-
-  const getExpoItems = async (query: string) => {
-    const filteredEntries = entries.filter((entry) => entry.label.toLowerCase().includes(query.toLowerCase()));
-    setExpoItems(filteredEntries.map((item) => <ExpoItem item={item} query={query} key={item.url} />));
-  };
-
+export default function ComponentsPage() {
   return (
     <>
-      <H1>UI</H1>
-      <H3>Search</H3>
-      <CommandMenu
-        config={{ docsVersion: 'latest' }}
-        open={open}
-        setOpen={setOpen}
-        customSections={[
-          {
-            heading: 'Expo Dashboard',
-            items: expoItems,
-            getItemsAsync: getExpoItems,
-            sectionIndex: 1,
-          },
-        ]}
-      />
-      <DemoTile title="@expo/search-ui">
-        <CommandMenuTrigger setOpen={setOpen} />
-      </DemoTile>
-      <DemoTile title="@expo/search-ui custom trigger">
-        <CommandMenuTrigger setOpen={setOpen} className="min-w-[220px] border-info bg-info hocus:bg-palette-blue4" />
-      </DemoTile>
+      <H1>UI: Components</H1>
       <H3>Link Base</H3>
       <DemoTile title="local anchor">
         <LinkBase href="#buttons">LinkBase</LinkBase>
@@ -112,8 +54,8 @@ export default function UI() {
       <H3 id="buttons">Buttons</H3>
       {THEMES.map((buttonTheme) => (
         <Fragment key={`buttons-${buttonTheme}`}>
-          <ButtonRow theme={buttonTheme} />
-          <ButtonRow theme={buttonTheme} disabled />
+          <ButtonsRow theme={buttonTheme} />
+          <ButtonsRow theme={buttonTheme} disabled />
         </Fragment>
       ))}
       <H3>Link Buttons</H3>

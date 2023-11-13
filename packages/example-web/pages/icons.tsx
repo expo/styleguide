@@ -24,7 +24,7 @@ const iconClasses = mergeClasses(
   'active:scale-98'
 );
 
-export default function Icons() {
+export default function IconsPage() {
   const [, copy] = useCopy();
   const [filters, setFilters] = useState({ outline: true, solid: false, duotone: false });
   const [search, setSearch] = useState('');
@@ -43,7 +43,7 @@ export default function Icons() {
   return (
     <div>
       <H1>Icons</H1>
-      <H3>Logos</H3>
+      <H3 id="logos">Logos</H3>
       <div className="mt-8 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 ">
         {[
           { name: 'WordMarkLogo', element: WordMarkLogo },
@@ -60,8 +60,8 @@ export default function Icons() {
           </div>
         ))}
       </div>
-      <H3>Icon set</H3>
-      <div className="flex items-center gap-4">
+      <H3 id="set">Icon set</H3>
+      <div className={mergeClasses('flex items-center gap-4', 'max-sm-gutters:flex-col max-sm-gutters:items-start')}>
         <div className="relative">
           <SearchMdIcon className="icon-sm absolute top-[9px] left-2.5" />
           <input

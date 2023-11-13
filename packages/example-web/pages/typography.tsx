@@ -1,11 +1,11 @@
 import { DemoTile } from '@/components/DemoTile';
 import { H1, H3 } from '@/components/headers';
 
-export default function Typography() {
+export default function TypographyPage() {
   return (
     <>
       <H1>Typography</H1>
-      <H3>Headings</H3>
+      <H3 id="headings">Headings</H3>
       <div className="flex flex-col gap-8">
         <DemoTile title="Heading 5xl" className="heading-5xl font-black" />
         <DemoTile title="Heading 4xl" className="heading-4xl font-extrabold" />
@@ -17,7 +17,7 @@ export default function Typography() {
         <DemoTile title="Heading sm" className="heading-sm font-medium" />
         <DemoTile title="Heading xs" className="heading-xs font-medium" />
       </div>
-      <H3>Elements</H3>
+      <H3 id="elements">Elements</H3>
       <div className="flex flex-col gap-8">
         <DemoTile title="Headline" className="text-base font-medium" />
         <DemoTile title="Paragraph" className="text-base font-normal" />

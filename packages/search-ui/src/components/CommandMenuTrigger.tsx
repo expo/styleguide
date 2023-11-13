@@ -28,7 +28,10 @@ export const CommandMenuTrigger = ({ setOpen, className }: Props) => {
           </div>
         ) : undefined
       }
-      className={mergeClasses('cmdk-trigger bg-default pl-2.5 pr-3 border border-default shadow-xs min-h-[40px]', className)}
+      className={mergeClasses(
+        'cmdk-trigger bg-default pl-2.5 pr-3 border border-default shadow-xs min-h-[40px]',
+        className
+      )}
       onClick={() => setOpen(true)}>
       <p className="text-secondary font-normal leading-normal text-xs">Search</p>
     </Button>
