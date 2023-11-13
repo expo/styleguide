@@ -10,7 +10,7 @@ import React from 'react';
 
 import { FootnoteSection } from './FootnoteSection';
 import { FootnoteArrowIcon } from './icons';
-import { CommandItemBase } from '../components/CommandItemBase';
+import { CommandItemBaseWithCopy } from '../components/CommandItemBaseWithCopy';
 import type { AlgoliaItemType } from '../types';
 import {
   getContentHighlightHTML,
@@ -81,7 +81,7 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl = (url: st
   const hierarchyClasses = mergeClasses('text-3xs text-quaternary', isNested && 'hidden');
 
   return (
-    <CommandItemBase
+    <CommandItemBaseWithCopy
       className={mergeClasses(isNested && 'ml-8 !min-h-[32px]')}
       value={`expodocs-${item.objectID}`}
       onSelect={onSelect}
@@ -154,6 +154,6 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl = (url: st
           )}
         </div>
       </div>
-    </CommandItemBase>
+    </CommandItemBaseWithCopy>
   );
 };

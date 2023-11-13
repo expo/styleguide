@@ -9,6 +9,9 @@
     "clean": "rimraf .next"
   },
   "dependencies": {
+    "@expo/styleguide": "latest",
+    "@expo/styleguide-icons": "latest",
+    "@expo/styleguide-search-ui": "latest",
     "@types/node": "^18.18.9",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",

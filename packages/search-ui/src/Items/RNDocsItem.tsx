@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FootnoteSection } from './FootnoteSection';
 import { ExternalLinkIcon, ReactIcon } from './icons';
-import { CommandItemBase } from '../components/CommandItemBase';
+import { CommandItemBaseWithCopy } from '../components/CommandItemBaseWithCopy';
 import type { AlgoliaItemType } from '../types';
 import { getContentHighlightHTML, getHighlightHTML } from '../utils';
 
@@ -14,7 +14,7 @@ type Props = {
 export const RNDocsItem = ({ item, onSelect }: Props) => {
   const { lvl0, lvl1, lvl2, lvl3, lvl4 } = item.hierarchy;
   return (
-    <CommandItemBase value={`rn-${item.objectID}`} url={item.url} isExternalLink onSelect={onSelect}>
+    <CommandItemBaseWithCopy value={`rn-${item.objectID}`} url={item.url} isExternalLink onSelect={onSelect}>
       <div className="inline-flex gap-3 items-center">
         <ReactIcon className="shrink-0" />
         <div>
@@ -59,6 +59,6 @@ export const RNDocsItem = ({ item, onSelect }: Props) => {
         </div>
         <ExternalLinkIcon />
       </div>
-    </CommandItemBase>
+    </CommandItemBaseWithCopy>
   );
 };
