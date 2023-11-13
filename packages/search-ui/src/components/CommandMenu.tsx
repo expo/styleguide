@@ -99,7 +99,7 @@ export const CommandMenu = ({
 
   const data = [
     expoDocsItems.length > 0 && (
-      <Command.Group heading="Expo documentation">
+      <Command.Group heading="Expo documentation" key="expo-docs-group">
         {Object.values(expoDocsGroupedItems).map((values) =>
           values
             .sort((a, b) => a.url.localeCompare(a.baseUrl) - b.url.localeCompare(b.baseUrl))
@@ -117,21 +117,21 @@ export const CommandMenu = ({
       </Command.Group>
     ),
     rnDocsItems.length > 0 && (
-      <Command.Group heading="React Native documentation">
+      <Command.Group heading="React Native documentation" key="rn-docs-group">
         {rnDocsItems.map((item) => (
           <RNDocsItem item={item} onSelect={dismiss} key={`hit-rn-docs-${item.objectID}`} />
         ))}
       </Command.Group>
     ),
     directoryItems.length > 0 && (
-      <Command.Group heading="React Native directory">
+      <Command.Group heading="React Native directory" key="rn-directory-group">
         {directoryItems.map((item) => (
           <RNDirectoryItem item={item} onSelect={dismiss} key={`hit-rn-dir-${item.npmPkg}`} query={query} />
         ))}
       </Command.Group>
     ),
     !loading && totalCount === 0 && (
-      <Command.Empty>
+      <Command.Empty key="no-results-group">
         <p className="text-secondary text-xs">No results found.</p>
       </Command.Empty>
     ),
@@ -143,7 +143,7 @@ export const CommandMenu = ({
       data.splice(
         sectionIndex,
         0,
-        <Command.Group heading={heading} key={heading}>
+        <Command.Group heading={heading} key={`${sectionIndex}-${heading}`}>
           {items}
         </Command.Group>
       )
