@@ -2,7 +2,7 @@ import { WordMarkLogo } from '@expo/styleguide';
 
 import { H1 } from '@/components/headers';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <H1 className="prose-strong:text-secondary">

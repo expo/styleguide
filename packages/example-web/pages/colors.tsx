@@ -4,7 +4,7 @@ import { getPaletteClasses } from '@/common/utils';
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
 
-export default function Colors() {
+export default function ColorsPage() {
   const [, copy] = useCopy();
   return (
     <>

@@ -24,7 +24,7 @@ const THEMES = [
   'secondary-destructive',
 ] as ButtonTheme[];
 
-export default function Components() {
+export default function ComponentsPage() {
   return (
     <>
       <H1>UI: Components</H1>

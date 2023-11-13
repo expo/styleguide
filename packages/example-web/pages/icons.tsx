@@ -24,7 +24,7 @@ const iconClasses = mergeClasses(
   'active:scale-98'
 );
 
-export default function Icons() {
+export default function IconsPage() {
   const [, copy] = useCopy();
   const [filters, setFilters] = useState({ outline: true, solid: false, duotone: false });
   const [search, setSearch] = useState('');

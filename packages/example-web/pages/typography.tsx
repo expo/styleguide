@@ -1,7 +1,7 @@
 import { DemoTile } from '@/components/DemoTile';
 import { H1, H3 } from '@/components/headers';
 
-export default function Typography() {
+export default function TypographyPage() {
   return (
     <>
       <H1>Typography</H1>
