@@ -13,10 +13,15 @@ type Props = PropsWithChildren<{
   value?: string;
 }>;
 
-/**
- * Wrapper for Command.Item that adds copy link on right/middle click + visual copy indicator.
- */
-export const CommandItemBase = ({ children, url, isExternalLink, isNested, onSelect, className, value }: Props) => {
+export const CommandItemBaseWithCopy = ({
+  children,
+  url,
+  isExternalLink,
+  isNested,
+  onSelect,
+  className,
+  value,
+}: Props) => {
   const [copyDone, setCopyDone] = useState(false);
 
   const copyUrl = () => {

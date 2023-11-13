@@ -1,7 +1,6 @@
 import { Themes, useTheme } from '@expo/styleguide';
 import { BuildIcon } from '@expo/styleguide-icons';
-import { addHighlight } from '@expo/styleguide-search-ui';
-import { Command } from 'cmdk';
+import { addHighlight, CommandItemBase } from '@expo/styleguide-search-ui';
 import { type ComponentType, HTMLAttributes } from 'react';
 
 type Props = {
@@ -28,11 +27,11 @@ export const QuickActionToggleThemeItem = ({ item, query }: Props) => {
   }
 
   return (
-    <Command.Item value={`quick-action-${item.label}`} onSelect={toggleTheme}>
+    <CommandItemBase value={`quick-action-${item.label}`} onSelect={toggleTheme}>
       <div className="inline-flex gap-3 items-center">
         <Icon className="text-icon-secondary" />
         <p className="text-xs font-medium" dangerouslySetInnerHTML={{ __html: addHighlight(item.label, query) }} />
       </div>
-    </Command.Item>
+    </CommandItemBase>
   );
 };

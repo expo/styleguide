@@ -2,7 +2,7 @@ import { GithubIcon } from '@expo/styleguide-icons';
 import React from 'react';
 
 import { ExternalLinkIcon } from './icons';
-import { CommandItemBase } from '../components/CommandItemBase';
+import { CommandItemBaseWithCopy } from '../components/CommandItemBaseWithCopy';
 import type { RNDirectoryItemType } from '../types';
 import { addHighlight } from '../utils';
 
@@ -16,7 +16,7 @@ const numberFormat = new Intl.NumberFormat();
 
 export const RNDirectoryItem = ({ item, onSelect, query }: Props) => {
   return (
-    <CommandItemBase value={`rnd-${item.npmPkg}`} url={item.githubUrl} isExternalLink onSelect={onSelect}>
+    <CommandItemBaseWithCopy value={`rnd-${item.npmPkg}`} url={item.githubUrl} isExternalLink onSelect={onSelect}>
       <div className="inline-flex gap-3 items-center">
         <GithubIcon className="text-icon-secondary" />
         <div>
@@ -27,6 +27,6 @@ export const RNDirectoryItem = ({ item, onSelect, query }: Props) => {
         </div>
         <ExternalLinkIcon />
       </div>
-    </CommandItemBase>
+    </CommandItemBaseWithCopy>
   );
 };
