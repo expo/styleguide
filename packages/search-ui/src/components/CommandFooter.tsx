@@ -19,7 +19,11 @@ export const CommandFooter = () => (
     </p>
     <p className="text-3xs text-tertiary inline-flex gap-2 items-center ml-auto">
       <span>Search by</span>
-      <AlgoliaLogo />
+      <a
+        href="https://www.algolia.com/developers/?utm_medium=referral&utm_content=powered_by&utm_source=expo.dev.com&utm_campaign=docsearch"
+        target="_blank">
+        <AlgoliaLogo />
+      </a>
     </p>
   </div>
 );
