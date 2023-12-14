@@ -103,7 +103,7 @@ const palette = {
 
 const expoTailwindConfig = {
   safelist: ['icon-md', 'text-icon-default'],
-  darkMode: ['class', '[class="dark-theme"]'],
+  darkMode: ['class', '[class*="dark-theme"]'],
   theme: {
     borderRadius: {
       none: 0,
