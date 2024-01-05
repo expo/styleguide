@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html className="a-test-class">
       <Head />
-      <body className="bg-screen text-default min-h-[100dvh]">
+      <body className="bg-screen text-default min-h-dvh">
         <BlockingSetInitialColorMode />
         <Main />
         <NextScript />
