@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-icons",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Expo's icons for use on the web.",
   "main": "dist/index",
   "types": "dist/index.d.ts",
