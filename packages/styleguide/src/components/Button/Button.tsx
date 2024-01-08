@@ -171,7 +171,7 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     const isRightSlotIcon = rightSlot && isIconElement(rightSlot);
     const iconClasses =
       (isLeftSlotIcon || isRightSlotIcon) &&
-      mergeClasses(`${getIconSizeClasses(size)}`, getThemedIconClasses(theme), disabled && 'opacity-60');
+      mergeClasses(getIconSizeClasses(size), getThemedIconClasses(theme), disabled && 'opacity-60');
     const isSingleIconButton = (leftSlot || rightSlot) && !children;
 
     const twClasses = mergeClasses(

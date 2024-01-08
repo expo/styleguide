@@ -368,6 +368,9 @@ const expoTailwindConfig = {
       width: {
         15: '3.75rem',
       },
+      size: {
+        15: '3.75rem',
+      },
       opacity: {
         inherit: 'inherit',
       },
@@ -376,6 +379,16 @@ const expoTailwindConfig = {
         1025: '1.025',
         175: '1.75',
         200: '2.0',
+      },
+      fontSize: {
+        inherit: [
+          'inherit',
+          {
+            lineHeight: 'inherit',
+            letterSpacing: 'inherit',
+            fontWeight: 'inherit',
+          },
+        ],
       },
       gridTemplateColumns: {
         'auto-min-1': 'auto',
@@ -446,6 +459,15 @@ const expoTailwindConfig = {
         '.transform-box': { 'transform-box': 'fill-box' },
         '.backface-hidden': {
           'backface-visibility': 'hidden',
+        },
+        '.variant-numeric-normal': {
+          'font-variant-numeric': 'normal',
+        },
+        '.variant-numeric-slashed': {
+          'font-variant-numeric': 'slashed-zero',
+        },
+        '.variant-numeric-tubular': {
+          'font-variant-numeric': 'tabular-nums',
         },
       });
     }),
