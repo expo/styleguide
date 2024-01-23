@@ -15,7 +15,7 @@ A collection of packages used to share styles and icons across Expo websites and
     yarn
     ```
 
-2. Configure styleguide-icons. Read [**packages/styleguide-icons/README.md**](https://github.com/expo/styleguide/tree/main/packages/styleguide-icons) to set up your credentials (Expo staff only) to generate icons.
+2. Configure styleguide-icons. Read [**packages/styleguide-icons/README.md**](https://github.com/expo/styleguide/blob/main/packages/styleguide-icons/README.md) to set up your credentials (Expo staff only) to generate icons.
 
 3. Build the packages with
 
