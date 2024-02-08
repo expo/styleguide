@@ -246,8 +246,10 @@
   dependencies:
     tailwind-merge "^2.2.0"
 
-"@expo/styleguide-search-ui@link:packages/search-ui":
+"@expo/styleguide-search-ui@latest":
   version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-1.0.2.tgz#e07cfa14161c74a6d89c0dc5e8897e053d6d54e7"
+  integrity sha512-V+ec5E3gnxZc13TuG5xV7C7WP3wr86kuZw+kZgbgf4IAgEgadlnoMjAtbtckN8r/KeYuT2FBsZR+9PVu4Lr1iw==
   dependencies:
     "@expo/styleguide" "^8.2.1"
     "@expo/styleguide-icons" "^1.0.7"
