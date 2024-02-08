@@ -256,8 +256,10 @@
     cmdk "^0.2.0"
     lodash.groupby "^4.6.0"
 
-"@expo/styleguide@link:packages/styleguide":
+"@expo/styleguide@latest":
   version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.1.tgz#5ce3d3adecbf0ff868d8c1276126b29d4a98a75a"
+  integrity sha512-kKBhuKjhv/6caOdWpI//sGDyT5zpQWcxXR1TwH/81uFyLCYZGqxURXRyIJR/aZeGn+jK03vtmyUvBCT6uG013g==
   dependencies:
     "@expo/styleguide-base" "^1.0.1"
     tailwind-merge "^2.2.0"

@@ -9,7 +9,7 @@
     "clean": "rimraf .next"
   },
   "dependencies": {
-    "@expo/styleguide": "link:../styleguide",
+    "@expo/styleguide": "latest",
     "@expo/styleguide-icons": "latest",
     "@expo/styleguide-search-ui": "latest",
     "@types/node": "^18.18.9",
