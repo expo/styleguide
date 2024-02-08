@@ -246,20 +246,16 @@
   dependencies:
     tailwind-merge "^2.2.0"
 
-"@expo/styleguide-search-ui@latest":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-1.0.0.tgz#110192e77ccd0c9ee0e19b9e3594bdaef8d3f0b0"
-  integrity sha512-bd0iVSThly32uVBLqa4W0r12F3Me8DhBMmre2noCX4ekpaQchv8BTQBzIXDFWRQGBop/BccTxQcsG839fV4D+Q==
+"@expo/styleguide-search-ui@link:packages/search-ui":
+  version "1.0.2"
   dependencies:
-    "@expo/styleguide" "^8.2.0"
-    "@expo/styleguide-icons" "^1.0.6"
+    "@expo/styleguide" "^8.2.1"
+    "@expo/styleguide-icons" "^1.0.7"
     cmdk "^0.2.0"
     lodash.groupby "^4.6.0"
 
-"@expo/styleguide@latest":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.0.tgz#52ae72d2cc5a8b274ac138afabf1e2501f17009e"
-  integrity sha512-GPOZ0vrBNGTsa9i2GKcxNGm3rRcU830rZRgH/yQrp8NWS+ZC26R/7u4+Y1IVBrSbfRgMlW63a46mYkz/I+f0eg==
+"@expo/styleguide@link:packages/styleguide":
+  version "8.2.1"
   dependencies:
     "@expo/styleguide-base" "^1.0.1"
     tailwind-merge "^2.2.0"
