@@ -43,6 +43,11 @@ export default function ComponentsPage() {
       <DemoTile title="no href">
         <LinkBase>LinkBase</LinkBase>
       </DemoTile>
+      <DemoTile title="skip intenral Next Link">
+        <LinkBase skipNextLink href="/">
+          LinkBase
+        </LinkBase>
+      </DemoTile>
       <H3>Link</H3>
       <DemoTile title="default link">
         <Link href="#">Link</Link>
@@ -86,6 +91,11 @@ export default function ComponentsPage() {
           openInNewTab
           theme="secondary-destructive">
           Delete
+        </Button>
+      </DemoTile>
+      <DemoTile title="skip Next Link version">
+        <Button skipNextLink href="/" theme="quaternary">
+          Home
         </Button>
       </DemoTile>
       <H3>Icon Buttons</H3>

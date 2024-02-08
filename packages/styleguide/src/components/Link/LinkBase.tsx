@@ -6,10 +6,11 @@ export type LinkBaseProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   testID?: string;
   openInNewTab?: boolean;
   disabled?: boolean;
+  skipNextLink?: boolean;
 };
 
 export const LinkBase = forwardRef<HTMLAnchorElement, LinkBaseProps>(
-  ({ children, testID, href, openInNewTab, onClick, target, disabled, rel, ...rest }, ref) => {
+  ({ children, testID, href, openInNewTab, onClick, target, disabled, skipNextLink, rel, ...rest }, ref) => {
     if (disabled) {
       return (
         <a ref={ref} data-testid={testID} {...rest}>
@@ -26,8 +27,10 @@ export const LinkBase = forwardRef<HTMLAnchorElement, LinkBaseProps>(
       );
     }
 
+    const Tag = skipNextLink ? 'a' : Link;
+
     return (
-      <Link
+      <Tag
         href={href}
         ref={ref}
         onClick={onClick}
@@ -36,7 +39,7 @@ export const LinkBase = forwardRef<HTMLAnchorElement, LinkBaseProps>(
         data-testid={testID}
         {...rest}>
         {children}
-      </Link>
+      </Tag>
     );
   }
 );

@@ -247,19 +247,19 @@
     tailwind-merge "^2.2.0"
 
 "@expo/styleguide-search-ui@latest":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-1.0.0.tgz#110192e77ccd0c9ee0e19b9e3594bdaef8d3f0b0"
-  integrity sha512-bd0iVSThly32uVBLqa4W0r12F3Me8DhBMmre2noCX4ekpaQchv8BTQBzIXDFWRQGBop/BccTxQcsG839fV4D+Q==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-1.0.2.tgz#e07cfa14161c74a6d89c0dc5e8897e053d6d54e7"
+  integrity sha512-V+ec5E3gnxZc13TuG5xV7C7WP3wr86kuZw+kZgbgf4IAgEgadlnoMjAtbtckN8r/KeYuT2FBsZR+9PVu4Lr1iw==
   dependencies:
-    "@expo/styleguide" "^8.2.0"
-    "@expo/styleguide-icons" "^1.0.6"
+    "@expo/styleguide" "^8.2.1"
+    "@expo/styleguide-icons" "^1.0.7"
     cmdk "^0.2.0"
     lodash.groupby "^4.6.0"
 
 "@expo/styleguide@latest":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.0.tgz#52ae72d2cc5a8b274ac138afabf1e2501f17009e"
-  integrity sha512-GPOZ0vrBNGTsa9i2GKcxNGm3rRcU830rZRgH/yQrp8NWS+ZC26R/7u4+Y1IVBrSbfRgMlW63a46mYkz/I+f0eg==
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.1.tgz#5ce3d3adecbf0ff868d8c1276126b29d4a98a75a"
+  integrity sha512-kKBhuKjhv/6caOdWpI//sGDyT5zpQWcxXR1TwH/81uFyLCYZGqxURXRyIJR/aZeGn+jK03vtmyUvBCT6uG013g==
   dependencies:
     "@expo/styleguide-base" "^1.0.1"
     tailwind-merge "^2.2.0"
