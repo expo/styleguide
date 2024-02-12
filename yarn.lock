@@ -239,31 +239,6 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@expo/styleguide-icons@latest":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-1.0.6.tgz#afa88a6f9dddb53926768de063432c9273f3380e"
-  integrity sha512-+C/1LhxvcI4D/M0YQ4Yp5FqzC/No1Am+ncKhfA6z/tEpvsuP/ABu/20PWKKhRATT19N0PJS+nOTVeOHN6YQPog==
-  dependencies:
-    tailwind-merge "^2.2.0"
-
-"@expo/styleguide-search-ui@latest":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-1.0.2.tgz#e07cfa14161c74a6d89c0dc5e8897e053d6d54e7"
-  integrity sha512-V+ec5E3gnxZc13TuG5xV7C7WP3wr86kuZw+kZgbgf4IAgEgadlnoMjAtbtckN8r/KeYuT2FBsZR+9PVu4Lr1iw==
-  dependencies:
-    "@expo/styleguide" "^8.2.1"
-    "@expo/styleguide-icons" "^1.0.7"
-    cmdk "^0.2.0"
-    lodash.groupby "^4.6.0"
-
-"@expo/styleguide@latest":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.1.tgz#5ce3d3adecbf0ff868d8c1276126b29d4a98a75a"
-  integrity sha512-kKBhuKjhv/6caOdWpI//sGDyT5zpQWcxXR1TwH/81uFyLCYZGqxURXRyIJR/aZeGn+jK03vtmyUvBCT6uG013g==
-  dependencies:
-    "@expo/styleguide-base" "^1.0.1"
-    tailwind-merge "^2.2.0"
-
 "@figma-export/cli@^4.7.0":
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/@figma-export/cli/-/cli-4.7.0.tgz#dc3ebf365aa18d90bba9dbe81010ba7a559e61c2"
