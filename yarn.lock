@@ -239,6 +239,13 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
+"@expo/styleguide-icons@latest":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-1.0.8.tgz#093f6099598f4765a04cb67b38d259a4e7fa4cb3"
+  integrity sha512-jqbgMgz1C15p82dBL3Cgg6K49nS+kxAP4gIlD06hRVCgYA9y0z8Xy7uc9ulb2ZE69vtxCv783QPXMSdEBlybiA==
+  dependencies:
+    tailwind-merge "^2.2.0"
+
 "@figma-export/cli@^4.7.0":
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/@figma-export/cli/-/cli-4.7.0.tgz#dc3ebf365aa18d90bba9dbe81010ba7a559e61c2"
