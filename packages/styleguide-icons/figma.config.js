@@ -19,7 +19,7 @@ const outputters = [
   require('@figma-export/output-components-as-svgr')({
     getFileExtension: () => '.tsx',
     getComponentName,
-    getSvgrConfig: () => ({
+    getSvgrConfig: ({ componentName, pageName }) => ({
       typescript: true,
       svgProps: {
         className: '{_className}',
@@ -27,6 +27,7 @@ const outputters = [
       },
       replaceAttrValues: {
         black: 'currentColor',
+        [componentName]: `${componentName}-${pageName}-icon`,
       },
       template,
     }),
