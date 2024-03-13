@@ -37,7 +37,7 @@ const outputters = [
         componentName,
         pageName,
       })} } from './${getComponentName({ componentName, pageName })}';`,
-    output: './tmp',
+    output: './src/icons',
   }),
 ];
 
