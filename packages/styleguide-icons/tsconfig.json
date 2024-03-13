@@ -8,10 +8,10 @@
     "outDir": "dist",
     "paths": {
       "@/*": [
-        "./*"
+        "./src/*"
       ]
     }
   },
-  "include": ["./tmp/**/*.tsx", "./tmp/**/*.ts", "./index.ts"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts", "./src/*.ts"],
   "exclude": ["node_modules"]
 }
