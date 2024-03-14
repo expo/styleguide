@@ -33,11 +33,11 @@ const outputters = [
     }),
     // Exports the component as a named export without the '.tsx' extension inside the generated index.ts file. By default the '.tsx' extension is added, which makes TypeScript complain.
     getExportTemplate: ({ componentName, pageName }) =>
-      `export { default as ${getComponentName({
+      `export { ${getComponentName({
         componentName,
         pageName,
       })} } from './${getComponentName({ componentName, pageName })}';`,
-    output: './src/icons',
+    output: './src',
   }),
 ];
 
