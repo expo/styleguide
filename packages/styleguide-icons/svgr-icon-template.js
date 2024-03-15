@@ -1,16 +1,14 @@
-const svgrTemplate = ({ imports, interfaces, componentName, props, jsx, exports }, { tpl, options }) => {
+const svgrTemplate = ({ imports, interfaces, componentName, props, jsx }, { tpl, options }) => {
   return tpl`${imports}
 
-import { mergeClasses } from '@/mergeClasses';
+import { mergeClasses } from "@/mergeClasses";
 
-function ${componentName}({ className, ...props }: SVGProps<SVGSVGElement> & React.HTMLAttributes<SVGSVGElement>) {
+export function ${componentName}({ className, ...props }: React.SVGProps<SVGSVGElement> & React.HTMLAttributes<SVGSVGElement>) {
   const _className = mergeClasses("icon-md text-icon-default", className);
   return ${jsx};
 }
 
-${componentName}.displayName = "${componentName}";
-${exports}
-  `;
+${componentName}.displayName = "${componentName}";`;
 };
 
 module.exports = svgrTemplate;
