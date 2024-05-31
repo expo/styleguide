@@ -12,6 +12,7 @@ const ThemeContext = createContext({
   setDarkMode: () => {},
   setLightMode: () => {},
   setAutoMode: () => {},
+  prefersDarkMode: false,
   themeName: Themes.AUTO,
 });
 
@@ -22,13 +23,24 @@ type ThemeProviderProps = {
 
 export function ThemeProvider(props: ThemeProviderProps) {
   const { children, disabled = false } = props;
-  const initialTheme = (process as any).browser ? (document.documentElement.dataset.expoTheme as Themes) : Themes.AUTO;
+  let initialTheme = Themes.AUTO;
+
+  if ((process as any).browser) {
+    if (document.documentElement.classList.contains('dark-theme')) {
+      initialTheme = Themes.DARK;
+    } else {
+      initialTheme = Themes.LIGHT;
+    }
+  }
+
   const [themeName, setThemeName] = useState(disabled ? Themes.LIGHT : initialTheme);
+  const [prefersDarkMode, setPrefersDarkMode] = useState(false);
 
   useEffect(function didMount() {
     if (disabled) return;
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setPrefersDarkMode(mediaQuery.matches);
 
     try {
       mediaQuery.addEventListener('change', onThemeChange);
@@ -83,6 +95,8 @@ export function ThemeProvider(props: ThemeProviderProps) {
     } else {
       setDocumentTheme(Themes.AUTO);
     }
+
+    setPrefersDarkMode(event.matches);
   }
 
   function setDarkMode() {
@@ -117,6 +131,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
         setDarkMode,
         setLightMode,
         setAutoMode,
+        prefersDarkMode,
         themeName,
       }}>
       {children}
