@@ -1,7 +1,7 @@
 import { mergeClasses } from '@expo/styleguide';
 
 import { getPaletteClasses } from '@/common/utils';
-import { H1, H3 } from '@/components/headers';
+import { H1, H3, H4 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
 
 export default function ColorsPage() {
@@ -9,6 +9,79 @@ export default function ColorsPage() {
   return (
     <>
       <H1>Colors</H1>
+      <H3 id="semantic">Semantic</H3>
+      <H4>Backgrounds</H4>
+      <div className="flex flex-wrap mb-2">
+        {[
+          'bg-default',
+          'bg-screen',
+          'bg-subtle',
+          'bg-element',
+          'bg-hover',
+          'bg-selected',
+          'bg-overlay',
+          'bg-success',
+          'bg-warning',
+          'bg-danger',
+          'bg-info',
+        ].map((className, index) => (
+          <div key={index}>
+            <div
+              className={mergeClasses(
+                'w-16 h-16 mb-1 transition',
+                'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                className
+              )}
+              onClick={() => copy(className)}
+            />
+            <p className="text-3xs text-secondary text-center">{className.replace('bg-', '')}</p>
+          </div>
+        ))}
+      </div>
+      <H4 className="mt-6">Borders</H4>
+      <div className="flex flex-wrap mb-2">
+        {['border-default', 'border-secondary', 'border-success', 'border-warning', 'border-danger', 'border-info'].map(
+          (className, index) => (
+            <div key={index}>
+              <div
+                className={mergeClasses(
+                  'w-16 h-16 mb-1 transition border-[10px]',
+                  'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                  className
+                )}
+                onClick={() => copy(className)}
+              />
+              <p className="text-3xs text-secondary text-center">{className.replace('border-', '')}</p>
+            </div>
+          )
+        )}
+      </div>
+      <H4 className="mt-6">Text colors</H4>
+      <div className="flex flex-wrap mb-2">
+        {[
+          'text-default',
+          'text-secondary',
+          'text-tertiary',
+          'text-quaternary',
+          'text-success',
+          'text-warning',
+          'text-danger',
+          'text-info',
+        ].map((className, index) => (
+          <div key={index}>
+            <div
+              className={mergeClasses(
+                'inline-flex items-center justify-center heading-xl w-16 h-16 mb-1 transition font-black',
+                'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                className
+              )}
+              onClick={() => copy(className)}>
+              T
+            </div>
+            <p className="text-3xs text-secondary text-center">{className.replace('text-', '')}</p>
+          </div>
+        ))}
+      </div>
       <H3 id="palette">Palette</H3>
       <div className="grid gap-2 mt-8">
         {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'gray'].map((color) => (

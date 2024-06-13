@@ -128,6 +128,7 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-background-warning)',
       danger: 'var(--expo-theme-background-danger)',
       info: 'var(--expo-theme-background-info)',
+      transparent: 'transparent',
 
       'button-primary': 'var(--expo-theme-button-primary-background)',
       'button-primary-hover': 'var(--expo-theme-button-primary-hover)',
@@ -332,9 +333,32 @@ const expoTailwindConfig = {
       'lg-gutters': '1008px',
       xl: '1200px',
       'xl-gutters': '1248px',
+      '2xl': '1524px',
+      '2xl-gutters': '1572px',
     },
     extend: {
       stroke: {
+        'bg-default': 'var(--expo-theme-background-default)',
+        'bg-screen': 'var(--expo-theme-background-screen)',
+        'bg-subtle': 'var(--expo-theme-background-subtle)',
+        'bg-element': 'var(--expo-theme-background-element)',
+        'bg-hover': 'var(--expo-theme-background-hover)',
+        'bg-selected': 'var(--expo-theme-background-selected)',
+        'bg-overlay': 'var(--expo-theme-background-overlay)',
+        'bg-success': 'var(--expo-theme-background-success)',
+        'bg-warning': 'var(--expo-theme-background-warning)',
+        'bg-danger': 'var(--expo-theme-background-danger)',
+        'bg-info': 'var(--expo-theme-background-info)',
+      },
+      fill: {
+        'border-default': 'var(--expo-theme-border-default)',
+        'border-secondary': 'var(--expo-theme-border-secondary)',
+        'border-success': 'var(--expo-theme-border-success)',
+        'border-warning': 'var(--expo-theme-border-warning)',
+        'border-danger': 'var(--expo-theme-border-danger)',
+        'border-info': 'var(--expo-theme-border-info)',
+      },
+      gradientColorStops: {
         'bg-default': 'var(--expo-theme-background-default)',
         'bg-screen': 'var(--expo-theme-background-screen)',
         'bg-subtle': 'var(--expo-theme-background-subtle)',
@@ -360,7 +384,6 @@ const expoTailwindConfig = {
         'app-lime': 'var(--expo-color-app-lime)',
         'app-light-green': 'var(--expo-color-app-light-green)',
         'app-dark-green': 'var(--expo-color-app-dark-green)',
-        transparent: 'transparent',
       },
       height: {
         15: '3.75rem',
@@ -466,7 +489,7 @@ const expoTailwindConfig = {
         '.variant-numeric-slashed': {
           'font-variant-numeric': 'slashed-zero',
         },
-        '.variant-numeric-tubular': {
+        '.variant-numeric-tabular': {
           'font-variant-numeric': 'tabular-nums',
         },
       });

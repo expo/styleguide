@@ -29,7 +29,7 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "dependencies": {
-    "tailwind-merge": "^2.2.0"
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@figma-export/cli": "^4.7.0",

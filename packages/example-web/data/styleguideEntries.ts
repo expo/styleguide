@@ -3,6 +3,11 @@ import { BezierCurve03Icon, LayoutAlt03Icon, PaletteIcon, TextInputIcon, Type01I
 
 export const entries = [
   {
+    label: 'Colors: Semantic',
+    url: '/colors#semantic',
+    Icon: PaletteIcon,
+  },
+  {
     label: 'Colors: Palette',
     url: '/colors#palette',
     Icon: PaletteIcon,
