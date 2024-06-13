@@ -1,4 +1,4 @@
-import { ThemeIcon } from '@expo/styleguide-icons';
+import { ThemeIcon } from '@expo/styleguide-icons/dist/custom/ThemeIcon';
 
 import { QuickActionToggleThemeItem } from '@/components/search/QuickActionItem';
 

@@ -12,7 +12,7 @@
     "check-env": "sh ./check-env.sh",
     "clean": "rimraf dist tmp",
     "export": "figma-export use-config figma.config.js",
-    "bundle": "rollup --config",
+    "bundle": "tsc",
     "build": "run-s check-env",
     "build-stub": "export STUB=true && run-s clean bundle",
     "build-icons": "run-s clean export bundle"

@@ -21,14 +21,14 @@ const baseConfig = {
 
 function getConfig() {
   if (process.env.STUB) {
-    return  {
+    return {
       ...baseConfig,
       input: 'src/index-stub.js',
       plugins: [
         copy({
           targets: [{ src: './stub.d.ts', dest: 'dist', rename: 'index.d.ts' }],
         }),
-      ]
+      ],
     };
   }
   return baseConfig;

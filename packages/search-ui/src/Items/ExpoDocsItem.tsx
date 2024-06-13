@@ -1,11 +1,9 @@
 import { DocsLogo, mergeClasses } from '@expo/styleguide';
-import {
-  PlanEnterpriseIcon,
-  BookOpen02Icon,
-  GraduationHat02Icon,
-  Home02Icon,
-  Hash02Icon,
-} from '@expo/styleguide-icons';
+import { PlanEnterpriseIcon } from '@expo/styleguide-icons/dist/custom/PlanEnterpriseIcon';
+import { BookOpen02Icon } from '@expo/styleguide-icons/dist/outline/BookOpen02Icon';
+import { GraduationHat02Icon } from '@expo/styleguide-icons/dist/outline/GraduationHat02Icon';
+import { Hash02Icon } from '@expo/styleguide-icons/dist/outline/Hash02Icon';
+import { Home02Icon } from '@expo/styleguide-icons/dist/outline/Home02Icon';
 import React from 'react';
 
 import { FootnoteSection } from './FootnoteSection';

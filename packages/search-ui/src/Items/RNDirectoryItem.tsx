@@ -1,4 +1,4 @@
-import { GithubIcon } from '@expo/styleguide-icons';
+import { GithubIcon } from '@expo/styleguide-icons/dist/custom/GithubIcon';
 import React from 'react';
 
 import { ExternalLinkIcon } from './icons';

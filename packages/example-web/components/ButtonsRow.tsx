@@ -1,5 +1,5 @@
 import { Button, ButtonProps } from '@expo/styleguide';
-import { PaletteIcon } from '@expo/styleguide-icons';
+import { PaletteIcon } from '@expo/styleguide-icons/dist/outline/PaletteIcon';
 
 import { DemoTile } from '@/components/DemoTile';
 
