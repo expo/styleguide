@@ -8,6 +8,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "check-env": "sh ./check-env.sh",
     "clean": "rimraf dist tmp",
