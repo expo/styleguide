@@ -9,9 +9,12 @@ import {
   mergeClasses,
   Button,
 } from '@expo/styleguide';
-import * as StyleguideIcons from '@expo/styleguide-icons';
-import { CheckCircleIcon, PlaceholderIcon, SearchMdIcon } from '@expo/styleguide-icons';
+import { CheckCircleIcon } from '@expo/styleguide-icons/dist/outline/CheckCircleIcon';
+import { PlaceholderIcon } from '@expo/styleguide-icons/dist/outline/PlaceholderIcon';
+import { SearchMdIcon } from '@expo/styleguide-icons/dist/outline/SearchMdIcon';
 import { createElement, useState } from 'react';
+
+import * as StyleguideIcons from './icon-imports';
 
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
