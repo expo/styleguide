@@ -13,6 +13,7 @@ async function run() {
         fs.promises.readdir(`${base}/${directory}`).then((files) =>
           files
             .filter((file) => file.endsWith('.js'))
+            .filter((file) => !file.startsWith('index'))
             .map((file) => {
               const iconName = file.replaceAll('.js', '').split('/').at(-1);
               return `export { ${iconName} } from '@expo/styleguide-icons/dist/${directory}/${iconName}'`;
