@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "check-env": "sh ./check-env.sh",
-    "clean": "rimraf dist tmp",
+    "clean": "rimraf custom duotone outline solid index.* mergeClasses.*",
     "export": "figma-export use-config figma.config.js",
     "bundle": "rollup --config && node ./postbundle.js",
     "build": "run-s check-env",

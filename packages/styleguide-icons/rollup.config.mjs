@@ -14,7 +14,10 @@ const baseConfig = {
     preserveModulesRoot: 'src',
   },
   treeshake: 'smallest',
-  plugins: [typescript(), terser()],
+  plugins: [
+    typescript(),
+    terser(),
+  ],
   external: ['react', 'tailwind-merge'],
 };
 
@@ -25,7 +28,9 @@ function getConfig() {
       input: 'src/index-stub.js',
       plugins: [
         copy({
-          targets: [{ src: './stub.d.ts', dest: 'dist', rename: 'index.d.ts' }],
+          targets: [
+            { src: './stub.d.ts', dest: './', rename: 'index.d.ts' }
+          ],
         }),
       ],
     };

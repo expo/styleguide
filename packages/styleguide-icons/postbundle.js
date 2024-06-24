@@ -1,8 +1,7 @@
-// Copy package.json to dist
+// Flatten package structure
 const fs = require('node:fs');
 const path = require('node:path');
 
-fs.writeFileSync(
-  path.resolve(__dirname, 'dist', 'package.json'),
-  fs.readFileSync(path.resolve(__dirname, 'package.json'))
-);
+fs.cpSync(path.resolve(__dirname, 'dist'), path.resolve(__dirname), { recursive: true });
+
+fs.rmdirSync('./dist', { recursive: true });

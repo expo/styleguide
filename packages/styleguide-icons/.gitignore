@@ -2,3 +2,13 @@ src/custom
 src/duotone
 src/outline
 src/solid
+
+custom
+duotone
+outline
+solid
+
+/index.js
+/mergeClasses.js
+
+*.d.ts
