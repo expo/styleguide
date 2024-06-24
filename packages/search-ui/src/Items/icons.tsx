@@ -1,6 +1,6 @@
 import { mergeClasses } from '@expo/styleguide';
-import { ArrowUpRightIcon } from '@expo/styleguide-icons/dist/outline/ArrowUpRightIcon';
-import { ChevronRightIcon } from '@expo/styleguide-icons/dist/outline/ChevronRightIcon';
+import { ArrowUpRightIcon } from '@expo/styleguide-icons/outline/ArrowUpRightIcon';
+import { ChevronRightIcon } from '@expo/styleguide-icons/outline/ChevronRightIcon';
 import React, { HTMLAttributes } from 'react';
 
 export function FootnoteArrowIcon() {

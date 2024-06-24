@@ -2,21 +2,18 @@
   "name": "@expo/styleguide-icons",
   "version": "2.0.0-alpha.0",
   "description": "Expo's icons for use on the web.",
-  "main": "index",
-  "types": "index.d.ts",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "check-env": "sh ./check-env.sh",
     "clean": "rimraf dist tmp",
     "export": "figma-export use-config figma.config.js",
-    "bundle": "tsc",
-    "build": "run-s check-env && node ./postbuild.js",
+    "bundle": "rollup --config",
+    "build": "run-s check-env",
     "build-stub": "export STUB=true && run-s clean bundle",
     "build-icons": "run-s clean export bundle"
   },

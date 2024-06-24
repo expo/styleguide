@@ -1,12 +1,12 @@
 import { ButtonBase, Button, Link, LinkBase, type ButtonTheme } from '@expo/styleguide';
-import { EasMetadataIcon } from '@expo/styleguide-icons/dist/custom/EasMetadataIcon';
-import { AlignTopArrow01Icon } from '@expo/styleguide-icons/dist/outline/AlignTopArrow01Icon';
-import { ArrowUpRightIcon } from '@expo/styleguide-icons/dist/outline/ArrowUpRightIcon';
-import { BookClosedIcon } from '@expo/styleguide-icons/dist/outline/BookClosedIcon';
-import { Diamond01Icon } from '@expo/styleguide-icons/dist/outline/Diamond01Icon';
-import { DotsHorizontalIcon } from '@expo/styleguide-icons/dist/outline/DotsHorizontalIcon';
-import { EyeOffIcon } from '@expo/styleguide-icons/dist/outline/EyeOffIcon';
-import { Trash01Icon } from '@expo/styleguide-icons/dist/outline/Trash01Icon';
+import { EasMetadataIcon } from '@expo/styleguide-icons/custom/EasMetadataIcon';
+import { AlignTopArrow01Icon } from '@expo/styleguide-icons/outline/AlignTopArrow01Icon';
+import { ArrowUpRightIcon } from '@expo/styleguide-icons/outline/ArrowUpRightIcon';
+import { BookClosedIcon } from '@expo/styleguide-icons/outline/BookClosedIcon';
+import { Diamond01Icon } from '@expo/styleguide-icons/outline/Diamond01Icon';
+import { DotsHorizontalIcon } from '@expo/styleguide-icons/outline/DotsHorizontalIcon';
+import { EyeOffIcon } from '@expo/styleguide-icons/outline/EyeOffIcon';
+import { Trash01Icon } from '@expo/styleguide-icons/outline/Trash01Icon';
 import { Fragment } from 'react';
 
 import { ButtonsRow } from '@/components/ButtonsRow';

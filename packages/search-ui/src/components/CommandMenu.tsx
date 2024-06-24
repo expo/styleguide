@@ -1,5 +1,5 @@
-import { SearchSmIcon } from '@expo/styleguide-icons/dist/outline/SearchSmIcon';
-import { XIcon } from '@expo/styleguide-icons/dist/outline/XIcon';
+import { SearchSmIcon } from '@expo/styleguide-icons/outline/SearchSmIcon';
+import { XIcon } from '@expo/styleguide-icons/outline/XIcon';
 import { Command } from 'cmdk';
 import groupBy from 'lodash.groupby';
 import React, { useEffect, useState, Dispatch, SetStateAction } from 'react';

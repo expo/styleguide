@@ -1,5 +1,5 @@
 import { Button, mergeClasses } from '@expo/styleguide';
-import { SearchSmIcon } from '@expo/styleguide-icons/dist/outline/SearchSmIcon';
+import { SearchSmIcon } from '@expo/styleguide-icons/outline/SearchSmIcon';
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import { isAppleDevice } from '../utils';
