@@ -14,7 +14,7 @@ import { PlaceholderIcon } from '@expo/styleguide-icons/dist/outline/Placeholder
 import { SearchMdIcon } from '@expo/styleguide-icons/dist/outline/SearchMdIcon';
 import { createElement, useState } from 'react';
 
-import * as StyleguideIcons from './icon-imports';
+import * as StyleguideIcons from '../common/icon-imports';
 
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
