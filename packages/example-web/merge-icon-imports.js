@@ -24,7 +24,7 @@ async function run() {
   ].flat();
 
   const content = files.join('\n');
-  await fs.promises.writeFile('pages/icon-imports.tsx', content);
+  await fs.promises.writeFile('common/icon-imports.ts', content);
 }
 
 run();
