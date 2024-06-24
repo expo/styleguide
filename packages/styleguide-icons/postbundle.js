@@ -4,4 +4,4 @@ const path = require('node:path');
 
 fs.cpSync(path.resolve(__dirname, 'dist'), path.resolve(__dirname), { recursive: true });
 
-fs.rmdirSync('./dist', { recursive: true });
+fs.rmSync('./dist', { recursive: true });
