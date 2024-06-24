@@ -48,13 +48,6 @@
   "peerDependencies": {
     "react": ">= 16"
   },
-  "lerna": {
-    "command": {
-      "publish": {
-        "directory": "./dist"
-      }
-    }
-  },
   "eslintConfig": {
     "extends": [
       "universe/web",
