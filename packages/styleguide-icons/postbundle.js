@@ -5,19 +5,23 @@ const path = require('node:path');
 fs.cpSync(path.resolve(__dirname, 'dist'), path.resolve(__dirname), { recursive: true });
 fs.rmSync('./dist', { recursive: true });
 
-// Remove index files from @expo/styleguide-icons package.
+console.log('');
+
+// Replace all index files content.
 fs.readdirSync(path.resolve(__dirname), { withFileTypes: true })
   .reduce((acc, dirent) => {
-    const directoryPath = path.join(path.resolve(__dirname), dirent.name);
+    const directoryPath = path.resolve(__dirname, dirent.name);
     if (dirent.isDirectory()) {
       const files = fs.readdirSync(directoryPath).map((fileName) => path.join(directoryPath, fileName));
       return acc.concat(files);
     }
     return acc.concat(directoryPath);
   }, [])
-  .filter((file) => ['index.js', 'index.d.ts', 'index.ts'].includes(path.basename(file)))
+  .filter((file) => ['index.js', 'index.d.ts'].includes(path.basename(file)))
   .forEach((indexFile) => {
     // Overwrite the index file with an empty file.
     fs.writeFileSync(indexFile, '');
-    console.log(`Removed: ${indexFile}`);
+    console.log(`🧹 Cleared: \x1b[36m${indexFile.replace(__dirname, '')}\x1b[0m`);
   });
+
+console.log('');
