@@ -239,20 +239,20 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@expo/styleguide-icons@latest":
-  version "2.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.0-alpha.5.tgz#7ad61f70480134a320c948b829a7e4d70de4de92"
-  integrity sha512-XoR4TRa5lYWpaJuFnIMuQBZ0NsrAnWyiQ5FU+UDkL49tXmt0WGdh4KjopT+d5Yi89gPnQDAWntymJOmyGq+0Og==
+"@expo/styleguide-icons@^2.0.0-alpha.6", "@expo/styleguide-icons@latest":
+  version "2.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.0-alpha.6.tgz#5f316e9a709dc3f01e5afbce0b018d80ff1f3456"
+  integrity sha512-rdd1FdFUPp9qVdQP0dlEM7zqe0X/e7Jq3vTI3VgmJE6BmkJt/G9HSbkMYyr0neDds9MzqXjv29H1X9Gw5isoSw==
   dependencies:
     tailwind-merge "^2.3.0"
 
 "@expo/styleguide-search-ui@latest":
-  version "2.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-2.0.0-alpha.5.tgz#a3c1c83a9142971894d5f10dc5da4a823363e800"
-  integrity sha512-7/itMs83jL86L7jEL1U2CCc5DaCEuooydAxD0WPNoiDZc6nIIQfoicsfdQqVLSZBzB+9lGRTFs6LyBqD3XaYkQ==
+  version "2.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-2.0.0-alpha.6.tgz#5b028da0eecd5d6323dc46ec2d2d6c2d52b0f34f"
+  integrity sha512-GthZhUNmizn/SRJzqhaADBh5m45Tin5DaPtj+YuWCs//RlWVTvVW7Db7K+IpNkJUaHZZJZOs1h+Zkv6JRB+13g==
   dependencies:
     "@expo/styleguide" "^8.2.3"
-    "@expo/styleguide-icons" "^2.0.0-alpha.5"
+    "@expo/styleguide-icons" "^2.0.0-alpha.6"
     cmdk "^0.2.0"
     lodash.groupby "^4.6.0"
 
