@@ -1,5 +1,5 @@
 import { Themes, useTheme } from '@expo/styleguide';
-import { BuildIcon } from '@expo/styleguide-icons';
+import { BuildIcon } from '@expo/styleguide-icons/custom/BuildIcon';
 import { addHighlight, CommandItemBase } from '@expo/styleguide-search-ui';
 import { type ComponentType, HTMLAttributes } from 'react';
 

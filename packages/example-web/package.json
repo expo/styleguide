@@ -6,12 +6,13 @@
     "dev": "yarn clean && next dev",
     "build": "next build",
     "analyze-build": "ANALYZE=true next build",
+    "postinstall": "node ./merge-icon-imports.js",
     "clean": "rimraf .next"
   },
   "dependencies": {
     "@expo/styleguide": "^8.2.2",
     "@expo/styleguide-icons": "latest",
-    "@expo/styleguide-search-ui": "^1.0.3",
+    "@expo/styleguide-search-ui": "latest",
     "@types/node": "^18.18.9",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
@@ -30,9 +31,15 @@
     "tailwindcss": "^3.4.4"
   },
   "eslintConfig": {
-    "extends": ["universe/web", "next/core-web-vitals"],
+    "extends": [
+      "universe/web",
+      "next/core-web-vitals"
+    ],
     "rules": {
-      "@next/next/no-html-link-for-pages": ["error", "packages/example-web/pages"]
+      "@next/next/no-html-link-for-pages": [
+        "error",
+        "packages/example-web/pages"
+      ]
     }
   }
 }

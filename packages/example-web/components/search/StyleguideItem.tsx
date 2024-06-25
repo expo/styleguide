@@ -1,4 +1,4 @@
-import { BuildIcon } from '@expo/styleguide-icons';
+import { BuildIcon } from '@expo/styleguide-icons/custom/BuildIcon';
 import { addHighlight } from '@expo/styleguide-search-ui';
 import { Command } from 'cmdk';
 import Link from 'next/link';

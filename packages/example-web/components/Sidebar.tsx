@@ -1,5 +1,5 @@
 import { Button, useTheme, Themes, mergeClasses } from '@expo/styleguide';
-import { ThemeIcon } from '@expo/styleguide-icons';
+import { ThemeIcon } from '@expo/styleguide-icons/custom/ThemeIcon';
 import { CommandMenuTrigger } from '@expo/styleguide-search-ui';
 import Image from 'next/image';
 import Link from 'next/link';

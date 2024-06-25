@@ -1,5 +1,9 @@
 import { ExpoGoLogo } from '@expo/styleguide';
-import { BezierCurve03Icon, LayoutAlt03Icon, PaletteIcon, TextInputIcon, Type01Icon } from '@expo/styleguide-icons';
+import { BezierCurve03Icon } from '@expo/styleguide-icons/outline/BezierCurve03Icon';
+import { LayoutAlt03Icon } from '@expo/styleguide-icons/outline/LayoutAlt03Icon';
+import { PaletteIcon } from '@expo/styleguide-icons/outline/PaletteIcon';
+import { TextInputIcon } from '@expo/styleguide-icons/outline/TextInputIcon';
+import { Type01Icon } from '@expo/styleguide-icons/outline/Type01Icon';
 
 export const entries = [
   {

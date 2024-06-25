@@ -1,18 +1,25 @@
 {
   "name": "@expo/styleguide-icons",
-  "version": "1.0.9",
+  "version": "2.0.0-alpha.7",
   "description": "Expo's icons for use on the web.",
-  "main": "dist/index",
-  "types": "dist/index.d.ts",
+  "main": "index",
+  "types": "index.d.ts",
   "sideEffects": false,
   "files": [
-    "dist"
+    "custom",
+    "duotone",
+    "outline",
+    "solid",
+    "index.d.ts",
+    "index.js",
+    "mergeClasses.d.ts",
+    "mergeClasses.js"
   ],
   "scripts": {
     "check-env": "sh ./check-env.sh",
-    "clean": "rimraf dist tmp",
+    "clean": "rimraf custom duotone outline solid index.* mergeClasses.*",
     "export": "figma-export use-config figma.config.js",
-    "bundle": "rollup --config",
+    "bundle": "rollup --config && node ./postbundle.js",
     "build": "run-s check-env",
     "build-stub": "export STUB=true && run-s clean bundle",
     "build-icons": "run-s clean export bundle"
