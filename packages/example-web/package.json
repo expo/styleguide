@@ -11,7 +11,7 @@
   "dependencies": {
     "@expo/styleguide": "^8.2.2",
     "@expo/styleguide-icons": "latest",
-    "@expo/styleguide-search-ui": "^1.0.3",
+    "@expo/styleguide-search-ui": "latest",
     "@types/node": "^18.18.9",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",

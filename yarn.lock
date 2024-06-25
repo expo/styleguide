@@ -239,27 +239,20 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@expo/styleguide-icons@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-1.0.9.tgz#bc80d8aba0e956c392e6c1c2ca692069fec95a3d"
-  integrity sha512-+z037gXZZWbhj47brp8p47a9qDw7rO//Hf7XtAuYUOMY3YmqSAMc0JsMTQ5GvdggoWnOQNZjOnmFwiEQfJI2MA==
-  dependencies:
-    tailwind-merge "^2.3.0"
-
 "@expo/styleguide-icons@latest":
-  version "2.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.0-alpha.0.tgz#7234145dae365632e98afaca316984d8a466a3b0"
-  integrity sha512-fb2lozO98QNLrjBgdbfHs6x0OoMeVW+70IWVWUVnzMj60k2yi8Tl5K53FafvzM9710oH5zahtC6hE3spglbrkg==
+  version "2.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.0-alpha.5.tgz#7ad61f70480134a320c948b829a7e4d70de4de92"
+  integrity sha512-XoR4TRa5lYWpaJuFnIMuQBZ0NsrAnWyiQ5FU+UDkL49tXmt0WGdh4KjopT+d5Yi89gPnQDAWntymJOmyGq+0Og==
   dependencies:
     tailwind-merge "^2.3.0"
 
-"@expo/styleguide-search-ui@^1.0.3":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-1.0.5.tgz#2494099b539199aa859ca06ef2506949160c597b"
-  integrity sha512-7UuhAqt/1wwU71Ll8NcJu3ktQ5Y4ruH3JEr2iGgjaR+gAq1DkjcCMQ+waDeI/Bp5IW0MM5WyOITJZNrkCAaRzw==
+"@expo/styleguide-search-ui@latest":
+  version "2.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-2.0.0-alpha.5.tgz#a3c1c83a9142971894d5f10dc5da4a823363e800"
+  integrity sha512-7/itMs83jL86L7jEL1U2CCc5DaCEuooydAxD0WPNoiDZc6nIIQfoicsfdQqVLSZBzB+9lGRTFs6LyBqD3XaYkQ==
   dependencies:
     "@expo/styleguide" "^8.2.3"
-    "@expo/styleguide-icons" "^1.0.9"
+    "@expo/styleguide-icons" "^2.0.0-alpha.5"
     cmdk "^0.2.0"
     lodash.groupby "^4.6.0"
 
