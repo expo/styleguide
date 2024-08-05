@@ -29,7 +29,8 @@ export default function ColorsPage() {
             <div
               className={mergeClasses(
                 'w-16 h-16 mb-1 transition',
-                'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                'active:scale-105',
                 className
               )}
               onClick={() => copy(className)}
@@ -46,7 +47,8 @@ export default function ColorsPage() {
               <div
                 className={mergeClasses(
                   'w-16 h-16 mb-1 transition border-[10px]',
-                  'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                  'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                  'active:scale-105',
                   className
                 )}
                 onClick={() => copy(className)}
@@ -72,7 +74,8 @@ export default function ColorsPage() {
             <div
               className={mergeClasses(
                 'inline-flex items-center justify-center heading-xl w-16 h-16 mb-1 transition font-black',
-                'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                'active:scale-105',
                 className
               )}
               onClick={() => copy(className)}>
@@ -91,7 +94,8 @@ export default function ColorsPage() {
                 <div
                   className={mergeClasses(
                     'w-16 h-16 mb-1 transition',
-                    'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                    'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                    'active:scale-105',
                     className
                   )}
                   onClick={() => copy(`palette-${color}${index + 1}`)}
@@ -125,7 +129,8 @@ export default function ColorsPage() {
             <div
               className={mergeClasses(
                 'w-16 h-16 mb-1 transition',
-                'hover:scale-110 hover:shadow-md hover:cursor-pointer active:scale-105',
+                'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                'active:scale-105',
                 className
               )}
               onClick={() => copy(className)}

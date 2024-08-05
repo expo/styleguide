@@ -227,6 +227,22 @@ const expoTailwindConfig = {
 
       ...palette,
     },
+    gradientColorStops: {
+      default: 'var(--expo-theme-background-default)',
+      screen: 'var(--expo-theme-background-screen)',
+      subtle: 'var(--expo-theme-background-subtle)',
+      element: 'var(--expo-theme-background-element)',
+      hover: 'var(--expo-theme-background-hover)',
+      selected: 'var(--expo-theme-background-selected)',
+      overlay: 'var(--expo-theme-background-overlay)',
+      success: 'var(--expo-theme-background-success)',
+      warning: 'var(--expo-theme-background-warning)',
+      danger: 'var(--expo-theme-background-danger)',
+      info: 'var(--expo-theme-background-info)',
+      transparent: 'transparent',
+
+      ...palette,
+    },
     boxShadow: {
       none: 'var(--expo-theme-shadows-none)',
       xs: 'var(--expo-theme-shadows-xs)',
@@ -357,19 +373,6 @@ const expoTailwindConfig = {
         'border-warning': 'var(--expo-theme-border-warning)',
         'border-danger': 'var(--expo-theme-border-danger)',
         'border-info': 'var(--expo-theme-border-info)',
-      },
-      gradientColorStops: {
-        'bg-default': 'var(--expo-theme-background-default)',
-        'bg-screen': 'var(--expo-theme-background-screen)',
-        'bg-subtle': 'var(--expo-theme-background-subtle)',
-        'bg-element': 'var(--expo-theme-background-element)',
-        'bg-hover': 'var(--expo-theme-background-hover)',
-        'bg-selected': 'var(--expo-theme-background-selected)',
-        'bg-overlay': 'var(--expo-theme-background-overlay)',
-        'bg-success': 'var(--expo-theme-background-success)',
-        'bg-warning': 'var(--expo-theme-background-warning)',
-        'bg-danger': 'var(--expo-theme-background-danger)',
-        'bg-info': 'var(--expo-theme-background-info)',
       },
       backgroundColor: {
         'app-cyan': 'var(--expo-color-app-cyan)',
