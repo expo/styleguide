@@ -30,7 +30,7 @@ export function Sidebar() {
           'flex flex-col gap-5',
           'max-sm-gutters:items-center max-sm-gutters:flex-row max-sm-gutters:mb-5'
         )}>
-        <Link href="/">
+        <Link href="/" className="animate-fadeIn">
           <Image src="/icon.png" width="72" height="72" alt="Expo Styleguide Logo" className="max-sm-gutters:hidden" />
           <Image
             src="/icon.png"

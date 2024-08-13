@@ -429,6 +429,72 @@ const expoTailwindConfig = {
       transitionDuration: {
         default: '150ms',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
+        fadeOut: {
+          '0%': {
+            opacity: 1,
+          },
+          '100%': {
+            opacity: 0,
+          },
+        },
+        slideDownAndFade: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(8px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+        slideRightAndFade: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(8px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
+        slideLeftAndFade: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-8px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
+        slideUpAndFade: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(-8px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.25s ease-out',
+        fadeOut: 'fadeOut 0.15s ease-in',
+        slideDownAndFade: 'slideDownAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+        slideRightAndFade: 'slideRightAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+        slideLeftAndFade: 'slideLeftAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+        slideUpAndFade: 'slideUpAndFade 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+      },
       typography: () => ({
         DEFAULT: {
           css: {
@@ -481,6 +547,7 @@ const expoTailwindConfig = {
           width: theme('width.10'),
         },
         '.break-words': { 'word-break': 'break-word' },
+        '.wrap-anywhere': { 'overflow-wrap': 'anywhere' },
         '.pause-animation': { 'animation-play-state': 'paused' },
         '.transform-box': { 'transform-box': 'fill-box' },
         '.backface-hidden': {
@@ -494,6 +561,12 @@ const expoTailwindConfig = {
         },
         '.variant-numeric-tabular': {
           'font-variant-numeric': 'tabular-nums',
+        },
+        '.asset-shadow': {
+          filter: 'drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.07))',
+        },
+        '.asset-sm-shadow': {
+          filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.03))',
         },
       });
     }),
