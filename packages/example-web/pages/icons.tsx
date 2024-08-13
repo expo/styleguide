@@ -14,10 +14,10 @@ import { PlaceholderIcon } from '@expo/styleguide-icons/outline/PlaceholderIcon'
 import { SearchMdIcon } from '@expo/styleguide-icons/outline/SearchMdIcon';
 import { createElement, useState } from 'react';
 
-import * as StyleguideIcons from '../common/icon-imports';
-
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
+
+import * as StyleguideIcons from '../common/icon-imports';
 
 type IconNames = keyof typeof StyleguideIcons;
 
