@@ -30,12 +30,12 @@
   "dependencies": {
     "@expo/styleguide": "^8.2.5",
     "@expo/styleguide-icons": "^2.0.0",
-    "cmdk": "^0.2.0",
+    "cmdk": "^0.2.1",
     "lodash.groupby": "^4.6.0"
   },
   "devDependencies": {
     "@types/lodash.groupby": "^4.6.9",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^3.4.10",
     "user-agent-data-types": "^0.4.2"
   },
   "peerDependencies": {

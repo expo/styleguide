@@ -4,7 +4,7 @@
 const fs = require('node:fs');
 const { join } = require('node:path');
 
-const base = './node_modules/@expo/styleguide-icons';
+const base = '../styleguide-icons';
 const dirs = ['custom', 'duotone', 'outline', 'solid'];
 
 async function run() {
@@ -23,7 +23,7 @@ async function run() {
               .filter((file) => !file.startsWith('index'))
               .map((file) => {
                 const iconName = file.replaceAll('.js', '').split('/').at(-1);
-                return `export { ${iconName} } from '@expo/styleguide-icons/${directory}/${iconName}'`;
+                return `export { ${iconName} } from '@expo/styleguide-icons/${directory}/${iconName}';`;
               })
           )
       )

@@ -14,10 +14,9 @@ import { PlaceholderIcon } from '@expo/styleguide-icons/outline/PlaceholderIcon'
 import { SearchMdIcon } from '@expo/styleguide-icons/outline/SearchMdIcon';
 import { createElement, useState } from 'react';
 
+import * as StyleguideIcons from '@/common/icon-imports';
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
-
-import * as StyleguideIcons from '../common/icon-imports';
 
 type IconNames = keyof typeof StyleguideIcons;
 
@@ -47,7 +46,7 @@ export default function IconsPage() {
     <div>
       <H1>Icons</H1>
       <H3 id="logos">Logos</H3>
-      <div className="mt-8 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 ">
+      <div className="mt-8 grid grid-cols-6 gap-2 max-lg-gutters:grid-cols-4 max-md-gutters:grid-cols-3 max-sm-gutters:grid-cols-1">
         {[
           { name: 'WordMarkLogo', element: WordMarkLogo },
           { name: 'Logo', element: Logo },
@@ -97,7 +96,7 @@ export default function IconsPage() {
           </Button>
         </div>
       </div>
-      <div className="mt-8 grid grid-cols-1 gap-2 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 ">
+      <div className="mt-8 grid grid-cols-6 gap-2 max-lg-gutters:grid-cols-4 max-md-gutters:grid-cols-3 max-sm-gutters:grid-cols-1">
         {iconNames.map((iconName) => (
           <div className={iconClasses} onClick={() => copy(iconName)} key={iconName}>
             {createElement(StyleguideIcons[iconName], { className: 'icon-xl text-default' })}
