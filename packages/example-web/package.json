@@ -10,25 +10,25 @@
     "clean": "rimraf .next"
   },
   "dependencies": {
-    "@expo/styleguide": "^8.2.2",
+    "@expo/styleguide": "latest",
     "@expo/styleguide-icons": "latest",
     "@expo/styleguide-search-ui": "latest",
     "@types/node": "^18.18.9",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
-    "next": "^14.0.4",
+    "next": "^14.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.3.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^14.0.4",
-    "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.16",
-    "eslint-config-next": "^14.0.4",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.4"
+    "@next/bundle-analyzer": "^14.2.6",
+    "@tailwindcss/typography": "^0.5.14",
+    "autoprefixer": "^10.4.20",
+    "eslint-config-next": "^14.2.6",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "tailwind-merge": "^2.5.2"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +40,9 @@
         "error",
         "packages/example-web/pages"
       ]
-    }
+    },
+    "ignorePatterns": [
+      "icon-imports.ts"
+    ]
   }
 }

@@ -36,7 +36,7 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "dependencies": {
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@figma-export/cli": "^4.7.0",
@@ -52,6 +52,12 @@
     "extends": [
       "universe/web",
       "universe/node"
+    ],
+    "ignorePatterns": [
+      "custom",
+      "duotone",
+      "outline",
+      "solid"
     ]
   }
 }

@@ -23,7 +23,7 @@ async function run() {
               .filter((file) => !file.startsWith('index'))
               .map((file) => {
                 const iconName = file.replaceAll('.js', '').split('/').at(-1);
-                return `export { ${iconName} } from '@expo/styleguide-icons/${directory}/${iconName}'`;
+                return `export { ${iconName} } from '@expo/styleguide-icons/${directory}/${iconName}';`;
               })
           )
       )

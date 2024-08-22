@@ -340,16 +340,10 @@ const expoTailwindConfig = {
       },
     },
     screens: {
-      xs: '340px',
-      sm: '420px',
       'sm-gutters': '468px',
-      md: '740px',
       'md-gutters': '788px',
-      lg: '960px',
       'lg-gutters': '1008px',
-      xl: '1200px',
       'xl-gutters': '1248px',
-      '2xl': '1524px',
       '2xl-gutters': '1572px',
     },
     extend: {
@@ -393,6 +387,15 @@ const expoTailwindConfig = {
       },
       width: {
         15: '3.75rem',
+      },
+      maxWidth: {
+        15: '3.75rem',
+        'screen-xs': '340px',
+        'screen-sm': '420px',
+        'screen-md': '740px',
+        'screen-lg': '960px',
+        'screen-xl': '1200px',
+        'screen-2xl': '1524px',
       },
       size: {
         15: '3.75rem',
