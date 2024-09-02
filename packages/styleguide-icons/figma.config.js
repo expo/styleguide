@@ -41,8 +41,39 @@ const outputters = [
   }),
 ];
 
-/** @type {import('svgo').PluginConfig[]} */
-const solidSVGOConfig = [
+const commonSVGOConfig = [
+  {
+    name: 'cleanupIDs',
+    active: true,
+    params: {
+      remove: true,
+      minify: false,
+    },
+  },
+  {
+    name: 'removeHiddenElems',
+    active: true,
+  },
+  {
+    name: 'removeXMLNS',
+    active: true,
+  },
+  {
+    name: 'removeUselessStrokeAndFill',
+    active: true,
+  },
+  {
+    name: 'removeUselessDefs',
+    active: true,
+  },
+  {
+    name: 'collapseGroups',
+    active: true,
+  },
+  {
+    name: 'removeEmptyContainers',
+    active: true,
+  },
   {
     name: 'removeDimensions',
     active: true,
@@ -51,6 +82,11 @@ const solidSVGOConfig = [
     name: 'sortAttrs',
     active: true,
   },
+];
+
+/** @type {import('svgo').PluginConfig[]} */
+const solidSVGOConfig = [
+  ...commonSVGOConfig,
   {
     name: 'removeAttrs',
     params: {
@@ -69,26 +105,12 @@ const solidSVGOConfig = [
 
 /** @type {import('svgo').PluginConfig[]} */
 const customSVGOConfig = [
-  {
-    name: 'removeDimensions',
-    active: true,
-  },
-  {
-    name: 'sortAttrs',
-    active: true,
-  },
+  ...commonSVGOConfig,
 ];
 
 /** @type {import('svgo').PluginConfig[]} */
 const outlineSVGOConfig = [
-  {
-    name: 'removeDimensions',
-    active: true,
-  },
-  {
-    name: 'sortAttrs',
-    active: true,
-  },
+  ...commonSVGOConfig,
   {
     name: 'removeAttrs',
     params: {
@@ -107,14 +129,7 @@ const outlineSVGOConfig = [
 
 /** @type {import('svgo').PluginConfig[]} */
 const duotoneSVGOConfig = [
-  {
-    name: 'removeDimensions',
-    active: true,
-  },
-  {
-    name: 'sortAttrs',
-    active: true,
-  },
+  ...commonSVGOConfig,
   {
     name: 'removeAttrs',
     params: {
