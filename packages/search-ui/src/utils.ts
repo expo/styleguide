@@ -1,10 +1,10 @@
 /// <reference types="user-agent-data-types" />
 
+import { ClientReturn, createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
 import type { Dispatch, SetStateAction } from 'react';
 
 import type { AlgoliaItemHierarchy, AlgoliaItemType } from './types';
-import { ClientReturn, createClient } from '@sanity/client';
-import imageUrlBuilder from '@sanity/image-url'
 
 export const SANITY_CLIENT = createClient({
   projectId: 'siias52v',
@@ -78,7 +78,15 @@ export const getRNDocsResults = (query: string) => {
 };
 
 export const getExpoBlogResults = (query: string) => {
-  return SANITY_CLIENT.fetch(`*[_type == "post" && title match "${query}*"] | order(publishAt desc)[0...10] { title, slug, tags, metadataDescription, mainImage }`);
+  return SANITY_CLIENT.fetch(
+    `*[_type == "post" && (title match "${query}*" || metadataDescription match "${query}*")] | order(publishAt desc)[0...10] {
+      title,
+      slug,
+      tags,
+      metadataDescription,
+      mainImage
+    }`
+  );
 };
 
 export const getDirectoryResults = (query: string) => {
