@@ -16,7 +16,7 @@ export const SANITY_CLIENT = createClient({
 const sanityAssetHelper = imageUrlBuilder({ projectId: 'siias52v', dataset: 'production' });
 
 export function getSanityAsset(source: string) {
-  return sanityAssetHelper.image(source).url();
+  return sanityAssetHelper.image(source).auto('format').height(150).url();
 }
 
 export const getItemsAsync = async <T>(
