@@ -22,6 +22,8 @@ const config = [
       '@expo/styleguide',
       '@expo/styleguide-base',
       '@expo/styleguide-icons',
+      '@sanity/client',
+      '@sanity/image-url',
       'cmdk',
       'lodash.groupby',
       'react',

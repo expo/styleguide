@@ -5,6 +5,7 @@
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "dist",
+    "target": "ES2021",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "declaration": true

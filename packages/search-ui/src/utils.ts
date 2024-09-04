@@ -3,6 +3,21 @@
 import type { Dispatch, SetStateAction } from 'react';
 
 import type { AlgoliaItemHierarchy, AlgoliaItemType } from './types';
+import { ClientReturn, createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url'
+
+export const SANITY_CLIENT = createClient({
+  projectId: 'siias52v',
+  dataset: 'production',
+  useCdn: true,
+  apiVersion: '2024-09-03',
+});
+
+const sanityAssetHelper = imageUrlBuilder({ projectId: 'siias52v', dataset: 'production' });
+
+export function getSanityAsset(source: string) {
+  return sanityAssetHelper.image(source).url();
+}
 
 export const getItemsAsync = async <T>(
   query: string,
@@ -12,6 +27,14 @@ export const getItemsAsync = async <T>(
 ) => {
   const { hits, libraries } = await fetcher(query, version).then((response) => response.json());
   setter(hits || libraries || []);
+};
+
+export const getSanityItemsAsync = async <T>(
+  query: string,
+  fetcher: (query: string, version?: string) => Promise<ClientReturn<any>>,
+  setter: Dispatch<SetStateAction<T[]>>
+) => {
+  setter(await fetcher(query));
 };
 
 const getAlgoliaFetchParams = (
@@ -52,6 +75,10 @@ export const getRNDocsResults = (query: string) => {
       facetFilters: [['version:current']],
     })
   );
+};
+
+export const getExpoBlogResults = (query: string) => {
+  return SANITY_CLIENT.fetch(`*[_type == "post" && title match "${query}*"] | order(publishAt desc)[0...10] { title, slug, tags, metadataDescription, mainImage }`);
 };
 
 export const getDirectoryResults = (query: string) => {
@@ -144,6 +171,10 @@ export const isAppleDevice = () => {
 };
 
 export const addHighlight = (content: string, query: string) => {
+  if (!content || !content.length) {
+    return '';
+  }
+
   const highlightStart = content.toLowerCase().indexOf(query.toLowerCase());
 
   if (highlightStart === -1) return content;

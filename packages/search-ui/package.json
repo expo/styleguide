@@ -30,6 +30,8 @@
   "dependencies": {
     "@expo/styleguide": "^8.2.5",
     "@expo/styleguide-icons": "^2.0.0",
+    "@sanity/client": "^6.21.3",
+    "@sanity/image-url": "^1.0.2",
     "cmdk": "^0.2.1",
     "lodash.groupby": "^4.6.0"
   },
