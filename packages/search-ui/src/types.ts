@@ -51,3 +51,20 @@ export type RNDirectoryItemType = {
     };
   };
 };
+
+export type ExpoBlogItemType = {
+  title: string;
+  tags: string[];
+  metadataDescription: string;
+  slug: {
+    current: string;
+  };
+  mainImage: {
+    altText: string;
+    image: {
+      asset: {
+        _ref: string;
+      };
+    };
+  };
+};

@@ -8,7 +8,16 @@ import { BarLoader } from './BarLoader';
 import { CommandFooter } from './CommandFooter';
 import { RNDirectoryItem, RNDocsItem, ExpoDocsItem } from '../Items';
 import type { RNDirectoryItemType, AlgoliaItemType, CommandMenuConfig, CommandMenuSection } from '../types';
-import { getExpoDocsResults, getRNDocsResults, getDirectoryResults, getItemsAsync, isAppleDevice } from '../utils';
+import {
+  getExpoDocsResults,
+  getRNDocsResults,
+  getDirectoryResults,
+  getItemsAsync,
+  isAppleDevice,
+  getExpoBlogResults, getSanityItemsAsync,
+} from '../utils';
+import { ExpoBlogItem } from '../Items/ExpoBlogItem';
+import { ExpoBlogItemType } from '../types';
 
 type Props = {
   open: boolean;
@@ -29,10 +38,12 @@ export const CommandMenu = ({
   const [isMac, setIsMac] = useState<boolean | null>(null);
 
   const [expoDocsItems, setExpoDocsItems] = useState<AlgoliaItemType[]>([]);
+  const [expoBlogItems, setExpoBlogItems] = useState<ExpoBlogItemType[]>([]);
   const [rnDocsItems, setRnDocsItems] = useState<AlgoliaItemType[]>([]);
   const [directoryItems, setDirectoryItems] = useState<RNDirectoryItemType[]>([]);
 
   const getExpoDocsItems = async () => getItemsAsync(query, getExpoDocsResults, setExpoDocsItems, docsVersion);
+  const getExpoBlogItems = async () => getSanityItemsAsync(query, getExpoBlogResults, setExpoBlogItems);
   const getRNDocsItems = async () => getItemsAsync(query, getRNDocsResults, setRnDocsItems);
   const getDirectoryItems = async () => getItemsAsync(query, getDirectoryResults, setDirectoryItems);
 
@@ -41,9 +52,10 @@ export const CommandMenu = ({
   const fetchData = (callback: () => void) => {
     Promise.all([
       getExpoDocsItems(),
+      getExpoBlogItems(),
       getRNDocsItems(),
       getDirectoryItems(),
-      ...customSections.map((section) => section.getItemsAsync(query)),
+      ...customSections?.map((section) => section.getItemsAsync(query)),
     ]).then(callback);
   };
 
@@ -109,6 +121,13 @@ export const CommandMenu = ({
               />
             ))
         )}
+      </Command.Group>
+    ),
+    expoBlogItems.length > 0 && (
+      <Command.Group heading="Expo blog" key="expo-blog-group">
+        {expoBlogItems.map((item) => (
+          <ExpoBlogItem item={item} onSelect={dismiss} key={`hit-expo-blog-${item.slug.current}`} query={query} />
+        ))}
       </Command.Group>
     ),
     rnDocsItems.length > 0 && (

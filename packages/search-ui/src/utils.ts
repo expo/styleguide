@@ -1,8 +1,23 @@
 /// <reference types="user-agent-data-types" />
 
+import { ClientReturn, createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
 import type { Dispatch, SetStateAction } from 'react';
 
 import type { AlgoliaItemHierarchy, AlgoliaItemType } from './types';
+
+export const SANITY_CLIENT = createClient({
+  projectId: 'siias52v',
+  dataset: 'production',
+  useCdn: true,
+  apiVersion: '2024-09-03',
+});
+
+const sanityAssetHelper = imageUrlBuilder({ projectId: 'siias52v', dataset: 'production' });
+
+export function getSanityAsset(source: string) {
+  return sanityAssetHelper.image(source).auto('format').height(150).url();
+}
 
 export const getItemsAsync = async <T>(
   query: string,
@@ -12,6 +27,14 @@ export const getItemsAsync = async <T>(
 ) => {
   const { hits, libraries } = await fetcher(query, version).then((response) => response.json());
   setter(hits || libraries || []);
+};
+
+export const getSanityItemsAsync = async <T>(
+  query: string,
+  fetcher: (query: string, version?: string) => Promise<ClientReturn<any>>,
+  setter: Dispatch<SetStateAction<T[]>>
+) => {
+  setter(await fetcher(query));
 };
 
 const getAlgoliaFetchParams = (
@@ -51,6 +74,18 @@ export const getRNDocsResults = (query: string) => {
     ...getAlgoliaFetchParams(query, '8TDSE0OHGQ', 'c9c791d9d5fd7f315d7f3859b32c1f3b', 'react-native-v2', 5, {
       facetFilters: [['version:current']],
     })
+  );
+};
+
+export const getExpoBlogResults = (query: string) => {
+  return SANITY_CLIENT.fetch(
+    `*[_type == "post" && (title match "${query}*" || metadataDescription match "${query}*")] | order(publishAt desc)[0...10] {
+      title,
+      slug,
+      tags,
+      metadataDescription,
+      mainImage
+    }`
   );
 };
 
@@ -144,6 +179,10 @@ export const isAppleDevice = () => {
 };
 
 export const addHighlight = (content: string, query: string) => {
+  if (!content || !content.length) {
+    return '';
+  }
+
   const highlightStart = content.toLowerCase().indexOf(query.toLowerCase());
 
   if (highlightStart === -1) return content;
