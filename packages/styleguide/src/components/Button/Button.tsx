@@ -13,7 +13,8 @@ export type ButtonTheme =
   | 'tertiary'
   | 'quaternary'
   | 'primary-destructive'
-  | 'secondary-destructive';
+  | 'secondary-destructive'
+  | 'tertiary-destructive';
 
 export type ButtonProps = ButtonBaseProps &
   LinkBaseProps & {
@@ -75,6 +76,13 @@ function getThemeClasses(theme: ButtonTheme, disabled = false) {
         !disabled && 'hocus:bg-button-tertiary-hover active:scale-98',
         disabled && 'bg-button-tertiary-disabled border-button-tertiary-disabled text-button-tertiary-disabled'
       );
+    case 'tertiary-destructive':
+      return mergeClasses(
+        'border-button-tertiary-destructive bg-button-tertiary-destructive text-button-tertiary-destructive shadow-none',
+        !disabled && 'hocus:bg-button-tertiary-destructive-hover active:scale-98',
+        disabled &&
+          'bg-button-tertiary-destructive-disabled border-button-tertiary-destructive-disabled text-button-tertiary-destructive-disabled'
+      );
     case 'quaternary':
       return mergeClasses(
         'border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none',
@@ -113,6 +121,8 @@ function getThemedIconClasses(theme: ButtonTheme) {
       return 'text-button-secondary-destructive-icon';
     case 'tertiary':
       return 'text-button-tertiary-icon';
+    case 'tertiary-destructive':
+      return 'text-button-tertiary-destructive-icon';
     case 'quaternary':
       return 'text-button-quaternary-icon';
   }

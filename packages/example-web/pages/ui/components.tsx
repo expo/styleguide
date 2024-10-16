@@ -20,6 +20,7 @@ const THEMES = [
   'quaternary',
   'primary-destructive',
   'secondary-destructive',
+  'tertiary-destructive',
 ] as ButtonTheme[];
 
 export default function ComponentsPage() {
