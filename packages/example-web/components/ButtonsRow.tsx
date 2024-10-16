@@ -3,27 +3,34 @@ import { PaletteIcon } from '@expo/styleguide-icons/outline/PaletteIcon';
 
 import { DemoTile } from '@/components/DemoTile';
 
-export function ButtonsRow({ theme, disabled = false }: ButtonProps) {
+type Props = ButtonProps & {
+  iconOnly?: boolean;
+};
+
+export function ButtonsRow({ theme, disabled = false, iconOnly = false }: Props) {
   return (
-    <DemoTile title={`${theme}${disabled ? ' (disabled)' : ''}`} tag="div">
-      <div className="flex flex-wrap gap-6">
+    <DemoTile title={`${theme}${disabled ? ' (disabled)' : ''}${iconOnly ? ' (icon only)' : ''}`} tag="div">
+      <div className="flex flex-wrap gap-6 items-center">
+        <Button theme={theme} size="2xs" disabled={disabled} leftSlot={<PaletteIcon />}>
+          {iconOnly ? null : 'Button 2XS'}
+        </Button>
         <Button theme={theme} size="xs" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button XS
+          {iconOnly ? null : 'Button XS'}
         </Button>
         <Button theme={theme} size="sm" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button SM
+          {iconOnly ? null : 'Button SM'}
         </Button>
         <Button theme={theme} size="md" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button MD
+          {iconOnly ? null : 'Button MD'}
         </Button>
         <Button theme={theme} size="lg" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button LG
+          {iconOnly ? null : 'Button LG'}
         </Button>
         <Button theme={theme} size="xl" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button XL
+          {iconOnly ? null : 'Button XL'}
         </Button>
         <Button theme={theme} size="2xl" disabled={disabled} leftSlot={<PaletteIcon />}>
-          Button 2XL
+          {iconOnly ? null : 'Button 2XL'}
         </Button>
       </div>
     </DemoTile>

@@ -5,7 +5,7 @@ type AdditionalClassGroupIds = 'icon';
 export const mergeClasses = extendTailwindMerge<AdditionalClassGroupIds>({
   extend: {
     classGroups: {
-      icon: [{ icon: ['xs', 'sm', 'md', 'lg', 'xl', '2xl'] }],
+      icon: [{ icon: ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'] }],
     },
   },
 });

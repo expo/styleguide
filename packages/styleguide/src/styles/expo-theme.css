@@ -130,6 +130,15 @@
   --expo-theme-button-secondary-destructive-disabled-border: var(--red5);
   --expo-theme-button-secondary-destructive-disabled-text: var(--red8);
 
+  --expo-theme-button-tertiary-destructive-background: transparent;
+  --expo-theme-button-tertiary-destructive-border: transparent;
+  --expo-theme-button-tertiary-destructive-hover: var(--red4);
+  --expo-theme-button-tertiary-destructive-icon: var(--red9);
+  --expo-theme-button-tertiary-destructive-text: var(--red10);
+  --expo-theme-button-tertiary-destructive-disabled-background: transparent;
+  --expo-theme-button-tertiary-destructive-disabled-border: transparent;
+  --expo-theme-button-tertiary-destructive-disabled-text: var(--red8);
+
   /* Light shadows */
   --expo-theme-shadows-none: 0 0 transparent;
   --expo-theme-shadows-xs: 0 1px 3px rgba(0, 0, 0, 0.025),
@@ -243,6 +252,15 @@
   --expo-theme-button-secondary-destructive-disabled-background: var(--red2);
   --expo-theme-button-secondary-destructive-disabled-border: var(--red6);
   --expo-theme-button-secondary-destructive-disabled-text: var(--red10);
+
+  --expo-theme-button-tertiary-destructive-background: transparent;
+  --expo-theme-button-tertiary-destructive-border: transparent;
+  --expo-theme-button-tertiary-destructive-hover: var(--red3);
+  --expo-theme-button-tertiary-destructive-icon: var(--red10);
+  --expo-theme-button-tertiary-destructive-text: var(--red11);
+  --expo-theme-button-tertiary-destructive-disabled-background: transparent;
+  --expo-theme-button-tertiary-destructive-disabled-border: transparent;
+  --expo-theme-button-tertiary-destructive-disabled-text: var(--red9);
 
   /* Dark shadows */
   --expo-theme-shadows-none: 0 0 transparent;

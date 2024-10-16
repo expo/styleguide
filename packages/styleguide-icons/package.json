@@ -36,14 +36,14 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "dependencies": {
-    "tailwind-merge": "^2.5.2"
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@figma-export/cli": "^4.7.0",
     "@figma-export/output-components-as-svgr": "^4.7.0",
     "@figma-export/transform-svg-with-svgo": "^4.7.0",
     "dotenv": "^16.3.1",
-    "tslib": "^2.6.2"
+    "tslib": "^2.8.0"
   },
   "peerDependencies": {
     "react": ">= 16"

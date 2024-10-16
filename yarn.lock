@@ -267,11 +267,11 @@
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
 "@expo/styleguide-icons@latest":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.0.tgz#0086e4f92637ddc0dab189c12546c9f442e8327e"
-  integrity sha512-YvFCdL5rZvSx/gw0O0EnE0rV7mSqjMtkYQatSJgleFXCzmSvPnTfKS1cgZ8BPMIGLFwzHMX+ow3fmO/mHFOq/g==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.2.tgz#81345c4b854a5be260690dbf01d3e867a56ff950"
+  integrity sha512-IPfbX8xiSn3Y5L8NJFnkJEwrynmPMjcwCLKaM5GyaK79Ln2+lSprGnHF2e6i0s8EKrY0wx3lGRkeCQABC+iShQ==
   dependencies:
-    tailwind-merge "^2.3.0"
+    tailwind-merge "^2.5.2"
 
 "@expo/styleguide-search-ui@latest":
   version "2.0.1"
@@ -284,12 +284,12 @@
     lodash.groupby "^4.6.0"
 
 "@expo/styleguide@latest":
-  version "8.2.5"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.5.tgz#970ea5d8402fbbd42444b74ce2f87849731d95d9"
-  integrity sha512-z2/7bXei5Ub85yjt0/hNO9yZHuZGImmGBtCxE+1v+fBkk5rPRC8wFELRcvr8PDNJalgIgwKi8ht9U3pD1/BYmg==
+  version "8.2.6"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.6.tgz#bab9f9793813ec6f72f8be223c6a35981136bcea"
+  integrity sha512-3dA/b7uNCfDQ9DVeJWAFUluIB/bAtJDULBru5llOujvBvbx7xuAHDZO0L+yNdi0ipfgP2kuINUmVD1APHrNdFQ==
   dependencies:
     "@expo/styleguide-base" "^1.0.1"
-    tailwind-merge "^2.3.0"
+    tailwind-merge "^2.5.2"
 
 "@figma-export/cli@^4.7.0":
   version "4.7.0"
@@ -1460,10 +1460,10 @@
     "@swc/counter" "^0.1.3"
     tslib "^2.4.0"
 
-"@tailwindcss/typography@^0.5.14":
-  version "0.5.14"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.14.tgz#90619a3c3889eb184a53f043e38bd6e424e7b86e"
-  integrity sha512-ZvOCjUbsJBjL9CxQBn+VEnFpouzuKhxh2dH8xMIWHILL+HfOYtlAkWcyoon8LlzE53d2Yo6YO6pahKKNW3q1YQ==
+"@tailwindcss/typography@^0.5.14", "@tailwindcss/typography@^0.5.15":
+  version "0.5.15"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.15.tgz#007ab9870c86082a1c76e5b3feda9392c7c8d648"
+  integrity sha512-AqhlCXl+8grUz8uqExv5OTtgpjuVIwFTSXTrh8y9/pw6q2ek7fJ+Y8ZEVw7EB2DCcuCOtEjf9w3+J3rzts01uA==
   dependencies:
     lodash.castarray "^4.4.0"
     lodash.isplainobject "^4.0.6"
@@ -2407,7 +2407,7 @@ cmd-shim@6.0.3, cmd-shim@^6.0.0:
   resolved "https://registry.yarnpkg.com/cmd-shim/-/cmd-shim-6.0.3.tgz#c491e9656594ba17ac83c4bd931590a9d6e26033"
   integrity sha512-FMabTRlc5t5zjdenF6mS0MBeFZm0XqHqeOkcskKFb/LYCcRQ5fVgLOHVc4Lq9CqABd9zhjwPjMBCJvMCziSVtA==
 
-cmdk@^0.2.1:
+cmdk@^0.2.0, cmdk@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/cmdk/-/cmdk-0.2.1.tgz#aa8e1332bb0b8d8484e793017c82537351188d9a"
   integrity sha512-U6//9lQ6JvT47+6OF6Gi8BvkxYQ8SCRRSKIJkthIMsFsLZRG0cKvTtuTaefyIKMQb8rvvXy0wGdpTNq/jPtm+g==
@@ -7068,15 +7068,15 @@ synckit@^0.9.1:
     "@pkgr/core" "^0.1.0"
     tslib "^2.6.2"
 
-tailwind-merge@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.5.2.tgz#000f05a703058f9f9f3829c644235f81d4c08a1f"
-  integrity sha512-kjEBm+pvD+6eAwzJL2Bi+02/9LFLal1Gs61+QB7HvTfQQ0aXwC5LGT8PEt1gS0CWKktKe6ysPTAy3cBC5MeiIg==
+tailwind-merge@^2.5.2, tailwind-merge@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.5.4.tgz#4bf574e81fa061adeceba099ae4df56edcee78d1"
+  integrity sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==
 
-tailwindcss@^3.4.10:
-  version "3.4.10"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.10.tgz#70442d9aeb78758d1f911af29af8255ecdb8ffef"
-  integrity sha512-KWZkVPm7yJRhdu4SRSl9d4AK2wM3a50UsvgHZO7xY77NQr2V+fIrEuoDGQcbvswWvFGbS2f6e+jC/6WJm1Dl0w==
+tailwindcss@^3.4.10, tailwindcss@^3.4.14:
+  version "3.4.14"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.4.14.tgz#6dd23a7f54ec197b19159e91e3bb1e55e7aa73ac"
+  integrity sha512-IcSvOcTRcUtQQ7ILQL5quRDg7Xs93PdJEk1ZLbhhvJc7uj/OAhYOnruEiwnGgBvUtaUAJ8/mhSw1o8L2jCiENA==
   dependencies:
     "@alloc/quick-lru" "^5.2.0"
     arg "^5.0.2"
@@ -7264,10 +7264,10 @@ tsconfig-paths@^4.1.2:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0, tslib@^2.5.0, tslib@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
-  integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
+tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0, tslib@^2.5.0, tslib@^2.6.2, tslib@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.8.0.tgz#d124c86c3c05a40a91e6fdea4021bd31d377971b"
+  integrity sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==
 
 tuf-js@^2.2.1:
   version "2.2.1"

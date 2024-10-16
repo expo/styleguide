@@ -20,6 +20,7 @@ const THEMES = [
   'quaternary',
   'primary-destructive',
   'secondary-destructive',
+  'tertiary-destructive',
 ] as ButtonTheme[];
 
 export default function ComponentsPage() {
@@ -61,6 +62,12 @@ export default function ComponentsPage() {
           <ButtonsRow theme={buttonTheme} disabled />
         </Fragment>
       ))}
+      <H3 id="buttons">Icon Buttons</H3>
+      {THEMES.map((buttonTheme) => (
+        <Fragment key={`buttons-${buttonTheme}`}>
+          <ButtonsRow theme={buttonTheme} iconOnly />
+        </Fragment>
+      ))}
       <H3>Link Buttons</H3>
       <DemoTile title="local anchor">
         <Button href="#" leftSlot={<AlignTopArrow01Icon />}>
@@ -95,19 +102,6 @@ export default function ComponentsPage() {
         <Button skipNextLink href="/" theme="quaternary">
           Home
         </Button>
-      </DemoTile>
-      <H3>Icon Buttons</H3>
-      <DemoTile title="default size">
-        <Button href="#" theme="secondary" leftSlot={<AlignTopArrow01Icon />} />
-      </DemoTile>
-      <DemoTile title="medium">
-        <Button theme="primary-destructive" size="md" leftSlot={<Trash01Icon />} />
-      </DemoTile>
-      <DemoTile title="xs">
-        <Button theme="secondary-destructive" size="xs" leftSlot={<EyeOffIcon />} />
-      </DemoTile>
-      <DemoTile title="2xl">
-        <Button theme="quaternary" size="2xl" leftSlot={<DotsHorizontalIcon />} />
       </DemoTile>
       <H3>Customized Buttons</H3>
       <DemoTile title="icon with custom color">
