@@ -6,14 +6,15 @@ import { titleCase } from './helpers';
 import { mergeClasses } from '../../helpers/mergeClasses';
 import { LinkBase, LinkBaseProps } from '../Link';
 
-export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type ButtonSize = '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 export type ButtonTheme =
   | 'primary'
   | 'secondary'
   | 'tertiary'
   | 'quaternary'
   | 'primary-destructive'
-  | 'secondary-destructive';
+  | 'secondary-destructive'
+  | 'tertiary-destructive';
 
 export type ButtonProps = ButtonBaseProps &
   LinkBaseProps & {
@@ -26,6 +27,8 @@ export type ButtonProps = ButtonBaseProps &
 
 function getSizeClasses(size: ButtonSize) {
   switch (size) {
+    case '2xs':
+      return 'h-7 px-1.5 text-3xs';
     case 'xs':
       return 'h-8 px-3 text-3xs';
     case 'sm':
@@ -75,6 +78,13 @@ function getThemeClasses(theme: ButtonTheme, disabled = false) {
         !disabled && 'hocus:bg-button-tertiary-hover active:scale-98',
         disabled && 'bg-button-tertiary-disabled border-button-tertiary-disabled text-button-tertiary-disabled'
       );
+    case 'tertiary-destructive':
+      return mergeClasses(
+        'border-button-tertiary-destructive bg-button-tertiary-destructive text-button-tertiary-destructive shadow-none',
+        !disabled && 'hocus:bg-button-tertiary-destructive-hover active:scale-98',
+        disabled &&
+          'bg-button-tertiary-destructive-disabled border-button-tertiary-destructive-disabled text-button-tertiary-destructive-disabled'
+      );
     case 'quaternary':
       return mergeClasses(
         'border-button-quaternary bg-button-quaternary text-button-quaternary shadow-none',
@@ -86,6 +96,8 @@ function getThemeClasses(theme: ButtonTheme, disabled = false) {
 
 function getIconSizeClasses(size: ButtonSize) {
   switch (size) {
+    case '2xs':
+      return 'icon-2xs';
     case 'xs':
       return 'icon-xs';
     case 'sm':
@@ -113,6 +125,8 @@ function getThemedIconClasses(theme: ButtonTheme) {
       return 'text-button-secondary-destructive-icon';
     case 'tertiary':
       return 'text-button-tertiary-icon';
+    case 'tertiary-destructive':
+      return 'text-button-tertiary-destructive-icon';
     case 'quaternary':
       return 'text-button-quaternary-icon';
   }
@@ -120,6 +134,8 @@ function getThemedIconClasses(theme: ButtonTheme) {
 
 function getButtonIconClasses(size: ButtonSize) {
   switch (size) {
+    case '2xs':
+      return 'px-0 w-7 justify-center items-center';
     case 'xs':
       return 'px-0 w-8 justify-center items-center';
     case 'sm':
@@ -175,7 +191,9 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     const isSingleIconButton = (leftSlot || rightSlot) && !children;
 
     const twClasses = mergeClasses(
-      `inline-flex border border-solid rounded-md font-medium gap-2 items-center whitespace-nowrap transition`,
+      `inline-flex border border-solid rounded-md font-medium items-center whitespace-nowrap transition gap-2`,
+      size === 'xs' && 'gap-1.5',
+      size === '2xs' && 'gap-1',
       getSizeClasses(size),
       getThemeClasses(theme, disabled),
       isSingleIconButton && getButtonIconClasses(size),

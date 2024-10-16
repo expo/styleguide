@@ -147,6 +147,9 @@ const expoTailwindConfig = {
       'button-tertiary': 'var(--expo-theme-button-tertiary-background)',
       'button-tertiary-hover': 'var(--expo-theme-button-tertiary-hover)',
       'button-tertiary-disabled': 'var(--expo-theme-button-tertiary-disabled-background)',
+      'button-tertiary-destructive': 'var(--expo-theme-button-tertiary-destructive-background)',
+      'button-tertiary-destructive-hover': 'var(--expo-theme-button-tertiary-destructive-hover)',
+      'button-tertiary-destructive-disabled': 'var(--expo-theme-button-tertiary-destructive-disabled-background)',
 
       'button-quaternary': 'var(--expo-theme-button-quaternary-background)',
       'button-quaternary-hover': 'var(--expo-theme-button-quaternary-hover)',
@@ -175,6 +178,8 @@ const expoTailwindConfig = {
 
       'button-tertiary': 'var(--expo-theme-button-tertiary-border)',
       'button-tertiary-disabled': 'var(--expo-theme-button-tertiary-disabled-border)',
+      'button-tertiary-destructive': 'var(--expo-theme-button-tertiary-destructive-border)',
+      'button-tertiary-destructive-disabled': 'var(--expo-theme-button-tertiary-destructive-disabled-border)',
 
       'button-quaternary': 'var(--expo-theme-button-quaternary-border)',
       'button-quaternary-disabled': 'var(--expo-theme-button-quaternary-disabled-border)',
@@ -220,6 +225,9 @@ const expoTailwindConfig = {
       'button-tertiary': 'var(--expo-theme-button-tertiary-text)',
       'button-tertiary-icon': 'var(--expo-theme-button-tertiary-icon)',
       'button-tertiary-disabled': 'var(--expo-theme-button-tertiary-disabled-text)',
+      'button-tertiary-destructive': 'var(--expo-theme-button-tertiary-destructive-text)',
+      'button-tertiary-destructive-icon': 'var(--expo-theme-button-tertiary-destructive-icon)',
+      'button-tertiary-destructive-disabled': 'var(--expo-theme-button-tertiary-destructive-disabled-text)',
 
       'button-quaternary': 'var(--expo-theme-button-quaternary-text)',
       'button-quaternary-icon': 'var(--expo-theme-button-quaternary-icon)',

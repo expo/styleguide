@@ -101,6 +101,18 @@ export const theme = {
         border: 'var(--expo-theme-button-tertiary-disabled-border)',
         text: 'var(--expo-theme-button-tertiary-disabled-text)',
       },
+      destructive: {
+        background: 'var(--expo-theme-button-tertiary-destructive-background)',
+        border: 'var(--expo-theme-button-tertiary-destructive-border)',
+        hover: 'var(--expo-theme-button-tertiary-destructive-hover)',
+        icon: 'var(--expo-theme-button-tertiary-destructive-icon)',
+        text: 'var(--expo-theme-button-tertiary-destructive-text)',
+        disabled: {
+          background: 'var(--expo-theme-button-tertiary-destructive-disabled-background)',
+          border: 'var(--expo-theme-button-tertiary-destructive-disabled-border)',
+          text: 'var(--expo-theme-button-tertiary-destructive-disabled-text)',
+        },
+      },
     },
     quaternary: {
       background: 'var(--expo-theme-button-quaternary-background)',
