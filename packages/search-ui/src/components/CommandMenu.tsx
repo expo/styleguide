@@ -7,17 +7,18 @@ import React, { useEffect, useState, Dispatch, SetStateAction } from 'react';
 import { BarLoader } from './BarLoader';
 import { CommandFooter } from './CommandFooter';
 import { RNDirectoryItem, RNDocsItem, ExpoDocsItem } from '../Items';
+import { ExpoBlogItem } from '../Items/ExpoBlogItem';
 import type { RNDirectoryItemType, AlgoliaItemType, CommandMenuConfig, CommandMenuSection } from '../types';
+import { ExpoBlogItemType } from '../types';
 import {
   getExpoDocsResults,
   getRNDocsResults,
   getDirectoryResults,
   getItemsAsync,
   isAppleDevice,
-  getExpoBlogResults, getSanityItemsAsync,
+  getExpoBlogResults,
+  getSanityItemsAsync,
 } from '../utils';
-import { ExpoBlogItem } from '../Items/ExpoBlogItem';
-import { ExpoBlogItemType } from '../types';
 
 type Props = {
   open: boolean;

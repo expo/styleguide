@@ -104,9 +104,7 @@ const solidSVGOConfig = [
 ];
 
 /** @type {import('svgo').PluginConfig[]} */
-const customSVGOConfig = [
-  ...commonSVGOConfig,
-];
+const customSVGOConfig = [...commonSVGOConfig];
 
 /** @type {import('svgo').PluginConfig[]} */
 const outlineSVGOConfig = [

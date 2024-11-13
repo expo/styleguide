@@ -2,8 +2,8 @@ import React from 'react';
 
 import { ExternalLinkIcon } from './icons';
 import { CommandItemBaseWithCopy } from '../components/CommandItemBaseWithCopy';
-import { addHighlight, getSanityAsset } from '../utils';
 import { ExpoBlogItemType } from '../types';
+import { addHighlight, getSanityAsset } from '../utils';
 
 type Props = {
   item: ExpoBlogItemType;
@@ -17,8 +17,7 @@ export const ExpoBlogItem = ({ item, onSelect, query }: Props) => {
       value={`expo-blog-${item.slug.current}`}
       url={`https://expo.dev/blog/${item.slug.current}`}
       isExternalLink
-      onSelect={onSelect}
-    >
+      onSelect={onSelect}>
       <div className="inline-flex gap-3 items-center">
         <img
           src={getSanityAsset(item.mainImage.image.asset._ref)}
@@ -27,7 +26,10 @@ export const ExpoBlogItem = ({ item, onSelect, query }: Props) => {
         />
         <div>
           <p className="text-xs font-medium" dangerouslySetInnerHTML={{ __html: addHighlight(item.title, query) }} />
-          <p className="text-3xs text-quaternary" dangerouslySetInnerHTML={{ __html: addHighlight(item.metadataDescription, query) }} />
+          <p
+            className="text-3xs text-quaternary"
+            dangerouslySetInnerHTML={{ __html: addHighlight(item.metadataDescription, query) }}
+          />
         </div>
         <ExternalLinkIcon />
       </div>
