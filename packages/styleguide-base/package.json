@@ -25,7 +25,7 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "dependencies": {
-    "@radix-ui/colors": "^0.1.8"
+    "@radix-ui/colors": "^3.0.0"
   },
   "peerDependencies": {
     "react": ">= 16"
