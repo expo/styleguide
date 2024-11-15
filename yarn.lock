@@ -267,29 +267,31 @@
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
 "@expo/styleguide-icons@latest":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.2.tgz#81345c4b854a5be260690dbf01d3e867a56ff950"
-  integrity sha512-IPfbX8xiSn3Y5L8NJFnkJEwrynmPMjcwCLKaM5GyaK79Ln2+lSprGnHF2e6i0s8EKrY0wx3lGRkeCQABC+iShQ==
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.3.tgz#234f741cab325cff5d0533626e61347faca1121b"
+  integrity sha512-7cZxGXclDYk9aghP6yTnZzLjYQxbTesCSG4Cau46bHmjzMVi8J1A2l5IflZCCWsQMsk051Ms3ketX3gcuTfXRQ==
   dependencies:
-    tailwind-merge "^2.5.2"
+    tailwind-merge "^2.5.4"
 
 "@expo/styleguide-search-ui@latest":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-2.0.1.tgz#564da3cc4ed831f93427cd7dc093d54226d0264b"
-  integrity sha512-Hs5ihEdQUmA0vvfQaR1oYcg9H+jiirW1xzG3mJetGgRjenegsBxccgTfbjb+0AbfxGjBz4KwlH7CROS5zlkAeQ==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-2.1.2.tgz#065bc7a7f9a310a269f81159ceb95dd834e34e61"
+  integrity sha512-oDE6IvGaIJjlS9n7rmwG8LvS6SUi5C6C2gAGcV1LKZ2IlwRZEyYpTnbed+bPhmQXwfrgkZC6HW9T4gWi+C8drg==
   dependencies:
-    "@expo/styleguide" "^8.2.5"
-    "@expo/styleguide-icons" "^2.0.0"
-    cmdk "^0.2.0"
+    "@expo/styleguide" "^8.3.0"
+    "@expo/styleguide-icons" "^2.0.3"
+    "@sanity/client" "^6.21.3"
+    "@sanity/image-url" "^1.0.2"
+    cmdk "^0.2.1"
     lodash.groupby "^4.6.0"
 
 "@expo/styleguide@latest":
-  version "8.2.6"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.2.6.tgz#bab9f9793813ec6f72f8be223c6a35981136bcea"
-  integrity sha512-3dA/b7uNCfDQ9DVeJWAFUluIB/bAtJDULBru5llOujvBvbx7xuAHDZO0L+yNdi0ipfgP2kuINUmVD1APHrNdFQ==
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.3.0.tgz#28909a076eff138c34a02e6bdb4e29c1ce264d0f"
+  integrity sha512-VCMoM2ayHyWnzaza2JR7tv3ZBbgv1o32BUzOFDPCzg3vN0Bigp/Uk5Pq33vhyLM9UrTrfDnFSDx0srOwcIfD8Q==
   dependencies:
     "@expo/styleguide-base" "^1.0.1"
-    tailwind-merge "^2.5.2"
+    tailwind-merge "^2.5.4"
 
 "@figma-export/cli@^4.7.0":
   version "4.7.0"
@@ -2458,7 +2460,7 @@ cmd-shim@6.0.3, cmd-shim@^6.0.0:
   resolved "https://registry.yarnpkg.com/cmd-shim/-/cmd-shim-6.0.3.tgz#c491e9656594ba17ac83c4bd931590a9d6e26033"
   integrity sha512-FMabTRlc5t5zjdenF6mS0MBeFZm0XqHqeOkcskKFb/LYCcRQ5fVgLOHVc4Lq9CqABd9zhjwPjMBCJvMCziSVtA==
 
-cmdk@^0.2.0, cmdk@^0.2.1:
+cmdk@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/cmdk/-/cmdk-0.2.1.tgz#aa8e1332bb0b8d8484e793017c82537351188d9a"
   integrity sha512-U6//9lQ6JvT47+6OF6Gi8BvkxYQ8SCRRSKIJkthIMsFsLZRG0cKvTtuTaefyIKMQb8rvvXy0wGdpTNq/jPtm+g==
@@ -7243,7 +7245,7 @@ synckit@^0.9.1:
     "@pkgr/core" "^0.1.0"
     tslib "^2.6.2"
 
-tailwind-merge@^2.5.2, tailwind-merge@^2.5.4:
+tailwind-merge@^2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-2.5.4.tgz#4bf574e81fa061adeceba099ae4df56edcee78d1"
   integrity sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==

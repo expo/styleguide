@@ -99,7 +99,7 @@ export default function IconsPage() {
       <div className="mt-8 grid grid-cols-6 gap-2 max-lg-gutters:grid-cols-4 max-md-gutters:grid-cols-3 max-sm-gutters:grid-cols-1">
         {iconNames.map((iconName) => (
           <div className={iconClasses} onClick={() => copy(iconName)} key={iconName}>
-            {createElement(StyleguideIcons[iconName], { className: 'icon-xl text-default' })}
+            {createElement(StyleguideIcons[iconName], { className: 'icon-xl text-default translate-z' })}
             <span className="text-2xs text-tertiary">{iconName}</span>
           </div>
         ))}

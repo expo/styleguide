@@ -102,7 +102,7 @@ const palette = {
 };
 
 const expoTailwindConfig = {
-  safelist: ['icon-md', 'text-icon-default'],
+  safelist: ['icon-md', 'text-icon-default', 'translate-z'],
   darkMode: ['class', '[class*="dark-theme"]'],
   theme: {
     borderRadius: {
@@ -556,6 +556,9 @@ const expoTailwindConfig = {
         '.icon-2xl': {
           height: theme('height.10'),
           width: theme('width.10'),
+        },
+        '.translate-z': {
+          transform: 'translateZ(0)',
         },
         '.break-words': { 'word-break': 'break-word' },
         '.wrap-anywhere': { 'overflow-wrap': 'anywhere' },
