@@ -43,14 +43,6 @@ const outputters = [
 
 const commonSVGOConfig = [
   {
-    name: 'cleanupIDs',
-    active: true,
-    params: {
-      remove: true,
-      minify: false,
-    },
-  },
-  {
     name: 'removeHiddenElems',
     active: true,
   },
