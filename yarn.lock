@@ -267,30 +267,30 @@
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
 "@expo/styleguide-icons@latest":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.0.3.tgz#234f741cab325cff5d0533626e61347faca1121b"
-  integrity sha512-7cZxGXclDYk9aghP6yTnZzLjYQxbTesCSG4Cau46bHmjzMVi8J1A2l5IflZCCWsQMsk051Ms3ketX3gcuTfXRQ==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-icons/-/styleguide-icons-2.1.0.tgz#cac20ab6259460ff5601746873926a08c3faf4e9"
+  integrity sha512-MCHyPPYGuUuyBecT3JFz0crDJO+6vhXBL43ikf/bZfkpHziSWlwXVXiUz2ZRShUxZuEy9rV9uDl54ZKI9l2scw==
   dependencies:
     tailwind-merge "^2.5.4"
 
 "@expo/styleguide-search-ui@latest":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-2.1.2.tgz#065bc7a7f9a310a269f81159ceb95dd834e34e61"
-  integrity sha512-oDE6IvGaIJjlS9n7rmwG8LvS6SUi5C6C2gAGcV1LKZ2IlwRZEyYpTnbed+bPhmQXwfrgkZC6HW9T4gWi+C8drg==
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide-search-ui/-/styleguide-search-ui-2.2.1.tgz#4b2725e8a296b0802d0d0cc259445186abba50fa"
+  integrity sha512-oI8f296i6hf+ulQMlkSSRGlUMaK6qLSrHsMnm4Gs90lISKMzaWeWS+vsftqdQ/VuCpK9sb0LsBQYwS9IOG4WoQ==
   dependencies:
-    "@expo/styleguide" "^8.3.0"
-    "@expo/styleguide-icons" "^2.0.3"
+    "@expo/styleguide" "^9.0.1"
+    "@expo/styleguide-icons" "^2.1.0"
     "@sanity/client" "^6.21.3"
     "@sanity/image-url" "^1.0.2"
     cmdk "^0.2.1"
     lodash.groupby "^4.6.0"
 
 "@expo/styleguide@latest":
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-8.3.0.tgz#28909a076eff138c34a02e6bdb4e29c1ce264d0f"
-  integrity sha512-VCMoM2ayHyWnzaza2JR7tv3ZBbgv1o32BUzOFDPCzg3vN0Bigp/Uk5Pq33vhyLM9UrTrfDnFSDx0srOwcIfD8Q==
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/@expo/styleguide/-/styleguide-9.0.1.tgz#fe189e0d34c2d07468179d859d4d91cfad9c69ea"
+  integrity sha512-qaSI0xCMWSvb2vnq3vxRsCa+HO4W4QoKN6JBmvXOOe/Io59ZK1CA7mUZfV3YGnJbjuOPfqW31x3ST2UdFrQZow==
   dependencies:
-    "@expo/styleguide-base" "^1.0.1"
+    "@expo/styleguide-base" "^2.0.1"
     tailwind-merge "^2.5.4"
 
 "@figma-export/cli@^4.7.0":
