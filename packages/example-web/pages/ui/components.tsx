@@ -25,6 +25,31 @@ export default function ComponentsPage() {
   return (
     <>
       <H1>UI: Components</H1>
+      <H3>Inline Help</H3>
+      <DemoTile title="info" tag="div">
+        <div className="rounded-lg bg-info border border-info text-info px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+          <EasMetadataIcon className="icon-sm text-icon-info" />
+          Info text
+        </div>
+      </DemoTile>
+      <DemoTile title="warning" tag="div">
+        <div className="rounded-lg bg-warning border border-warning text-warning px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+          <EasMetadataIcon className="icon-sm text-icon-warning" />
+          Warning text
+        </div>
+      </DemoTile>
+      <DemoTile title="danger" tag="div">
+        <div className="rounded-lg bg-danger border border-danger text-danger px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+          <EasMetadataIcon className="icon-sm text-icon-danger" />
+          Danger text
+        </div>
+      </DemoTile>
+      <DemoTile title="success" tag="div">
+        <div className="rounded-lg bg-success border border-success text-success px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+          <EasMetadataIcon className="icon-sm text-icon-success" />
+          Success text
+        </div>
+      </DemoTile>
       <H3>Link Base</H3>
       <DemoTile title="local anchor">
         <LinkBase href="#buttons">LinkBase</LinkBase>
