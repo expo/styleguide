@@ -1,7 +1,7 @@
 @import "@radix-ui/colors/green.css";
 @import "@radix-ui/colors/green-dark.css";
-@import "@radix-ui/colors/yellow.css";
-@import "@radix-ui/colors/yellow-dark.css";
+@import "@radix-ui/colors/amber.css";
+@import "@radix-ui/colors/amber-dark.css";
 @import "@radix-ui/colors/red.css";
 @import "@radix-ui/colors/red-dark.css";
 @import "@radix-ui/colors/blue.css";
@@ -42,7 +42,7 @@
   --expo-theme-background-selected: var(--slate-5);
   --expo-theme-background-overlay: var(--expo-color-white);
   --expo-theme-background-success: var(--green-3);
-  --expo-theme-background-warning: var(--yellow-3);
+  --expo-theme-background-warning: var(--amber-3);
   --expo-theme-background-danger: var(--red-3);
   --expo-theme-background-info: var(--blue-3);
 
@@ -52,7 +52,7 @@
   --expo-theme-icon-tertiary: var(--slate-9);
   --expo-theme-icon-quaternary: var(--slate-8);
   --expo-theme-icon-success: var(--green-10);
-  --expo-theme-icon-warning: var(--yellow-10);
+  --expo-theme-icon-warning: var(--amber-11);
   --expo-theme-icon-danger: var(--red-10);
   --expo-theme-icon-info: var(--blue-10);
 
@@ -63,7 +63,7 @@
   --expo-theme-text-quaternary: var(--slate-9);
   --expo-theme-text-link: var(--blue-11);
   --expo-theme-text-success: var(--green-11);
-  --expo-theme-text-warning: var(--yellow-11);
+  --expo-theme-text-warning: var(--amber-11);
   --expo-theme-text-danger: var(--red-11);
   --expo-theme-text-info: var(--blue-11);
 
@@ -71,7 +71,7 @@
   --expo-theme-border-default: var(--slate-6);
   --expo-theme-border-secondary: var(--slate-5);
   --expo-theme-border-success: var(--green-7);
-  --expo-theme-border-warning: var(--yellow-7);
+  --expo-theme-border-warning: var(--amber-7);
   --expo-theme-border-danger: var(--red-7);
   --expo-theme-border-info: var(--blue-7);
 
@@ -165,7 +165,7 @@
   --expo-theme-background-selected: var(--slate-5);
   --expo-theme-background-overlay: var(--slate-2);
   --expo-theme-background-success: var(--green-3);
-  --expo-theme-background-warning: var(--yellow-3);
+  --expo-theme-background-warning: var(--amber-3);
   --expo-theme-background-danger: var(--red-3);
   --expo-theme-background-info: var(--blue-3);
 
@@ -175,7 +175,7 @@
   --expo-theme-icon-tertiary: var(--slate-9);
   --expo-theme-icon-quaternary: var(--slate-8);
   --expo-theme-icon-success: var(--green-10);
-  --expo-theme-icon-warning: var(--yellow-10);
+  --expo-theme-icon-warning: var(--amber-11);
   --expo-theme-icon-danger: var(--red-10);
   --expo-theme-icon-info: var(--blue-10);
 
@@ -186,7 +186,7 @@
   --expo-theme-text-quaternary: var(--slate-9);
   --expo-theme-text-link: var(--blue-11);
   --expo-theme-text-success: var(--green-11);
-  --expo-theme-text-warning: var(--yellow-11);
+  --expo-theme-text-warning: var(--amber-11);
   --expo-theme-text-danger: var(--red-11);
   --expo-theme-text-info: var(--blue-11);
 
@@ -194,7 +194,7 @@
   --expo-theme-border-default: var(--slate-6);
   --expo-theme-border-secondary: var(--slate-5);
   --expo-theme-border-success: var(--green-7);
-  --expo-theme-border-warning: var(--yellow-7);
+  --expo-theme-border-warning: var(--amber-7);
   --expo-theme-border-danger: var(--red-7);
   --expo-theme-border-info: var(--blue-7);
 
