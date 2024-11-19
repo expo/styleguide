@@ -79,7 +79,7 @@ export const getRNDocsResults = (query: string) => {
 
 export const getExpoBlogResults = (query: string) => {
   return SANITY_CLIENT.fetch(
-    `*[_type == "post" && (title match "${query}*" || metadataDescription match "${query}*")] | order(publishAt desc)[0...10] {
+    `*[_type == "post" && publishAt < now() && (title match "${query}*" || metadataDescription match "${query}*")] | order(publishAt desc)[0...10] {
       title,
       slug,
       tags,
