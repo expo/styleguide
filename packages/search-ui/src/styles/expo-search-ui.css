@@ -125,8 +125,8 @@
 }
 
 [cmdk-item] mark {
-  color: var(--blue12);
-  background: var(--blue4);
+  color: var(--blue-12);
+  background: var(--blue-4);
   border-radius: 2px;
   opacity: 0.85;
 }
@@ -177,11 +177,11 @@
 }
 
 html.dark-theme [cmdk-item] mark {
-  background: var(--blue6);
+  background: var(--blue-6);
 }
 
 html.dark-theme [cmdk-item][data-selected='true'] mark {
-  background: var(--blue7);
+  background: var(--blue-7);
 }
 
 [cmdk-list]::-webkit-scrollbar {
@@ -194,10 +194,10 @@ html.dark-theme [cmdk-item][data-selected='true'] mark {
 }
 
 [cmdk-list]::-webkit-scrollbar-thumb {
-  background-color: var(--slate5);
+  background-color: var(--slate-5);
   border-radius: 10px;
 }
 
 [cmdk-list]::-webkit-scrollbar-thumb:hover {
-  background-color: var(--slate6);
+  background-color: var(--slate-6);
 }
