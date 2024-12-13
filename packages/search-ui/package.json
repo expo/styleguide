@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-search-ui",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "Expo's common search component for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,7 +28,7 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "dependencies": {
-    "@expo/styleguide": "^9.0.1",
+    "@expo/styleguide": "^9.0.2",
     "@expo/styleguide-icons": "^2.1.1",
     "@sanity/client": "^6.21.3",
     "@sanity/image-url": "^1.0.2",
