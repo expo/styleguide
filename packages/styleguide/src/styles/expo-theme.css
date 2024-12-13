@@ -156,6 +156,8 @@
 }
 
 .dark-theme {
+  color-scheme: dark;
+
   /* Backgrounds */
   --expo-theme-background-default: var(--slate-1);
   --expo-theme-background-screen: #0C0D0E;
