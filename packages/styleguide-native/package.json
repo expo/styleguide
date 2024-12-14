@@ -23,7 +23,10 @@
   },
   "devDependencies": {
     "@svgr/cli": "^6.5.1",
-    "react-native-svg": "^12.1.1"
+    "npm-run-all": "*",
+    "react-native-svg": "^12.1.1",
+    "rimraf": "*",
+    "rollup": "*"
   },
   "peerDependencies": {
     "react": "*",

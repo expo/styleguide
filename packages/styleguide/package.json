@@ -34,6 +34,9 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
+    "npm-run-all": "*",
+    "rimraf": "*",
+    "rollup": "*",
     "tailwindcss": "^3.4.14"
   },
   "peerDependencies": {

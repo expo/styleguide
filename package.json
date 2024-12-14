@@ -5,7 +5,7 @@
     "build": "lerna run build --stream",
     "dev": "lerna run dev --parallel",
     "npm-publish": "lerna publish --no-private",
-    "lint": "eslint packages/**"
+    "lint": "eslint packages/*"
   },
   "workspaces": [
     "packages/*"
@@ -28,11 +28,13 @@
     "rollup-plugin-copy": "^3.5.0",
     "typescript": "^5.6.3"
   },
+  "packageManager": "yarn@4.5.3",
   "eslintConfig": {
     "root": true,
     "ignorePatterns": [
       "node_modules",
       "dist",
+      "out",
       "tmp",
       ".next",
       "packages/styleguide-icons/index.*",
