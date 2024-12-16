@@ -1,4 +1,4 @@
-name: Deploy website
+name: Check packages and deploy website
 
 env:
   NODE_ENV: production
@@ -18,13 +18,11 @@ on:
       - packages/**
 
 jobs:
-  docs:
+  deploy:
     runs-on: ubuntu-22.04
     steps:
       - name: 👀 Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: ⬢ Setup Node
         uses: actions/setup-node@v4
         with:
