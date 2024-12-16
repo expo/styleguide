@@ -4833,7 +4833,7 @@ __metadata:
     tailwindcss: "npm:^3.4.14"
     typescript: "npm:^5.6.3"
   peerDependencies:
-    cmdk: "workspace:*"
+    cmdk: "*"
   languageName: unknown
   linkType: soft
 

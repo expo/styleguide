@@ -32,7 +32,7 @@
     "tailwindcss": "^3.4.14"
   },
   "peerDependencies": {
-    "cmdk": "workspace:*"
+    "cmdk": "*"
   },
   "eslintConfig": {
     "extends": [
