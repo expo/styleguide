@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "yarn clean && yarn prepare && next dev",
-    "build": "yarn prepare && next build",
+    "dev": "yarn clean && yarn update-icons && next dev",
+    "build": "next build",
     "analyze-build": "ANALYZE=true next build",
-    "prepare": "node ./merge-icon-imports.js",
+    "update-icons": "node ./merge-icon-imports.js",
     "clean": "rimraf .next"
   },
   "dependencies": {
