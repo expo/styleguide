@@ -32,6 +32,9 @@ jobs:
         run: yarn install --immutable
       - name: 🚨 Lint code
         run: yarn lint --max-warnings 0
+      - name: 🔧 Prepare icons fetch
+        working-directory: packages/styleguide-icons
+        run: echo "FILE_ID=zHeGLN45wIgf39kqdvKpoj" >> .env
       - name: 📦️ Build packages
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
