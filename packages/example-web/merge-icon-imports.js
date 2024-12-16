@@ -4,7 +4,7 @@
 const fs = require('node:fs');
 const { join } = require('node:path');
 
-const base = './node_modules/@expo/styleguide-icons';
+const base = join(__dirname, '../..', '/node_modules/@expo/styleguide-icons');
 const dirs = ['custom', 'duotone', 'outline', 'solid'];
 
 async function run() {
