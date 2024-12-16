@@ -37,6 +37,7 @@
       "out",
       "tmp",
       ".next",
+      "packages/example-web/common/icon-imports.*",
       "packages/styleguide-icons/index.*",
       "packages/styleguide-icons/mergeClasses.*"
     ],

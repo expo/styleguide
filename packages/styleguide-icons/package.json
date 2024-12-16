@@ -39,9 +39,9 @@
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
-    "@figma-export/cli": "^4.7.0",
-    "@figma-export/output-components-as-svgr": "^4.7.0",
-    "@figma-export/transform-svg-with-svgo": "^4.7.0",
+    "@figma-export/cli": "^4.8.0",
+    "@figma-export/output-components-as-svgr": "^4.8.0",
+    "@figma-export/transform-svg-with-svgo": "^4.8.0",
     "dotenv": "^16.3.1",
     "npm-run-all": "*",
     "rimraf": "*",

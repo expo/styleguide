@@ -293,9 +293,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-icons@workspace:packages/styleguide-icons"
   dependencies:
-    "@figma-export/cli": "npm:^4.7.0"
-    "@figma-export/output-components-as-svgr": "npm:^4.7.0"
-    "@figma-export/transform-svg-with-svgo": "npm:^4.7.0"
+    "@figma-export/cli": "npm:^4.8.0"
+    "@figma-export/output-components-as-svgr": "npm:^4.8.0"
+    "@figma-export/transform-svg-with-svgo": "npm:^4.8.0"
     dotenv: "npm:^16.3.1"
     npm-run-all: "npm:*"
     rimraf: "npm:*"
@@ -361,7 +361,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@figma-export/cli@npm:^4.7.0":
+"@figma-export/cli@npm:^4.8.0":
   version: 4.8.0
   resolution: "@figma-export/cli@npm:4.8.0"
   dependencies:
@@ -388,7 +388,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/output-components-as-svgr@npm:^4.7.0":
+"@figma-export/output-components-as-svgr@npm:^4.8.0":
   version: 4.8.0
   resolution: "@figma-export/output-components-as-svgr@npm:4.8.0"
   dependencies:
@@ -399,7 +399,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma-export/transform-svg-with-svgo@npm:^4.7.0":
+"@figma-export/transform-svg-with-svgo@npm:^4.8.0":
   version: 4.8.0
   resolution: "@figma-export/transform-svg-with-svgo@npm:4.8.0"
   dependencies:
