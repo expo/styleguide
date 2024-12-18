@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "yarn clean && next dev",
+    "dev": "yarn clean && yarn update-icons && next dev",
     "build": "next build",
     "analyze-build": "ANALYZE=true next build",
-    "postinstall": "node ./merge-icon-imports.js",
+    "update-icons": "node ./merge-icon-imports.js",
     "clean": "rimraf .next"
   },
   "dependencies": {
-    "@expo/styleguide": "latest",
-    "@expo/styleguide-icons": "latest",
-    "@expo/styleguide-search-ui": "latest",
+    "@expo/styleguide": "*",
+    "@expo/styleguide-icons": "*",
+    "@expo/styleguide-search-ui": "*",
     "@types/node": "^18.18.9",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
@@ -27,8 +27,12 @@
     "autoprefixer": "^10.4.20",
     "eslint-config-next": "^15.0.3",
     "postcss": "^8.4.49",
+    "rimraf": "*",
     "tailwind-merge": "^2.5.4",
     "tailwindcss": "^3.4.14"
+  },
+  "peerDependencies": {
+    "cmdk": "*"
   },
   "eslintConfig": {
     "extends": [

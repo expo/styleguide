@@ -27,6 +27,11 @@
   "dependencies": {
     "@radix-ui/colors": "^3.0.0"
   },
+  "devDependencies": {
+    "npm-run-all": "*",
+    "rimraf": "*",
+    "rollup": "*"
+  },
   "peerDependencies": {
     "react": ">= 16"
   },

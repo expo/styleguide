@@ -37,6 +37,9 @@
   },
   "devDependencies": {
     "@types/lodash.groupby": "^4.6.9",
+    "npm-run-all": "*",
+    "rimraf": "*",
+    "rollup": "*",
     "tailwindcss": "^3.4.14",
     "user-agent-data-types": "^0.4.2"
   },
