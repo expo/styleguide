@@ -9,6 +9,12 @@ A collection of packages used to share styles and icons across Expo websites and
 
 ## Get started
 
+1. Enable [Corepack](https://yarnpkg.com/corepack) to use the correct package manager version
+
+    ```shell
+    corepack enable
+    ```
+
 1. Install dependencies with
 
     ```bash
