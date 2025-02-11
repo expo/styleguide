@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-native",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "description": "Expo's React Native styleguide components.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
