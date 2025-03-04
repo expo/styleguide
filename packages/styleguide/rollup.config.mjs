@@ -17,7 +17,6 @@ const config = [
       copy({
         targets: [
           { src: './src/styles/expo-theme.css', dest: 'dist' },
-          { src: './src/styles/global.css', dest: 'dist' },
         ],
       }),
     ],
