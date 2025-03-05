@@ -31,18 +31,12 @@ jobs:
         run: yarn install --immutable
       - name: 🚨 Lint code
         run: yarn lint --max-warnings 0
-      - name: ⬇️ Pull environment information
-        working-directory: 'packages/example-web'
-        run: yarn dlx vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
       - name: 📦️ Build packages
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
-      - name: 🚀 Deploy preview website
-        if: github.ref != 'refs/heads/main'
-        working-directory: 'packages/example-web'
-        run: yarn dlx vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
-      - name: 🚀 Deploy production website
-        if: github.ref == 'refs/heads/main'
-        working-directory: 'packages/example-web'
-        run: yarn dlx vercel deploy --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - name: 🚀 Deploy website
+        uses: BetaHuhn/deploy-to-vercel-action@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.EXPO_BOT_GH_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
