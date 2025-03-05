@@ -31,14 +31,12 @@ jobs:
         run: yarn install --immutable
       - name: 🚨 Lint code
         run: yarn lint --max-warnings 0
+      - name: ⬇️ Pull environment information
+        run: yarn dlx vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
       - name: 📦️ Build packages
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
-      - name: ⬇️ Pull environment information
-        run: yarn dlx vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
-      - name: 📦️ Build project artifacts
-        run: yarn dlx vercel build --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
       - name: 🚀 Deploy preview website
         if: github.ref != 'refs/heads/main'
         run: yarn dlx vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
