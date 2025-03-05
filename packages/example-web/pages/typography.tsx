@@ -29,17 +29,6 @@ export default function TypographyPage() {
         <DemoTile title="text-2xs" className="text-2xs" />
         <DemoTile title="text-3xs" className="text-3xs" />
       </div>
-      <H3 id="elements">Font weight classes</H3>
-      <div className="flex flex-col gap-8">
-        <DemoTile title="font-black" className="font-black" />
-        <DemoTile title="font-extrabold" className="font-extrabold" />
-        <DemoTile title="font-bold" className="font-bold" />
-        <DemoTile title="font-semibold" className="font-semibold" />
-        <DemoTile title="font-medium" className="font-medium" />
-        <DemoTile title="font-normal" className="font-normal" />
-        <DemoTile title="font-light" className="font-light" />
-        <DemoTile title="font-extralight" className="font-extralight" />
-      </div>
       <H3 id="elements">Elements (legacy)</H3>
       <div className="flex flex-col gap-8">
         <DemoTile title="Headline" className="text-base font-medium" />
