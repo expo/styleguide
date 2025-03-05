@@ -101,6 +101,21 @@ const palette = {
   'palette-gray12': 'var(--slate-12)',
 };
 
+const appColors = {
+  'app-cyan': 'var(--expo-color-app-cyan)',
+  'app-light-blue': 'var(--expo-color-app-light-blue)',
+  'app-dark-blue': 'var(--expo-color-app-dark-blue)',
+  'app-indigo': 'var(--expo-color-app-indigo)',
+  'app-purple': 'var(--expo-color-app-purple)',
+  'app-pink': 'var(--expo-color-app-pink)',
+  'app-orange': 'var(--expo-color-app-orange)',
+  'app-gold': 'var(--expo-color-app-gold)',
+  'app-yellow': 'var(--expo-color-app-yellow)',
+  'app-lime': 'var(--expo-color-app-lime)',
+  'app-light-green': 'var(--expo-color-app-light-green)',
+  'app-dark-green': 'var(--expo-color-app-dark-green)',
+};
+
 const expoTailwindConfig = {
   safelist: ['icon-md', 'text-icon-default', 'translate-z'],
   darkMode: ['class', '[class*="dark-theme"]'],
@@ -117,6 +132,8 @@ const expoTailwindConfig = {
       full: 9999,
     },
     backgroundColor: {
+      transparent: 'transparent',
+
       default: 'var(--expo-theme-background-default)',
       screen: 'var(--expo-theme-background-screen)',
       subtle: 'var(--expo-theme-background-subtle)',
@@ -128,7 +145,6 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-background-warning)',
       danger: 'var(--expo-theme-background-danger)',
       info: 'var(--expo-theme-background-info)',
-      transparent: 'transparent',
 
       'button-primary': 'var(--expo-theme-button-primary-background)',
       'button-primary-hover': 'var(--expo-theme-button-primary-hover)',
@@ -158,13 +174,14 @@ const expoTailwindConfig = {
       ...palette,
     },
     borderColor: {
+      transparent: 'transparent',
+
       default: 'var(--expo-theme-border-default)',
       secondary: 'var(--expo-theme-border-secondary)',
       success: 'var(--expo-theme-border-success)',
       warning: 'var(--expo-theme-border-warning)',
       danger: 'var(--expo-theme-border-danger)',
       info: 'var(--expo-theme-border-info)',
-      transparent: 'transparent',
 
       'button-primary': 'var(--expo-theme-button-primary-border)',
       'button-primary-disabled': 'var(--expo-theme-button-primary-disabled-border)',
@@ -189,6 +206,7 @@ const expoTailwindConfig = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+
       default: 'var(--expo-theme-text-default)',
       secondary: 'var(--expo-theme-text-secondary)',
       tertiary: 'var(--expo-theme-text-tertiary)',
@@ -236,6 +254,8 @@ const expoTailwindConfig = {
       ...palette,
     },
     gradientColorStops: {
+      transparent: 'transparent',
+
       default: 'var(--expo-theme-background-default)',
       screen: 'var(--expo-theme-background-screen)',
       subtle: 'var(--expo-theme-background-subtle)',
@@ -247,7 +267,6 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-background-warning)',
       danger: 'var(--expo-theme-background-danger)',
       info: 'var(--expo-theme-background-info)',
-      transparent: 'transparent',
 
       ...palette,
     },
@@ -258,12 +277,35 @@ const expoTailwindConfig = {
       md: 'var(--expo-theme-shadows-md)',
       lg: 'var(--expo-theme-shadows-lg)',
       xl: 'var(--expo-theme-shadows-xl)',
+      kbd: '0 .1rem 0 1px var(--expo-theme-border-default)',
     },
     fontSize: {
+      '3xl': [
+        '31px',
+        {
+          lineHeight: 1.29,
+          letterSpacing: '-0.021rem',
+        },
+      ],
+      '2xl': [
+        '25px',
+        {
+          lineHeight: 1.4,
+          letterSpacing: '-0.021rem',
+        },
+      ],
+      xl: [
+        '20px',
+        {
+          lineHeight: 1.5,
+          letterSpacing: '-0.017rem',
+        },
+      ],
       lg: [
         '18px',
         {
           lineHeight: 1.5,
+          letterSpacing: '-0.014rem',
         },
       ],
       base: [
@@ -338,12 +380,12 @@ const expoTailwindConfig = {
         letterSpacing: '-0.011rem',
       },
       sm: {
-        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 0.8)',
-        lineHeight: 1.615,
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 0.9)',
+        lineHeight: 1.61,
         letterSpacing: '-0.003rem',
       },
       xs: {
-        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 0.64)',
+        fontSize: 'calc(var(--expo-theme-heading-base-font-size) * 0.8)',
         lineHeight: 1.58,
       },
     },
@@ -377,18 +419,10 @@ const expoTailwindConfig = {
         'border-info': 'var(--expo-theme-border-info)',
       },
       backgroundColor: {
-        'app-cyan': 'var(--expo-color-app-cyan)',
-        'app-light-blue': 'var(--expo-color-app-light-blue)',
-        'app-dark-blue': 'var(--expo-color-app-dark-blue)',
-        'app-indigo': 'var(--expo-color-app-indigo)',
-        'app-purple': 'var(--expo-color-app-purple)',
-        'app-pink': 'var(--expo-color-app-pink)',
-        'app-orange': 'var(--expo-color-app-orange)',
-        'app-gold': 'var(--expo-color-app-gold)',
-        'app-yellow': 'var(--expo-color-app-yellow)',
-        'app-lime': 'var(--expo-color-app-lime)',
-        'app-light-green': 'var(--expo-color-app-light-green)',
-        'app-dark-green': 'var(--expo-color-app-dark-green)',
+        ...appColors,
+      },
+      gradientColorStops: {
+        ...appColors,
       },
       height: {
         15: '3.75rem',
@@ -564,6 +598,9 @@ const expoTailwindConfig = {
         '.wrap-anywhere': { 'overflow-wrap': 'anywhere' },
         '.pause-animation': { 'animation-play-state': 'paused' },
         '.transform-box': { 'transform-box': 'fill-box' },
+        '.overflow-wrap-anywhere': {
+          'overflow-wrap': 'anywhere',
+        },
         '.backface-hidden': {
           'backface-visibility': 'hidden',
         },
