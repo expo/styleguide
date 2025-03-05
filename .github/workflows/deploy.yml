@@ -36,16 +36,12 @@ jobs:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
       - name: ⬇️ Pull environment information
-        working-directory: 'packages/example-web'
-        run: npx vercel@latest pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel@latest pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
       - name: 📦️ Build project artifacts
-        working-directory: 'packages/example-web'
-        run: npx vercel@latest build --token=${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel@latest build --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
       - name: 🚀 Deploy preview website
         if: github.ref != 'refs/heads/main'
-        working-directory: 'packages/example-web'
-        run: npx vercel@latest deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel@latest deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
       - name: 🚀 Deploy production website
         if: github.ref == 'refs/heads/main'
-        working-directory: 'packages/example-web'
-        run: npx vercel@latest deploy --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel@latest deploy --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --cwd=./packages/example-web
