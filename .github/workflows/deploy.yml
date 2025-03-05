@@ -35,8 +35,17 @@ jobs:
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
-      - name: 🚀 Deploy website
-        uses: BetaHuhn/deploy-to-vercel-action@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.EXPO_BOT_GH_TOKEN }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      - name: ⬇️ Pull environment information
+        working-directory: 'packages/example-web'
+        run: npx vercel@latest pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+      - name: 📦️ Build project artifacts
+        working-directory: 'packages/example-web'
+        run: npx vercel@latest build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: 🚀 Deploy preview website
+        if: github.ref != 'refs/heads/main'
+        working-directory: 'packages/example-web'
+        run: npx vercel@latest deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - name: 🚀 Deploy production website
+        if: github.ref == 'refs/heads/main'
+        working-directory: 'packages/example-web'
+        run: npx vercel@latest deploy --prod --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
