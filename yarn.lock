@@ -289,7 +289,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@expo/styleguide-icons@npm:^2.1.2, @expo/styleguide-icons@workspace:*, @expo/styleguide-icons@workspace:packages/styleguide-icons":
+"@expo/styleguide-icons@npm:*, @expo/styleguide-icons@npm:^2.1.2, @expo/styleguide-icons@workspace:packages/styleguide-icons":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-icons@workspace:packages/styleguide-icons"
   dependencies:
@@ -322,7 +322,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@expo/styleguide-search-ui@workspace:*, @expo/styleguide-search-ui@workspace:packages/search-ui":
+"@expo/styleguide-search-ui@npm:*, @expo/styleguide-search-ui@workspace:packages/search-ui":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-search-ui@workspace:packages/search-ui"
   dependencies:
@@ -344,7 +344,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@expo/styleguide@npm:^9.0.3, @expo/styleguide@workspace:*, @expo/styleguide@workspace:packages/styleguide":
+"@expo/styleguide@npm:*, @expo/styleguide@npm:^9.0.3, @expo/styleguide@workspace:packages/styleguide":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide@workspace:packages/styleguide"
   dependencies:
@@ -4814,9 +4814,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example-web@workspace:packages/example-web"
   dependencies:
-    "@expo/styleguide": "workspace:*"
-    "@expo/styleguide-icons": "workspace:*"
-    "@expo/styleguide-search-ui": "workspace:*"
+    "@expo/styleguide": "npm:*"
+    "@expo/styleguide-icons": "npm:*"
+    "@expo/styleguide-search-ui": "npm:*"
     "@next/bundle-analyzer": "npm:^15.0.3"
     "@tailwindcss/typography": "npm:^0.5.15"
     "@types/node": "npm:^18.18.9"

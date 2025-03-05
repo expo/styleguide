@@ -10,9 +10,9 @@
     "clean": "rimraf .next"
   },
   "dependencies": {
-    "@expo/styleguide": "workspace:*",
-    "@expo/styleguide-icons": "workspace:*",
-    "@expo/styleguide-search-ui": "workspace:*",
+    "@expo/styleguide": "*",
+    "@expo/styleguide-icons": "*",
+    "@expo/styleguide-search-ui": "*",
     "@types/node": "^18.18.9",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
