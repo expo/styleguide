@@ -40,6 +40,7 @@ jobs:
         run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }}
       - name: 📦️ Build example-web app
         working-directory: packages/example-web
+        shell: bash
         run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }}
       - name: 🚀 Deploy website
         uses: BetaHuhn/deploy-to-vercel-action@v1
