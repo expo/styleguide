@@ -38,6 +38,9 @@ jobs:
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
+      - name: 📦️ Build example-app
+        working-directory: packages/example-web
+        run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }}
       - name: 🚀 Deploy website
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
