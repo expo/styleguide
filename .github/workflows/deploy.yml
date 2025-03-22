@@ -35,14 +35,12 @@ jobs:
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
-      - name: 📥 Install Vercel CLI
-        run: yarn global add vercel@latest
       - name: ⬇️️ Pull example-web metadata
         working-directory: packages/example-web
-        run: vercel pull
+        run: yarn dlx vercel pull
       - name: 📦️ Build example-web app
         working-directory: packages/example-web
-        run: vercel build
+        run: yarn dlx vercel build
       - name: 🚀 Deploy website
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
