@@ -40,3 +40,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.EXPO_BOT_GH_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          PREBUILT: true
