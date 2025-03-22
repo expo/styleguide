@@ -7,7 +7,7 @@
     "build": "next build",
     "analyze-build": "ANALYZE=true next build",
     "update-icons": "node ./merge-icon-imports.js",
-    "clean": "rimraf .next"
+    "clean": "rimraf .next .vercel"
   },
   "dependencies": {
     "@expo/styleguide": "workspace:*",
