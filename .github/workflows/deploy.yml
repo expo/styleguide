@@ -37,10 +37,10 @@ jobs:
         run: yarn build
       - name: ⬇️️ Pull example-web metadata
         working-directory: packages/example-web
-        run: yarn dlx vercel pull
+        run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }}
       - name: 📦️ Build example-web app
         working-directory: packages/example-web
-        run: yarn dlx vercel build
+        run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }}
       - name: 🚀 Deploy website
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
