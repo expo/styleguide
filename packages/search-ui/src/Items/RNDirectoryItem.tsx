@@ -1,4 +1,6 @@
 import { GithubIcon } from '@expo/styleguide-icons/custom/GithubIcon';
+import { Download01Icon } from '@expo/styleguide-icons/outline/Download01Icon';
+import { Star01Icon } from '@expo/styleguide-icons/outline/Star01Icon';
 import React from 'react';
 
 import { ExternalLinkIcon } from './icons';
@@ -21,8 +23,16 @@ export const RNDirectoryItem = ({ item, onSelect, query }: Props) => {
         <GithubIcon className="text-icon-secondary" />
         <div>
           <p className="text-xs font-medium" dangerouslySetInnerHTML={{ __html: addHighlight(item.npmPkg, query) }} />
-          <p className="text-3xs text-quaternary">
-            {numberFormat.format(item.github.stats.stars)} stars · {numberFormat.format(item.npm.downloads)} downloads
+          <p className="flex items-center gap-1 text-3xs text-quaternary">
+            <Star01Icon className="icon-2xs text-icon-quaternary" />
+            {numberFormat.format(item.github.stats.stars)} stars
+            {item.npm.downloads ? (
+              <>
+                {' '}
+                · <Download01Icon className="icon-2xs text-icon-quaternary" />
+                {numberFormat.format(item.npm.downloads)} downloads
+              </>
+            ) : undefined}
           </p>
         </div>
         <ExternalLinkIcon />
