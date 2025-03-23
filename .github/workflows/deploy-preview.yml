@@ -35,24 +35,20 @@ jobs:
       - name: 🚨 Lint code
         run: yarn lint --max-warnings 0
 
-      - name: ⬇️️ Pull example-web metadata
-        if: github.ref == 'refs/heads/main'
-        working-directory: packages/example-web
-        run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }} --environment=production
-
-      - name: ⬇️️ Pull example-web metadata for preview
-        if: github.ref != 'refs/heads/main'
-        working-directory: packages/example-web
-        run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }}
-
       - name: 📦️ Build packages
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
 
-      - name: 📦️ Build example-app
+      - name: 📦️ Build example-app for preview
+        if: github.ref != 'refs/heads/main'
         working-directory: packages/example-web
         run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }}
+
+      - name: 📦️ Build example-app
+        if: github.ref == 'refs/heads/main'
+        working-directory: packages/example-web
+        run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }} --prod
 
       - name: 🚀 Deploy website
         uses: BetaHuhn/deploy-to-vercel-action@v1
