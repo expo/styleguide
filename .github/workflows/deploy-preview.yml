@@ -23,24 +23,37 @@ jobs:
     steps:
       - name: 👀 Checkout
         uses: actions/checkout@v4
+
       - name: ⬢ Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: 🧶 Yarn install
         run: yarn install --immutable
+
       - name: 🚨 Lint code
         run: yarn lint --max-warnings 0
+
       - name: ⬇️️ Pull example-web metadata
+        if: github.ref == 'refs/heads/main'
+        working-directory: packages/example-web
+        run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }} --environment=production
+
+      - name: ⬇️️ Pull example-web metadata for preview
+        if: github.ref != 'refs/heads/main'
         working-directory: packages/example-web
         run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }}
+
       - name: 📦️ Build packages
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
+
       - name: 📦️ Build example-app
         working-directory: packages/example-web
         run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }}
+
       - name: 🚀 Deploy website
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
