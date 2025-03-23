@@ -86,7 +86,7 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) 
       url={transformUrl ? transformUrl(item.url) : item.url}
       isNested={isNested}
       isExternalLink={!transformUrl}>
-      <div className="flex gap-3 jutify-between">
+      <div className="flex gap-3 justify-between">
         <div className="inline-flex items-center gap-3 break-words">
           <ItemIcon url={item.url} isNested={isNested} className="shrink-0" />
           <div>

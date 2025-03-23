@@ -23,6 +23,7 @@ export const CommandItemBaseWithCopy = ({
   value,
 }: Props) => {
   const [copyDone, setCopyDone] = useState(false);
+  const [isMetaClick, setMetaClick] = useState(false);
 
   const copyUrl = () => {
     navigator.clipboard?.writeText(url);
@@ -35,6 +36,11 @@ export const CommandItemBaseWithCopy = ({
       className={mergeClasses('relative', className)}
       value={value}
       data-nested={isNested ? true : undefined}
+      onMouseDown={(event) => {
+        if (event.metaKey || event.ctrlKey) {
+          setMetaClick(true);
+        }
+      }}
       onMouseUp={(event) => {
         // note(Keith): middle click (typical *nix copy shortcut), right click (works with Mac trackpads), onAuxClick is not supported in Safari
         if (event.button === 1 || event.button === 2) {
@@ -43,7 +49,11 @@ export const CommandItemBaseWithCopy = ({
       }}
       onSelect={() => {
         openLink(url, isExternalLink);
-        onSelect && onSelect();
+        if (isMetaClick) {
+          setMetaClick(false);
+        } else {
+          onSelect && onSelect();
+        }
       }}
       onContextMenu={(event) => {
         event.preventDefault();

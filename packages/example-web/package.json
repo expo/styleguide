@@ -7,29 +7,29 @@
     "build": "next build",
     "analyze-build": "ANALYZE=true next build",
     "update-icons": "node ./merge-icon-imports.js",
-    "clean": "rimraf .next"
+    "clean": "rimraf .next .vercel"
   },
   "dependencies": {
-    "@expo/styleguide": "*",
-    "@expo/styleguide-icons": "*",
-    "@expo/styleguide-search-ui": "*",
+    "@expo/styleguide": "workspace:*",
+    "@expo/styleguide-icons": "workspace:*",
+    "@expo/styleguide-search-ui": "workspace:*",
     "@types/node": "^18.18.9",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "next": "^15.0.3",
+    "next": "^15.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.0.3",
+    "@next/bundle-analyzer": "^15.2.3",
     "@tailwindcss/typography": "^0.5.15",
-    "autoprefixer": "^10.4.20",
-    "eslint-config-next": "^15.0.3",
-    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.21",
+    "eslint-config-next": "^15.2.3",
+    "postcss": "^8.5.3",
     "rimraf": "*",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss": "^3.4.14"
+    "tailwindcss": "^3.4.17"
   },
   "peerDependencies": {
     "cmdk": "*"

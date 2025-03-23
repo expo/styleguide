@@ -30,8 +30,8 @@
   "dependencies": {
     "@expo/styleguide": "^9.0.4",
     "@expo/styleguide-icons": "^2.1.2",
-    "@sanity/client": "^6.21.3",
-    "@sanity/image-url": "^1.0.2",
+    "@sanity/client": "^6.28.3",
+    "@sanity/image-url": "^1.1.0",
     "cmdk": "^0.2.1",
     "lodash.groupby": "^4.6.0"
   },
@@ -40,7 +40,7 @@
     "npm-run-all": "*",
     "rimraf": "*",
     "rollup": "*",
-    "tailwindcss": "^3.4.14",
+    "tailwindcss": "^3.4.17",
     "user-agent-data-types": "^0.4.2"
   },
   "peerDependencies": {

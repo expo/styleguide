@@ -31,12 +31,20 @@ jobs:
         run: yarn install --immutable
       - name: 🚨 Lint code
         run: yarn lint --max-warnings 0
+      - name: ⬇️️ Pull example-web metadata
+        working-directory: packages/example-web
+        run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }}
       - name: 📦️ Build packages
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
+      - name: 📦️ Build example-app
+        working-directory: packages/example-web
+        run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }}
       - name: 🚀 Deploy website
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
           GITHUB_TOKEN: ${{ secrets.EXPO_BOT_GH_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          PREBUILT: true
+          WORKING_DIRECTORY: packages/example-web
