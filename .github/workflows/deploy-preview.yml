@@ -40,11 +40,19 @@ jobs:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
         run: yarn build
 
+      - name: ⬇️️ Pull example-web metadata for preview
+        if: github.ref != 'refs/heads/main'
+        working-directory: packages/example-web
+        run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }}
       - name: 📦️ Build example-app for preview
         if: github.ref != 'refs/heads/main'
         working-directory: packages/example-web
         run: yarn dlx vercel build --token ${{ secrets.VERCEL_TOKEN }}
 
+      - name: ⬇️️ Pull example-web metadata
+        if: github.ref == 'refs/heads/main'
+        working-directory: packages/example-web
+        run: yarn dlx vercel pull --token ${{ secrets.VERCEL_TOKEN }} --environment=production
       - name: 📦️ Build example-app
         if: github.ref == 'refs/heads/main'
         working-directory: packages/example-web
