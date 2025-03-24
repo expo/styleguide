@@ -37,6 +37,7 @@
       "out",
       "tmp",
       ".next",
+      "packages/example-native/expo-env.d.ts",
       "packages/example-web/common/icon-imports.*",
       "packages/styleguide-icons/index.*",
       "packages/styleguide-icons/mergeClasses.*"
