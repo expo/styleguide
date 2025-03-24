@@ -48,7 +48,7 @@ export const CommandItemBaseWithCopy = ({
         }
       }}
       onSelect={() => {
-        openLink(url, isExternalLink);
+        openLink(url, isMetaClick ? true : isExternalLink);
         if (isMetaClick) {
           setMetaClick(false);
         } else {

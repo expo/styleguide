@@ -31,7 +31,10 @@ export function SearchMenu() {
 
   return (
     <CommandMenu
-      config={{ docsVersion: 'latest' }}
+      config={{
+        docsVersion: 'latest',
+        docsTransformUrl: (url: string) => url,
+      }}
       open={isOpen}
       setOpen={setOpen}
       customSections={[
