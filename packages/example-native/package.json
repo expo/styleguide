@@ -42,8 +42,5 @@
   },
   "eslintConfig": {
     "extends": "universe/native"
-  },
-  "eslintIgnore": [
-    "./expo-env.d.ts"
-  ]
+  }
 }
