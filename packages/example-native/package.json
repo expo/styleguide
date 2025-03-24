@@ -38,13 +38,15 @@
     "react-native-webview": "13.12.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "^7.26.10",
     "@types/react": "~18.3.12",
     "typescript": "^5.6.3"
   },
   "eslintConfig": {
     "extends": "universe/native"
   },
-  "eslintIgnore": ["./expo-env.d.ts"],
+  "eslintIgnore": [
+    "./expo-env.d.ts"
+  ],
   "private": true
 }
