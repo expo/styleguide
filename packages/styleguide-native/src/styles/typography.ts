@@ -1,3 +1,5 @@
+import { type TextStyle } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+
 const baseFontSize = 16;
 
 const fontSizes = {
@@ -116,91 +118,91 @@ const headers = {
   xl: {
     large: {
       huge: {
-        fontWeight: '900',
+        fontWeight: '900' as TextStyle['fontWeight'],
         ...fontSizes[61],
       },
       h1: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[49],
       },
       h2: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[39],
       },
       h3: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[31],
       },
       h4: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[25],
       },
       h5: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[20],
       },
       h6: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
     },
     medium: {
       huge: {
-        fontWeight: '900',
+        fontWeight: '900' as TextStyle['fontWeight'],
         ...fontSizes[53],
       },
       h1: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[43],
       },
       h2: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[34],
       },
       h3: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[27],
       },
       h4: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[22],
       },
       h5: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[18],
       },
       h6: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
     },
     small: {
       huge: {
-        fontWeight: '900',
+        fontWeight: '900' as TextStyle['fontWeight'],
         ...fontSizes[46],
       },
       h1: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[37],
       },
       h2: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[29],
       },
       h3: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[23],
       },
       h4: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[19],
       },
       h5: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
       h6: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
     },
@@ -208,91 +210,91 @@ const headers = {
   default: {
     large: {
       huge: {
-        fontWeight: '900',
+        fontWeight: '900' as TextStyle['fontWeight'],
         ...fontSizes[39],
       },
       h1: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[31],
       },
       h2: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[25],
       },
       h3: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[20],
       },
       h4: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
       h5: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[13],
       },
       h6: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[12],
       },
     },
     medium: {
       huge: {
-        fontWeight: '900',
+        fontWeight: '900' as TextStyle['fontWeight'],
         ...fontSizes[34],
       },
       h1: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[27],
       },
       h2: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[22],
       },
       h3: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[18],
       },
       h4: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
       h5: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[13],
       },
       h6: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[12],
       },
     },
     small: {
       huge: {
-        fontWeight: '900',
+        fontWeight: '900' as TextStyle['fontWeight'],
         ...fontSizes[29],
       },
       h1: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[23],
       },
       h2: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[19],
       },
       h3: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
       h4: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[16],
       },
       h5: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[13],
       },
       h6: {
-        fontWeight: '600',
+        fontWeight: '600' as TextStyle['fontWeight'],
         ...fontSizes[12],
       },
     },
@@ -300,34 +302,34 @@ const headers = {
 };
 
 const baseStyle = {
-  fontWeight: '400',
+  fontWeight: '400' as TextStyle['fontWeight'],
   ...fontSizes[16],
 };
 
 const body = {
   headline: {
-    fontWeight: '500',
+    fontWeight: '500' as TextStyle['fontWeight'],
     ...fontSizes[16],
   },
   paragraph: baseStyle,
   label: {
-    fontWeight: '500',
+    fontWeight: '500' as TextStyle['fontWeight'],
     ...fontSizes[15],
   },
   callout: {
-    fontWeight: '400',
+    fontWeight: '400' as TextStyle['fontWeight'],
     ...fontSizes[14],
   },
   footnote: {
-    fontWeight: '400',
+    fontWeight: '400' as TextStyle['fontWeight'],
     ...fontSizes[13],
   },
   caption: {
-    fontWeight: '400',
+    fontWeight: '400' as TextStyle['fontWeight'],
     ...fontSizes[12],
   },
   code: {
-    fontWeight: '400',
+    fontWeight: '400' as TextStyle['fontWeight'],
     ...fontSizes[13],
   },
 };
