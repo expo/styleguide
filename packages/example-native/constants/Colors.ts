@@ -10,7 +10,7 @@ export const Colors = {
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
     headerIcon: '#A1CEDC',
-    header: '#0a7ea4'
+    header: '#0a7ea4',
   },
   dark: {
     text: '#ECEDEE',
@@ -20,6 +20,6 @@ export const Colors = {
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
     headerIcon: '#1D3D47',
-    header: '#0a7ea4'
+    header: '#0a7ea4',
   },
 };

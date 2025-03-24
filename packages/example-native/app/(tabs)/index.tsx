@@ -1,18 +1,15 @@
+import { Logo, typography } from '@expo/styleguide-native';
 import { StyleSheet } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { Logo, typography } from '@expo/styleguide-native';
 
 export default function Typography() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Logo color="#0a7ea4" style={styles.logo} />
-      }
-    >
+      headerImage={<Logo color="#0a7ea4" style={styles.logo} />}>
       <ThemedText type="title">Headers</ThemedText>
       <ThemedView style={styles.elementContainer}>
         <ThemedText style={typography.headers.default.large.huge}>default.large.huge</ThemedText>

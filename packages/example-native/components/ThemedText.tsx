@@ -1,7 +1,7 @@
+import { typography } from '@expo/styleguide-native';
 import { Text, type TextProps } from 'react-native';
 
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { typography } from '@expo/styleguide-native';
 
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
@@ -9,13 +9,7 @@ export type ThemedTextProps = TextProps & {
   type?: 'default' | 'title';
 };
 
-export function ThemedText({
-  style,
-  lightColor,
-  darkColor,
-  type = 'default',
-  ...rest
-}: ThemedTextProps) {
+export function ThemedText({ style, lightColor, darkColor, type = 'default', ...rest }: ThemedTextProps) {
   const color = useThemeColor({ light: lightColor, dark: darkColor }, type === 'title' ? 'header' : 'text');
 
   return (

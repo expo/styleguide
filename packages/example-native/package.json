@@ -42,5 +42,9 @@
     "@types/react": "~18.3.12",
     "typescript": "^5.6.3"
   },
+  "eslintConfig": {
+    "extends": "universe/native"
+  },
+  "eslintIgnore": ["./expo-env.d.ts"],
   "private": true
 }

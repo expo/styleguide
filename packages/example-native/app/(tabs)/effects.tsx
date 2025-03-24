@@ -1,17 +1,15 @@
+import { shadows, SnackLogo } from '@expo/styleguide-native';
 import { StyleSheet, View } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { shadows, SnackLogo } from '@expo/styleguide-native';
 
 export default function Effects() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <SnackLogo color="#0a7ea4" style={styles.logo} />
-      }>
+      headerImage={<SnackLogo color="#0a7ea4" style={styles.logo} />}>
       <ThemedText type="title">Shadows</ThemedText>
       <View style={styles.effectsContainer}>
         <ThemedView style={[styles.box, shadows.xs]}>
@@ -52,7 +50,7 @@ const styles = StyleSheet.create({
   effectsContainer: {
     flex: 1,
     gap: 24,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   logo: {
     height: 120,
@@ -60,6 +58,6 @@ const styles = StyleSheet.create({
     top: 96,
     left: 0,
     position: 'absolute',
-    fontWeight: 'medium'
+    fontWeight: 'medium',
   },
 });
