@@ -1,14 +1,12 @@
 {
   "name": "example-native",
+  "version": "0.0.0",
+  "private": true,
   "main": "expo-router/entry",
-  "version": "1.0.0",
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios"
-  },
-  "jest": {
-    "preset": "jest-expo"
   },
   "dependencies": {
     "@expo/styleguide-native": "workspace:*",
@@ -47,6 +45,5 @@
   },
   "eslintIgnore": [
     "./expo-env.d.ts"
-  ],
-  "private": true
+  ]
 }

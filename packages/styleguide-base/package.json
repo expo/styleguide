@@ -13,7 +13,7 @@
     "build": "run-s clean bundle",
     "dev": "rollup --config --watch"
   },
-  "author": "Jon Samp",
+  "author": "Expo",
   "license": "MIT",
   "homepage": "https://github.com/expo/styleguide",
   "repository": {

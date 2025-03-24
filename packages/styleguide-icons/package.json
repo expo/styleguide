@@ -24,7 +24,7 @@
     "build-stub": "export STUB=true && run-s clean bundle",
     "build-icons": "run-s clean export bundle"
   },
-  "author": "Jon Samp",
+  "author": "Expo",
   "license": "UNLICENSED",
   "homepage": "https://github.com/expo/styleguide",
   "repository": {
