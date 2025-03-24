@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide",
-  "version": "9.0.4",
+  "version": "9.0.5",
   "description": "Expo's styleguide components for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,7 +29,7 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "dependencies": {
-    "@expo/styleguide-base": "^2.0.2",
+    "@expo/styleguide-base": "^2.0.3",
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {

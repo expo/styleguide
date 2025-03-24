@@ -2051,7 +2051,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/styleguide-base@npm:^2.0.2, @expo/styleguide-base@workspace:packages/styleguide-base":
+"@expo/styleguide-base@npm:^2.0.3, @expo/styleguide-base@workspace:packages/styleguide-base":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-base@workspace:packages/styleguide-base"
   dependencies:
@@ -2064,7 +2064,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@expo/styleguide-icons@npm:^2.1.2, @expo/styleguide-icons@workspace:*, @expo/styleguide-icons@workspace:packages/styleguide-icons":
+"@expo/styleguide-icons@npm:^2.1.3, @expo/styleguide-icons@workspace:*, @expo/styleguide-icons@workspace:packages/styleguide-icons":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-icons@workspace:packages/styleguide-icons"
   dependencies:
@@ -2107,8 +2107,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-search-ui@workspace:packages/search-ui"
   dependencies:
-    "@expo/styleguide": "npm:^9.0.4"
-    "@expo/styleguide-icons": "npm:^2.1.2"
+    "@expo/styleguide": "npm:^9.0.5"
+    "@expo/styleguide-icons": "npm:^2.1.3"
     "@sanity/client": "npm:^6.28.3"
     "@sanity/image-url": "npm:^1.1.0"
     "@types/lodash.groupby": "npm:^4.6.9"
@@ -2125,11 +2125,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@expo/styleguide@npm:^9.0.4, @expo/styleguide@workspace:*, @expo/styleguide@workspace:packages/styleguide":
+"@expo/styleguide@npm:^9.0.5, @expo/styleguide@workspace:*, @expo/styleguide@workspace:packages/styleguide":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide@workspace:packages/styleguide"
   dependencies:
-    "@expo/styleguide-base": "npm:^2.0.2"
+    "@expo/styleguide-base": "npm:^2.0.3"
     "@tailwindcss/typography": "npm:^0.5.15"
     npm-run-all: "npm:*"
     rimraf: "npm:*"
