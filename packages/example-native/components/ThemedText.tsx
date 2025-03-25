@@ -10,14 +10,14 @@ export type ThemedTextProps = TextProps & {
 };
 
 export function ThemedText({ style, lightColor, darkColor, type = 'default', ...rest }: ThemedTextProps) {
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, type === 'title' ? 'header' : 'text');
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, type === 'title' ? 'icon' : 'text');
 
   return (
     <Text
       style={[
         { color },
         type === 'default' ? typography.body.paragraph : undefined,
-        type === 'title' ? typography.headers.default.small.huge : undefined,
+        type === 'title' ? typography.headers.default.small.h1 : undefined,
         style,
       ]}
       {...rest}
