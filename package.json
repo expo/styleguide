@@ -36,6 +36,7 @@
       "dist",
       "out",
       "tmp",
+      ".expo",
       ".next",
       "packages/example-native/expo-env.d.ts",
       "packages/example-web/common/icon-imports.*",

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box {
+  @apply w-full h-24 rounded-lg items-center justify-center;
+}

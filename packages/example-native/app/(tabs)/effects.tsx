@@ -1,62 +1,35 @@
-import { shadows, SnackLogo } from '@expo/styleguide-native';
-import { StyleSheet, View } from 'react-native';
+import { shadows } from '@expo/styleguide-native';
+import { Platform, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { SafeScrollView } from '@/components/ui/SafeScrollView';
 
 export default function Effects() {
+  const Container = Platform.OS === 'ios' ? SafeAreaView : ThemedView;
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={<SnackLogo color="#0a7ea4" style={styles.logo} />}>
-      <ThemedText type="title">Shadows</ThemedText>
-      <View style={styles.effectsContainer}>
-        <ThemedView style={[styles.box, shadows.xs]}>
-          <ThemedText>shadows.xs</ThemedText>
-        </ThemedView>
-        <ThemedView style={[styles.box, shadows.sm]}>
-          <ThemedText>shadows.sm</ThemedText>
-        </ThemedView>
-        <ThemedView style={[styles.box, shadows.md]}>
-          <ThemedText>shadows.md</ThemedText>
-        </ThemedView>
-        <ThemedView style={[styles.box, shadows.lg]}>
-          <ThemedText>shadows.lg</ThemedText>
-        </ThemedView>
-        <ThemedView style={[styles.box, shadows.xl]}>
-          <ThemedText>shadows.xl</ThemedText>
-        </ThemedView>
-      </View>
-    </ParallaxScrollView>
+    <SafeScrollView>
+      <Container>
+        <ThemedText type="title">Shadows</ThemedText>
+        <View className="flex mt-4 gap-10 items-center">
+          <ThemedView className="box" style={[shadows.xs]}>
+            <ThemedText>shadows.xs</ThemedText>
+          </ThemedView>
+          <ThemedView className="box" style={[shadows.sm]}>
+            <ThemedText>shadows.sm</ThemedText>
+          </ThemedView>
+          <ThemedView className="box" style={[shadows.md]}>
+            <ThemedText>shadows.md</ThemedText>
+          </ThemedView>
+          <ThemedView className="box" style={[shadows.lg]}>
+            <ThemedText>shadows.lg</ThemedText>
+          </ThemedView>
+          <ThemedView className="box" style={[shadows.xl]}>
+            <ThemedText>shadows.xl</ThemedText>
+          </ThemedView>
+        </View>
+      </Container>
+    </SafeScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  box: {
-    width: 200,
-    height: 100,
-    borderRadius: 12,
-    marginBottom: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
-  effectsContainer: {
-    flex: 1,
-    gap: 24,
-    alignItems: 'center',
-  },
-  logo: {
-    height: 120,
-    width: '100%',
-    top: 80,
-    left: 0,
-    position: 'absolute',
-  },
-});
