@@ -3,9 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html className="a-test-class">
+    <Html>
       <Head />
-      <body className="bg-screen text-default min-h-dvh">
+      <body className="min-h-dvh bg-screen text-default">
         <BlockingSetInitialColorMode />
         <Main />
         <NextScript />

@@ -28,7 +28,7 @@ export const StyleguideItem = ({ item, onSelect, query }: Props) => {
           linkRef?.current?.click();
           onSelect?.();
         }}>
-        <div className="inline-flex gap-3 items-center">
+        <div className="inline-flex items-center gap-3">
           <Icon className="text-icon-secondary" />
           <p className="text-xs font-medium" dangerouslySetInnerHTML={{ __html: addHighlight(item.label, query) }} />
         </div>

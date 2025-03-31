@@ -390,26 +390,11 @@ const expoTailwindConfig = {
       },
     },
     screens: {
-      // note(simek): re-generate 'max-<size>-gutters' screen scopes as 'raw' due to:
-      // https://github.com/tailwindlabs/tailwindcss/issues/13022
-      'max-2xl-gutters': {
-        raw: 'not all and (min-width: 1572px)',
-      },
-      'max-xl-gutters': {
-        raw: 'not all and (min-width: 1248px)',
-      },
-      'max-lg-gutters': {
-        raw: 'not all and (min-width: 1008px)',
-      },
-      'max-md-gutters': {
-        raw: 'not all and (min-width: 788px)',
-      },
-      'max-sm-gutters': {
-        raw: 'not all and (min-width: 468px)',
-      },
-      short: {
-        raw: '(max-height: 788px) and (min-width: 1008px)',
-      },
+      'sm-gutters': '468px',
+      'md-gutters': '788px',
+      'lg-gutters': '1008px',
+      'xl-gutters': '1248px',
+      '2xl-gutters': '1572px',
     },
     extend: {
       stroke: {
@@ -447,7 +432,6 @@ const expoTailwindConfig = {
       },
       maxWidth: {
         15: '3.75rem',
-        'screen-xs': '340px',
         'screen-sm': '420px',
         'screen-md': '740px',
         'screen-lg': '960px',

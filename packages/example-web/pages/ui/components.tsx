@@ -27,25 +27,25 @@ export default function ComponentsPage() {
       <H1>UI: Components</H1>
       <H3>Inline Help</H3>
       <DemoTile title="info" tag="div">
-        <div className="rounded-lg bg-info border border-info text-info px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+        <div className="flex items-center gap-2 rounded-lg border border-info bg-info px-3 py-1.5 text-sm text-info shadow-xs">
           <EasMetadataIcon className="icon-sm text-icon-info" />
           Info text
         </div>
       </DemoTile>
       <DemoTile title="warning" tag="div">
-        <div className="rounded-lg bg-warning border border-warning text-warning px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+        <div className="flex items-center gap-2 rounded-lg border border-warning bg-warning px-3 py-1.5 text-sm text-warning shadow-xs">
           <EasMetadataIcon className="icon-sm text-icon-warning" />
           Warning text
         </div>
       </DemoTile>
       <DemoTile title="danger" tag="div">
-        <div className="rounded-lg bg-danger border border-danger text-danger px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+        <div className="flex items-center gap-2 rounded-lg border border-danger bg-danger px-3 py-1.5 text-sm text-danger shadow-xs">
           <EasMetadataIcon className="icon-sm text-icon-danger" />
           Danger text
         </div>
       </DemoTile>
       <DemoTile title="success" tag="div">
-        <div className="rounded-lg bg-success border border-success text-success px-3 py-1.5 flex gap-2 items-center shadow-xs text-sm">
+        <div className="flex items-center gap-2 rounded-lg border border-success bg-success px-3 py-1.5 text-sm text-success shadow-xs">
           <EasMetadataIcon className="icon-sm text-icon-success" />
           Success text
         </div>
@@ -142,13 +142,13 @@ export default function ComponentsPage() {
       </DemoTile>
       <DemoTile title="custom button">
         <Button
-          className="bg-palette-green3 border-palette-green7 text-success hocus:bg-palette-green4"
+          className="border-palette-green7 bg-palette-green3 text-success hocus:bg-palette-green4"
           rightSlot={<EasMetadataIcon className="text-success" />}>
           EAS Metadata
         </Button>
         <Button
           href="#"
-          className="ml-4 bg-palette-green3 border-palette-green7 text-success hocus:bg-palette-green4"
+          className="ml-4 border-palette-green7 bg-palette-green3 text-success hocus:bg-palette-green4"
           rightSlot={<EasMetadataIcon className="text-success" />}>
           EAS Metadata
         </Button>
@@ -156,8 +156,8 @@ export default function ComponentsPage() {
       <DemoTile title="custom slot content">
         <Button
           theme="quaternary"
-          className="hocus:bg-palette-yellow2 hocus:border-palette-yellow6"
-          leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}
+          className="hocus:border-palette-yellow6 hocus:bg-palette-yellow2"
+          leftSlot={<span className="icon-2xs rounded-md bg-palette-yellow10" />}
           testID="test-button"
           skipCapitalization>
           Check status
@@ -165,15 +165,15 @@ export default function ComponentsPage() {
         <Button
           href="#"
           theme="quaternary"
-          className="ml-4 hocus:bg-palette-yellow2 hocus:border-palette-yellow6"
-          leftSlot={<span className="icon-2xs bg-palette-yellow10 rounded-md" />}
+          className="ml-4 hocus:border-palette-yellow6 hocus:bg-palette-yellow2"
+          leftSlot={<span className="icon-2xs rounded-md bg-palette-yellow10" />}
           testID="test-link"
           skipCapitalization>
           Check status
         </Button>
       </DemoTile>
       <DemoTile title="forced dark theme">
-        <span className="dark-theme flex bg-screen p-4 rounded-lg gap-4">
+        <span className="dark-theme flex gap-4 rounded-lg bg-screen p-4">
           <Button theme="secondary" className="dark-theme">
             Dark button
           </Button>

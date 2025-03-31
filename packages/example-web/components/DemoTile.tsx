@@ -9,8 +9,8 @@ type DemoTileProps = PropsWithChildren<{
 
 export function DemoTile({ title, className, children = 'Build developer trust.', tag = 'p' }: DemoTileProps) {
   return (
-    <div className="flex items-center gap-2 mb-4 flex-wrap">
-      <p className="w-40 large:w-60 text-2xs text-secondary">{title}</p>
+    <div className="mb-4 flex flex-wrap items-center gap-2">
+      <p className="large:w-60 w-40 text-2xs text-secondary">{title}</p>
       {createElement(tag, { className }, children)}
     </div>
   );

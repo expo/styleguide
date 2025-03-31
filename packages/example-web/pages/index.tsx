@@ -8,9 +8,9 @@ export default function HomePage() {
       <H1 className="prose-strong:text-secondary">
         @expo<strong>/</strong>styleguide
       </H1>
-      <p className="text-lg mt-8">
+      <p className="mt-8 text-lg">
         A collection of packages used to share styles and icons across{' '}
-        <WordMarkLogo className="text-default w-auto h-6 inline relative -top-0.5 px-0.5" /> websites and projects.
+        <WordMarkLogo className="relative -top-0.5 inline h-6 w-auto px-0.5 text-default" /> websites and projects.
       </p>
     </>
   );
