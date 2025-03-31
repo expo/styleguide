@@ -10,7 +10,7 @@ type Props = ButtonProps & {
 export function ButtonsRow({ theme, disabled = false, iconOnly = false }: Props) {
   return (
     <DemoTile title={`${theme}${disabled ? ' (disabled)' : ''}${iconOnly ? ' (icon only)' : ''}`} tag="div">
-      <div className="flex flex-wrap gap-6 items-center">
+      <div className="flex flex-wrap items-center gap-6">
         <Button theme={theme} size="2xs" disabled={disabled} leftSlot={<PaletteIcon />}>
           {iconOnly ? null : 'Button 2XS'}
         </Button>

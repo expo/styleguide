@@ -7,15 +7,15 @@ export default function TypographyPage() {
       <H1>Typography</H1>
       <H3 id="headings">Headings classes</H3>
       <div className="flex flex-col gap-8">
-        <DemoTile title="heading-5xl" className="heading-5xl font-black" />
-        <DemoTile title="heading-4xl" className="heading-4xl font-extrabold" />
-        <DemoTile title="heading-3xl" className="heading-3xl font-bold" />
-        <DemoTile title="heading-2xl" className="heading-2xl font-semibold" />
-        <DemoTile title="heading-xl" className="heading-xl font-medium" />
-        <DemoTile title="heading-lg" className="heading-lg font-medium" />
-        <DemoTile title="heading-base" className="heading-base font-medium" />
-        <DemoTile title="heading-sm" className="heading-sm font-medium" />
-        <DemoTile title="heading-xs" className="heading-xs font-medium" />
+        <DemoTile title="heading-5xl" className="font-black heading-5xl" />
+        <DemoTile title="heading-4xl" className="font-extrabold heading-4xl" />
+        <DemoTile title="heading-3xl" className="font-bold heading-3xl" />
+        <DemoTile title="heading-2xl" className="font-semibold heading-2xl" />
+        <DemoTile title="heading-xl" className="font-medium heading-xl" />
+        <DemoTile title="heading-lg" className="font-medium heading-lg" />
+        <DemoTile title="heading-base" className="font-medium heading-base" />
+        <DemoTile title="heading-sm" className="font-medium heading-sm" />
+        <DemoTile title="heading-xs" className="font-medium heading-xs" />
       </div>
       <H3 id="elements">Text classes</H3>
       <div className="flex flex-col gap-8">

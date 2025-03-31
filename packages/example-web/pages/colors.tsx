@@ -11,7 +11,7 @@ export default function ColorsPage() {
       <H1>Colors</H1>
       <H3 id="semantic">Semantic</H3>
       <H4>Backgrounds</H4>
-      <div className="flex flex-wrap mb-2">
+      <div className="mb-2 flex flex-wrap">
         {[
           'bg-default',
           'bg-screen',
@@ -28,38 +28,38 @@ export default function ColorsPage() {
           <div key={index}>
             <div
               className={mergeClasses(
-                'w-16 h-16 mb-1 transition',
-                'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                'mb-1 h-16 w-16 transition',
+                'hover:shadow-xl hocus:scale-110 hocus:cursor-pointer',
                 'active:scale-105',
                 className
               )}
               onClick={() => copy(className)}
             />
-            <p className="text-3xs text-secondary text-center">{className.replace('bg-', '')}</p>
+            <p className="text-center text-3xs text-secondary">{className.replace('bg-', '')}</p>
           </div>
         ))}
       </div>
       <H4 className="mt-6">Borders</H4>
-      <div className="flex flex-wrap mb-2">
+      <div className="mb-2 flex flex-wrap">
         {['border-default', 'border-secondary', 'border-success', 'border-warning', 'border-danger', 'border-info'].map(
           (className, index) => (
             <div key={index}>
               <div
                 className={mergeClasses(
-                  'w-16 h-16 mb-1 transition border-[10px]',
-                  'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                  'mb-1 h-16 w-16 border-[10px] transition',
+                  'hover:shadow-xl hocus:scale-110 hocus:cursor-pointer',
                   'active:scale-105',
                   className
                 )}
                 onClick={() => copy(className)}
               />
-              <p className="text-3xs text-secondary text-center">{className.replace('border-', '')}</p>
+              <p className="text-center text-3xs text-secondary">{className.replace('border-', '')}</p>
             </div>
           )
         )}
       </div>
       <H4 className="mt-6">Text colors</H4>
-      <div className="flex flex-wrap mb-2">
+      <div className="mb-2 flex flex-wrap">
         {[
           'text-default',
           'text-secondary',
@@ -73,34 +73,34 @@ export default function ColorsPage() {
           <div key={index}>
             <div
               className={mergeClasses(
-                'inline-flex items-center justify-center heading-xl w-16 h-16 mb-1 transition font-black',
-                'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                'mb-1 inline-flex h-16 w-16 items-center justify-center font-black transition heading-xl',
+                'hover:shadow-xl hocus:scale-110 hocus:cursor-pointer',
                 'active:scale-105',
                 className
               )}
               onClick={() => copy(className)}>
               T
             </div>
-            <p className="text-3xs text-secondary text-center">{className.replace('text-', '')}</p>
+            <p className="text-center text-3xs text-secondary">{className.replace('text-', '')}</p>
           </div>
         ))}
       </div>
       <H3 id="palette">Palette</H3>
-      <div className="grid gap-2 mt-8">
+      <div className="mt-8 grid gap-2">
         {['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'gray'].map((color) => (
-          <div className="flex flex-wrap mb-2" key={color}>
+          <div className="mb-2 flex flex-wrap" key={color}>
             {getPaletteClasses(color).map((className, index) => (
               <div key={index}>
                 <div
                   className={mergeClasses(
-                    'w-16 h-16 mb-1 transition',
-                    'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                    'mb-1 h-16 w-16 transition',
+                    'hover:shadow-xl hocus:scale-110 hocus:cursor-pointer',
                     'active:scale-105',
                     className
                   )}
                   onClick={() => copy(`palette-${color}${index + 1}`)}
                 />
-                <p className="text-3xs text-secondary text-center">
+                <p className="text-center text-3xs text-secondary">
                   {color}
                   {index + 1}
                 </p>
@@ -110,7 +110,7 @@ export default function ColorsPage() {
         ))}
       </div>
       <H3 id="project">Project background colors</H3>
-      <div className="flex flex-wrap mb-2">
+      <div className="mb-2 flex flex-wrap">
         {[
           'bg-app-cyan',
           'bg-app-light-blue',
@@ -128,14 +128,14 @@ export default function ColorsPage() {
           <div key={index}>
             <div
               className={mergeClasses(
-                'w-16 h-16 mb-1 transition',
-                'hocus:scale-110 hover:shadow-xl hocus:cursor-pointer',
+                'mb-1 h-16 w-16 transition',
+                'hover:shadow-xl hocus:scale-110 hocus:cursor-pointer',
                 'active:scale-105',
                 className
               )}
               onClick={() => copy(className)}
             />
-            <p className="text-3xs text-secondary text-center">{className.replace('bg-app-', '')}</p>
+            <p className="text-center text-3xs text-secondary">{className.replace('bg-app-', '')}</p>
           </div>
         ))}
       </div>

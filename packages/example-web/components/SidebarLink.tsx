@@ -14,11 +14,11 @@ export function SidebarLink({ href, text, size = 'md' }: Props) {
     <Link
       href={href}
       className={mergeClasses(
-        'font-medium flex items-center gap-2 transition-colors hover:underline',
+        'flex items-center gap-2 font-medium transition-colors hover:underline',
         pathname === href && 'text-link',
-        size === 'sm' && 'heading-base pl-2',
+        size === 'sm' && 'pl-2 heading-base',
         size === 'md' && 'heading-xl',
-        'max-sm-gutters:inline-flex max-sm-gutters:mr-2 max-sm-gutters:pl-0'
+        'max-sm-gutters:mr-2 max-sm-gutters:inline-flex max-sm-gutters:pl-0'
       )}>
       <span>{text}</span>
     </Link>

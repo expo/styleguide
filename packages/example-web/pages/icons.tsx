@@ -21,8 +21,8 @@ import useCopy from '@/hooks/useCopy';
 type IconNames = keyof typeof StyleguideIcons;
 
 const iconClasses = mergeClasses(
-  'flex flex-col items-center justify-center py-4 px-2 gap-1 border border-transparent rounded-md transition',
-  'hocus:border-secondary hocus:shadow-xs hover:cursor-pointer',
+  'flex flex-col items-center justify-center gap-1 rounded-md border border-transparent px-2 py-4 transition',
+  'hover:cursor-pointer hocus:border-secondary hocus:shadow-xs',
   'active:scale-98'
 );
 
@@ -65,9 +65,9 @@ export default function IconsPage() {
       <H3 id="set">Icon set</H3>
       <div className={mergeClasses('flex items-center gap-4', 'max-sm-gutters:flex-col max-sm-gutters:items-start')}>
         <div className="relative">
-          <SearchMdIcon className="icon-sm absolute top-[9px] left-2.5" />
+          <SearchMdIcon className="icon-sm absolute left-2.5 top-[9px]" />
           <input
-            className="border border-default rounded-md bg-default shadow-none py-1 px-3 pl-8 box-border outline-palette-blue8"
+            className="box-border rounded-md border border-default bg-default px-3 py-1 pl-8 shadow-none outline-palette-blue8"
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>

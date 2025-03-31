@@ -1,11 +1,11 @@
 {
-  "name": "root",
+  "name": "styleguide-root",
   "private": true,
   "scripts": {
     "build": "lerna run build --stream",
     "dev": "lerna run dev --parallel",
     "npm-publish": "lerna publish --no-private",
-    "lint": "eslint packages/*"
+    "lint": "eslint packages/example-native packages/search-ui packages/styleguide packages/styleguide-base packages/styleguide-icons packages/styleguide-native"
   },
   "workspaces": [
     "packages/*"
@@ -31,18 +31,6 @@
   "packageManager": "yarn@4.7.0",
   "eslintConfig": {
     "root": true,
-    "ignorePatterns": [
-      "node_modules",
-      "dist",
-      "out",
-      "tmp",
-      ".expo",
-      ".next",
-      "packages/example-native/expo-env.d.ts",
-      "packages/example-web/common/icon-imports.*",
-      "packages/styleguide-icons/index.*",
-      "packages/styleguide-icons/mergeClasses.*"
-    ],
     "rules": {
       "max-len": [
         "warn",
@@ -52,6 +40,17 @@
       ]
     }
   },
+  "eslintIgnore": [
+    "node_modules",
+    "dist",
+    "out",
+    "tmp",
+    ".expo",
+    ".next",
+    "packages/example-native/expo-env.d.ts",
+    "packages/styleguide-icons/index.*",
+    "packages/styleguide-icons/mergeClasses.*"
+  ],
   "prettier": {
     "printWidth": 120,
     "singleQuote": true,

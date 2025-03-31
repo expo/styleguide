@@ -7,7 +7,8 @@
     "build": "next build",
     "analyze-build": "ANALYZE=true next build",
     "update-icons": "node ./merge-icon-imports.js",
-    "clean": "rimraf .next .vercel"
+    "clean": "rimraf .next .vercel",
+    "lint": "yarn eslint ."
   },
   "dependencies": {
     "@expo/styleguide": "workspace:*",
@@ -25,8 +26,11 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
     "eslint-config-next": "^15.2.3",
+    "eslint-plugin-tailwindcss": "^3.18.0",
     "postcss": "^8.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "rimraf": "*",
     "tailwind-merge": "^2.5.4",
     "tailwindcss": "^3.4.17"
@@ -35,18 +39,55 @@
     "cmdk": "*"
   },
   "eslintConfig": {
+    "root": true,
     "extends": [
       "universe/web",
-      "next/core-web-vitals"
+      "next/core-web-vitals",
+      "plugin:tailwindcss/recommended"
     ],
     "rules": {
       "@next/next/no-html-link-for-pages": [
+        "error"
+      ],
+      "tailwindcss/classnames-order": "off",
+      "tailwindcss/enforces-negative-arbitrary-values": "error",
+      "tailwindcss/enforces-shorthand": "error",
+      "tailwindcss/no-arbitrary-value": "off",
+      "tailwindcss/no-custom-classname": [
         "error",
-        "packages/example-web/pages"
+        {
+          "cssFiles": [],
+          "whitelist": [
+            "dark-theme"
+          ],
+          "callees": [
+            "mergeClasses"
+          ]
+        }
+      ],
+      "tailwindcss/no-unnecessary-arbitrary-value": [
+        "error",
+        {
+          "callees": [
+            "mergeClasses"
+          ]
+        }
       ]
     },
     "ignorePatterns": [
       "icon-imports.ts"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "bracketSameLine": true,
+    "trailingComma": "es5",
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
+    "tailwindFunctions": [
+      "mergeClasses"
     ]
   }
 }
