@@ -117,7 +117,7 @@ const appColors = {
 };
 
 const expoTailwindConfig = {
-  safelist: ['icon-md', 'text-icon-default', 'translate-z'],
+  safelist: ['icon-md', 'text-icon-default', 'translate-z', 'shrink-0'],
   darkMode: ['class', '[class*="dark-theme"]'],
   theme: {
     borderRadius: {
@@ -390,11 +390,26 @@ const expoTailwindConfig = {
       },
     },
     screens: {
-      'sm-gutters': '468px',
-      'md-gutters': '788px',
-      'lg-gutters': '1008px',
-      'xl-gutters': '1248px',
-      '2xl-gutters': '1572px',
+      // note(simek): re-generate 'max-<size>-gutters' screen scopes as 'raw' due to:
+      // https://github.com/tailwindlabs/tailwindcss/issues/13022
+      'max-2xl-gutters': {
+        raw: 'not all and (min-width: 1572px)',
+      },
+      'max-xl-gutters': {
+        raw: 'not all and (min-width: 1248px)',
+      },
+      'max-lg-gutters': {
+        raw: 'not all and (min-width: 1008px)',
+      },
+      'max-md-gutters': {
+        raw: 'not all and (min-width: 788px)',
+      },
+      'max-sm-gutters': {
+        raw: 'not all and (min-width: 468px)',
+      },
+      short: {
+        raw: '(max-height: 788px) and (min-width: 1008px)',
+      },
     },
     extend: {
       stroke: {

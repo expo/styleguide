@@ -4,7 +4,7 @@ const svgrTemplate = ({ imports, interfaces, componentName, props, jsx }, { tpl,
 import { mergeClasses } from "../mergeClasses";
 
 export function ${componentName}({ className, ...props }: React.SVGProps<SVGSVGElement> & React.HTMLAttributes<SVGSVGElement>) {
-  const _className = mergeClasses("icon-md text-icon-default translate-z", className);
+  const _className = mergeClasses("icon-md text-icon-default translate-z shrink-0", className);
   return ${jsx};
 }
 
