@@ -475,20 +475,12 @@ const expoTailwindConfig = {
       },
       keyframes: {
         fadeIn: {
-          '0%': {
-            opacity: 0,
-          },
-          '100%': {
-            opacity: 1,
-          },
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
         },
         fadeOut: {
-          '0%': {
-            opacity: 1,
-          },
-          '100%': {
-            opacity: 0,
-          },
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
         },
         slideDownAndFade: {
           '0%': {
@@ -559,7 +551,10 @@ const expoTailwindConfig = {
   plugins: [
     plugin(({ addComponents, addVariant, matchUtilities, theme }) => {
       addVariant('hocus', ['&:hover', '&:focus-visible']);
+      addVariant('compact-height', `@media (max-height: 788px) and (min-width: 1008px)`);
+
       matchUtilities({ heading: (value) => value }, { values: theme('heading') });
+
       addComponents({
         '.icon-2xs': {
           height: theme('height.3'),
@@ -590,19 +585,21 @@ const expoTailwindConfig = {
           height: theme('height.10'),
           width: theme('width.10'),
         },
+
         '.translate-z': {
           transform: 'translateZ(0)',
         },
+
         '.break-words': { 'word-break': 'break-word' },
         '.wrap-anywhere': { 'overflow-wrap': 'anywhere' },
+
         '.pause-animation': { 'animation-play-state': 'paused' },
         '.transform-box': { 'transform-box': 'fill-box' },
-        '.overflow-wrap-anywhere': {
-          'overflow-wrap': 'anywhere',
-        },
+
         '.backface-hidden': {
           'backface-visibility': 'hidden',
         },
+
         '.variant-numeric-normal': {
           'font-variant-numeric': 'normal',
         },
@@ -612,6 +609,7 @@ const expoTailwindConfig = {
         '.variant-numeric-tabular': {
           'font-variant-numeric': 'tabular-nums',
         },
+
         '.asset-shadow': {
           filter: 'drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.07))',
         },

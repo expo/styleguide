@@ -51,10 +51,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <main
           className={mergeClasses(
             'bg-gradient-to-b from-subtle to-default',
-            'grid min-h-dvh grid-cols-[240px_1fr] gap-8 p-8',
+            'grid min-h-dvh grid-cols-[200px_1fr] gap-8 p-8',
             'dark:from-default dark:to-screen',
-            'max-md-gutters:grid-cols-[140px_1fr]',
-            'max-sm-gutters:grid-cols-1 max-sm-gutters:gap-16'
+            'max-md-gutters:grid-cols-1 max-md-gutters:gap-16'
           )}>
           <Sidebar />
           <div>
