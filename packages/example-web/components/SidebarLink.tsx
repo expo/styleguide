@@ -18,7 +18,7 @@ export function SidebarLink({ href, text, size = 'md' }: Props) {
         pathname === href && 'text-link',
         size === 'sm' && 'pl-2 heading-base',
         size === 'md' && 'heading-xl',
-        'max-sm-gutters:mr-2 max-sm-gutters:inline-flex max-sm-gutters:pl-0'
+        'max-md-gutters:mr-2 max-md-gutters:inline-flex max-md-gutters:pl-0'
       )}>
       <span>{text}</span>
     </Link>

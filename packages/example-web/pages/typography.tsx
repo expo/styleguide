@@ -6,7 +6,7 @@ export default function TypographyPage() {
     <>
       <H1>Typography</H1>
       <H3 id="headings">Headings classes</H3>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <DemoTile title="heading-5xl" className="font-black heading-5xl" />
         <DemoTile title="heading-4xl" className="font-extrabold heading-4xl" />
         <DemoTile title="heading-3xl" className="font-bold heading-3xl" />
@@ -18,7 +18,7 @@ export default function TypographyPage() {
         <DemoTile title="heading-xs" className="font-medium heading-xs" />
       </div>
       <H3 id="elements">Text classes</H3>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         <DemoTile title="text-3xl" className="text-3xl" />
         <DemoTile title="text-2xl" className="text-2xl" />
         <DemoTile title="text-xl" className="text-xl" />
@@ -29,8 +29,10 @@ export default function TypographyPage() {
         <DemoTile title="text-2xs" className="text-2xs" />
         <DemoTile title="text-3xs" className="text-3xs" />
       </div>
-      <H3 id="elements">Elements (legacy)</H3>
-      <div className="flex flex-col gap-8">
+      <H3 id="elements" className="opacity-80">
+        <span className="line-through">Elements</span> (legacy)
+      </H3>
+      <div className="flex flex-col gap-4 opacity-60">
         <DemoTile title="Headline" className="text-base font-medium" />
         <DemoTile title="Paragraph" className="text-base font-normal" />
         <DemoTile title="Label" className="text-sm font-medium" />

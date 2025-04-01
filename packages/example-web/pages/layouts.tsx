@@ -2,8 +2,10 @@ import { mergeClasses } from '@expo/styleguide';
 
 import { H1, H3 } from '@/components/headers';
 
-const VIEWPORT_CLASS = mergeClasses('mx-auto mt-4 min-h-40 border border-b-0 border-default bg-screen px-6 pt-4');
-const SCREEN_CLASS = mergeClasses('mx-auto mt-4 min-h-40 border border-b-0 border-secondary bg-default px-4 pt-3');
+const VIEWPORT_CLASS = mergeClasses(
+  'mx-auto mt-4 border border-default bg-screen px-6 pt-4 pb-5 rounded-lg shadow-xs'
+);
+const SCREEN_CLASS = mergeClasses('mx-auto mt-4 min-h-28 border border-secondary bg-default px-4 pt-3 rounded-md');
 
 export default function LayoutsPage() {
   return (
@@ -11,29 +13,64 @@ export default function LayoutsPage() {
       <H1>Layouts</H1>
       <H3>screen-2xl</H3>
       <div className={mergeClasses(VIEWPORT_CLASS, 'mx-0 border-b', 'max-w-screen-2xl-gutters')}>
-        max-2xl-gutters: <span className="text-quaternary">scope or</span> max-w-screen-2xl-gutters
-        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-2xl')}>max-w-screen-2xl</div>
+        max-2xl-gutters: <span className="text-quaternary">scope or</span>{' '}
+        <WidthExplanation screen="screen-2xl-gutters" />
+        <span className="text-2xs text-tertiary">1572px</span>
+        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-2xl')}>
+          <WidthExplanation screen="screen-2xl" />
+          <span className="text-2xs text-tertiary">1524px</span>
+        </div>
       </div>
       <H3>screen-xl</H3>
       <div className={mergeClasses(VIEWPORT_CLASS, 'mx-0 border-b', 'max-w-screen-xl-gutters')}>
-        max-xl-gutters: <span className="text-quaternary">scope or</span> max-w-screen-xl-gutters
-        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-xl')}>max-w-screen-xl</div>
+        max-xl-gutters: <span className="text-quaternary">scope or</span>{' '}
+        <WidthExplanation screen="screen-xl-gutters" />
+        <span className="text-2xs text-tertiary">1248px</span>
+        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-xl')}>
+          <WidthExplanation screen="screen-xl" />
+          <span className="text-2xs text-tertiary">1200px</span>
+        </div>
       </div>
       <H3>screen-lg</H3>
       <div className={mergeClasses(VIEWPORT_CLASS, 'mx-0 border-b', 'max-w-screen-lg-gutters')}>
-        max-lg-gutters: <span className="text-quaternary">scope or</span> max-w-screen-lg-gutters
-        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-lg')}>max-w-screen-lg</div>
+        max-lg-gutters: <span className="text-quaternary">scope or</span>{' '}
+        <WidthExplanation screen="screen-lg-gutters" />
+        <span className="text-2xs text-tertiary">1008px</span>
+        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-lg')}>
+          <WidthExplanation screen="screen-lg" />
+          <span className="text-2xs text-tertiary">960px</span>
+        </div>
       </div>
       <H3>screen-md</H3>
       <div className={mergeClasses(VIEWPORT_CLASS, 'mx-0 border-b', 'max-w-screen-md-gutters')}>
-        max-md-gutters: <span className="text-quaternary">scope or</span> max-w-screen-md-gutters
-        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-md')}>max-w-screen-md</div>
+        max-md-gutters: <span className="text-quaternary">scope or</span>{' '}
+        <WidthExplanation screen="screen-md-gutters" />
+        <span className="text-2xs text-tertiary">788px</span>
+        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-md')}>
+          <WidthExplanation screen="screen-md" />
+          <span className="text-2xs text-tertiary">740px</span>
+        </div>
       </div>
       <H3>screen-sm</H3>
       <div className={mergeClasses(VIEWPORT_CLASS, 'mx-0 border-b', 'max-w-screen-sm-gutters')}>
-        max-sm-gutters: <span className="text-quaternary">scope or</span> max-w-screen-sm-gutters
-        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-sm')}>max-w-screen-sm</div>
+        max-sm-gutters: <span className="text-quaternary">scope or</span>{' '}
+        <WidthExplanation screen="screen-sm-gutters" />
+        <span className="text-2xs text-tertiary">468px</span>
+        <div className={mergeClasses(SCREEN_CLASS, 'max-w-screen-sm')}>
+          <WidthExplanation screen="screen-sm" />
+          <span className="text-2xs text-tertiary">420px</span>
+        </div>
       </div>
+    </>
+  );
+}
+
+function WidthExplanation({ screen }: { screen: string }) {
+  return (
+    <>
+      <span className="text-quaternary">(</span>w<span className="text-quaternary">/</span>min-w
+      <span className="text-quaternary">/</span>max-w<span className="text-quaternary">)</span>-{screen}
+      <br />
     </>
   );
 }

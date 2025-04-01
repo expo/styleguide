@@ -20,9 +20,9 @@ export function H3({ children, className, ...rest }: HTMLAttributes<HTMLHeadingE
   return (
     <h3
       className={mergeClasses(
-        'mb-4 mt-10 scroll-mt-5 truncate font-bold heading-3xl',
-        'max-md-gutters:heading-2xl',
-        'max-sm-gutters:heading-xl',
+        'mb-4 mt-8 scroll-mt-5 truncate font-semibold heading-2xl',
+        'max-md-gutters:heading-xl',
+        'max-sm-gutters:heading-lg',
         className
       )}
       {...rest}>
@@ -36,8 +36,8 @@ export function H4({ children, className, ...rest }: HTMLAttributes<HTMLHeadingE
     <h4
       className={mergeClasses(
         'mb-4 scroll-mt-5 truncate font-semibold heading-lg',
-        'max-md-gutters:heading-2xl',
-        'max-sm-gutters:heading-xl',
+        'max-md-gutters:heading-base',
+        'max-sm-gutters:heading-sm',
         className
       )}
       {...rest}>
