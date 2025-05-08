@@ -28,6 +28,7 @@ export { HeadsetIcon } from '@expo/styleguide-icons/custom/HeadsetIcon';
 export { InspectElementIcon } from '@expo/styleguide-icons/custom/InspectElementIcon';
 export { InstagramIcon } from '@expo/styleguide-icons/custom/InstagramIcon';
 export { LinkedinIcon } from '@expo/styleguide-icons/custom/LinkedinIcon';
+export { LogrocketIcon } from '@expo/styleguide-icons/custom/LogrocketIcon';
 export { LogsIcon } from '@expo/styleguide-icons/custom/LogsIcon';
 export { MastodonIcon } from '@expo/styleguide-icons/custom/MastodonIcon';
 export { NpmIcon } from '@expo/styleguide-icons/custom/NpmIcon';
@@ -48,6 +49,7 @@ export { RequestUnhandledIcon } from '@expo/styleguide-icons/custom/RequestUnhan
 export { RolloutIcon } from '@expo/styleguide-icons/custom/RolloutIcon';
 export { RunIcon } from '@expo/styleguide-icons/custom/RunIcon';
 export { RuntimeVersionIcon } from '@expo/styleguide-icons/custom/RuntimeVersionIcon';
+export { SentryIcon } from '@expo/styleguide-icons/custom/SentryIcon';
 export { SlashShortcutIcon } from '@expo/styleguide-icons/custom/SlashShortcutIcon';
 export { Smartphone01Icon } from '@expo/styleguide-icons/custom/Smartphone01Icon';
 export { Smartphone02Icon } from '@expo/styleguide-icons/custom/Smartphone02Icon';
