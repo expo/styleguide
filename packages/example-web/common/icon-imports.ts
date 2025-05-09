@@ -40,6 +40,7 @@ export { PlanOnDemandIcon } from '@expo/styleguide-icons/custom/PlanOnDemandIcon
 export { PlanProductionIcon } from '@expo/styleguide-icons/custom/PlanProductionIcon';
 export { PushToDeviceIcon } from '@expo/styleguide-icons/custom/PushToDeviceIcon';
 export { QuestionMarkIcon } from '@expo/styleguide-icons/custom/QuestionMarkIcon';
+export { ReactLogoIcon } from '@expo/styleguide-icons/custom/ReactLogoIcon';
 export { ReceiptIcon } from '@expo/styleguide-icons/custom/ReceiptIcon';
 export { RedditIcon } from '@expo/styleguide-icons/custom/RedditIcon';
 export { RequestAssetIcon } from '@expo/styleguide-icons/custom/RequestAssetIcon';
