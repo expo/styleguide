@@ -144,85 +144,62 @@
 
 .prompt-result {
   > * {
-    margin-bottom: 10px;
+    @apply mb-2.5 last:mb-0;
+  }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+  h2, h3, h4 {
+    @apply heading-base mt-3.5;
+  }
+
+  h5, h6 {
+    @apply heading-sm mt-3.5;
   }
 
   code {
-    background: var(--expo-theme-background-subtle);
-    border: 1px solid var(--expo-theme-border-secondary);
-    border-radius: 6px;
-    padding: 0 2px;
+    @apply bg-subtle border border-secondary rounded-sm px-0.5;
   }
 
   pre {
-    background: var(--expo-theme-background-screen);
-    border: 1px solid var(--expo-theme-border-default);
-    border-radius: 6px;
-    padding: 12px;
-    white-space: pre-wrap;
-    word-break: break-word;
+    @apply text-2xs bg-screen border border-default shadow-xs p-3 rounded-md whitespace-pre-wrap break-words;
 
     code {
-      background: none;
-      border: 0;
-      padding: 0;
+      @apply p-0 border-0 bg-transparent;
     }
   }
 
   ul, ol {
-    padding-left: 16px;
+    @apply marker:text-secondary pl-5;
 
     * {
-      margin-bottom: 10px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+      @apply mb-2 last:mb-0;
     }
   }
 
   ul {
-    list-style: disc;
+    @apply list-disc;
   }
 
   ol {
-    list-style: decimal;
+    @apply list-decimal;
   }
 
   hr {
-    border-color: var(--expo-theme-border-secondary);
-    margin: 12px 0;
+    @apply border-secondary my-3;
   }
 
   table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 1px solid var(--expo-theme-border-default);
+    @apply border border-default;
 
     thead, tr {
-      border-bottom: 1px solid var(--expo-theme-border-secondary);
-
-      &:last-child {
-        border-bottom: 0;
-      }
+      @apply border-b border-secondary last:border-b-0;
     }
 
     th {
-      background: var(--expo-theme-background-subtle);
+      @apply bg-subtle;
     }
 
     th, td {
-      padding: 6px 8px;
-      line-height: 1.25;
-      border-right: 1px solid var(--expo-theme-border-secondary);
-
-      &:last-child {
-        border-right: 0;
-      }
+      @apply py-1.5 px-2 leading-[1.25] border-r border-secondary last:border-r-0;
     }
   }
 }
