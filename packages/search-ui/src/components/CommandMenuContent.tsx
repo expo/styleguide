@@ -35,7 +35,15 @@ export const CommandMenuContent = ({
   const [isMac, setIsMac] = useState<boolean | null>(null);
   const [isPromptMode, setPromptMode] = useState(false);
 
-  const { conversation, submitQuery, isGeneratingAnswer, isPreparingAnswer, addFeedback } = useChat();
+  const {
+    conversation,
+    submitQuery,
+    isGeneratingAnswer,
+    isPreparingAnswer,
+    addFeedback,
+    stopGeneration,
+    resetConversation,
+  } = useChat();
 
   const [expoDocsItems, setExpoDocsItems] = useState<AlgoliaItemType[]>([]);
   const [expoBlogItems, setExpoBlogItems] = useState<ExpoBlogItemType[]>([]);
@@ -63,6 +71,12 @@ export const CommandMenuContent = ({
     if (open) {
       setLoading(true);
       setPromptMode(false);
+
+      if (isPreparingAnswer || isGeneratingAnswer) {
+        stopGeneration();
+        resetConversation();
+      }
+
       const inputTimeout = setTimeout(() => fetchData(() => setLoading(false)), 150);
       return () => clearTimeout(inputTimeout);
     }
