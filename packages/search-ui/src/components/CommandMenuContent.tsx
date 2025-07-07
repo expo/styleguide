@@ -88,8 +88,6 @@ export const CommandMenuContent = ({
         setInitialized(true);
         setLoading(false);
       });
-    } else {
-      setPromptMode(false);
     }
   };
 
