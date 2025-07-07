@@ -23,7 +23,7 @@ export function PromptResultCodeBlock({ children, isLoading }: Props) {
       {children}
       <Button
         className="absolute right-1.5 top-1.5"
-        leftSlot={<ClipboardIcon />}
+        leftSlot={<ClipboardIcon className="text-icon-secondary" />}
         size="xs"
         theme="quaternary"
         disabled={copyDone || !isCopyable}

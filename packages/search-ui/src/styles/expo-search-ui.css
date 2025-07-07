@@ -151,12 +151,26 @@
     }
   }
 
+  code {
+    background: var(--expo-theme-background-subtle);
+    border: 1px solid var(--expo-theme-border-secondary);
+    border-radius: 6px;
+    padding: 0 2px;
+  }
+
   pre {
     background: var(--expo-theme-background-screen);
     border: 1px solid var(--expo-theme-border-default);
     border-radius: 6px;
     padding: 12px;
-    white-space: break-spaces;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    code {
+      background: none;
+      border: 0;
+      padding: 0;
+    }
   }
 
   ul, ol {
@@ -177,6 +191,11 @@
 
   ol {
     list-style: decimal;
+  }
+
+  hr {
+    border-color: var(--expo-theme-border-secondary);
+    margin: 12px 0;
   }
 
   table {
@@ -209,7 +228,7 @@
 }
 
 @media screen and (max-width: 788px) {
-  [cmdk-list] {
+  [cmdk-list], .result-container {
     height: calc(96dvh - 50px - 50px - 20px);
     max-height: calc(96dvh - 50px - 50px - 20px);
   }
@@ -250,20 +269,20 @@ html.dark-theme [cmdk-item][data-selected='true'] mark {
   background: var(--blue-7);
 }
 
-[cmdk-list]::-webkit-scrollbar {
+[cmdk-list]::-webkit-scrollbar, .result-container::-webkit-scrollbar {
   width: 6px;
 }
 
-[cmdk-list]::-webkit-scrollbar-track {
+[cmdk-list]::-webkit-scrollbar-track, .result-container::-webkit-scrollbar-track {
   background-color: transparent;
   cursor: pointer;
 }
 
-[cmdk-list]::-webkit-scrollbar-thumb {
+[cmdk-list]::-webkit-scrollbar-thumb, .result-container::-webkit-scrollbar-thumb {
   background-color: var(--slate-5);
   border-radius: 10px;
 }
 
-[cmdk-list]::-webkit-scrollbar-thumb:hover {
+[cmdk-list]::-webkit-scrollbar-thumb:hover, .result-container::-webkit-scrollbar-thumb:hover {
   background-color: var(--slate-6);
 }

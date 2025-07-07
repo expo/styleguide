@@ -11,11 +11,9 @@ import React, { useState } from 'react';
 import { BarLoader } from './BarLoader';
 import { PromptResultCodeBlock } from './PromptResultCodeBlock';
 
-type Props = Partial<UseChat> & {
-  onReset: () => void;
-};
+type Props = Partial<UseChat>;
 
-export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAnswer, addFeedback, onReset }: Props) {
+export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAnswer, addFeedback }: Props) {
   const [copyDone, setCopyDone] = useState(false);
   const [hasVoted, setVoted] = useState<boolean | undefined>(undefined);
 
@@ -25,9 +23,9 @@ export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAn
   return (
     <>
       <BarLoader isLoading={isLoading} />
-      <div className="result-container flex flex-col gap-4 px-4 py-3 w-full">
+      <div className="result-container flex flex-col gap-4 p-4 w-full">
         {isPreparingAnswer && (
-          <div className="blog text-xs w-full text-center text-quaternary">Preparing answer...</div>
+          <div className="flex text-xs size-full items-center justify-center text-quaternary">Preparing answer...</div>
         )}
         <Markdown
           children={lastConversation?.answer ?? ''}
@@ -48,12 +46,11 @@ export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAn
         />
         {!isLoading && lastConversation?.id && (
           <>
-            <div className="inline-flex w-full gap-2">
-              <Button theme="secondary" size="xs" className="mr-auto" onClick={onReset}>
-                Ask an another question
-              </Button>
+            <div className="inline-flex items-center w-full gap-2">
               <Button
+                skipCapitalization
                 theme="secondary"
+                className="mr-auto"
                 size="xs"
                 leftSlot={<ClipboardIcon />}
                 disabled={copyDone}
@@ -63,8 +60,10 @@ export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAn
                     setCopyDone(true);
                     setTimeout(() => setCopyDone(false), 1500);
                   }
-                }}
-              />
+                }}>
+                Copy answer
+              </Button>
+              <p className="text-tertiary text-2xs">Rate answer:</p>
               <Button
                 theme="secondary"
                 size="xs"

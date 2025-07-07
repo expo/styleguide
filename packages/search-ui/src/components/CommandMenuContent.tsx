@@ -118,7 +118,7 @@ export const CommandMenuContent = ({
           }}>
           <div className="inline-flex gap-3 items-center">
             <Stars02Icon className="text-icon-secondary" />
-            <p className="text-xs font-medium">Ask Expo AI assistant</p>
+            <p className="text-xs font-medium">Ask Expo's AI assistant</p>
           </div>
         </CommandItemBaseWithCopy>
       </Command.Group>
@@ -186,18 +186,12 @@ export const CommandMenuContent = ({
         <Command.Input value={query} onValueChange={setQuery} placeholder="Search or ask AI…" autoFocus />
         <BarLoader isLoading={loading} />
         {isPromptMode ? (
-          <div className="flex flex-1 h-full">
-            <AIPromptResult
-              conversation={conversation}
-              isGeneratingAnswer={isGeneratingAnswer}
-              isPreparingAnswer={isPreparingAnswer}
-              addFeedback={addFeedback}
-              onReset={() => {
-                setQuery('');
-                setPromptMode(false);
-              }}
-            />
-          </div>
+          <AIPromptResult
+            conversation={conversation}
+            isGeneratingAnswer={isGeneratingAnswer}
+            isPreparingAnswer={isPreparingAnswer}
+            addFeedback={addFeedback}
+          />
         ) : (
           <Command.List>
             {initialized && data}
@@ -208,7 +202,7 @@ export const CommandMenuContent = ({
             )}
           </Command.List>
         )}
-        <CommandFooter />
+        <CommandFooter isPromptMode={isPromptMode} />
       </Command.Dialog>
     </KapaProvider>
   );
