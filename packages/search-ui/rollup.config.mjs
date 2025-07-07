@@ -22,12 +22,14 @@ const config = [
       '@expo/styleguide',
       '@expo/styleguide-base',
       '@expo/styleguide-icons',
+      '@kapaai/react-sdk',
       '@sanity/client',
       '@sanity/image-url',
       'cmdk',
       'lodash.groupby',
+      'markdown-to-jsx',
       'react',
-      'tailwind-merge'
+      'tailwind-merge',
     ],
   },
 ];

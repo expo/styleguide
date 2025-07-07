@@ -30,10 +30,12 @@
   "dependencies": {
     "@expo/styleguide": "^9.1.2",
     "@expo/styleguide-icons": "^2.2.2",
+    "@kapaai/react-sdk": "^0.3.0",
     "@sanity/client": "^6.28.3",
     "@sanity/image-url": "^1.1.0",
     "cmdk": "^0.2.1",
-    "lodash.groupby": "^4.6.0"
+    "lodash.groupby": "^4.6.0",
+    "markdown-to-jsx": "^7.7.10"
   },
   "devDependencies": {
     "@types/lodash.groupby": "^4.6.9",

@@ -1,4 +1,11 @@
-import type { ReactNode } from 'react';
+import type { Dispatch, ReactNode, SetStateAction } from 'react';
+
+export type CommandMenuProps = {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  config: CommandMenuConfig;
+  customSections?: CommandMenuSection[];
+};
 
 export type CommandMenuConfig = {
   docsVersion: string;
