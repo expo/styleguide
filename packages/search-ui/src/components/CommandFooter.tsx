@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AlgoliaLogo } from '../Items/icons';
+import { AlgoliaLogo, KapaLogo } from '../Items/icons';
 
 type Props = { isPromptMode: boolean };
 
@@ -21,10 +21,10 @@ export function CommandFooter({ isPromptMode }: Props) {
         <span>to close</span>
       </p>
       {isPromptMode ? (
-        <p className="text-3xs text-tertiary inline-flex gap-1 items-center ml-auto">
+        <p className="text-3xs text-tertiary inline-flex gap-1.5 items-center ml-auto">
           <span>AI assistant by</span>
-          <a href="https://www.kapa.ai/" target="_blank" className="hocus:opacity-80">
-            kapa.ai
+          <a href="https://www.kapa.ai/" target="_blank">
+            <KapaLogo className="hocus:opacity-80" />
           </a>
         </p>
       ) : (
