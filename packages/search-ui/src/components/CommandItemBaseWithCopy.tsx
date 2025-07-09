@@ -5,7 +5,7 @@ import React, { PropsWithChildren, useState } from 'react';
 import { openLink } from '../utils';
 
 type Props = PropsWithChildren<{
-  url: string;
+  url?: string;
   onSelect?: () => void;
   isExternalLink?: boolean;
   isNested?: boolean;
@@ -25,11 +25,11 @@ export const CommandItemBaseWithCopy = ({
   const [copyDone, setCopyDone] = useState(false);
   const [isMetaClick, setMetaClick] = useState(false);
 
-  const copyUrl = () => {
+  function copyUrl(url: string) {
     navigator.clipboard?.writeText(url);
     setCopyDone(true);
     setTimeout(() => setCopyDone(false), 1500);
-  };
+  }
 
   return (
     <Command.Item
@@ -43,12 +43,12 @@ export const CommandItemBaseWithCopy = ({
       }}
       onMouseUp={(event) => {
         // note(Keith): middle click (typical *nix copy shortcut), right click (works with Mac trackpads), onAuxClick is not supported in Safari
-        if (event.button === 1 || event.button === 2) {
-          copyUrl();
+        if (url && (event.button === 1 || event.button === 2)) {
+          copyUrl(url);
         }
       }}
       onSelect={() => {
-        openLink(url, isMetaClick ? true : isExternalLink);
+        url && openLink(url, isMetaClick ? true : isExternalLink);
         if (isMetaClick) {
           setMetaClick(false);
         } else {
