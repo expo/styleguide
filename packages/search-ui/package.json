@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-search-ui",
-  "version": "2.3.6",
+  "version": "3.0.0",
   "description": "Expo's common search component for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
