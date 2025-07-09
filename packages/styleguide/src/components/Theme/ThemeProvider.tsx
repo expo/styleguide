@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useEffect, useState, useContext, ReactNode, useMemo } from 'react';
 
 import { getInitialColorMode, isLocalStorageAvailable } from './BlockingSetInitialColorMode';
 
@@ -8,7 +8,14 @@ export enum Themes {
   LIGHT = 'light',
 }
 
-const ThemeContext = createContext({
+const ThemeContext = createContext<{
+  activeTheme: 'light' | 'dark';
+  setDarkMode: () => void;
+  setLightMode: () => void;
+  setAutoMode: () => void;
+  themeName: Themes;
+}>({
+  activeTheme: Themes.LIGHT,
   setDarkMode: () => {},
   setLightMode: () => {},
   setAutoMode: () => {},
@@ -58,6 +65,14 @@ export function ThemeProvider(props: ThemeProviderProps) {
       }
     };
   }, []);
+
+  const activeTheme = useMemo(() => {
+    if (themeName !== Themes.AUTO) {
+      return themeName;
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? Themes.DARK : Themes.LIGHT;
+  }, [themeName]);
 
   function setDocumentTheme(themeName: Themes) {
     if (disabled) return;
@@ -114,6 +129,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
   return (
     <ThemeContext.Provider
       value={{
+        activeTheme,
         setDarkMode,
         setLightMode,
         setAutoMode,
