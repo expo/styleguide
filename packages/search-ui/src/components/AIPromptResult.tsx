@@ -1,4 +1,4 @@
-import { Button, Link } from '@expo/styleguide';
+import { Button, Link, mergeClasses } from '@expo/styleguide';
 import { ClipboardIcon } from '@expo/styleguide-icons/outline/ClipboardIcon';
 import { ThumbsDownIcon } from '@expo/styleguide-icons/outline/ThumbsDownIcon';
 import { ThumbsUpIcon } from '@expo/styleguide-icons/outline/ThumbsUpIcon';
@@ -23,7 +23,7 @@ export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAn
   return (
     <>
       <BarLoader isLoading={isLoading} />
-      <div className="result-container flex flex-col gap-4 p-4 w-full">
+      <div className="result-container flex flex-col gap-4 !pt-3 w-full">
         {isPreparingAnswer && (
           <div className="flex text-xs size-full items-center justify-center text-quaternary">Preparing answer...</div>
         )}
@@ -46,11 +46,10 @@ export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAn
         />
         {!isLoading && lastConversation?.id && (
           <>
-            <div className="inline-flex items-center w-full gap-2">
+            <div className={mergeClasses('inline-flex items-center w-full gap-2', 'max-md-gutters:flex-col')}>
               <Button
                 skipCapitalization
                 theme="secondary"
-                className="mr-auto"
                 size="xs"
                 leftSlot={<ClipboardIcon />}
                 disabled={copyDone}
@@ -63,39 +62,50 @@ export function AIPromptResult({ conversation, isGeneratingAnswer, isPreparingAn
                 }}>
                 Copy answer
               </Button>
-              <p className="text-tertiary text-2xs">Rate answer:</p>
-              <Button
-                theme="secondary"
-                size="xs"
-                disabled={hasVoted}
-                leftSlot={
-                  hasVoted === true ? (
-                    <ThumbsUpSolidIcon className="text-icon-success" />
-                  ) : (
-                    <ThumbsUpIcon className="text-icon-success" />
-                  )
-                }
-                onClick={() => {
-                  addFeedback?.(lastConversation.id, 'upvote');
-                  setVoted(true);
-                }}
-              />
-              <Button
-                theme="secondary"
-                size="xs"
-                disabled={hasVoted}
-                leftSlot={
-                  hasVoted === false ? (
-                    <ThumbsDownSolidIcon className="text-icon-danger" />
-                  ) : (
-                    <ThumbsDownIcon className="text-icon-danger" />
-                  )
-                }
-                onClick={() => {
-                  addFeedback?.(lastConversation.id, 'downvote');
-                  setVoted(false);
-                }}
-              />
+              <p className={mergeClasses('text-tertiary text-2xs mx-auto', 'max-md-gutters:mt-0.5')}>
+                Expo AI assistant is an experimental feature.
+              </p>
+              <div
+                className={mergeClasses(
+                  'contents items-center w-full gap-x-2 gap-y-3',
+                  'max-md-gutters:justify-center max-md-gutters:inline-flex'
+                )}>
+                <p className="text-tertiary text-2xs">Rate answer:</p>
+                <Button
+                  theme="secondary"
+                  size="xs"
+                  className="shrink-0"
+                  disabled={hasVoted}
+                  leftSlot={
+                    hasVoted === true ? (
+                      <ThumbsUpSolidIcon className="text-icon-success" />
+                    ) : (
+                      <ThumbsUpIcon className="text-icon-success" />
+                    )
+                  }
+                  onClick={() => {
+                    addFeedback?.(lastConversation.id, 'upvote');
+                    setVoted(true);
+                  }}
+                />
+                <Button
+                  theme="secondary"
+                  size="xs"
+                  className="shrink-0"
+                  disabled={hasVoted}
+                  leftSlot={
+                    hasVoted === false ? (
+                      <ThumbsDownSolidIcon className="text-icon-danger" />
+                    ) : (
+                      <ThumbsDownIcon className="text-icon-danger" />
+                    )
+                  }
+                  onClick={() => {
+                    addFeedback?.(lastConversation.id, 'downvote');
+                    setVoted(false);
+                  }}
+                />
+              </div>
             </div>
           </>
         )}

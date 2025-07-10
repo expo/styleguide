@@ -81,7 +81,7 @@
   outline: none;
   padding: 0 44px;
   min-height: 46px;
-  margin: 16px 16px 0;
+  margin: 16px 16px 12px;
   border: 1px solid var(--expo-theme-border-default);
   border-radius: 6px;
   width: calc(100% - 32px);
@@ -139,7 +139,6 @@
   border-top: 1px solid var(--expo-theme-border-default);
   border-bottom: 1px solid var(--expo-theme-border-default);
   padding: 0 16px 12px;
-  margin: 12px 0 0;
 }
 
 .prompt-result {
@@ -262,4 +261,8 @@ html.dark-theme [cmdk-item][data-selected='true'] mark {
 
 [cmdk-list]::-webkit-scrollbar-thumb:hover, .result-container::-webkit-scrollbar-thumb:hover {
   background-color: var(--slate-6);
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }

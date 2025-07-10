@@ -130,7 +130,10 @@ export const CommandMenuContent = ({
           }}>
           <div className="inline-flex gap-3 items-center">
             <Stars02Icon className="text-icon-secondary" />
-            <p className="text-xs font-medium">Ask Expo's AI assistant</p>
+            <div className="flex flex-col">
+              <p className="text-xs font-medium leading-snug">Ask Expo's AI assistant</p>
+              <p className="text-2xs text-tertiary leading-snug">Experimental feature</p>
+            </div>
           </div>
         </CommandItemBaseWithCopy>
       </Command.Group>
