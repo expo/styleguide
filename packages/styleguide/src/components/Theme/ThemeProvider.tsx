@@ -15,7 +15,7 @@ const ThemeContext = createContext<{
   setAutoMode: () => void;
   themeName: Themes;
 }>({
-  activeTheme: Themes.LIGHT,
+  activeTheme: undefined,
   setDarkMode: () => {},
   setLightMode: () => {},
   setAutoMode: () => {},
