@@ -262,3 +262,7 @@ html.dark-theme [cmdk-item][data-selected='true'] mark {
 [cmdk-list]::-webkit-scrollbar-thumb:hover, .result-container::-webkit-scrollbar-thumb:hover {
   background-color: var(--slate-6);
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
