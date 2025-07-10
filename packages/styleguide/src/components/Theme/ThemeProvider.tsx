@@ -9,7 +9,7 @@ export enum Themes {
 }
 
 const ThemeContext = createContext<{
-  activeTheme: 'light' | 'dark';
+  activeTheme: Themes.LIGHT | Themes.DARK | undefined;
   setDarkMode: () => void;
   setLightMode: () => void;
   setAutoMode: () => void;
