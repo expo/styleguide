@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, useContext, ReactNode, useMemo } from 'react';
+import React, { createContext, useEffect, useState, useContext, ReactNode } from 'react';
 
 import { getInitialColorMode, isLocalStorageAvailable } from './BlockingSetInitialColorMode';
 
@@ -8,14 +8,10 @@ export enum Themes {
   LIGHT = 'light',
 }
 
-const ThemeContext = createContext<{
-  activeTheme: Themes.LIGHT | Themes.DARK | undefined;
-  setDarkMode: () => void;
-  setLightMode: () => void;
-  setAutoMode: () => void;
-  themeName: Themes;
-}>({
-  activeTheme: undefined,
+type ActiveTheme = Themes.LIGHT | Themes.DARK | undefined;
+
+const ThemeContext = createContext({
+  activeTheme: undefined as ActiveTheme,
   setDarkMode: () => {},
   setLightMode: () => {},
   setAutoMode: () => {},
@@ -31,11 +27,13 @@ export function ThemeProvider(props: ThemeProviderProps) {
   const { children, disabled = false } = props;
   const initialTheme = (process as any).browser ? (document.documentElement.dataset.expoTheme as Themes) : Themes.AUTO;
   const [themeName, setThemeName] = useState(disabled ? Themes.LIGHT : initialTheme);
+  const [activeTheme, setActiveTheme] = useState<ActiveTheme>(undefined);
 
   useEffect(function didMount() {
     if (disabled) return;
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setActiveTheme(themeName === Themes.AUTO ? (mediaQuery.matches ? Themes.DARK : Themes.LIGHT) : themeName);
 
     try {
       mediaQuery.addEventListener('change', onThemeChange);
@@ -65,14 +63,6 @@ export function ThemeProvider(props: ThemeProviderProps) {
       }
     };
   }, []);
-
-  const activeTheme = useMemo(() => {
-    if (themeName !== Themes.AUTO) {
-      return themeName;
-    }
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? Themes.DARK : Themes.LIGHT;
-  }, [themeName]);
 
   function setDocumentTheme(themeName: Themes) {
     if (disabled) return;
@@ -106,6 +96,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
     setDocumentTheme(Themes.DARK);
     setThemeName(Themes.DARK);
+    setActiveTheme(Themes.DARK);
   }
 
   function setLightMode() {
@@ -114,6 +105,7 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
     setDocumentTheme(Themes.LIGHT);
     setThemeName(Themes.LIGHT);
+    setActiveTheme(Themes.LIGHT);
   }
 
   function setAutoMode() {
@@ -121,9 +113,10 @@ export function ThemeProvider(props: ThemeProviderProps) {
       window.localStorage.removeItem('data-expo-theme');
     }
 
-    const themeName = getInitialColorMode() as Themes;
+    const themeName = getInitialColorMode() as Themes.LIGHT | Themes.DARK;
     setDocumentTheme(themeName);
     setThemeName(Themes.AUTO);
+    setActiveTheme(themeName);
   }
 
   return (
