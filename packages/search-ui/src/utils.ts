@@ -6,14 +6,18 @@ import type { Dispatch, SetStateAction } from 'react';
 
 import type { AlgoliaItemHierarchy, AlgoliaItemType } from './types';
 
+const SANITY_PROJECT_ID = '9r24npb8';
+const SANITY_DATASET = 'production';
+const SANITY_API_VERSION = 'v2025-02-19';
+
 export const SANITY_CLIENT = createClient({
-  projectId: 'siias52v',
-  dataset: 'production',
+  projectId: SANITY_PROJECT_ID,
+  dataset: SANITY_DATASET,
   useCdn: true,
-  apiVersion: '2024-09-03',
+  apiVersion: SANITY_API_VERSION,
 });
 
-const sanityAssetHelper = imageUrlBuilder({ projectId: 'siias52v', dataset: 'production' });
+const sanityAssetHelper = imageUrlBuilder({ projectId: SANITY_PROJECT_ID, dataset: SANITY_DATASET });
 
 export function getSanityAsset(source: string) {
   return sanityAssetHelper.image(source).auto('format').height(150).url();
