@@ -64,6 +64,14 @@ export function ThemeProvider(props: ThemeProviderProps) {
     };
   }, []);
 
+  useEffect(
+    function onThemeNameChange() {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setActiveTheme(themeName === Themes.AUTO ? (prefersDark ? Themes.DARK : Themes.LIGHT) : themeName);
+    },
+    [themeName]
+  );
+
   function setDocumentTheme(themeName: Themes) {
     if (disabled) return;
 
@@ -96,7 +104,6 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
     setDocumentTheme(Themes.DARK);
     setThemeName(Themes.DARK);
-    setActiveTheme(Themes.DARK);
   }
 
   function setLightMode() {
@@ -105,7 +112,6 @@ export function ThemeProvider(props: ThemeProviderProps) {
     }
     setDocumentTheme(Themes.LIGHT);
     setThemeName(Themes.LIGHT);
-    setActiveTheme(Themes.LIGHT);
   }
 
   function setAutoMode() {
@@ -116,7 +122,6 @@ export function ThemeProvider(props: ThemeProviderProps) {
     const themeName = getInitialColorMode() as Themes.LIGHT | Themes.DARK;
     setDocumentTheme(themeName);
     setThemeName(Themes.AUTO);
-    setActiveTheme(themeName);
   }
 
   return (
