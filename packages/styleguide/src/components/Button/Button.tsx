@@ -1,4 +1,4 @@
-import React, { cloneElement, ForwardedRef, forwardRef } from 'react';
+import React, { cloneElement, ForwardedRef, forwardRef, isValidElement, PropsWithChildren } from 'react';
 import type { ReactElement } from 'react';
 
 import { ButtonBase, ButtonBaseProps } from './ButtonBase';
@@ -152,7 +152,7 @@ function getButtonIconClasses(size: ButtonSize) {
 }
 
 function isIconElement(element: ReactElement) {
-  if (React.isValidElement(element)) {
+  if (isValidElement<ReactElement>(element)) {
     // @ts-ignore React Portal did not have `displayName` prop, but it is a valid element
     return element.type?.displayName?.endsWith('Icon') ?? false;
   }
@@ -160,6 +160,9 @@ function isIconElement(element: ReactElement) {
 }
 
 function getIconProps(element: ReactElement, classNames: string) {
+  if (!isValidElement<PropsWithChildren<{ className?: string }>>(element)) {
+    return element;
+  }
   return {
     ...element.props,
     className: mergeClasses(classNames, element.props.className),
@@ -194,6 +197,7 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
       `inline-flex border border-solid rounded-md font-medium items-center whitespace-nowrap transition gap-2`,
       size === 'xs' && 'gap-1.5',
       size === '2xs' && 'gap-1',
+      size === '2xl' && 'rounded-md',
       getSizeClasses(size),
       getThemeClasses(theme, disabled),
       isSingleIconButton && getButtonIconClasses(size),

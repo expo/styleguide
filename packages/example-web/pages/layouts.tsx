@@ -2,10 +2,8 @@ import { mergeClasses } from '@expo/styleguide';
 
 import { H1, H3 } from '@/components/headers';
 
-const VIEWPORT_CLASS = mergeClasses(
-  'mx-auto mt-4 border border-default bg-screen px-6 pt-4 pb-5 rounded-lg shadow-xs'
-);
-const SCREEN_CLASS = mergeClasses('mx-auto mt-4 min-h-28 border border-secondary bg-default px-4 pt-3 rounded-md');
+const VIEWPORT_CLASS = mergeClasses('mx-auto mt-4 rounded-lg border border-default bg-screen px-6 pb-5 pt-4 shadow-xs');
+const SCREEN_CLASS = mergeClasses('mx-auto mt-4 min-h-28 rounded-md border border-secondary bg-default px-4 pt-3');
 
 export default function LayoutsPage() {
   return (
