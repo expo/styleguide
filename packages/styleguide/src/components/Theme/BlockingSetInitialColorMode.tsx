@@ -36,7 +36,7 @@ export function getInitialColorMode(): string | null {
   return 'light';
 }
 
-function setInitialColorMode() {
+export function setInitialColorMode(): void {
   const colorMode = getInitialColorMode();
 
   // add HTML attribute if dark mode
