@@ -1,4 +1,4 @@
-import { Button, useTheme, Themes, mergeClasses } from '@expo/styleguide';
+import { Button, mergeClasses, Themes, useTheme } from '@expo/styleguide';
 import { ThemeIcon } from '@expo/styleguide-icons/custom/ThemeIcon';
 import { CommandMenuTrigger } from '@expo/styleguide-search-ui';
 import Image from 'next/image';
@@ -8,11 +8,11 @@ import { useSearchDialogContext } from '@/common/SearchDialogContext';
 import { SidebarLink } from '@/components/SidebarLink';
 
 export function Sidebar() {
-  const { activeTheme, setDarkMode, setLightMode } = useTheme();
+  const { activeTheme, themeName, setDarkMode, setLightMode } = useTheme();
   const { setOpen } = useSearchDialogContext();
 
   function toggleTheme() {
-    if (activeTheme === Themes.LIGHT) {
+    if (themeName === Themes.LIGHT || (themeName === Themes.AUTO && activeTheme === Themes.LIGHT)) {
       setDarkMode();
     } else {
       setLightMode();
