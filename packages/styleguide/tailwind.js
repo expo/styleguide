@@ -133,6 +133,7 @@ const expoTailwindConfig = {
     },
     backgroundColor: {
       transparent: 'transparent',
+      current: 'currentColor',
 
       default: 'var(--expo-theme-background-default)',
       screen: 'var(--expo-theme-background-screen)',
@@ -145,6 +146,7 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-background-warning)',
       danger: 'var(--expo-theme-background-danger)',
       info: 'var(--expo-theme-background-info)',
+      preview: 'var(--expo-theme-background-preview)',
 
       'button-primary': 'var(--expo-theme-button-primary-background)',
       'button-primary-hover': 'var(--expo-theme-button-primary-hover)',
@@ -175,6 +177,7 @@ const expoTailwindConfig = {
     },
     borderColor: {
       transparent: 'transparent',
+      current: 'currentColor',
 
       default: 'var(--expo-theme-border-default)',
       secondary: 'var(--expo-theme-border-secondary)',
@@ -182,6 +185,7 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-border-warning)',
       danger: 'var(--expo-theme-border-danger)',
       info: 'var(--expo-theme-border-info)',
+      preview: 'var(--expo-theme-border-preview)',
 
       'button-primary': 'var(--expo-theme-button-primary-border)',
       'button-primary-disabled': 'var(--expo-theme-button-primary-disabled-border)',
@@ -216,6 +220,7 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-text-warning)',
       danger: 'var(--expo-theme-text-danger)',
       info: 'var(--expo-theme-text-info)',
+      preview: 'var(--expo-theme-text-preview)',
 
       'icon-default': 'var(--expo-theme-icon-default)',
       'icon-secondary': 'var(--expo-theme-icon-secondary)',
@@ -225,6 +230,7 @@ const expoTailwindConfig = {
       'icon-warning': 'var(--expo-theme-icon-warning)',
       'icon-danger': 'var(--expo-theme-icon-danger)',
       'icon-info': 'var(--expo-theme-icon-info)',
+      'icon-preview': 'var(--expo-theme-icon-preview)',
 
       'button-primary': 'var(--expo-theme-button-primary-text)',
       'button-primary-icon': 'var(--expo-theme-button-primary-icon)',
@@ -267,6 +273,7 @@ const expoTailwindConfig = {
       warning: 'var(--expo-theme-background-warning)',
       danger: 'var(--expo-theme-background-danger)',
       info: 'var(--expo-theme-background-info)',
+      preview: 'var(--expo-theme-background-preview)',
 
       ...palette,
     },
@@ -409,6 +416,7 @@ const expoTailwindConfig = {
         'bg-warning': 'var(--expo-theme-background-warning)',
         'bg-danger': 'var(--expo-theme-background-danger)',
         'bg-info': 'var(--expo-theme-background-info)',
+        'bg-preview': 'var(--expo-theme-background-preview)',
       },
       fill: {
         'border-default': 'var(--expo-theme-border-default)',
@@ -417,12 +425,16 @@ const expoTailwindConfig = {
         'border-warning': 'var(--expo-theme-border-warning)',
         'border-danger': 'var(--expo-theme-border-danger)',
         'border-info': 'var(--expo-theme-border-info)',
+        'border-preview': 'var(--expo-theme-border-preview)',
       },
       backgroundColor: {
         ...appColors,
       },
       gradientColorStops: {
         ...appColors,
+      },
+      zIndex: {
+        1: '1',
       },
       height: {
         15: '3.75rem',

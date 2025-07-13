@@ -50,6 +50,12 @@ export default function ComponentsPage() {
           Success text
         </div>
       </DemoTile>
+      <DemoTile title="preview" tag="div">
+        <div className="flex items-center gap-2 rounded-lg border border-preview bg-preview px-3 py-1.5 text-sm text-preview shadow-xs">
+          <EasMetadataIcon className="icon-sm text-icon-preview" />
+          Preview text
+        </div>
+      </DemoTile>
       <H3>Link Base</H3>
       <DemoTile title="local anchor">
         <LinkBase href="#buttons">LinkBase</LinkBase>

@@ -45,6 +45,7 @@
   --expo-theme-background-warning: var(--amber-3);
   --expo-theme-background-danger: var(--red-3);
   --expo-theme-background-info: var(--blue-3);
+  --expo-theme-background-preview: var(--purple-3);
 
   /* Icons */
   --expo-theme-icon-default: var(--slate-11);
@@ -55,6 +56,7 @@
   --expo-theme-icon-warning: var(--amber-11);
   --expo-theme-icon-danger: var(--red-10);
   --expo-theme-icon-info: var(--blue-10);
+  --expo-theme-icon-preview: var(--purple-10);
 
   /* Text */
   --expo-theme-text-default: var(--slate-12);
@@ -66,6 +68,7 @@
   --expo-theme-text-warning: var(--amber-11);
   --expo-theme-text-danger: var(--red-11);
   --expo-theme-text-info: var(--blue-11);
+  --expo-theme-text-preview: var(--purple-11);
 
   /* Borders */
   --expo-theme-border-default: var(--slate-6);
@@ -74,6 +77,7 @@
   --expo-theme-border-warning: var(--amber-7);
   --expo-theme-border-danger: var(--red-7);
   --expo-theme-border-info: var(--blue-7);
+  --expo-theme-border-preview: var(--purple-7);
 
   /* Buttons */
   --expo-theme-button-primary-background: var(--blue-10);
@@ -170,6 +174,7 @@
   --expo-theme-background-warning: var(--amber-3);
   --expo-theme-background-danger: var(--red-3);
   --expo-theme-background-info: var(--blue-3);
+  --expo-theme-background-preview: var(--purple-3);
 
   /* Icons */
   --expo-theme-icon-default: var(--slate-11);
@@ -180,6 +185,7 @@
   --expo-theme-icon-warning: var(--amber-11);
   --expo-theme-icon-danger: var(--red-10);
   --expo-theme-icon-info: var(--blue-10);
+  --expo-theme-icon-preview: var(--purple-10);
 
   /* Text */
   --expo-theme-text-default: var(--slate-12);
@@ -191,6 +197,7 @@
   --expo-theme-text-warning: var(--amber-11);
   --expo-theme-text-danger: var(--red-11);
   --expo-theme-text-info: var(--blue-11);
+  --expo-theme-text-preview: var(--purple-11);
 
   /* Borders */
   --expo-theme-border-default: var(--slate-6);
@@ -199,6 +206,7 @@
   --expo-theme-border-warning: var(--amber-7);
   --expo-theme-border-danger: var(--red-7);
   --expo-theme-border-info: var(--blue-7);
+  --expo-theme-border-preview: var(--purple-7);
 
   /* Buttons */
   --expo-theme-button-primary-background: hsl(from var(--blue-8) h calc(s + 20) calc(l - 10));

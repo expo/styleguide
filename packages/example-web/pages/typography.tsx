@@ -29,17 +29,9 @@ export default function TypographyPage() {
         <DemoTile title="text-2xs" className="text-2xs" />
         <DemoTile title="text-3xs" className="text-3xs" />
       </div>
-      <H3 id="elements" className="opacity-80">
-        <span className="line-through">Elements</span> (legacy)
-      </H3>
-      <div className="flex flex-col gap-4 opacity-60">
-        <DemoTile title="Headline" className="text-base font-medium" />
-        <DemoTile title="Paragraph" className="text-base font-normal" />
-        <DemoTile title="Label" className="text-sm font-medium" />
-        <DemoTile title="Callout" className="text-xs" />
-        <DemoTile title="Footnote" className="text-2xs" />
-        <DemoTile title="Caption" className="text-3xs" />
-        <DemoTile tag="code" title="Code" className="text-base" />
+      <H3 id="elements">Raw Elements</H3>
+      <div className="flex flex-col gap-4">
+        <DemoTile tag="code" title="code" className="text-base" />
       </div>
     </>
   );

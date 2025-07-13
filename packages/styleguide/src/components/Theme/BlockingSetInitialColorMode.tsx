@@ -36,7 +36,7 @@ export function getInitialColorMode(): string | null {
   return 'light';
 }
 
-function setInitialColorMode() {
+export function setInitialColorMode(): void {
   const colorMode = getInitialColorMode();
 
   // add HTML attribute if dark mode
@@ -47,12 +47,15 @@ function setInitialColorMode() {
   }
 }
 
+const FUNCTION_NAME_REGEX = /function\s+([A-Za-z_$][\w$]*)\s*\(/;
+const match = setInitialColorMode.toString().match(FUNCTION_NAME_REGEX);
+
 // our function needs to be a string so that we can call it
 const blockingSetInitialColorMode = `(function() {
   ${isLocalStorageAvailable.toString()}
   ${getInitialColorMode.toString()}
   ${setInitialColorMode.toString()}
-  setInitialColorMode();
+  ${match?.[1] ?? 'setInitialColorMode'}();
 })()
 `;
 

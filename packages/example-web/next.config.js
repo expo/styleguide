@@ -8,6 +8,11 @@ const nextConfig = {
   devIndicators: {
     position: 'bottom-right',
   },
+  transpilePackages: ['@expo/*'],
+  experimental: {
+    webpackBuildWorker: true,
+    optimizePackageImports: ['@expo/*'],
+  },
   async redirects() {
     return [
       {
