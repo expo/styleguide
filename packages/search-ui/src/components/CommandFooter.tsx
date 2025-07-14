@@ -6,15 +6,21 @@ type Props = { isPromptMode: boolean };
 
 export function CommandFooter({ isPromptMode }: Props) {
   return (
-    <div className="flex gap-4 px-4 h-11 items-center">
+    <div className="flex gap-4 px-4 h-11 items-center border-t border-secondary">
       <p className="text-3xs text-tertiary inline-flex gap-2 items-center max-md-gutters:hidden">
         <kbd>↵</kbd>
-        <span>to select</span>
+        <span>to {isPromptMode ? 'send question' : 'select'}</span>
       </p>
+      {!isPromptMode && (
+        <p className="text-3xs text-tertiary inline-flex gap-2 items-center max-md-gutters:hidden">
+          <kbd>↑</kbd>
+          <kbd>↓</kbd>
+          <span>to navigate</span>
+        </p>
+      )}
       <p className="text-3xs text-tertiary inline-flex gap-2 items-center max-md-gutters:hidden">
-        <kbd>↑</kbd>
-        <kbd>↓</kbd>
-        <span>to navigate</span>
+        <kbd>tab</kbd>
+        <span>to switch mode</span>
       </p>
       <p className="text-3xs text-tertiary inline-flex gap-2 items-center max-md-gutters:hidden">
         <kbd>esc</kbd>

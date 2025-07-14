@@ -1,7 +1,9 @@
+import { mergeClasses } from '@expo/styleguide';
+import { MessageQuestionCircleIcon } from '@expo/styleguide-icons/outline/MessageQuestionCircleIcon';
 import { SearchSmIcon } from '@expo/styleguide-icons/outline/SearchSmIcon';
 import { Stars02Icon } from '@expo/styleguide-icons/outline/Stars02Icon';
 import { XIcon } from '@expo/styleguide-icons/outline/XIcon';
-import { KapaProvider, useChat } from '@kapaai/react-sdk';
+import { useChat } from '@kapaai/react-sdk';
 import { Command } from 'cmdk';
 import groupBy from 'lodash.groupby';
 import React, { useEffect, useState } from 'react';
@@ -22,6 +24,7 @@ import {
   getSanityItemsAsync,
 } from '../utils';
 import { AIPromptResult } from './AIPromptResult';
+import { ModeTab } from './ModeTab';
 
 export const CommandMenuContent = ({
   config: { docsVersion, docsTransformUrl },
@@ -56,6 +59,7 @@ export const CommandMenuContent = ({
   const getDirectoryItems = async () => getItemsAsync(query, getDirectoryResults, setDirectoryItems);
 
   const dismiss = () => setOpen(false);
+  const latestConversation = conversation.getLatest();
 
   const fetchData = (callback: () => void) => {
     Promise.all([
@@ -69,16 +73,13 @@ export const CommandMenuContent = ({
 
   const onQueryChange = () => {
     if (open) {
-      setLoading(true);
-      setPromptMode(false);
-
-      if (isPreparingAnswer || isGeneratingAnswer) {
-        stopGeneration();
-        resetConversation();
+      if (!isPromptMode) {
+        setLoading(true);
+        const inputTimeout = setTimeout(() => {
+          fetchData(() => setLoading(false));
+        }, 150);
+        return () => clearTimeout(inputTimeout);
       }
-
-      const inputTimeout = setTimeout(() => fetchData(() => setLoading(false)), 150);
-      return () => clearTimeout(inputTimeout);
     }
   };
 
@@ -96,17 +97,52 @@ export const CommandMenuContent = ({
   }, []);
 
   useEffect(() => {
+    if (!isPreparingAnswer && !isGeneratingAnswer) {
+      setLoading(false);
+    }
+  }, [isPreparingAnswer, isGeneratingAnswer]);
+
+  useEffect(() => {
+    if (!isPromptMode) {
+      onQueryChange();
+    }
+  }, [isPromptMode]);
+
+  useEffect(() => {
     if (isMac !== null) {
       const keyDownListener = (event: KeyboardEvent) => {
         if (event.key === 'k' && (isMac ? event.metaKey : event.ctrlKey)) {
           event.preventDefault();
           setOpen((open) => !open);
         }
+
+        if (event.key === 'Tab') {
+          event.preventDefault();
+          setPromptMode((isActive) => !isActive);
+        }
+
+        if (isPromptMode) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            if (query.length > 0) {
+              if (isPreparingAnswer || isGeneratingAnswer) {
+                stopGeneration();
+                return;
+              }
+              if (latestConversation?.question === query && !latestConversation?.isGenerationAborted) {
+                return;
+              }
+              resetConversation();
+              setLoading(true);
+              submitQuery(query);
+            }
+          }
+        }
       };
       document.addEventListener('keydown', keyDownListener, false);
       return () => document.removeEventListener('keydown', keyDownListener);
     }
-  }, [isMac]);
+  }, [isMac, isPromptMode, latestConversation, query]);
 
   useEffect(onMenuOpen, [open]);
   useEffect(onQueryChange, [query]);
@@ -120,12 +156,11 @@ export const CommandMenuContent = ({
   );
 
   const data = [
-    query.length > 0 && (
+    query.length > 10 && expoDocsItems.length === 0 && (
       <Command.Group heading="Ask AI" key="expo-ai-prompt">
         <CommandItemBaseWithCopy
           value="expo-ai-prompt"
           onSelect={() => {
-            submitQuery(query);
             setPromptMode(true);
           }}>
           <div className="inline-flex gap-3 items-center">
@@ -191,21 +226,66 @@ export const CommandMenuContent = ({
       )
   );
 
+  const ModeIcon = isPromptMode ? MessageQuestionCircleIcon : SearchSmIcon;
+
   return (
-    <KapaProvider userTrackingMode="none" integrationId="bf5bd579-bb83-4591-8cc9-d87b6cdcb712" callbacks={{}}>
-      <Command.Dialog open={open} onOpenChange={setOpen} label="Search Menu" shouldFilter={false}>
-        <SearchSmIcon className="text-icon-secondary absolute top-[29px] left-[29px] transition-opacity duration-200" />
-        <div className="absolute top-[25px] right-[25px] cursor-pointer p-1 rounded-sm hocus:bg-element">
-          <XIcon className="text-icon-secondary" onClick={() => setOpen(false)} />
+    <Command.Dialog open={open} onOpenChange={setOpen} label="Search Menu" shouldFilter={false}>
+      <div className={mergeClasses('flex px-4 gap-x-3 border-b border-secondary', 'max-md-gutters:flex-col')}>
+        <div className="flex relative w-full">
+          <ModeIcon className="text-icon-tertiary absolute top-[29px] left-[13px] transition-opacity duration-200" />
+          <div className="absolute top-[25px] right-[9px] cursor-pointer p-1 rounded-sm hocus:bg-element">
+            <XIcon className="text-icon-tertiary" onClick={() => setOpen(false)} />
+          </div>
+          <Command.Input
+            value={query}
+            onValueChange={setQuery}
+            placeholder={isPromptMode ? 'Ask AI…' : 'Search…'}
+            autoFocus
+          />
         </div>
-        <Command.Input value={query} onValueChange={setQuery} placeholder="Search or ask AI…" autoFocus />
-        <BarLoader isLoading={loading} />
+        <div
+          className={mergeClasses(
+            'tabs-container flex mt-4 mb-3 px-1 py-1 gap-1 items-center rounded-lg border border-secondary bg-subtle',
+            'max-md-gutters:mt-0'
+          )}>
+          <ModeTab
+            label="Search"
+            isActive={!isPromptMode}
+            onClick={() => {
+              setPromptMode(false);
+            }}
+          />
+          <ModeTab
+            label="Ask AI"
+            isActive={isPromptMode}
+            onClick={() => {
+              setPromptMode(true);
+              if (query.length > 0) {
+                if (!conversation.getLatest()) {
+                  setLoading(true);
+                  submitQuery(query);
+                }
+              }
+            }}
+          />
+        </div>
+      </div>
+      <BarLoader isLoading={loading} />
+      <div className="relative">
+        <div
+          className={mergeClasses(
+            'pointer-events-none absolute left-0 -top-px z-10 h-6 w-[calc(100%-8px)]',
+            'bg-gradient-to-b from-default to-transparent opacity-90'
+          )}
+        />
         {isPromptMode ? (
           <AIPromptResult
             conversation={conversation}
             isGeneratingAnswer={isGeneratingAnswer}
             isPreparingAnswer={isPreparingAnswer}
             addFeedback={addFeedback}
+            resetConversation={resetConversation}
+            resetInput={() => setQuery('')}
           />
         ) : (
           <Command.List>
@@ -217,8 +297,14 @@ export const CommandMenuContent = ({
             )}
           </Command.List>
         )}
-        <CommandFooter isPromptMode={isPromptMode} />
-      </Command.Dialog>
-    </KapaProvider>
+        <div
+          className={mergeClasses(
+            'pointer-events-none absolute left-0 -bottom-px z-10 h-6 w-[calc(100%-8px)]',
+            'bg-gradient-to-t from-default to-transparent opacity-90'
+          )}
+        />
+      </div>
+      <CommandFooter isPromptMode={isPromptMode} />
+    </Command.Dialog>
   );
 };
