@@ -1,6 +1,6 @@
 {
   "name": "@expo/styleguide-search-ui",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Expo's common search component for use on the web.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,7 +28,7 @@
     "url": "https://github.com/expo/styleguide/issues"
   },
   "dependencies": {
-    "@expo/styleguide": "^9.1.2",
+    "@expo/styleguide": "^9.2.0",
     "@expo/styleguide-icons": "^2.2.2",
     "@kapaai/react-sdk": "^0.3.0",
     "@sanity/client": "^6.28.3",
