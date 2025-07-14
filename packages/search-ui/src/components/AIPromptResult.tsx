@@ -47,7 +47,7 @@ export function AIPromptResult({
               'max-md-gutters:text-center max-md-gutters:px-5'
             )}>
             <span>
-              Enter the question above and than press Enter <kbd className="mx-0.5">↵</kbd> to send it.
+              Ask the question above and then press Enter <kbd className="mx-0.5">↵</kbd> to send it.
             </span>
           </div>
         )}
