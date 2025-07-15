@@ -225,7 +225,7 @@ html.dark-theme .tabs-container {
 
 html.dark-theme .tabs-container-ai {
   &:before {
-    opacity: 0.11;
+    opacity: 0.13;
   }
 }
 
