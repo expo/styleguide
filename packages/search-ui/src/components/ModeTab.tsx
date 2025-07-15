@@ -13,10 +13,12 @@ export function ModeTab({ label, isActive, onClick }: Props) {
       onClick={onClick}
       className={mergeClasses(
         'flex items-center text-xs px-2.5 rounded-md h-full cursor-pointer transition text-tertiary whitespace-nowrap select-none min-h-8',
-        'hocus:bg-hover',
+        'hocus:bg-hover hocus:scale-[1.025] dark:hocus:bg-element',
+        'active:!scale-[0.975]',
         'max-md-gutters:w-1/2 max-md-gutters:justify-center',
-        isActive &&
-          'bg-palette-black text-palette-white dark:bg-palette-white dark:text-palette-black hocus:bg-palette-gray12'
+        isActive && 'mode-tab',
+        isActive && 'bg-gradient-to-b from-palette-gray11 to-palette-black text-palette-white',
+        isActive && 'dark:from-palette-gray12 dark:to-palette-white dark:text-palette-black'
       )}>
       {label}
     </div>

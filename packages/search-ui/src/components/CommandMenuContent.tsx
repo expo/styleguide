@@ -6,7 +6,7 @@ import { XIcon } from '@expo/styleguide-icons/outline/XIcon';
 import { useChat } from '@kapaai/react-sdk';
 import { Command } from 'cmdk';
 import groupBy from 'lodash.groupby';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { BarLoader } from './BarLoader';
 import { CommandFooter } from './CommandFooter';
@@ -37,6 +37,8 @@ export const CommandMenuContent = ({
   const [query, setQuery] = useState('');
   const [isMac, setIsMac] = useState<boolean | null>(null);
   const [isPromptMode, setPromptMode] = useState(false);
+
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const {
     conversation,
@@ -119,6 +121,7 @@ export const CommandMenuContent = ({
         if (event.key === 'Tab') {
           event.preventDefault();
           setPromptMode((isActive) => !isActive);
+          inputRef?.current?.focus();
         }
 
         if (isPromptMode) {
@@ -230,10 +233,15 @@ export const CommandMenuContent = ({
 
   return (
     <Command.Dialog open={open} onOpenChange={setOpen} label="Search Menu" shouldFilter={false}>
-      <div className={mergeClasses('flex px-4 gap-x-3 border-b border-secondary', 'max-md-gutters:flex-col')}>
-        <div className="flex relative w-full">
+      <div className={mergeClasses('relative flex px-4 gap-x-3 border-b border-secondary', 'max-md-gutters:flex-col')}>
+        <div className="flex relative w-full overflow-hidden">
           <ModeIcon className="text-icon-tertiary absolute top-[29px] left-[13px] transition-opacity duration-200" />
-          <div className="absolute top-[25px] right-[9px] cursor-pointer p-1 rounded-sm hocus:bg-element">
+          <div
+            className={mergeClasses(
+              'absolute top-[25px] right-[9px] z-[101] cursor-pointer p-1 rounded-sm',
+              'hocus:bg-element',
+              'active:scale-[0.975]'
+            )}>
             <XIcon className="text-icon-tertiary" onClick={() => setOpen(false)} />
           </div>
           <Command.Input
@@ -241,12 +249,15 @@ export const CommandMenuContent = ({
             onValueChange={setQuery}
             placeholder={isPromptMode ? 'Ask AI…' : 'Search…'}
             autoFocus
+            ref={inputRef}
           />
         </div>
         <div
           className={mergeClasses(
-            'tabs-container flex mt-4 mb-3 px-1 py-1 gap-1 items-center rounded-lg border border-secondary bg-subtle',
-            'max-md-gutters:mt-0'
+            'tabs-container relative flex mt-4 mb-3 px-1.5 py-1.5 gap-1 items-center rounded-lg border border-palette-gray5 bg-subtle',
+            'dark:bg-screen dark:border-palette-gray4',
+            'max-md-gutters:mt-0',
+            isPromptMode && 'tabs-container-ai'
           )}>
           <ModeTab
             label="Search"
