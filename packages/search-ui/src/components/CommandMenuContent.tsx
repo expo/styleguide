@@ -264,6 +264,7 @@ export const CommandMenuContent = ({
             isActive={!isPromptMode}
             onClick={() => {
               setPromptMode(false);
+              inputRef?.current?.focus();
             }}
           />
           <ModeTab
@@ -277,6 +278,7 @@ export const CommandMenuContent = ({
                   submitQuery(query);
                 }
               }
+              inputRef?.current?.focus();
             }}
           />
         </div>
