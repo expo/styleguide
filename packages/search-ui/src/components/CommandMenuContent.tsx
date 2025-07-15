@@ -94,6 +94,32 @@ export const CommandMenuContent = ({
     }
   };
 
+  const inDialogKeyDownListener = (event: KeyboardEvent) => {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      setPromptMode((isActive) => !isActive);
+      inputRef?.current?.focus();
+    }
+
+    if (isPromptMode) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        if (query.length > 0) {
+          if (isPreparingAnswer || isGeneratingAnswer) {
+            stopGeneration();
+            return;
+          }
+          if (latestConversation?.question === query && !latestConversation?.isGenerationAborted) {
+            return;
+          }
+          resetConversation();
+          setLoading(true);
+          submitQuery(query);
+        }
+      }
+    }
+  };
+
   useEffect(() => {
     setIsMac(typeof navigator !== 'undefined' && isAppleDevice());
   }, []);
@@ -117,37 +143,23 @@ export const CommandMenuContent = ({
           event.preventDefault();
           setOpen((open) => !open);
         }
-
-        if (event.key === 'Tab') {
-          event.preventDefault();
-          setPromptMode((isActive) => !isActive);
-          inputRef?.current?.focus();
-        }
-
-        if (isPromptMode) {
-          if (event.key === 'Enter') {
-            event.preventDefault();
-            if (query.length > 0) {
-              if (isPreparingAnswer || isGeneratingAnswer) {
-                stopGeneration();
-                return;
-              }
-              if (latestConversation?.question === query && !latestConversation?.isGenerationAborted) {
-                return;
-              }
-              resetConversation();
-              setLoading(true);
-              submitQuery(query);
-            }
-          }
-        }
       };
       document.addEventListener('keydown', keyDownListener, false);
       return () => document.removeEventListener('keydown', keyDownListener);
     }
-  }, [isMac, isPromptMode, latestConversation, query]);
+  }, [isMac]);
 
-  useEffect(onMenuOpen, [open]);
+  useEffect(() => {
+    onMenuOpen();
+
+    if (open) {
+      document.addEventListener('keydown', inDialogKeyDownListener, false);
+      return () => document.removeEventListener('keydown', inDialogKeyDownListener);
+    } else {
+      document.removeEventListener('keydown', inDialogKeyDownListener);
+    }
+  }, [open, isPromptMode, latestConversation, query]);
+
   useEffect(onQueryChange, [query]);
 
   const expoDocsGroupedItems = groupBy(
