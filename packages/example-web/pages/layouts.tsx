@@ -1,5 +1,6 @@
 import { mergeClasses } from '@expo/styleguide';
 
+import { Metadata } from '@/common/metadata';
 import { H1, H3 } from '@/components/headers';
 
 const VIEWPORT_CLASS = mergeClasses('mx-auto mt-4 rounded-lg border border-default bg-screen px-6 pb-5 pt-4 shadow-xs');
@@ -8,7 +9,9 @@ const SCREEN_CLASS = mergeClasses('mx-auto mt-4 min-h-28 rounded-md border borde
 export default function LayoutsPage() {
   return (
     <>
+      <Metadata title="Layouts" description="Layout variants and breakpoint scopes in Tailwind config" />
       <H1>Layouts</H1>
+      <p className="mt-2 text-secondary">Available layout variants and breakpoint scopes in Tailwind config</p>
       <H3>screen-2xl</H3>
       <div className={mergeClasses(VIEWPORT_CLASS, 'mx-0 border-b', 'max-w-screen-2xl-gutters')}>
         max-2xl-gutters: <span className="text-quaternary">scope or</span>{' '}

@@ -65,6 +65,7 @@ export function Sidebar() {
       <SidebarLink href="/layouts" text="Layouts" />
       <div className="gap-x-3 max-md-gutters:flex max-md-gutters:flex-row">
         <p className="select-none font-medium heading-xl">UI</p>
+        <SidebarLink size="sm" href="/ui/primitives" text="Primitives" />
         <SidebarLink size="sm" href="/ui/components" text="Components" />
         <SidebarLink size="sm" href="/ui/search" text="Search" />
       </div>

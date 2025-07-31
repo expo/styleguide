@@ -1,5 +1,6 @@
 import { mergeClasses } from '@expo/styleguide';
 
+import { Metadata } from '@/common/metadata';
 import { getPaletteClasses } from '@/common/utils';
 import { ColorTile } from '@/components/ColorTile';
 import { H1, H3, H4 } from '@/components/headers';
@@ -7,7 +8,9 @@ import { H1, H3, H4 } from '@/components/headers';
 export default function ColorsPage() {
   return (
     <>
+      <Metadata title="Colors" description="Color classes that differs from the default Tailwind config" />
       <H1>Colors</H1>
+      <p className="mt-2 text-secondary">Color classes that differs from the default Tailwind config</p>
       <H3 id="semantic">Semantic</H3>
       <H4>Backgrounds</H4>
       <div className="mb-2 flex flex-wrap">
