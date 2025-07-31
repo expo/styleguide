@@ -1,10 +1,12 @@
 import { WordMarkLogo } from '@expo/styleguide';
 
+import { Metadata } from '@/common/metadata';
 import { H1 } from '@/components/headers';
 
 export default function HomePage() {
   return (
     <>
+      <Metadata title="@expo/styleguide" description="Expo styleguide site listing UI build blocks and examples" />
       <H1 className="prose-strong:text-secondary">
         @expo<strong>/</strong>styleguide
       </H1>

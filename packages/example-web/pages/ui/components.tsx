@@ -7,6 +7,7 @@ import { Diamond01Icon } from '@expo/styleguide-icons/outline/Diamond01Icon';
 import { Trash01Icon } from '@expo/styleguide-icons/outline/Trash01Icon';
 import { Fragment } from 'react';
 
+import { Metadata } from '@/common/metadata';
 import { ButtonsRow } from '@/components/ButtonsRow';
 import { DemoTile } from '@/components/DemoTile';
 import { H1, H3 } from '@/components/headers';
@@ -24,7 +25,11 @@ const THEMES = [
 export default function ComponentsPage() {
   return (
     <>
+      <Metadata title="UI: Components" description="Basic components which are included in @expo/styleguide package" />
       <H1>UI: Components</H1>
+      <p className="mt-2 text-secondary">
+        Basic components which are included in <code>@expo/styleguide</code> package
+      </p>
       <H3>Inline Help</H3>
       <DemoTile title="info" tag="div">
         <div className="flex items-center gap-2 rounded-lg border border-info bg-info px-3 py-1.5 text-sm text-info shadow-xs">

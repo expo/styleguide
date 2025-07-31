@@ -15,6 +15,7 @@ import { SearchMdIcon } from '@expo/styleguide-icons/outline/SearchMdIcon';
 import { createElement, useState } from 'react';
 
 import * as StyleguideIcons from '@/common/icon-imports';
+import { Metadata } from '@/common/metadata';
 import { H1, H3 } from '@/components/headers';
 import useCopy from '@/hooks/useCopy';
 
@@ -44,8 +45,11 @@ export default function IconsPage() {
 
   return (
     <div>
+      <Metadata title="Icons" description="List of logos and icons used across Expo apps and services" />
       <H1>Icons</H1>
-      <H3 id="logos">Logos</H3>
+      <H3 id="logos">
+        Logos<code className="block text-base font-normal text-secondary">@expo/styleguide</code>
+      </H3>
       <div className="mt-8 grid grid-cols-6 gap-2 max-lg-gutters:grid-cols-4 max-md-gutters:grid-cols-3 max-sm-gutters:grid-cols-1">
         {[
           { name: 'WordMarkLogo', element: WordMarkLogo },
@@ -62,7 +66,10 @@ export default function IconsPage() {
           </div>
         ))}
       </div>
-      <H3 id="set">Icon set</H3>
+      <H3 id="set">
+        Icon set<code className="block text-base font-normal text-secondary">@expo/styleguide-icons</code>
+      </H3>
+
       <div className={mergeClasses('flex items-center gap-4', 'max-sm-gutters:flex-col max-sm-gutters:items-start')}>
         <div className="relative">
           <SearchMdIcon className="icon-sm absolute left-2.5 top-[9px]" />

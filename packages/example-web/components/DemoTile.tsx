@@ -1,8 +1,8 @@
 import { createElement } from 'react';
-import type { PropsWithChildren } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
 
 type DemoTileProps = PropsWithChildren<{
-  title: string;
+  title: ReactNode;
   className?: string;
   tag?: string;
 }>;
