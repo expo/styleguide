@@ -63,21 +63,10 @@ export function AIPromptResult({
         <Markdown
           children={(() => {
             if (!lastConversation?.answer) return '';
-
-            // Process the answer to add periods to source links at sentence endings
             let processedAnswer = lastConversation.answer;
-
-            // First, add "Source:" to all links
             processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[Source: $1]($2)');
-
-            // Then add pipe separators between consecutive source links
             processedAnswer = processedAnswer.replace(/\]\(([^)]+)\)\s*\[/g, ']($1) | [');
-
-            // Finally, add period before the first source link in a sentence
-            // Add period when the preceding text doesn't end with punctuation and is followed by Source:
             processedAnswer = processedAnswer.replace(/([^.!?])\s*\[Source:/g, '$1. [Source:');
-
-            // Clean up: remove any periods that appear after pipe separators
             processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
 
             return processedAnswer;
