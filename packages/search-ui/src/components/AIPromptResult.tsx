@@ -52,7 +52,7 @@ export function AIPromptResult({
           </div>
         )}
         {lastConversation?.question && (
-          <div className="font-semibold mt-1">Last question: “{lastConversation?.question ?? ''}”</div>
+          <div className="font-semibold mt-1 leading-relaxed">Last question: "{lastConversation?.question ?? ''}"</div>
         )}
         {isPreparingAnswer && (
           <div className="flex text-xs size-full items-center justify-center text-quaternary">
