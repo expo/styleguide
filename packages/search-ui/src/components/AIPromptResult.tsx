@@ -64,9 +64,10 @@ export function AIPromptResult({
           children={(() => {
             if (!lastConversation?.answer) return '';
             let processedAnswer = lastConversation.answer;
-            processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[Source: $1]($2)');
-            processedAnswer = processedAnswer.replace(/\]\(([^)]+)\)\s*\[/g, ']($1) | [');
-            processedAnswer = processedAnswer.replace(/([^.!?])\s*\[Source:/g, '$1. [Source:');
+
+            processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
+            processedAnswer = processedAnswer.replace(/\]\(([^)]+)\)\s*Source:/g, ']($1) | Source:');
+            processedAnswer = processedAnswer.replace(/([^.!?])\s*Source:/g, '$1. Source:');
             processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
 
             return processedAnswer;
