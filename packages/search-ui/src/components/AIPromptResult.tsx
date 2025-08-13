@@ -52,7 +52,7 @@ export function AIPromptResult({
           </div>
         )}
         {lastConversation?.question && (
-          <div className="font-semibold mt-1">Last question: “{lastConversation?.question ?? ''}”</div>
+          <div className="font-semibold mt-1 leading-relaxed">You asked: "{lastConversation?.question ?? ''}"</div>
         )}
         {isPreparingAnswer && (
           <div className="flex text-xs size-full items-center justify-center text-quaternary">
@@ -61,7 +61,17 @@ export function AIPromptResult({
           </div>
         )}
         <Markdown
-          children={lastConversation?.answer ?? ''}
+          children={(() => {
+            if (!lastConversation?.answer) return '';
+            let processedAnswer = lastConversation.answer;
+
+            processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
+            processedAnswer = processedAnswer.replace(/\]\(([^)]+)\)\s*Source:/g, ']($1) | Source:');
+            processedAnswer = processedAnswer.replace(/([^.!?])\s*Source:/g, '$1. Source:');
+            processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
+
+            return processedAnswer;
+          })()}
           options={{
             overrides: {
               a: {
