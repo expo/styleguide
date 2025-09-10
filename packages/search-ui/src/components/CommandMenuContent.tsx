@@ -254,7 +254,7 @@ export const CommandMenuContent = ({
               'hocus:bg-element',
               'active:scale-[0.975]'
             )}>
-            <XIcon className="text-icon-tertiary" onClick={() => setOpen(false)} />
+            <XIcon className="text-icon-tertiary" onClick={() => setQuery('')} />
           </div>
           <Command.Input
             value={query}
