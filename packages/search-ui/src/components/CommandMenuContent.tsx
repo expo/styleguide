@@ -79,7 +79,7 @@ export const CommandMenuContent = ({
         setLoading(true);
         const inputTimeout = setTimeout(() => {
           fetchData(() => setLoading(false));
-        }, 150);
+        }, 500);
         return () => clearTimeout(inputTimeout);
       }
     }
@@ -115,6 +115,7 @@ export const CommandMenuContent = ({
           resetConversation();
           setLoading(true);
           submitQuery(query);
+          setQuery('');
         }
       }
     }
@@ -254,7 +255,7 @@ export const CommandMenuContent = ({
               'hocus:bg-element',
               'active:scale-[0.975]'
             )}>
-            <XIcon className="text-icon-tertiary" onClick={() => setOpen(false)} />
+            <XIcon className="text-icon-tertiary" onClick={() => setQuery('')} />
           </div>
           <Command.Input
             value={query}
@@ -288,6 +289,7 @@ export const CommandMenuContent = ({
                 if (!conversation.getLatest()) {
                   setLoading(true);
                   submitQuery(query);
+                  setQuery('');
                 }
               }
               inputRef?.current?.focus();

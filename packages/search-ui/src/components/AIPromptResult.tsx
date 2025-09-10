@@ -76,6 +76,10 @@ export function AIPromptResult({
             overrides: {
               a: {
                 component: Link,
+                props: {
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                },
               },
               pre: {
                 component: PromptResultCodeBlock,
