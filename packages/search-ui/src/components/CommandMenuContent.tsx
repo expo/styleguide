@@ -79,7 +79,7 @@ export const CommandMenuContent = ({
         setLoading(true);
         const inputTimeout = setTimeout(() => {
           fetchData(() => setLoading(false));
-        }, 150);
+        }, 500);
         return () => clearTimeout(inputTimeout);
       }
     }
