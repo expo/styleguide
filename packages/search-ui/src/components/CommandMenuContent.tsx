@@ -115,6 +115,7 @@ export const CommandMenuContent = ({
           resetConversation();
           setLoading(true);
           submitQuery(query);
+          setQuery('');
         }
       }
     }
@@ -288,6 +289,7 @@ export const CommandMenuContent = ({
                 if (!conversation.getLatest()) {
                   setLoading(true);
                   submitQuery(query);
+                  setQuery('');
                 }
               }
               inputRef?.current?.focus();
