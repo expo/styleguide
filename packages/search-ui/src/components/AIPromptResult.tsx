@@ -76,9 +76,13 @@ export function AIPromptResult({
             processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
             processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, ' | ');
             processedAnswer = processedAnswer.replace(/\[([^\]]*)\](?!\()/g, '$1');
-            // Remove first [ and last ] without touching markdown links
-            processedAnswer = processedAnswer.replace(/^\[/, '');
-            processedAnswer = processedAnswer.replace(/\]$/, '');
+            // Remove extra [ after "Source: " and extra ] without touching markdown links
+            processedAnswer = processedAnswer.replace(/Source: \[\[/g, 'Source: [');
+            // Remove extra ] that appear after markdown links [text](url)]
+            processedAnswer = processedAnswer.replace(/(\]\([^)]+\))\]/g, '$1');
+            // Remove extra ] that appear after source text (not part of markdown links)
+            processedAnswer = processedAnswer.replace(/\]\]/g, ']');
+            processedAnswer = processedAnswer.replace(/\](\s*\||\s*$)/g, '$1');
 
             console.log('after processing', processedAnswer);
 
