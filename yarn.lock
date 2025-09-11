@@ -2122,7 +2122,7 @@ __metadata:
   dependencies:
     "@expo/styleguide": "npm:^9.2.0"
     "@expo/styleguide-icons": "npm:^2.2.2"
-    "@kapaai/react-sdk": "npm:^0.3.0"
+    "@kapaai/react-sdk": "npm:^0.5.1"
     "@sanity/client": "npm:^6.28.3"
     "@sanity/image-url": "npm:^1.1.0"
     "@types/lodash.groupby": "npm:^4.6.9"
@@ -2252,7 +2252,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fingerprintjs/fingerprintjs-pro-react@npm:^2.6.3":
+"@fingerprintjs/fingerprintjs-pro-react@npm:^2.7.0":
   version: 2.7.0
   resolution: "@fingerprintjs/fingerprintjs-pro-react@npm:2.7.0"
   dependencies:
@@ -2712,11 +2712,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kapaai/react-sdk@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@kapaai/react-sdk@npm:0.3.0"
+"@kapaai/react-sdk@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "@kapaai/react-sdk@npm:0.5.1"
   dependencies:
-    "@fingerprintjs/fingerprintjs-pro-react": "npm:^2.6.3"
+    "@fingerprintjs/fingerprintjs-pro-react": "npm:^2.7.0"
     "@hcaptcha/react-hcaptcha": "npm:^1.12.0"
     "@tanstack/react-query": "npm:^5.74.3"
     js-cookie: "npm:^3.0.5"
@@ -2724,7 +2724,7 @@ __metadata:
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10/c5d14d5994d2b5d228853b5e0a91bd6e0c8c3a6edebd0a7286a5aa8b8cbc1172c385887788d8612e945ba3bafa8cfefaa7cb66253b279544417c3d12c502fe62
+  checksum: 10/74d6b8c890b53f7fc6eb7c6436efb7c29089ff7788b59205c032e590786eafaefc9581f4e84bc60ac525ad222d35818ef95b1613d252ea3c76cc79ae5cc8d49b
   languageName: node
   linkType: hard
 
