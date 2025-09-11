@@ -65,26 +65,19 @@ export function AIPromptResult({
             if (!lastConversation?.answer) return '';
             let processedAnswer = lastConversation.answer;
 
-            console.log('brefore processing', processedAnswer);
-
             processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\);/g, '[$1]($2) |');
             processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
-            processedAnswer = processedAnswer.replace(/;/g, ' |');
+            processedAnswer = processedAnswer.replace(/(\]\([^)]+\));/g, '$1 |');
             processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
             processedAnswer = processedAnswer.replace(/([^.!?|,\s])\s*Source:/g, '$1. Source:');
             processedAnswer = processedAnswer.replace(/Source:\s*Source:/g, 'Source:');
             processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
             processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, ' | ');
             processedAnswer = processedAnswer.replace(/\[([^\]]*)\](?!\()/g, '$1');
-            // Remove extra [ after "Source: " and extra ] without touching markdown links
             processedAnswer = processedAnswer.replace(/Source: \[\[/g, 'Source: [');
-            // Remove extra ] that appear after markdown links [text](url)]
             processedAnswer = processedAnswer.replace(/(\]\([^)]+\))\]/g, '$1');
-            // Remove extra ] that appear after source text (not part of markdown links)
             processedAnswer = processedAnswer.replace(/\]\]/g, ']');
             processedAnswer = processedAnswer.replace(/\](\s*\||\s*$)/g, '$1');
-
-            console.log('after processing', processedAnswer);
 
             return processedAnswer;
           })()}
