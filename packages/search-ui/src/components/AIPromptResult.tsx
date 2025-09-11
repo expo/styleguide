@@ -65,6 +65,8 @@ export function AIPromptResult({
             if (!lastConversation?.answer) return '';
             let processedAnswer = lastConversation.answer;
 
+            console.log('brefore processing', processedAnswer);
+
             processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\);/g, '[$1]($2) |');
             processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
             processedAnswer = processedAnswer.replace(/;/g, ' |');
@@ -72,8 +74,13 @@ export function AIPromptResult({
             processedAnswer = processedAnswer.replace(/([^.!?|,\s])\s*Source:/g, '$1. Source:');
             processedAnswer = processedAnswer.replace(/Source:\s*Source:/g, 'Source:');
             processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
-            processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, '. ');
+            processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, ' | ');
             processedAnswer = processedAnswer.replace(/\[([^\]]*)\](?!\()/g, '$1');
+            // Remove first [ and last ] without touching markdown links
+            processedAnswer = processedAnswer.replace(/^\[/, '');
+            processedAnswer = processedAnswer.replace(/\]$/, '');
+
+            console.log('after processing', processedAnswer);
 
             return processedAnswer;
           })()}
