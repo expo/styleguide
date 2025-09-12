@@ -1,4 +1,4 @@
-import { type TextStyle } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+import { type TextStyle } from 'react-native';
 
 const baseFontSize = 16;
 
