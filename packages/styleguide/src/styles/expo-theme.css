@@ -163,8 +163,8 @@
   color-scheme: dark;
 
   /* Backgrounds */
+  --expo-theme-background-screen: var(--expo-color-black);
   --expo-theme-background-default: var(--slate-1);
-  --expo-theme-background-screen: #0C0D0E;
   --expo-theme-background-subtle: var(--slate-2);
   --expo-theme-background-element: var(--slate-3);
   --expo-theme-background-hover: var(--slate-4);
