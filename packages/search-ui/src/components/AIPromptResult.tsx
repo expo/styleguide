@@ -17,6 +17,29 @@ type Props = Partial<UseChat> & {
   resetInput: () => void;
 };
 
+function formatAnswer(answer: string) {
+  let processedAnswer = answer;
+
+  processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\);/g, '[$1]($2) |');
+  processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
+  processedAnswer = processedAnswer.replace(/(\]\([^)]+\));/g, '$1 |');
+  processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
+  processedAnswer = processedAnswer.replace(/([^.!?|,\s])\s*Source:/g, '$1. Source:');
+  processedAnswer = processedAnswer.replace(/Source:\s*Source:/g, 'Source:');
+  processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
+  processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, ' | ');
+  processedAnswer = processedAnswer.replace(/\[([^\]]*)\](?!\()/g, '$1');
+  processedAnswer = processedAnswer.replace(/Source: \[\[/g, 'Source: [');
+  processedAnswer = processedAnswer.replace(/(\]\([^)]+\))\]/g, '$1');
+  processedAnswer = processedAnswer.replace(/\]\]/g, ']');
+  processedAnswer = processedAnswer.replace(/\](\s*\||\s*$)/g, '$1');
+  processedAnswer = processedAnswer.replace(/^\s*•\s*/gm, '- ');
+  processedAnswer = processedAnswer.replace(/^(\s*)(\d+)\)\s*/gm, '$1$2. ');
+  processedAnswer = processedAnswer.replace(/:\s*```/g, ':\n```');
+
+  return processedAnswer;
+}
+
 export function AIPromptResult({
   conversation,
   isGeneratingAnswer,
@@ -63,23 +86,7 @@ export function AIPromptResult({
         <Markdown
           children={(() => {
             if (!lastConversation?.answer) return '';
-            let processedAnswer = lastConversation.answer;
-
-            processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\);/g, '[$1]($2) |');
-            processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
-            processedAnswer = processedAnswer.replace(/(\]\([^)]+\));/g, '$1 |');
-            processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
-            processedAnswer = processedAnswer.replace(/([^.!?|,\s])\s*Source:/g, '$1. Source:');
-            processedAnswer = processedAnswer.replace(/Source:\s*Source:/g, 'Source:');
-            processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
-            processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, ' | ');
-            processedAnswer = processedAnswer.replace(/\[([^\]]*)\](?!\()/g, '$1');
-            processedAnswer = processedAnswer.replace(/Source: \[\[/g, 'Source: [');
-            processedAnswer = processedAnswer.replace(/(\]\([^)]+\))\]/g, '$1');
-            processedAnswer = processedAnswer.replace(/\]\]/g, ']');
-            processedAnswer = processedAnswer.replace(/\](\s*\||\s*$)/g, '$1');
-
-            return processedAnswer;
+            return formatAnswer(lastConversation.answer);
           })()}
           options={{
             overrides: {
