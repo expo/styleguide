@@ -20,8 +20,6 @@ type Props = Partial<UseChat> & {
 function formatAnswer(answer: string) {
   let processedAnswer = answer;
 
-  console.log('BEFORE -------------> ', processedAnswer);
-
   processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\);/g, '[$1]($2) |');
   processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
   processedAnswer = processedAnswer.replace(/(\]\([^)]+\));/g, '$1 |');
@@ -38,8 +36,6 @@ function formatAnswer(answer: string) {
   processedAnswer = processedAnswer.replace(/^\s*•\s*/gm, '- ');
   processedAnswer = processedAnswer.replace(/^(\s*)(\d+)\)\s*/gm, '$1$2. ');
   processedAnswer = processedAnswer.replace(/:\s*```/g, ':\n```');
-
-  console.log('AFTER -------------> ', processedAnswer);
 
   return processedAnswer;
 }
