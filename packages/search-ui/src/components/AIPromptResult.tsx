@@ -41,6 +41,17 @@ function formatAnswer(answer: string) {
   processedAnswer = processedAnswer.replace(/^(\s*)(\d+)\)\s*/gm, '$1$2. ');
   processedAnswer = processedAnswer.replace(/:\s*```/g, ':\n```');
 
+  const noInfoDetected =
+    /\b(no information|do not contain information|cannot find|no relevant information|no info|not enough information|knowledge sources[^.]*do not)\b/i.test(
+      processedAnswer
+    );
+  if (noInfoDetected) {
+    const guidance =
+      '\n\nIf you have questions about Expo or related technologies, feel free to ask.\n' +
+      'If this topic should be covered in the Expo docs, please request it by opening an issue: [Open an issue](https://github.com/expo/expo/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen).';
+    processedAnswer += guidance;
+  }
+
   return processedAnswer;
 }
 
@@ -122,10 +133,7 @@ export function AIPromptResult({
                     <p
                       {...props}
                       style={{ ...(style ?? {}), fontSize: '14px', lineHeight: '1.55' }}
-                      className={mergeClasses(
-                        'mb-2 text-[10px] leading-[1.55] text-secondary',
-                        className
-                      )}
+                      className={mergeClasses('mb-2 text-[10px] leading-[1.55] text-secondary', className)}
                     />
                   ),
                 },
@@ -158,10 +166,7 @@ export function AIPromptResult({
                     <li
                       {...props}
                       style={{ ...(style ?? {}), fontSize: '14px', lineHeight: '1.45' }}
-                      className={mergeClasses(
-                        'text-[10px] leading-[1.45] text-secondary',
-                        className
-                      )}
+                      className={mergeClasses('text-[10px] leading-[1.45] text-secondary', className)}
                     />
                   ),
                 },
