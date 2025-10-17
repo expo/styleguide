@@ -7,7 +7,7 @@ import { ThumbsDownSolidIcon } from '@expo/styleguide-icons/solid/ThumbsDownSoli
 import { ThumbsUpSolidIcon } from '@expo/styleguide-icons/solid/ThumbsUpSolidIcon';
 import { type UseChat } from '@kapaai/react-sdk';
 import Markdown from 'markdown-to-jsx';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import { BarLoader } from './BarLoader';
 import { DotsLoader } from './DotsLoader';
@@ -24,7 +24,11 @@ function formatAnswer(answer: string) {
   processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
   processedAnswer = processedAnswer.replace(/(\]\([^)]+\));/g, '$1 |');
   processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
-  processedAnswer = processedAnswer.replace(/([^.!?|,\s])\s*Source:/g, '$1. Source:');
+  // Add a sentence break before "Source:" when it directly follows text,
+  // but avoid inserting after code fences (```), punctuation, or at line start.
+  processedAnswer = processedAnswer.replace(/([^.!?|,\s`])\s*Source:/g, '$1. Source:');
+  // If a stray ". " ends up at the beginning of a line (e.g., after a code block fence), drop it.
+  processedAnswer = processedAnswer.replace(/(^|\n)\s*\.\s*Source:/g, '$1Source:');
   processedAnswer = processedAnswer.replace(/Source:\s*Source:/g, 'Source:');
   processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
   processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, ' | ');
@@ -88,23 +92,83 @@ export function AIPromptResult({
             if (!lastConversation?.answer) return '';
             return formatAnswer(lastConversation.answer);
           })()}
-          options={{
-            overrides: {
-              a: {
-                component: Link,
-                props: {
-                  target: '_blank',
-                  rel: 'noopener noreferrer',
+          options={useMemo(
+            () => ({
+              overrides: {
+                a: {
+                  component: Link,
+                  props: {
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
+                    className: 'text-link underline-offset-2 hocus:underline',
+                  },
+                },
+                pre: {
+                  component: PromptResultCodeBlock,
+                },
+                code: {
+                  component: ({ className, ...props }) => (
+                    <code
+                      {...props}
+                      className={mergeClasses(
+                        'inline-block rounded-md border border-default bg-subtle px-1 py-0.5 text-3xs font-medium leading-tight text-default',
+                        className
+                      )}
+                    />
+                  ),
+                },
+                p: {
+                  component: ({ className, style, ...props }) => (
+                    <p
+                      {...props}
+                      style={{ ...(style ?? {}), fontSize: '14px', lineHeight: '1.55' }}
+                      className={mergeClasses(
+                        'mb-2 text-[10px] leading-[1.55] text-secondary',
+                        className
+                      )}
+                    />
+                  ),
+                },
+                ol: {
+                  component: ({ className, style, ...props }) => (
+                    <ol
+                      {...props}
+                      style={{ ...(style ?? {}), fontSize: '14px', lineHeight: '1.55' }}
+                      className={mergeClasses(
+                        'mb-2 list-decimal pl-4 text-[10px] leading-normal text-secondary',
+                        className
+                      )}
+                    />
+                  ),
+                },
+                ul: {
+                  component: ({ className, style, ...props }) => (
+                    <ul
+                      {...props}
+                      style={{ ...(style ?? {}), fontSize: '14px', lineHeight: '1.55' }}
+                      className={mergeClasses(
+                        'mb-2 list-disc pl-4 text-[10px] leading-normal text-secondary',
+                        className
+                      )}
+                    />
+                  ),
+                },
+                li: {
+                  component: ({ className, style, ...props }) => (
+                    <li
+                      {...props}
+                      style={{ ...(style ?? {}), fontSize: '14px', lineHeight: '1.45' }}
+                      className={mergeClasses(
+                        'text-[10px] leading-[1.45] text-secondary',
+                        className
+                      )}
+                    />
+                  ),
                 },
               },
-              pre: {
-                component: PromptResultCodeBlock,
-                props: {
-                  isLoading,
-                },
-              },
-            },
-          }}
+            }),
+            []
+          )}
           className="prompt-result text-xs"
         />
         {!isLoading && lastConversation?.id && (

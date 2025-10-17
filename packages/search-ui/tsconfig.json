@@ -6,6 +6,7 @@
     "allowSyntheticDefaultImports": true,
     "outDir": "dist",
     "target": "ES2021",
+    "module": "ES2022",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "declaration": true
