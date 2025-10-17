@@ -24,10 +24,7 @@ function formatAnswer(answer: string) {
   processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
   processedAnswer = processedAnswer.replace(/(\]\([^)]+\));/g, '$1 |');
   processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
-  // Add a sentence break before "Source:" when it directly follows text,
-  // but avoid inserting after code fences (```), punctuation, or at line start.
   processedAnswer = processedAnswer.replace(/([^.!?|,\s`])\s*Source:/g, '$1. Source:');
-  // If a stray ". " ends up at the beginning of a line (e.g., after a code block fence), drop it.
   processedAnswer = processedAnswer.replace(/(^|\n)\s*\.\s*Source:/g, '$1Source:');
   processedAnswer = processedAnswer.replace(/Source:\s*Source:/g, 'Source:');
   processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
