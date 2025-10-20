@@ -28,6 +28,8 @@ const config = [
       'cmdk',
       'lodash.groupby',
       'markdown-to-jsx',
+      'prism-react-renderer',
+      'prismjs',
       'react',
       'tailwind-merge',
     ],

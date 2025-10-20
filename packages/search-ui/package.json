@@ -35,7 +35,9 @@
     "@sanity/image-url": "^1.1.0",
     "cmdk": "^0.2.1",
     "lodash.groupby": "^4.6.0",
-    "markdown-to-jsx": "^7.7.10"
+    "markdown-to-jsx": "^7.7.10",
+    "prism-react-renderer": "^2.4.1",
+    "prismjs": "^1.30.0"
   },
   "devDependencies": {
     "@types/lodash.groupby": "^4.6.9",

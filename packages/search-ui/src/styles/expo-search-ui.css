@@ -223,6 +223,82 @@ html.dark-theme .tabs-container {
   }
 }
 
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-palette-gray10;
+}
+
+.token.operator,
+.token.punctuation {
+  @apply text-palette-gray9;
+}
+
+.token.attr-name,
+.token.boolean,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-palette-red10;
+}
+
+.token.selector,
+.token.char,
+.token.builtin,
+.token.script,
+.token.inserted {
+  @apply text-palette-green10;
+}
+
+.token.entity,
+.token.variable {
+  @apply text-palette-green11;
+}
+
+.token.keyword {
+  @apply text-palette-pink10;
+}
+
+.token.property,
+.token.atrule,
+.token.attr-value,
+.token.function {
+  @apply text-palette-purple10 dark:text-palette-purple11;
+}
+
+.token.class-name,
+.token.regex,
+.token.important,
+.token.tag {
+  @apply text-palette-orange11;
+}
+
+.token.number,
+.token.string {
+  @apply text-palette-yellow11;
+}
+
+.token.url,
+.token.literal-property,
+.token.property-access {
+  @apply text-palette-blue11;
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
 html.dark-theme .tabs-container-ai {
   &:before {
     opacity: 0.13;

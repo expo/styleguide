@@ -1,42 +1,108 @@
-import { Button } from '@expo/styleguide';
+import { Button, mergeClasses } from '@expo/styleguide';
+import { CheckIcon } from '@expo/styleguide-icons/outline/CheckIcon';
 import { ClipboardIcon } from '@expo/styleguide-icons/outline/ClipboardIcon';
-import React, { isValidElement, PropsWithChildren, useEffect, useState } from 'react';
+import type { PropsWithChildren } from 'react';
+import React, { isValidElement, useEffect, useMemo, useState } from 'react';
 
-type Props = PropsWithChildren<{
-  isLoading: boolean;
+import { getCodeBlockDataFromChildren, getCodeData, whenPrismReady } from '../utils/promptCodeUtils';
+
+type PromptResultCodeBlockProps = PropsWithChildren<{
+  className?: string;
 }>;
 
-export function PromptResultCodeBlock({ children, isLoading }: Props) {
-  const [isCopyable, setCopyable] = useState(false);
-  const [copyDone, setCopyDone] = useState(false);
+export function PromptResultCodeBlock({ children, className }: PromptResultCodeBlockProps) {
+  const { value, language } = useMemo(() => getCodeBlockDataFromChildren(children, className), [children, className]);
+
+  const [prismLoaded, setPrismLoaded] = useState(false);
+  useEffect(() => {
+    let mounted = true;
+    whenPrismReady().then(() => {
+      if (mounted) setPrismLoaded(true);
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const codeClassName = useMemo(() => {
+    if (typeof className === 'string' && className.length > 0) {
+      return className;
+    }
+
+    if (isValidElement<{ className?: string }>(children) && typeof children.props.className === 'string') {
+      return children.props.className;
+    }
+
+    return undefined;
+  }, [children, className]);
+
+  const highlightClass = useMemo(
+    () => codeClassName ?? (language ? `language-${language}` : undefined),
+    [codeClassName, language]
+  );
+
+  const highlightedHtml = useMemo(
+    () => (value ? getCodeData(value, highlightClass) : ''),
+    [value, highlightClass, prismLoaded]
+  );
+
+  const codeToCopy = useMemo(() => value ?? '', [value]);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    if (isValidElement<PropsWithChildren>(children)) {
-      if (typeof children.props.children === 'string') {
-        return setCopyable(true);
-      }
+    if (!copied) {
+      return undefined;
     }
-  }, [isLoading]);
+    const timer = setTimeout(() => setCopied(false), 2000);
+    return () => clearTimeout(timer);
+  }, [copied]);
+
+  const handleCopy = () => {
+    if (!codeToCopy) {
+      return;
+    }
+    navigator.clipboard?.writeText(codeToCopy).catch(() => {});
+    setCopied(true);
+  };
+
+  if (!value) {
+    return (
+      <pre
+        className={mergeClasses(
+          'relative my-3 overflow-x-auto rounded-md border border-default bg-subtle px-4 py-3 text-2xs text-default shadow-xs',
+          'font-mono leading-[1.6]'
+        )}>
+        {children}
+      </pre>
+    );
+  }
 
   return (
-    <pre className="relative shadow-xs">
-      {children}
+    <div className="relative my-3">
+      <pre
+        className={mergeClasses(
+          'relative overflow-x-auto rounded-md border border-default bg-subtle px-4 py-3 text-2xs text-default shadow-xs',
+          'font-mono leading-[1.6]',
+          'dark:bg-element'
+        )}>
+        <code
+          className={mergeClasses('block min-w-fit whitespace-pre', codeClassName)}
+          dangerouslySetInnerHTML={{ __html: highlightedHtml }}
+        />
+      </pre>
       <Button
-        className="absolute right-1.5 top-1.5"
-        leftSlot={<ClipboardIcon className="text-icon-secondary" />}
-        size="xs"
+        type="button"
         theme="quaternary"
-        disabled={copyDone || !isCopyable}
-        onClick={() => {
-          if (isValidElement<PropsWithChildren>(children)) {
-            if (typeof children.props.children === 'string') {
-              navigator.clipboard?.writeText(children?.props?.children);
-              setCopyDone(true);
-              setTimeout(() => setCopyDone(false), 1500);
-            }
-          }
-        }}
-      />
-    </pre>
+        size="xs"
+        className="absolute right-3 top-3 inline-flex size-7 items-center justify-center rounded-full !border !border-default !bg-default !p-0 shadow-sm"
+        onClick={handleCopy}
+        aria-label="Copy code block">
+        {copied ? (
+          <CheckIcon className="icon-xs text-success" aria-hidden />
+        ) : (
+          <ClipboardIcon className="icon-xs text-icon-secondary" aria-hidden />
+        )}
+      </Button>
+    </div>
   );
 }
