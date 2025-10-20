@@ -14,10 +14,13 @@ export function loadPrismLanguages() {
       await Promise.all([
         import('prismjs/components/prism-json'),
         import('prismjs/components/prism-yaml'),
+        import('prismjs/components/prism-diff'),
         import('prismjs/components/prism-typescript'),
         import('prismjs/components/prism-tsx'),
         import('prismjs/components/prism-jsx'),
         import('prismjs/components/prism-bash'),
+        import('prismjs/components/prism-kotlin'),
+        import('prismjs/components/prism-swift'),
         import('prismjs/components/prism-markdown'),
       ]);
     })();
