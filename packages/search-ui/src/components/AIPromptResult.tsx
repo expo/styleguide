@@ -18,6 +18,25 @@ type Props = Partial<UseChat> & {
 };
 
 const CODE_BLOCK_SPLIT_REGEX = /(\s*```[\s\S]*?```)/g;
+const SOURCE_SENTENCE_BREAK_EXCEPTIONS = new Set([
+  'a',
+  'an',
+  'the',
+  'this',
+  'that',
+  'these',
+  'those',
+  'your',
+  'see',
+  'refer',
+  'check',
+  'use',
+  'try',
+  'visit',
+  'read',
+  'review',
+  'consult',
+]);
 
 function normalizeSourcesText(text: string) {
   return text
@@ -25,7 +44,16 @@ function normalizeSourcesText(text: string) {
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)')
     .replace(/(\]\([^)]+\));/g, '$1 |')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)')
-    .replace(/([^.!?|,\s`])\s*Source:/g, '$1. Source:')
+    .replace(/([^.!?|,\s`])\s*Source:/g, (match, char: string, offset: number, source: string) => {
+      const uptoChar = source.slice(0, offset + 1);
+      const cleanedTail = uptoChar.replace(/[^A-Za-z]+$/i, ' ').trimEnd();
+      const lastWordMatch = cleanedTail.match(/([A-Za-z]+)$/);
+      const lastWord = lastWordMatch?.[1]?.toLowerCase();
+      if (lastWord && SOURCE_SENTENCE_BREAK_EXCEPTIONS.has(lastWord)) {
+        return `${char} Source:`;
+      }
+      return `${char}. Source:`;
+    })
     .replace(/(^|\n)\s*\.\s*Source:/g, '$1Source:')
     .replace(/Source:\s*Source:/g, 'Source:')
     .replace(/\|\s*\./g, '|')
