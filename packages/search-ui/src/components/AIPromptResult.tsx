@@ -17,26 +17,44 @@ type Props = Partial<UseChat> & {
   resetInput: () => void;
 };
 
-function formatAnswer(answer: string) {
-  let processedAnswer = answer;
+const CODE_BLOCK_SPLIT_REGEX = /(\s*```[\s\S]*?```)/g;
 
-  processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\);/g, '[$1]($2) |');
-  processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)');
-  processedAnswer = processedAnswer.replace(/(\]\([^)]+\));/g, '$1 |');
-  processedAnswer = processedAnswer.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)');
-  processedAnswer = processedAnswer.replace(/([^.!?|,\s`])\s*Source:/g, '$1. Source:');
-  processedAnswer = processedAnswer.replace(/(^|\n)\s*\.\s*Source:/g, '$1Source:');
-  processedAnswer = processedAnswer.replace(/Source:\s*Source:/g, 'Source:');
-  processedAnswer = processedAnswer.replace(/\|\s*\./g, '|');
-  processedAnswer = processedAnswer.replace(/\.\s*\|\s*/g, ' | ');
-  processedAnswer = processedAnswer.replace(/\[([^\]]*)\](?!\()/g, '$1');
-  processedAnswer = processedAnswer.replace(/Source: \[\[/g, 'Source: [');
-  processedAnswer = processedAnswer.replace(/(\]\([^)]+\))\]/g, '$1');
-  processedAnswer = processedAnswer.replace(/\]\]/g, ']');
-  processedAnswer = processedAnswer.replace(/\](\s*\||\s*$)/g, '$1');
-  processedAnswer = processedAnswer.replace(/^\s*•\s*/gm, '- ');
-  processedAnswer = processedAnswer.replace(/^(\s*)(\d+)\)\s*/gm, '$1$2. ');
-  processedAnswer = processedAnswer.replace(/:\s*```/g, ':\n```');
+function normalizeSourcesText(text: string) {
+  return text
+    .replace(/\[([^\]]+)\]\(([^)]+)\);/g, '[$1]($2) |')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)')
+    .replace(/(\]\([^)]+\));/g, '$1 |')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, 'Source: [$1]($2)')
+    .replace(/([^.!?|,\s`])\s*Source:/g, '$1. Source:')
+    .replace(/(^|\n)\s*\.\s*Source:/g, '$1Source:')
+    .replace(/Source:\s*Source:/g, 'Source:')
+    .replace(/\|\s*\./g, '|')
+    .replace(/\.\s*\|\s*/g, ' | ')
+    .replace(/\[([^\]]*)\](?!\()/g, '$1')
+    .replace(/Source: \[\[/g, 'Source: [')
+    .replace(/(\]\([^)]+\))\]/g, '$1')
+    .replace(/\]\]/g, ']')
+    .replace(/\](\s*\||\s*$)/g, '$1')
+    .replace(/^\s*•\s*/gm, '- ')
+    .replace(/^(\s*)(\d+)\)\s*/gm, '$1$2. ');
+}
+
+function formatAnswer(answer: string) {
+  const segments = answer.split(CODE_BLOCK_SPLIT_REGEX);
+
+  let processedAnswer = segments
+    .map((segment, index) => {
+      if (segment.trimStart().startsWith('```')) {
+        return segment;
+      }
+      const normalized = normalizeSourcesText(segment);
+      const nextSegment = segments[index + 1];
+      if (nextSegment && nextSegment.trimStart().startsWith('```') && /:\s*$/.test(normalized)) {
+        return normalized.replace(/:\s*$/, ':\n');
+      }
+      return normalized;
+    })
+    .join('');
 
   const noInfoDetected =
     /\b(no information|do not contain information|cannot find|no relevant information|no info|not enough information|knowledge sources[^.]*do not)\b/i.test(
