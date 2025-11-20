@@ -11,6 +11,8 @@ export type CommandMenuConfig = {
   docsVersion: string;
   docsTransformUrl?: (url: string) => string;
   disableDashboardSection?: boolean;
+  docsSectionContext?: DocsSectionContext;
+  docsGroupByMainSection?: boolean;
 };
 
 export type CommandMenuSection = {
@@ -35,11 +37,24 @@ export type AlgoliaItemHierarchy<T> = {
 };
 
 export type AlgoliaItemType = {
+  mainSection?: string | null;
+  section?: string | null;
+  group?: string | null;
   url: string;
   objectID: string;
   anchor: string | null;
   content: string | null;
   hierarchy: AlgoliaItemHierarchy<string>;
+  _rankingInfo?: {
+    userScore?: number;
+    promoted?: number;
+    matchedGeoLocation?: unknown;
+    nbTypos?: number;
+    proximityDistance?: number;
+    words?: number;
+    filters?: number;
+    firstMatchedWord?: number;
+  };
   _highlightResult: {
     content: AlgoliaHighlight | null;
     hierarchy: AlgoliaItemHierarchy<AlgoliaHighlight>;
@@ -57,6 +72,12 @@ export type RNDirectoryItemType = {
       stars: number;
     };
   };
+};
+
+export type DocsSectionContext = {
+  mainSection?: string | null;
+  section?: string | null;
+  group?: string | null;
 };
 
 export type ExpoBlogItemType = {
