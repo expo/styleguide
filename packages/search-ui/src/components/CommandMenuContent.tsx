@@ -197,10 +197,7 @@ export const CommandMenuContent = ({
   const expoDocsWithBaseUrl = sortedExpoDocsItems.map((item) => ({
     ...item,
     baseUrl: item.url.replace(/#.+/, ''),
-    mainSection:
-      item.mainSection === 'EAS'
-        ? 'Expo Application Services'
-        : item.mainSection || 'Expo documentation',
+    mainSection: item.mainSection === 'EAS' ? 'Expo Application Services' : item.mainSection || 'Expo documentation',
   }));
 
   const expoDocsGroupedByMainSection = docsGroupByMainSection
