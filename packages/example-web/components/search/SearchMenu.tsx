@@ -34,8 +34,9 @@ export function SearchMenu() {
       config={{
         docsVersion: 'latest',
         docsTransformUrl: (url: string) => url,
+        docsGroupByMainSection: true,
         // Tip: set docsSectionContext here when you want to demo section-aware boosting locally.
-        // docsSectionContext: { mainSection: 'EAS', section: 'EAS Workflows', group: 'Builds' },
+        docsSectionContext: { mainSection: 'EAS', section: 'EAS Workflows', group: 'Builds' },
       }}
       open={isOpen}
       setOpen={setOpen}

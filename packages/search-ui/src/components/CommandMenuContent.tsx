@@ -27,7 +27,7 @@ import { AIPromptResult } from './AIPromptResult';
 import { ModeTab } from './ModeTab';
 
 export const CommandMenuContent = ({
-  config: { docsVersion, docsTransformUrl, docsSectionContext, docsGroupByMainSection = false },
+  config: { docsVersion, docsTransformUrl, docsSectionContext, docsGroupByMainSection = true },
   open,
   setOpen,
   customSections = [],
