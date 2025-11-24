@@ -181,6 +181,11 @@ const EASPathChunks = [
   '/eas/metadata/',
   '/eas-update/',
   '/submit/',
+  '/distribution/',
+  '/custom-builds/',
+  '/hosting/',
+  '/billing/',
+  '/accounts/',
 ] as const;
 
 export const isEASPath = (url: string) => {
@@ -192,16 +197,18 @@ const HomePathChunks = [
   '/develop/',
   '/deploy/',
   '/faq/',
-  '/core-concepts/',
+  '/config-plugins/',
   '/debugging/',
   '/config-plugins/',
+  '/review/',
+  '/monitoring/',
 ] as const;
 
 export const isHomePath = (url: string) => {
   return HomePathChunks.some((pathChunk) => url.includes(pathChunk));
 };
 
-const LearnPathChunks = ['/tutorial', '/ui-programming/', '/additional-resources/'] as const;
+const LearnPathChunks = ['/tutorial', '/additional-resources/'] as const;
 
 export const isLearnPath = (url: string) => {
   return LearnPathChunks.some((pathChunk) => url.includes(pathChunk));
