@@ -47,13 +47,7 @@ export type AlgoliaItemType = {
   hierarchy: AlgoliaItemHierarchy<string>;
   _rankingInfo?: {
     userScore?: number;
-    promoted?: number;
-    matchedGeoLocation?: unknown;
-    nbTypos?: number;
-    proximityDistance?: number;
-    words?: number;
     filters?: number;
-    firstMatchedWord?: number;
   };
   _highlightResult: {
     content: AlgoliaHighlight | null;

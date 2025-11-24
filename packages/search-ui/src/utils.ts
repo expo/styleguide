@@ -92,13 +92,11 @@ export const getExpoDocsResults = (
   return fetch(
     ...getAlgoliaFetchParams(query, 'QEX7PB7D46', '6652d26570e8628af4601e1d78ad456b', 'expo', 20, {
       facetFilters: [['version:none', `version:${version}`]],
-      ...(optionalFilters.length > 0
-        ? {
-            optionalFilters,
-            sumOrFiltersScores: true,
-            ruleContexts: options?.ruleContexts,
-          }
-        : {}),
+      ...(optionalFilters.length && {
+        optionalFilters,
+        sumOrFiltersScores: true,
+        ruleContexts: options?.ruleContexts,
+      }),
       attributesToRetrieve: ['*', 'mainSection', 'section', 'group', 'weight'],
     })
   );

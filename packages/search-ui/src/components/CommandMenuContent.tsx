@@ -56,7 +56,11 @@ export const CommandMenuContent = ({
   const [directoryItems, setDirectoryItems] = useState<RNDirectoryItemType[]>([]);
 
   const getExpoDocsItems = async () =>
-    getItemsAsync(query, (searchQuery) => getExpoDocsResults(searchQuery, docsVersion, { sectionContext: docsSectionContext }), setExpoDocsItems);
+    getItemsAsync(
+      query,
+      (searchQuery) => getExpoDocsResults(searchQuery, docsVersion, { sectionContext: docsSectionContext }),
+      setExpoDocsItems
+    );
   const getExpoBlogItems = async () => getSanityItemsAsync(query, getExpoBlogResults, setExpoBlogItems);
   const getRNDocsItems = async () => getItemsAsync(query, getRNDocsResults, setRnDocsItems);
   const getDirectoryItems = async () => getItemsAsync(query, getDirectoryResults, setDirectoryItems);
@@ -180,28 +184,20 @@ export const CommandMenuContent = ({
       boost += 1;
     }
 
-    // Add the optionalFilters score when available
     boost += item._rankingInfo?.filters ?? 0;
     return boost;
   };
 
-  // Prefer hits that match the current section context (custom boost) before falling back to
-  // Algolia's original order.
   const sortedExpoDocsItems = [...expoDocsItems].sort((a, b) => {
-    const aBoost = getContextBoost(a);
-    const bBoost = getContextBoost(b);
-    if (aBoost !== bBoost) {
-      return bBoost - aBoost;
-    }
-    const aUserScore = a._rankingInfo?.userScore ?? 0;
-    const bUserScore = b._rankingInfo?.userScore ?? 0;
-    return bUserScore - aUserScore;
+    const boostDiff = getContextBoost(b) - getContextBoost(a);
+    if (boostDiff) return boostDiff;
+    return (b._rankingInfo?.userScore ?? 0) - (a._rankingInfo?.userScore ?? 0);
   });
 
-  const expoDocsWithBaseUrl = sortedExpoDocsItems.map((expoDocsItem: AlgoliaItemType) => ({
-    ...expoDocsItem,
-    baseUrl: expoDocsItem.url.replace(/#.+/, ''),
-    mainSection: expoDocsItem.mainSection || 'Expo documentation',
+  const expoDocsWithBaseUrl = sortedExpoDocsItems.map((item) => ({
+    ...item,
+    baseUrl: item.url.replace(/#.+/, ''),
+    mainSection: item.mainSection || 'Expo documentation',
   }));
 
   const expoDocsGroupedByMainSection = docsGroupByMainSection
