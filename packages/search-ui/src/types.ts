@@ -13,6 +13,7 @@ export type CommandMenuConfig = {
   disableDashboardSection?: boolean;
   docsSectionContext?: DocsSectionContext;
   docsGroupByMainSection?: boolean;
+  docsContextBoost?: boolean;
 };
 
 export type CommandMenuSection = {

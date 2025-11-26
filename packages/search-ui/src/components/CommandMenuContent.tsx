@@ -27,7 +27,13 @@ import { AIPromptResult } from './AIPromptResult';
 import { ModeTab } from './ModeTab';
 
 export const CommandMenuContent = ({
-  config: { docsVersion, docsTransformUrl, docsSectionContext, docsGroupByMainSection = true },
+  config: {
+    docsVersion,
+    docsTransformUrl,
+    docsSectionContext,
+    docsGroupByMainSection = true,
+    docsContextBoost = false,
+  },
   open,
   setOpen,
   customSections = [],
@@ -173,6 +179,16 @@ export const CommandMenuContent = ({
     const sectionContextString = (docsSectionContext?.section ?? '').toLowerCase();
     const groupContextString = (docsSectionContext?.group ?? '').toLowerCase();
     const mainSectionContextString = (docsSectionContext?.mainSection ?? '').toLowerCase();
+
+    if (docsContextBoost && sectionContextString) {
+      const sectionPath = sectionContextString.replace(/\s+/g, '/');
+      const itemUrl = item.url.toLowerCase();
+      const urlMatchesSection = itemUrl.includes(`/${sectionPath}/`);
+      const titleMatchesSection = item.hierarchy.lvl0?.toLowerCase().includes(sectionContextString);
+      if (urlMatchesSection || titleMatchesSection) {
+        boost += 5;
+      }
+    }
 
     if (item.mainSection?.toLowerCase() === mainSectionContextString && mainSectionContextString) {
       boost += 3;
