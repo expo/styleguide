@@ -4,7 +4,7 @@ import { ClientReturn, createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 import type { Dispatch, SetStateAction } from 'react';
 
-import type { AlgoliaItemHierarchy, AlgoliaItemType } from './types';
+import type { AlgoliaItemHierarchy, AlgoliaItemType, DocsSectionContext } from './types';
 
 const SANITY_PROJECT_ID = '9r24npb8';
 const SANITY_DATASET = 'production';
@@ -60,15 +60,44 @@ const getAlgoliaFetchParams = (
       params: `query=${query}&hitsPerPage=${hits}`,
       highlightPreTag: '<mark>',
       highlightPostTag: '</mark>',
+      getRankingInfo: true,
       ...additionalParams,
     }),
   },
 ];
 
-export const getExpoDocsResults = (query: string, version?: string) => {
+const escapeFilterValue = (value: string) => `"${value.replace(/"/g, '\\"')}"`;
+
+const getSectionOptionalFilters = (sectionContext?: DocsSectionContext) => {
+  if (!sectionContext) {
+    return [];
+  }
+
+  const filters = [
+    sectionContext.group ? `group:${escapeFilterValue(sectionContext.group)}` : null,
+    sectionContext.section ? `section:${escapeFilterValue(sectionContext.section)}` : null,
+    sectionContext.mainSection ? `mainSection:${escapeFilterValue(sectionContext.mainSection)}` : null,
+  ].filter(Boolean) as string[];
+
+  return filters;
+};
+
+export const getExpoDocsResults = (
+  query: string,
+  version?: string,
+  options?: { sectionContext?: DocsSectionContext; ruleContexts?: string[] }
+) => {
+  const optionalFilters = getSectionOptionalFilters(options?.sectionContext);
+
   return fetch(
     ...getAlgoliaFetchParams(query, 'QEX7PB7D46', '6652d26570e8628af4601e1d78ad456b', 'expo', 20, {
       facetFilters: [['version:none', `version:${version}`]],
+      ...(optionalFilters.length && {
+        optionalFilters,
+        sumOrFiltersScores: true,
+        ruleContexts: options?.ruleContexts,
+      }),
+      attributesToRetrieve: ['*', 'mainSection', 'section', 'group', 'weight'],
     })
   );
 };
@@ -152,6 +181,11 @@ const EASPathChunks = [
   '/eas/metadata/',
   '/eas-update/',
   '/submit/',
+  '/distribution/',
+  '/custom-builds/',
+  '/hosting/',
+  '/billing/',
+  '/accounts/',
 ] as const;
 
 export const isEASPath = (url: string) => {
@@ -163,16 +197,18 @@ const HomePathChunks = [
   '/develop/',
   '/deploy/',
   '/faq/',
-  '/core-concepts/',
+  '/config-plugins/',
   '/debugging/',
   '/config-plugins/',
+  '/review/',
+  '/monitoring/',
 ] as const;
 
 export const isHomePath = (url: string) => {
   return HomePathChunks.some((pathChunk) => url.includes(pathChunk));
 };
 
-const LearnPathChunks = ['/tutorial', '/ui-programming/', '/additional-resources/'] as const;
+const LearnPathChunks = ['/tutorial', '/additional-resources/'] as const;
 
 export const isLearnPath = (url: string) => {
   return LearnPathChunks.some((pathChunk) => url.includes(pathChunk));

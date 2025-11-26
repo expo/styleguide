@@ -7,7 +7,7 @@ import { Home02Icon } from '@expo/styleguide-icons/outline/Home02Icon';
 import React from 'react';
 
 import { FootnoteSection } from './FootnoteSection';
-import { ExternalLinkIcon, FootnoteArrowIcon } from './icons';
+import { ExternalLinkIcon } from './icons';
 import { CommandItemBaseWithCopy } from '../components/CommandItemBaseWithCopy';
 import type { AlgoliaItemType } from '../types';
 import {
@@ -47,31 +47,6 @@ const ItemIcon = ({ url, className, isNested }: ItemIconProps) => {
   return <BookOpen02Icon className={mergeClasses('text-icon-secondary', className)} />;
 };
 
-const getFootnotePrefix = (url: string) => {
-  if (isReferencePath(url)) {
-    return 'Reference';
-  } else if (isEASPath(url)) {
-    return 'Expo Application Services';
-  } else if (isHomePath(url)) {
-    return 'Home';
-  } else if (isLearnPath(url)) {
-    return 'Learn';
-  } else {
-    return 'Guides';
-  }
-};
-
-const ItemFootnotePrefix = ({ url, isNested = false }: { url: string; isNested?: boolean }) => {
-  return isNested ? (
-    <>
-      <span className="text-3xs text-quaternary">{getFootnotePrefix(url)}</span>
-      <FootnoteArrowIcon />
-    </>
-  ) : (
-    <p className="text-3xs text-quaternary">{getFootnotePrefix(url)}</p>
-  );
-};
-
 export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) => {
   const { lvl0, lvl2, lvl3, lvl4, lvl6 } = item.hierarchy;
 
@@ -95,7 +70,6 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) 
                 <p className={titleClasses} {...getHighlightHTML(item, 'lvl6')} />
                 {!isNested && (
                   <p className="text-3xs text-quaternary">
-                    <ItemFootnotePrefix url={item.url} isNested />
                     <span {...getHighlightHTML(item, 'lvl0')} />
                     <FootnoteSection item={item} levelKey="lvl2" />
                     <FootnoteSection item={item} levelKey="lvl3" />
@@ -109,7 +83,6 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) 
                 <p className={titleClasses} {...getHighlightHTML(item, 'lvl4')} />
                 {!isNested && (
                   <p className={hierarchyClasses}>
-                    <ItemFootnotePrefix url={item.url} isNested />
                     <span {...getHighlightHTML(item, 'lvl0')} />
                     <FootnoteSection item={item} levelKey="lvl2" />
                     <FootnoteSection item={item} levelKey="lvl3" />
@@ -122,7 +95,6 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) 
                 <p className={titleClasses} {...getHighlightHTML(item, 'lvl3')} />
                 {!isNested && (
                   <p className={hierarchyClasses}>
-                    <ItemFootnotePrefix url={item.url} isNested />
                     <span {...getHighlightHTML(item, 'lvl0')} />
                     <FootnoteSection item={item} levelKey="lvl2" />
                   </p>
@@ -134,7 +106,6 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) 
                 <p className={titleClasses} {...getHighlightHTML(item, 'lvl2')} />
                 {!isNested && (
                   <p className={hierarchyClasses}>
-                    <ItemFootnotePrefix url={item.url} isNested />
                     <span {...getHighlightHTML(item, 'lvl0')} />
                   </p>
                 )}
@@ -143,7 +114,6 @@ export const ExpoDocsItem = ({ item, onSelect, isNested, transformUrl }: Props) 
             {!lvl6 && !lvl4 && !lvl3 && !lvl2 && lvl0 && (
               <>
                 <p className={titleClasses} {...getHighlightHTML(item, 'lvl0')} />
-                <ItemFootnotePrefix url={item.url} />
               </>
             )}
             {(!isNested || item.content) && (
