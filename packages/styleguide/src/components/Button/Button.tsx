@@ -194,10 +194,9 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     const isSingleIconButton = (leftSlot || rightSlot) && !children;
 
     const twClasses = mergeClasses(
-      `inline-flex border border-solid rounded-md font-medium items-center whitespace-nowrap transition gap-2`,
+      `inline-flex border border-solid rounded-full font-medium items-center whitespace-nowrap transition gap-2`,
       size === 'xs' && 'gap-1.5',
       size === '2xs' && 'gap-1',
-      size === '2xl' && 'rounded-md',
       getSizeClasses(size),
       getThemeClasses(theme, disabled),
       isSingleIconButton && getButtonIconClasses(size),
