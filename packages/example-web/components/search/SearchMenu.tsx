@@ -35,8 +35,6 @@ export function SearchMenu() {
         docsVersion: 'latest',
         docsTransformUrl: (url: string) => url,
         docsGroupByMainSection: true,
-        // Tip: set docsSectionContext here when you want to demo section-aware boosting locally.
-        // docsSectionContext: { mainSection: 'EAS', section: 'EAS Build' },
         docsContextBoost: true,
       }}
       open={isOpen}
