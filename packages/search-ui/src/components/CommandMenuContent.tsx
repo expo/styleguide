@@ -27,7 +27,13 @@ import { AIPromptResult } from './AIPromptResult';
 import { ModeTab } from './ModeTab';
 
 export const CommandMenuContent = ({
-  config: { docsVersion, docsTransformUrl },
+  config: {
+    docsVersion,
+    docsTransformUrl,
+    docsSectionContext,
+    docsGroupByMainSection = true,
+    docsContextBoost = false,
+  },
   open,
   setOpen,
   customSections = [],
@@ -55,7 +61,12 @@ export const CommandMenuContent = ({
   const [rnDocsItems, setRnDocsItems] = useState<AlgoliaItemType[]>([]);
   const [directoryItems, setDirectoryItems] = useState<RNDirectoryItemType[]>([]);
 
-  const getExpoDocsItems = async () => getItemsAsync(query, getExpoDocsResults, setExpoDocsItems, docsVersion);
+  const getExpoDocsItems = async () =>
+    getItemsAsync(
+      query,
+      (searchQuery) => getExpoDocsResults(searchQuery, docsVersion, { sectionContext: docsSectionContext }),
+      setExpoDocsItems
+    );
   const getExpoBlogItems = async () => getSanityItemsAsync(query, getExpoBlogResults, setExpoBlogItems);
   const getRNDocsItems = async () => getItemsAsync(query, getRNDocsResults, setRnDocsItems);
   const getDirectoryItems = async () => getItemsAsync(query, getDirectoryResults, setDirectoryItems);
@@ -163,13 +174,69 @@ export const CommandMenuContent = ({
 
   useEffect(onQueryChange, [query]);
 
-  const expoDocsGroupedItems = groupBy(
-    expoDocsItems.map((expoDocsItem: AlgoliaItemType) => ({
-      ...expoDocsItem,
-      baseUrl: expoDocsItem.url.replace(/#.+/, ''),
-    })),
-    'baseUrl'
-  );
+  const getContextBoost = (item: AlgoliaItemType) => {
+    let boost = 0;
+    const sectionContextString = (docsSectionContext?.section ?? '').toLowerCase();
+    const groupContextString = (docsSectionContext?.group ?? '').toLowerCase();
+    const mainSectionContextString = (docsSectionContext?.mainSection ?? '').toLowerCase();
+
+    if (docsContextBoost && sectionContextString) {
+      const sectionPath = sectionContextString.replace(/\s+/g, '/');
+      const itemUrl = item.url.toLowerCase();
+      const urlMatchesSection = itemUrl.includes(`/${sectionPath}/`);
+      const titleMatchesSection = item.hierarchy.lvl0?.toLowerCase().includes(sectionContextString);
+      if (urlMatchesSection || titleMatchesSection) {
+        boost += 5;
+      }
+    }
+
+    if (item.mainSection?.toLowerCase() === mainSectionContextString && mainSectionContextString) {
+      boost += 3;
+    }
+    if (item.section?.toLowerCase().includes(sectionContextString) && sectionContextString) {
+      boost += 2;
+    }
+    if (item.group?.toLowerCase().includes(groupContextString) && groupContextString) {
+      boost += 1;
+    }
+
+    boost += item._rankingInfo?.filters ?? 0;
+    return boost;
+  };
+
+  const sortedExpoDocsItems = [...expoDocsItems].sort((a, b) => {
+    const boostDiff = getContextBoost(b) - getContextBoost(a);
+    if (boostDiff) return boostDiff;
+    return (b._rankingInfo?.userScore ?? 0) - (a._rankingInfo?.userScore ?? 0);
+  });
+
+  const expoDocsWithBaseUrl = sortedExpoDocsItems.map((item) => ({
+    ...item,
+    baseUrl: item.url.replace(/#.+/, ''),
+    mainSection: item.mainSection === 'EAS' ? 'Expo Application Services' : item.mainSection || 'Expo documentation',
+  }));
+
+  const expoDocsGroupedByMainSection = docsGroupByMainSection
+    ? groupBy(expoDocsWithBaseUrl, 'mainSection')
+    : { 'Expo documentation': expoDocsWithBaseUrl };
+
+  const prioritizedMainSection = docsSectionContext?.mainSection;
+
+  const sortedMainSectionKeys = Object.keys(expoDocsGroupedByMainSection).sort((a, b) => {
+    if (prioritizedMainSection) {
+      if (a === prioritizedMainSection) return -1;
+      if (b === prioritizedMainSection) return 1;
+    }
+    return a.localeCompare(b);
+  });
+
+  const baseUrlOrder = new Map<string, number>();
+  expoDocsWithBaseUrl.forEach((item, index) => {
+    const current = baseUrlOrder.get(item.baseUrl);
+    if (current === undefined || index < current) {
+      baseUrlOrder.set(item.baseUrl, index);
+    }
+  });
 
   const data = [
     query.length > 10 && expoDocsItems.length === 0 && (
@@ -189,24 +256,45 @@ export const CommandMenuContent = ({
         </CommandItemBaseWithCopy>
       </Command.Group>
     ),
-    expoDocsItems.length > 0 && (
-      <Command.Group heading="Expo documentation" key="expo-docs-group">
-        {Object.values(expoDocsGroupedItems).map((values) =>
-          values
-            .sort((a, b) => a.url.localeCompare(a.baseUrl) - b.url.localeCompare(b.baseUrl))
-            .slice(0, 6)
-            .map((item, index) => (
-              <ExpoDocsItem
-                isNested={index !== 0}
-                item={item}
-                onSelect={dismiss}
-                key={`hit-expo-docs-${item.objectID}`}
-                transformUrl={docsTransformUrl}
-              />
-            ))
-        )}
-      </Command.Group>
-    ),
+    ...(expoDocsItems.length > 0
+      ? sortedMainSectionKeys.map((mainSection) => {
+          const groupedByBaseUrl = groupBy(expoDocsGroupedByMainSection[mainSection], 'baseUrl');
+
+          const baseUrlGroups = Object.entries(groupedByBaseUrl)
+            .map(([baseUrl, values]) => {
+              const filtersScore = Math.max(...values.map((item) => item._rankingInfo?.filters ?? 0), 0);
+              const orderIndex = baseUrlOrder.get(baseUrl) ?? Number.MAX_SAFE_INTEGER;
+              return { baseUrl, values, filtersScore, orderIndex };
+            })
+            .sort((a, b) => {
+              if (a.filtersScore !== b.filtersScore) {
+                return b.filtersScore - a.filtersScore;
+              }
+              return a.orderIndex - b.orderIndex;
+            });
+
+          return (
+            <Command.Group
+              heading={docsGroupByMainSection ? mainSection : 'Expo documentation'}
+              key={`expo-docs-group-${mainSection}`}>
+              {baseUrlGroups.map(({ values }) =>
+                values
+                  .sort((a, b) => a.url.localeCompare(a.baseUrl) - b.url.localeCompare(b.baseUrl))
+                  .slice(0, 6)
+                  .map((item, index) => (
+                    <ExpoDocsItem
+                      isNested={index !== 0}
+                      item={item}
+                      onSelect={dismiss}
+                      key={`hit-expo-docs-${item.objectID}`}
+                      transformUrl={docsTransformUrl}
+                    />
+                  ))
+              )}
+            </Command.Group>
+          );
+        })
+      : []),
     expoBlogItems.length > 0 && (
       <Command.Group heading="Expo blog" key="expo-blog-group">
         {expoBlogItems.map((item) => (

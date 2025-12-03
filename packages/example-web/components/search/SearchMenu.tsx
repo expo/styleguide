@@ -34,6 +34,8 @@ export function SearchMenu() {
       config={{
         docsVersion: 'latest',
         docsTransformUrl: (url: string) => url,
+        docsGroupByMainSection: true,
+        docsContextBoost: true,
       }}
       open={isOpen}
       setOpen={setOpen}
