@@ -2064,7 +2064,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/styleguide-base@npm:^2.0.5, @expo/styleguide-base@workspace:packages/styleguide-base":
+"@expo/styleguide-base@npm:^2.0.3, @expo/styleguide-base@workspace:packages/styleguide-base":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-base@workspace:packages/styleguide-base"
   dependencies:
@@ -2077,7 +2077,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@expo/styleguide-icons@npm:^2.3.1, @expo/styleguide-icons@workspace:*, @expo/styleguide-icons@workspace:packages/styleguide-icons":
+"@expo/styleguide-icons@npm:^2.2.3, @expo/styleguide-icons@workspace:*, @expo/styleguide-icons@workspace:packages/styleguide-icons":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-icons@workspace:packages/styleguide-icons"
   dependencies:
@@ -2121,8 +2121,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@expo/styleguide-search-ui@workspace:packages/search-ui"
   dependencies:
-    "@expo/styleguide": "npm:^9.2.4"
-    "@expo/styleguide-icons": "npm:^2.3.1"
+    "@expo/styleguide": "npm:^9.2.2"
+    "@expo/styleguide-icons": "npm:^2.2.3"
     "@kapaai/react-sdk": "npm:^0.5.1"
     "@sanity/client": "npm:^6.28.3"
     "@sanity/image-url": "npm:^1.1.0"
@@ -2143,11 +2143,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@expo/styleguide@npm:^9.2.4, @expo/styleguide@workspace:*, @expo/styleguide@workspace:packages/styleguide":
+"@expo/styleguide@npm:^9.2.2, @expo/styleguide@workspace:*, @expo/styleguide@workspace:packages/styleguide":
   version: 0.0.0-use.local
   resolution: "@expo/styleguide@workspace:packages/styleguide"
   dependencies:
-    "@expo/styleguide-base": "npm:^2.0.5"
+    "@expo/styleguide-base": "npm:^2.0.3"
     "@tailwindcss/typography": "npm:^0.5.15"
     npm-run-all: "npm:*"
     rimraf: "npm:*"
