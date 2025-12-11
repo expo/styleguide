@@ -1,6 +1,6 @@
 import { ButtonBase, Button, Link, LinkBase, type ButtonTheme } from '@expo/styleguide';
 import { EasMetadataIcon } from '@expo/styleguide-icons/custom/EasMetadataIcon';
-import { AlignTopArrow01Icon } from '@expo/styleguide-icons/outline/AlignTopArrow01Icon';
+import { ArrowUpIcon } from '@expo/styleguide-icons/outline/ArrowUpIcon';
 import { ArrowUpRightIcon } from '@expo/styleguide-icons/outline/ArrowUpRightIcon';
 import { BookClosedIcon } from '@expo/styleguide-icons/outline/BookClosedIcon';
 import { Diamond01Icon } from '@expo/styleguide-icons/outline/Diamond01Icon';
@@ -104,7 +104,7 @@ export default function ComponentsPage() {
       ))}
       <H3>Link Buttons</H3>
       <DemoTile title="local anchor">
-        <Button href="#" leftSlot={<AlignTopArrow01Icon />}>
+        <Button href="#" leftSlot={<ArrowUpIcon />}>
           Scroll top
         </Button>
       </DemoTile>
