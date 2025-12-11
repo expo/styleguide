@@ -26,6 +26,8 @@ import {
 import { AIPromptResult } from './AIPromptResult';
 import { ModeTab } from './ModeTab';
 
+const toLowerCaseString = (value?: string | null) => (typeof value === 'string' ? value.toLowerCase() : '');
+
 export const CommandMenuContent = ({
   config: {
     docsVersion,
@@ -176,27 +178,32 @@ export const CommandMenuContent = ({
 
   const getContextBoost = (item: AlgoliaItemType) => {
     let boost = 0;
-    const sectionContextString = (docsSectionContext?.section ?? '').toLowerCase();
-    const groupContextString = (docsSectionContext?.group ?? '').toLowerCase();
-    const mainSectionContextString = (docsSectionContext?.mainSection ?? '').toLowerCase();
+    const sectionContextString = toLowerCaseString(docsSectionContext?.section);
+    const groupContextString = toLowerCaseString(docsSectionContext?.group);
+    const mainSectionContextString = toLowerCaseString(docsSectionContext?.mainSection);
+
+    const itemMainSection = toLowerCaseString(item.mainSection);
+    const itemSection = toLowerCaseString(item.section);
+    const itemGroup = toLowerCaseString(item.group);
+    const itemUrl = item.url.toLowerCase();
+    const itemTitle = toLowerCaseString(item.hierarchy.lvl0);
 
     if (docsContextBoost && sectionContextString) {
       const sectionPath = sectionContextString.replace(/\s+/g, '/');
-      const itemUrl = item.url.toLowerCase();
       const urlMatchesSection = itemUrl.includes(`/${sectionPath}/`);
-      const titleMatchesSection = item.hierarchy.lvl0?.toLowerCase().includes(sectionContextString);
+      const titleMatchesSection = itemTitle.includes(sectionContextString);
       if (urlMatchesSection || titleMatchesSection) {
         boost += 5;
       }
     }
 
-    if (item.mainSection?.toLowerCase() === mainSectionContextString && mainSectionContextString) {
+    if (mainSectionContextString && itemMainSection === mainSectionContextString) {
       boost += 3;
     }
-    if (item.section?.toLowerCase().includes(sectionContextString) && sectionContextString) {
+    if (sectionContextString && itemSection.includes(sectionContextString)) {
       boost += 2;
     }
-    if (item.group?.toLowerCase().includes(groupContextString) && groupContextString) {
+    if (groupContextString && itemGroup.includes(groupContextString)) {
       boost += 1;
     }
 
