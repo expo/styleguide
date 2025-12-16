@@ -211,7 +211,7 @@
   /* Buttons */
   --expo-theme-button-primary-background: var(--expo-color-white);
   --expo-theme-button-primary-border: transparent;
-  --expo-theme-button-primary-hover: hsl(from var(--expo-color-white) h s calc(l - 15));
+  --expo-theme-button-primary-hover: hsl(from var(--expo-color-white) h s calc(l - 20));
   --expo-theme-button-primary-icon: var(--slate-1);
   --expo-theme-button-primary-text: var(--slate-1);
   --expo-theme-button-primary-disabled-background: var(--slate-11);
