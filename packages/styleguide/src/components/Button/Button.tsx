@@ -28,7 +28,7 @@ export type ButtonProps = ButtonBaseProps &
 function getSizeClasses(size: ButtonSize) {
   switch (size) {
     case '2xs':
-      return 'h-7 px-1.5 text-3xs';
+      return 'h-7 px-2 text-3xs';
     case 'xs':
       return 'h-8 px-3 text-3xs';
     case 'sm':
@@ -48,26 +48,26 @@ function getThemeClasses(theme: ButtonTheme, disabled = false) {
   switch (theme) {
     case 'primary':
       return mergeClasses(
-        'border-button-primary bg-button-primary text-button-primary shadow-xs',
+        'border-button-primary bg-button-primary text-button-primary',
         !disabled && 'hocus:bg-button-primary-hover active:scale-98',
         disabled && 'bg-button-primary-disabled border-button-primary-disabled text-button-primary-disabled'
       );
     case 'primary-destructive':
       return mergeClasses(
-        'border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive shadow-xs',
+        'border-button-primary-destructive bg-button-primary-destructive text-button-primary-destructive',
         !disabled && 'hocus:bg-button-primary-destructive-hover active:scale-98',
         disabled &&
           'bg-button-primary-destructive-disabled border-button-primary-destructive-disabled text-button-primary-destructive-disabled'
       );
     case 'secondary':
       return mergeClasses(
-        'border-button-secondary bg-button-secondary text-button-secondary shadow-xs',
+        'border-button-secondary bg-button-secondary text-button-secondary',
         !disabled && 'hocus:bg-button-secondary-hover active:scale-98',
         disabled && 'bg-button-secondary-disabled border-button-secondary-disabled text-button-secondary-disabled'
       );
     case 'secondary-destructive':
       return mergeClasses(
-        'border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive shadow-xs',
+        'border-button-secondary-destructive bg-button-secondary-destructive text-button-secondary-destructive',
         !disabled && 'hocus:bg-button-secondary-destructive-hover active:scale-98',
         disabled &&
           'bg-button-secondary-destructive-disabled border-button-secondary-destructive-disabled text-button-secondary-destructive-disabled'
@@ -194,10 +194,9 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     const isSingleIconButton = (leftSlot || rightSlot) && !children;
 
     const twClasses = mergeClasses(
-      `inline-flex border border-solid rounded-md font-medium items-center whitespace-nowrap transition gap-2`,
+      `inline-flex border border-solid rounded-full font-medium items-center whitespace-nowrap transition gap-2`,
       size === 'xs' && 'gap-1.5',
       size === '2xs' && 'gap-1',
-      size === '2xl' && 'rounded-md',
       getSizeClasses(size),
       getThemeClasses(theme, disabled),
       isSingleIconButton && getButtonIconClasses(size),

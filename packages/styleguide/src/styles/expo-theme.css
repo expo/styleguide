@@ -80,49 +80,49 @@
   --expo-theme-border-preview: var(--purple-7);
 
   /* Buttons */
-  --expo-theme-button-primary-background: var(--blue-10);
-  --expo-theme-button-primary-border: var(--blue-10);
-  --expo-theme-button-primary-hover: var(--blue-11);
-  --expo-theme-button-primary-icon: var(--blue-3);
+  --expo-theme-button-primary-background: var(--expo-color-black);
+  --expo-theme-button-primary-border: transparent;
+  --expo-theme-button-primary-hover: var(--slate-11);
+  --expo-theme-button-primary-icon: var(--expo-color-white);
   --expo-theme-button-primary-text: var(--expo-color-white);
-  --expo-theme-button-primary-disabled-background: var(--blue-7);
-  --expo-theme-button-primary-disabled-border: var(--blue-7);
+  --expo-theme-button-primary-disabled-background: var(--slate-8);
+  --expo-theme-button-primary-disabled-border: transparent;
   --expo-theme-button-primary-disabled-text: var(--expo-color-white);
 
-  --expo-theme-button-secondary-background: var(--expo-color-white);
-  --expo-theme-button-secondary-border: var(--slate-7);
-  --expo-theme-button-secondary-hover: var(--slate-3);
-  --expo-theme-button-secondary-icon: var(--slate-11);
+  --expo-theme-button-secondary-background: var(--slate-3);
+  --expo-theme-button-secondary-border: transparent;
+  --expo-theme-button-secondary-hover: var(--slate-4);
+  --expo-theme-button-secondary-icon: var(--slate-12);
   --expo-theme-button-secondary-text: var(--slate-12);
-  --expo-theme-button-secondary-disabled-background: var(--expo-color-white);
-  --expo-theme-button-secondary-disabled-border: var(--slate-6);
+  --expo-theme-button-secondary-disabled-background: var(--slate-3);
+  --expo-theme-button-secondary-disabled-border: transparent;
   --expo-theme-button-secondary-disabled-text: var(--slate-9);
 
   --expo-theme-button-tertiary-background: transparent;
-  --expo-theme-button-tertiary-border: transparent;
-  --expo-theme-button-tertiary-hover: var(--blue-3);
-  --expo-theme-button-tertiary-icon: var(--blue-9);
-  --expo-theme-button-tertiary-text: var(--blue-10);
+  --expo-theme-button-tertiary-border: var(--slate-7);
+  --expo-theme-button-tertiary-hover: var(--slate-3);
+  --expo-theme-button-tertiary-icon: var(--slate-11);
+  --expo-theme-button-tertiary-text: var(--slate-12);
   --expo-theme-button-tertiary-disabled-background: transparent;
-  --expo-theme-button-tertiary-disabled-border: transparent;
-  --expo-theme-button-tertiary-disabled-text: var(--blue-8);
+  --expo-theme-button-tertiary-disabled-border: var(--slate-6);
+  --expo-theme-button-tertiary-disabled-text: var(--slate-9);
 
   --expo-theme-button-quaternary-background: transparent;
   --expo-theme-button-quaternary-border: transparent;
-  --expo-theme-button-quaternary-hover: var(--slate-3);
-  --expo-theme-button-quaternary-icon: var(--slate-11);
-  --expo-theme-button-quaternary-text: var(--slate-12);
+  --expo-theme-button-quaternary-hover: var(--blue-3);
+  --expo-theme-button-quaternary-icon: var(--blue-9);
+  --expo-theme-button-quaternary-text: var(--blue-10);
   --expo-theme-button-quaternary-disabled-background: transparent;
   --expo-theme-button-quaternary-disabled-border: transparent;
-  --expo-theme-button-quaternary-disabled-text: var(--slate-9);
+  --expo-theme-button-quaternary-disabled-text: var(--blue-8);
 
   --expo-theme-button-primary-destructive-background: var(--red-10);
-  --expo-theme-button-primary-destructive-border: var(--red-10);
+  --expo-theme-button-primary-destructive-border: transparent;
   --expo-theme-button-primary-destructive-hover: var(--red-11);
   --expo-theme-button-primary-destructive-icon: var(--red-3);
   --expo-theme-button-primary-destructive-text: var(--expo-color-white);
   --expo-theme-button-primary-destructive-disabled-background: var(--red-7);
-  --expo-theme-button-primary-destructive-disabled-border: var(--red-7);
+  --expo-theme-button-primary-destructive-disabled-border: transparent;
   --expo-theme-button-primary-destructive-disabled-text: var(--expo-color-white);
 
   --expo-theme-button-secondary-destructive-background: var(--expo-color-white);
@@ -209,49 +209,50 @@
   --expo-theme-border-preview: var(--purple-7);
 
   /* Buttons */
-  --expo-theme-button-primary-background: hsl(from var(--blue-8) h calc(s + 20) calc(l - 10));
-  --expo-theme-button-primary-border: hsl(from var(--blue-8) h calc(s + 20) calc(l - 10));
-  --expo-theme-button-primary-hover: hsl(from var(--blue-7) h calc(s + 20) calc(l - 10));
-  --expo-theme-button-primary-icon: var(--blue-12);
-  --expo-theme-button-primary-text: var(--expo-color-white);
-  --expo-theme-button-primary-disabled-background: var(--blue-6);
-  --expo-theme-button-primary-disabled-border: var(--blue-6);
-  --expo-theme-button-primary-disabled-text: var(--blue-12);
+  --expo-theme-button-primary-background: var(--expo-color-white);
+  --expo-theme-button-primary-border: transparent;
+  --expo-theme-button-primary-hover: hsl(from var(--expo-color-white) h s calc(l - 20));
+  --expo-theme-button-primary-icon: var(--slate-1);
+  --expo-theme-button-primary-text: var(--slate-1);
+  --expo-theme-button-primary-disabled-background: var(--slate-11);
+  --expo-theme-button-primary-disabled-border: transparent;
+  --expo-theme-button-primary-disabled-text: var(--slate-1);
 
-  --expo-theme-button-secondary-background: var(--slate-3);
-  --expo-theme-button-secondary-border: var(--slate-7);
-  --expo-theme-button-secondary-hover: var(--slate-4);
+  --expo-theme-button-secondary-background: var(--slate-4);
+  --expo-theme-button-secondary-border: transparent;
+  --expo-theme-button-secondary-hover: var(--slate-6);
   --expo-theme-button-secondary-icon: var(--slate-12);
   --expo-theme-button-secondary-text: var(--expo-color-white);
-  --expo-theme-button-secondary-disabled-background: var(--slate-1);
-  --expo-theme-button-secondary-disabled-border: var(--slate-7);
+  --expo-theme-button-secondary-disabled-background: var(--slate-2);
+  --expo-theme-button-secondary-disabled-border: transparent;
   --expo-theme-button-secondary-disabled-text: var(--slate-11);
-
+  
   --expo-theme-button-tertiary-background: transparent;
-  --expo-theme-button-tertiary-border: transparent;
-  --expo-theme-button-tertiary-hover: var(--blue-3);
-  --expo-theme-button-tertiary-icon: var(--blue-10);
-  --expo-theme-button-tertiary-text: var(--blue-11);
+  --expo-theme-button-tertiary-border: var(--slate-5);
+  --expo-theme-button-tertiary-hover: var(--slate-4);
+  --expo-theme-button-tertiary-icon: var(--slate-12);
+  --expo-theme-button-tertiary-text: var(--expo-color-white);
   --expo-theme-button-tertiary-disabled-background: transparent;
-  --expo-theme-button-tertiary-disabled-border: transparent;
-  --expo-theme-button-tertiary-disabled-text: var(--blue-10);
+  --expo-theme-button-tertiary-disabled-border: var(--slate-7);
+  --expo-theme-button-tertiary-disabled-text: var(--slate-11);
 
+ 
   --expo-theme-button-quaternary-background: transparent;
   --expo-theme-button-quaternary-border: transparent;
-  --expo-theme-button-quaternary-hover: var(--slate-3);
-  --expo-theme-button-quaternary-icon: var(--slate-12);
-  --expo-theme-button-quaternary-text: var(--expo-color-white);
+  --expo-theme-button-quaternary-hover: var(--blue-3);
+  --expo-theme-button-quaternary-icon: var(--blue-9);
+  --expo-theme-button-quaternary-text: var(--blue-10);
   --expo-theme-button-quaternary-disabled-background: transparent;
   --expo-theme-button-quaternary-disabled-border: transparent;
-  --expo-theme-button-quaternary-disabled-text: var(--slate-11);
+  --expo-theme-button-quaternary-disabled-text: var(--blue-8);
 
   --expo-theme-button-primary-destructive-background: hsl(from var(--red-8) h calc(s + 15) calc(l - 10));
-  --expo-theme-button-primary-destructive-border: hsl(from var(--red-8) h calc(s + 15) calc(l - 10));
+  --expo-theme-button-primary-destructive-border: transparent;
   --expo-theme-button-primary-destructive-hover: hsl(from var(--red-7) h calc(s + 15) calc(l - 10));
   --expo-theme-button-primary-destructive-icon: var(--red-12);
   --expo-theme-button-primary-destructive-text: var(--expo-color-white);
   --expo-theme-button-primary-destructive-disabled-background: var(--red-6);
-  --expo-theme-button-primary-destructive-disabled-border: var(--red-6);
+  --expo-theme-button-primary-destructive-disabled-border: transparent;
   --expo-theme-button-primary-destructive-disabled-text: var(--red-12);
 
   --expo-theme-button-secondary-destructive-background: var(--red-3);
